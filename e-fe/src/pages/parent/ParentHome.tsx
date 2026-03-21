@@ -61,6 +61,15 @@ export default function ParentHome() {
     )
   }
 
+  const isSatProgram = student.program === 'SAT'
+  const scoreLabel = isSatProgram ? 'SAT' : 'IELTS'
+  const maxScore = isSatProgram ? 1600 : 9
+  const currentScore = isSatProgram ? (student.satScore ?? 0) : student.ieltsScore
+  const scoreDisplay = isSatProgram
+    ? String(Math.round(currentScore))
+    : currentScore.toFixed(1)
+  const scoreRatio = Math.max(0, Math.min(currentScore / maxScore, 1))
+
   return (
     <div className="space-y-6">
       {/* Bento Grid Layout */}
@@ -161,7 +170,7 @@ export default function ParentHome() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-etest-text">Tiến độ học tập</h3>
-                  <p className="text-sm text-etest-subtext">IELTS Overall</p>
+                  <p className="text-sm text-etest-subtext">{scoreLabel} Overall</p>
                 </div>
               </div>
 
@@ -183,12 +192,12 @@ export default function ParentHome() {
                     stroke="#0058be"
                     strokeWidth="8"
                     fill="none"
-                    strokeDasharray={`${(student.ieltsScore / 9) * 251.2} 251.2`}
+                    strokeDasharray={`${scoreRatio * 251.2} 251.2`}
                     strokeLinecap="round"
                   />
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-2xl font-black text-etest-blue">{student.ieltsScore}</span>
+                  <span className="text-2xl font-black text-etest-blue">{scoreDisplay}</span>
                 </div>
               </div>
             </div>
