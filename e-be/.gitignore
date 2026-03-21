@@ -13,7 +13,6 @@ __pycache__/
 dist/
 build/
 develop-eggs/
-scripts/
 
 # Virtual environments
 venv/
