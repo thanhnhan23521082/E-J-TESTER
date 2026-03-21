@@ -1,4 +1,4 @@
-export type AuthRole = 'parent' | 'mentor' | 'admin'
+export type AuthRole = 'parent' | 'mentor' | 'student' | 'manager'
 
 export interface LoginPayload {
   email: string
@@ -9,6 +9,17 @@ export interface RegisterPayload {
   email: string
   password: string
   role: AuthRole
+  full_name: string
+  phone?: string
+  // Parent-specific
+  telegram_id?: string
+  // Mentor-specific
+  specialty?: string
+  bio?: string
+  // Student-specific
+  program?: string
+  // Manager-specific
+  department?: string
 }
 
 export interface TokenResponse {
@@ -22,6 +33,8 @@ export interface UserResponse {
   id: number
   email: string
   role: AuthRole
+  full_name: string | null
+  phone: string | null
   created_at: string
 }
 
@@ -33,6 +46,12 @@ async function parseApiError(response: Response): Promise<string> {
     const payload = await response.json()
     if (typeof payload?.detail === 'string') {
       return payload.detail
+    }
+    if (Array.isArray(payload?.detail)) {
+      // Pydantic validation errors
+      return payload.detail
+        .map((e: { msg: string; loc: string[] }) => `${e.loc.join('.')}: ${e.msg}`)
+        .join('; ')
     }
     return `HTTP ${response.status}: ${response.statusText}`
   } catch {

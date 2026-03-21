@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link, useLocation } from 'react-router-dom'
 import { GraduationCap, Users, Award, Shield, Check } from 'lucide-react'
 import { useRole } from '../hooks/useRole'
+import { authApi } from '../api'
 import type { AllRoles } from '../types'
 
 const roles: { id: AllRoles; label: string; icon: typeof GraduationCap }[] = [
@@ -13,17 +14,18 @@ const roles: { id: AllRoles; label: string; icon: typeof GraduationCap }[] = [
 
 export default function Login() {
   const [selectedRole, setSelectedRole] = useState<AllRoles | null>(null)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState<string | null>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const { setRole } = useRole()
   const navigate = useNavigate()
+  const location = useLocation()
 
-  const normalizeRoleForRegister = (role: Role | null): AuthRole | null => {
-    if (role === 'parent' || role === 'mentor') {
-      return role
-    }
-    return null
-  }
+  // Check for registration success message
+  const registrationSuccess = (location.state as { registrationSuccess?: boolean })?.registrationSuccess
 
-  const handleAuth = async () => {
+  const handleLogin = async () => {
     if (!selectedRole) return
     if (!email.trim() || !password.trim()) {
       setError('Vui lòng nhập email và mật khẩu')
@@ -31,45 +33,37 @@ export default function Login() {
     }
 
     setError(null)
-    setSuccess(null)
     setIsSubmitting(true)
 
     try {
-      if (mode === 'register') {
-        const backendRole = normalizeRoleForRegister(selectedRole)
-        if (!backendRole) {
-          throw new Error('Đăng ký hiện chỉ hỗ trợ vai trò Phụ huynh hoặc Mentor')
-        }
-
-        await authApi.register({
-          email: email.trim(),
-          password,
-          role: backendRole,
-        })
-        setSuccess('Đăng ký thành công. Bạn có thể đăng nhập ngay bây giờ.')
-        setMode('login')
-      }
-
       const token = await authApi.login({
         email: email.trim(),
         password,
       })
 
-    setRole(selectedRole)
+      localStorage.setItem('access_token', token.access_token)
+      localStorage.setItem('refresh_token', token.refresh_token)
 
-    switch (selectedRole) {
-      case 'student':
-        navigate('/student')
-        break
-      case 'parent':
-        navigate('/parent')
-        break
-      case 'mentor':
-        navigate('/mentor')
-        break
-      case 'manager':
-        navigate('/manager')
-        break
+      setRole(selectedRole)
+
+      switch (selectedRole) {
+        case 'student':
+          navigate('/student')
+          break
+        case 'parent':
+          navigate('/parent')
+          break
+        case 'mentor':
+          navigate('/mentor')
+          break
+        case 'manager':
+          navigate('/manager')
+          break
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Đã xảy ra lỗi')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -149,6 +143,15 @@ export default function Login() {
 
         {/* Form Section */}
         <div className="bg-white rounded-form shadow-form p-8 flex flex-col gap-6">
+          {/* Success Message from Registration */}
+          {registrationSuccess && (
+            <div className="px-4 py-3 bg-green-50 rounded-xl border border-green-200">
+              <p className="text-sm font-medium text-green-700">
+                🎉 Đăng ký thành công! Bạn có thể đăng nhập ngay bây giờ.
+              </p>
+            </div>
+          )}
+
           {/* Email/Phone Input */}
           <div className="flex flex-col gap-1.5">
             <label className="text-xs font-bold text-etest-subtext ml-1">
@@ -186,10 +189,6 @@ export default function Login() {
             <p className="text-sm font-medium text-red-600">{error}</p>
           )}
 
-          {success && (
-            <p className="text-sm font-medium text-green-600">{success}</p>
-          )}
-
           {/* Remember Me */}
           <label className="flex items-center gap-2 cursor-pointer">
             <input
@@ -201,7 +200,7 @@ export default function Login() {
 
           {/* Login Button */}
           <button
-            onClick={handleAuth}
+            onClick={handleLogin}
             disabled={!selectedRole || isSubmitting}
             className={`w-full h-[52px] rounded-2xl font-bold text-base transition-all ${
               selectedRole && !isSubmitting
@@ -209,26 +208,16 @@ export default function Login() {
                 : 'bg-etest-border/30 text-etest-hint cursor-not-allowed'
             }`}
           >
-            {isSubmitting
-              ? 'Đang xử lý...'
-              : mode === 'login'
-                ? 'Đăng nhập'
-                : 'Đăng ký và đăng nhập'}
+            {isSubmitting ? 'Đang xử lý...' : 'Đăng nhập'}
           </button>
 
-          <button
-            type="button"
-            onClick={() => {
-              setMode(mode === 'login' ? 'register' : 'login')
-              setError(null)
-              setSuccess(null)
-            }}
-            className="w-full text-sm font-semibold text-etest-red hover:opacity-80 transition-opacity"
+          {/* Register link */}
+          <Link
+            to="/register"
+            className="w-full text-center text-sm font-semibold text-etest-red hover:opacity-80 transition-opacity"
           >
-            {mode === 'login'
-              ? 'Chưa có tài khoản? Đăng ký ngay'
-              : 'Đã có tài khoản? Quay lại đăng nhập'}
-          </button>
+            Chưa có tài khoản? Đăng ký ngay
+          </Link>
 
           {/* Divider */}
           <div className="flex items-center gap-4 py-2">
@@ -268,7 +257,7 @@ export default function Login() {
         {/* Footer Help */}
         <div className="flex flex-col gap-4">
           <p className="text-center text-sm font-medium text-etest-muted">
-            Chưa có tài khoản? Liên hệ ETEST để được tạo tài khoản
+            Cần hỗ trợ? Liên hệ ETEST để được giúp đỡ
           </p>
 
           {/* Social Icons */}

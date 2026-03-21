@@ -8,6 +8,7 @@ import ManagerLayout from './layouts/ManagerLayout'
 // Public pages
 import Homepage from './pages/Homepage'
 import Login from './pages/Login'
+import Register from './pages/Register'
 
 // Parent pages
 import ParentHome from './pages/parent/ParentHome'
@@ -45,6 +46,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Homepage /> },
       { path: 'login', element: <Login /> },
+      { path: 'register', element: <Register /> },
     ],
   },
   {
