@@ -244,7 +244,7 @@ services:
   # pgAdmin (Database GUI - Dev only)
   # ──────────────────────────────────────────────
   pgadmin:
-    image: dpage/pgadmin4:latest
+    image: ${PGADMIN_IMAGE:-dpage/pgadmin4:8.14}
     container_name: etest-pgadmin
     restart: unless-stopped
     environment:
