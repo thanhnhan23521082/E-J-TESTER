@@ -19,6 +19,11 @@ from shared.clients.llm_client import call_text
 logger = logging.getLogger(__name__)
 
 
+async def _call_llm(prompt: str, system_prompt: str, **kwargs) -> str:
+    """Forward to the async llm_client."""
+    return await call_text(prompt=prompt, system_prompt=system_prompt, **kwargs)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Mock vector store (in-memory, no external dependencies)
 # ─────────────────────────────────────────────────────────────────────────────
@@ -92,7 +97,7 @@ class RAGClient:
     Each method:
       1. Retrieves relevant context from the vector store
       2. Builds a prompt with context
-      3. Calls Claude via `call_text`
+      3. Calls OpenAI via `call_text`
 
     Replace the `_build_prompt` internals when migrating to a real vector DB.
     """
@@ -102,7 +107,7 @@ class RAGClient:
 
     # ── Smart Parenting helpers ───────────────────────────────────────────────
 
-    def answer_parent_question(
+    async def answer_parent_question(
         self,
         question: str,
         student_id: str,
@@ -149,11 +154,11 @@ class RAGClient:
             "and suggest constructive next steps. Be warm, specific, and data-driven."
         )
 
-        return call_text(prompt=prompt, system_prompt=system, max_tokens=1024)
+        return await _call_llm(prompt=prompt, system_prompt=system, max_tokens=1024)
 
     # ── ETESTER helpers ───────────────────────────────────────────────────────
 
-    def score_essay_authenticity(
+    async def score_essay_authenticity(
         self,
         essay: str,
         student_id: str,
@@ -182,7 +187,7 @@ class RAGClient:
             "a list of reasons for the score, and any red flags."
         )
 
-        raw = call_text(prompt=prompt, system_prompt=system, max_tokens=512, temperature=0.2)
+        raw = await _call_llm(prompt=prompt, system_prompt=system, max_tokens=512, temperature=0.2)
 
         try:
             return json.loads(raw)
@@ -190,7 +195,7 @@ class RAGClient:
             logger.warning("Authenticity JSON parse failed, returning fallback: %s", raw[:100])
             return {"score": 0.5, "reasons": ["Parse error – defaulting to 0.5"], "flags": []}
 
-    def build_student_narrative(
+    async def build_student_narrative(
         self,
         student_id: str,
         milestones: list[dict[str, Any]],
@@ -218,7 +223,7 @@ class RAGClient:
             "Focus on growth mindset language without exaggeration."
         )
 
-        return call_text(prompt=prompt, system_prompt=system, max_tokens=512, temperature=0.7)
+        return await _call_llm(prompt=prompt, system_prompt=system, max_tokens=512, temperature=0.7)
 
 
 # ── Global singleton ───────────────────────────────────────────────────────────

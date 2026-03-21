@@ -186,7 +186,7 @@ async def authenticity(
     _current_user: User = Depends(get_current_user),
 ) -> AuthenticityResponse:
     """
-    Score an essay's authenticity using AI (Claude).
+    Score an essay's authenticity using OpenAI.
 
     Returns a score (0–1), reasons, flags, and improvement suggestions.
     """
