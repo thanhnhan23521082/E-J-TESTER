@@ -109,11 +109,51 @@ const normalizeSkills = (
   }
 }
 
+const inferProgram = (
+  program: string | null | undefined,
+  ieltsScore: number | null | undefined,
+  satScore: number | null | undefined,
+  skills: Record<string, unknown> | null | undefined
+): Student['program'] => {
+  const normalized = typeof program === 'string' ? program.trim().toUpperCase() : ''
+  if (normalized === 'AMP' || normalized === 'IELTS' || normalized === 'SAT') {
+    return normalized
+  }
+
+  const hasSatScore = typeof satScore === 'number' && satScore > 0
+  const hasSatSkills =
+    !!skills &&
+    (typeof skills.math === 'number' ||
+      typeof skills.reading_writing === 'number' ||
+      typeof skills.essay === 'number')
+  if (hasSatScore || hasSatSkills) {
+    return 'SAT'
+  }
+
+  const hasIeltsScore = typeof ieltsScore === 'number' && ieltsScore > 0
+  const hasIeltsSkills =
+    !!skills &&
+    (typeof skills.L === 'number' ||
+      typeof skills.R === 'number' ||
+      typeof skills.W === 'number' ||
+      typeof skills.S === 'number' ||
+      typeof skills.listening === 'number' ||
+      typeof skills.reading === 'number' ||
+      typeof skills.writing === 'number' ||
+      typeof skills.speaking === 'number')
+
+  if (hasIeltsScore || hasIeltsSkills) {
+    return 'IELTS'
+  }
+
+  return 'IELTS'
+}
+
 const mapStudent = (dto: StudentProfileDto): Student => {
   return {
     id: dto.student_id,
     name: dto.name,
-    program: (dto.program ?? 'IELTS') as Student['program'],
+    program: inferProgram(dto.program, dto.ielts_score, dto.sat_score, dto.skill_breakdown),
     monthsEnrolled: dto.months_enrolled ?? 0,
     ieltsScore: dto.ielts_score ?? 0,
     satScore: dto.sat_score ?? null,
