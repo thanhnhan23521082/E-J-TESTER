@@ -30,6 +30,7 @@ from sqlalchemy import (
     Time,
     UniqueConstraint,
     func,
+    text,
 )
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -334,7 +335,7 @@ class BehavioralLog(Base):
         Numeric(4, 1), server_default="0", default=Decimal("0.0")
     )
     activities: Mapped[list] = mapped_column(
-        JSONB, server_default="[]", default=list
+        JSONB, server_default=text("'[]'::jsonb"), default=list
     )
     mood_note: Mapped[str | None] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
@@ -411,6 +412,11 @@ class Milestone(Base):
 
     __tablename__ = "milestones"
     __table_args__ = (
+        UniqueConstraint(
+            "student_id",
+            "milestone_id",
+            name="uq_milestones_student_milestone_id",
+        ),
         Index("idx_milestones_student_date", "student_id", "date"),
         Index(
             "idx_milestones_upcoming",

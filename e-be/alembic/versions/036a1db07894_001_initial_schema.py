@@ -126,7 +126,7 @@ def upgrade() -> None:
     sa.Column('studied', sa.Boolean(), server_default='false', nullable=False),
     sa.Column('streak_day', sa.Integer(), server_default='0', nullable=False),
     sa.Column('score_delta', sa.Numeric(precision=4, scale=1), server_default='0', nullable=False),
-    sa.Column('activities', postgresql.JSONB(astext_type=sa.Text()), server_default="[]'::jsonb", nullable=False),
+    sa.Column('activities', postgresql.JSONB(astext_type=sa.Text()), server_default=sa.text("'[]'::jsonb"), nullable=False),
     sa.Column('mood_note', sa.Text(), nullable=True),
     sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=False),
     sa.ForeignKeyConstraint(['student_id'], ['students.student_id'], ondelete='CASCADE'),
@@ -175,6 +175,8 @@ def upgrade() -> None:
     sa.ForeignKeyConstraint(['mentor_id'], ['mentors.mentor_id'], ondelete='SET NULL'),
     sa.ForeignKeyConstraint(['student_id'], ['students.student_id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('id')
+    ,
+    sa.UniqueConstraint('student_id', 'milestone_id', name='uq_milestones_student_milestone_id')
     )
     op.create_index('idx_milestones_completed', 'milestones', ['student_id', 'date'], unique=False, postgresql_where="status = 'completed'")
     op.create_index('idx_milestones_essays', 'milestones', ['student_id', 'date'], unique=False)
