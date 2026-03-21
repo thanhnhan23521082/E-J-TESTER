@@ -10,16 +10,22 @@ export default {
           red: '#bb0016',
           'red-secondary': '#e42027',
           'red-light': '#fef2f2',
-          // Backgrounds
+          // Backgrounds / Surface hierarchy (Academic Atelier)
           bg: '#f9f9ff',
           'bg-secondary': '#f0f3ff',
           'bg-login': '#f5f5f5',
+          'surface-container': '#e7eefe',
+          'surface-high': '#e2e8f8',
+          'surface-highest': '#dce2f3',
+          'pink-light': '#ffdad6',
+          'pink-dim': '#ffb3ac',
           // Text colors
           text: '#151c27',
           subtext: '#5d3f3c',
           'nav-text': '#475569',
           muted: '#64748b',
           hint: '#94a3b8',
+          outline: '#926f6b',
           // Status colors
           teal: '#0D9488',
           'teal-dark': '#0F6E56',
@@ -29,6 +35,20 @@ export default {
           'amber-bg': '#FEF3C7',
           green: '#10B981',
           'green-bg': '#D1FAE5',
+          // Tertiary / Blue accents (AI, Links)
+          blue: '#0058BE',
+          'blue-container': '#2170e4',
+          'blue-light': '#d8e2ff',
+          'blue-dim': '#adc6ff',
+          'blue-dark': '#004395',
+          // Secondary / Gold accents
+          gold: '#6f5d21',
+          'gold-light': '#fae197',
+          'gold-dark': '#55450a',
+          // Purple accent
+          purple: '#7C3AED',
+          'purple-light': '#F5F3FF',
+          'purple-border': '#DDD6FE',
           // Borders and shadows
           border: '#e7bdb8',
           'border-light': '#e7bdb803',

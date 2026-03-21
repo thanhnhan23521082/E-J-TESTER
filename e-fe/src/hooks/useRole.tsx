@@ -1,9 +1,9 @@
 import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
-import type { Role } from '../types'
+import type { AllRoles } from '../types'
 
 interface RoleContextType {
-  role: Role | null
-  setRole: (role: Role | null) => void
+  role: AllRoles | null
+  setRole: (role: AllRoles | null) => void
   clearRole: () => void
 }
 
@@ -14,9 +14,9 @@ interface RoleProviderProps {
 }
 
 export function RoleProvider({ children }: RoleProviderProps) {
-  const [role, setRoleState] = useState<Role | null>(null)
+  const [role, setRoleState] = useState<AllRoles | null>(null)
 
-  const setRole = useCallback((newRole: Role | null) => {
+  const setRole = useCallback((newRole: AllRoles | null) => {
     setRoleState(newRole)
   }, [])
 
