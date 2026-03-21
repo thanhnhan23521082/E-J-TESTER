@@ -91,6 +91,9 @@ e-be/
 │   ├── deps.py                      # FastAPI dependencies (get_current_user)
 │   ├── constants.py                 # Enums (ContributorType, MilestoneType, ...)
 │   ├── model.py                     # SQLAlchemy ORM models (5 bảng)
+│   ├── schemas/                     # Shared Pydantic schemas (API versioning)
+│   │   ├── __init__.py
+│   │   └── v1.py                   # PaginatedResponse, APIResponse, ErrorResponse...
 │   └── clients/
 │       ├── llm_client.py            # Claude API wrapper (call_text, call_json)
 │       └── rag_client.py            # RAG orchestrator (MockVectorStore + RAGClient)
