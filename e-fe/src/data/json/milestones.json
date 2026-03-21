@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ms_001",
+    "studentId": "student_001",
+    "type": "essay_review",
+    "title": "Why I want to study at Melbourne — Draft 2",
+    "date": "2026-03-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 91,
+    "notes": "Bài viết tốt, giọng văn rõ ràng và nhất quán.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Bài luận Melbourne Draft 2 được mentor xác nhận, thể hiện tư duy phản biện và giọng văn cá nhân rõ ràng.",
+      "skillsDemonstrated": ["Academic Writing", "Critical Thinking", "Self-reflection"],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "ms_002",
+    "studentId": "student_001",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #5",
+    "date": "2026-03-10",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Tăng 0.5 so với lần trước. Writing cần cải thiện thêm.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Đạt Band 6.5 trong lần thi thử thứ 5, tăng 0.5 so với lần trước. Tiến bộ rõ rệt ở Listening và Reading.",
+      "skillsDemonstrated": ["Test-taking", "Listening", "Reading"],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "ms_003",
+    "studentId": "student_001",
+    "type": "csr",
+    "title": "Tình nguyện dạy tiếng Anh tại Mái ấm Hoa Hồng",
+    "date": "2026-02-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "3 buổi dạy, 15 trẻ em.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Tham gia 3 buổi tình nguyện dạy tiếng Anh, thể hiện kỹ năng lãnh đạo và tinh thần trách nhiệm xã hội.",
+      "skillsDemonstrated": ["Leadership", "Communication", "Social Responsibility"],
+      "evidenceStrength": "medium"
+    }
+  }
+]
