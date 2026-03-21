@@ -1,110 +1,4522 @@
 [
   {
     "studentId": "student_001",
-    "date": "2026-03-19",
-    "durationMin": 95,
-    "sessionStart": "22:35:00",
-    "sessionEnd": "00:05:00",
+    "date": "2026-03-11",
+    "durationMin": 74,
+    "sessionStart": "19:06:00",
+    "sessionEnd": "20:20:00",
     "studied": true,
     "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "university_research",
+      "sat_verbal",
+      "essay_outline"
+    ],
+    "moodNote": "high: Trần Hà Hân vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_001",
+    "date": "2026-03-19",
+    "durationMin": 68,
+    "sessionStart": "23:14:00",
+    "sessionEnd": "00:22:00",
+    "studied": true,
+    "streakDay": 2,
     "scoreDelta": 0.0,
-    "activities": ["late_night_study", "writing_practice"],
-    "moodNote": "medium: Minh Anh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+    "activities": [
+      "application_planning"
+    ],
+    "moodNote": "medium: Trần Hà Hân học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
   },
   {
     "studentId": "student_001",
     "date": "2026-03-20",
-    "durationMin": 100,
-    "sessionStart": "22:50:00",
-    "sessionEnd": "00:20:00",
-    "studied": true,
-    "streakDay": 2,
-    "scoreDelta": 0.0,
-    "activities": ["late_night_study", "ielts_mock"],
-    "moodNote": "medium: Minh Anh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
-  },
-  {
-    "studentId": "student_001",
-    "date": "2026-03-21",
-    "durationMin": 90,
-    "sessionStart": "23:00:00",
-    "sessionEnd": "00:30:00",
+    "durationMin": 57,
+    "sessionStart": "18:35:00",
+    "sessionEnd": "18:32:00",
     "studied": true,
     "streakDay": 3,
     "scoreDelta": 0.0,
-    "activities": ["late_night_study", "essay_revision"],
-    "moodNote": "medium: Minh Anh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+    "activities": [
+      "essay_outline",
+      "application_planning"
+    ],
+    "moodNote": "medium: Trần Hà Hân học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_002",
+    "date": "2026-03-11",
+    "durationMin": 76,
+    "sessionStart": "20:18:00",
+    "sessionEnd": "21:34:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_practice"
+    ],
+    "moodNote": "high: Võ Minh Trang vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
   },
   {
     "studentId": "student_002",
     "date": "2026-03-18",
-    "durationMin": 80,
-    "sessionStart": "19:30:00",
-    "sessionEnd": "20:50:00",
+    "durationMin": 44,
+    "sessionStart": "19:26:00",
+    "sessionEnd": "19:10:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "reading"
+    ],
+    "moodNote": "medium: Võ Minh Trang học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_002",
+    "date": "2026-03-21",
+    "durationMin": 103,
+    "sessionStart": "19:59:00",
+    "sessionEnd": "20:42:00",
     "studied": true,
     "streakDay": 3,
-    "scoreDelta": 0.1,
-    "activities": ["reading", "speaking_mock"],
-    "moodNote": "low: Gia Hân duy trì nhịp học ổn định 5 ngày liên tiếp | Tiếp tục giữ lịch học và nghỉ ngơi hiện tại"
-  },
-  {
-    "studentId": "student_002",
-    "date": "2026-03-19",
-    "durationMin": 85,
-    "sessionStart": "19:45:00",
-    "sessionEnd": "21:10:00",
-    "studied": true,
-    "streakDay": 4,
-    "scoreDelta": 0.1,
-    "activities": ["writing_task_2", "reading"],
-    "moodNote": "low: Gia Hân duy trì nhịp học ổn định 5 ngày liên tiếp | Tiếp tục giữ lịch học và nghỉ ngơi hiện tại"
-  },
-  {
-    "studentId": "student_002",
-    "date": "2026-03-20",
-    "durationMin": 75,
-    "sessionStart": "20:00:00",
-    "sessionEnd": "21:15:00",
-    "studied": true,
-    "streakDay": 5,
-    "scoreDelta": 0.0,
-    "activities": ["writing_revision"],
-    "moodNote": "low: Gia Hân duy trì nhịp học ổn định 5 ngày liên tiếp | Tiếp tục giữ lịch học và nghỉ ngơi hiện tại"
+    "scoreDelta": 0.2,
+    "activities": [
+      "reading",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Võ Minh Trang học đều 3 ngày gần đây | Tiếp tục theo dõi"
   },
   {
     "studentId": "student_003",
-    "date": "2026-03-17",
-    "durationMin": 70,
+    "date": "2026-03-14",
+    "durationMin": 82,
+    "sessionStart": "20:29:00",
+    "sessionEnd": "21:51:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "university_research",
+      "application_planning",
+      "sat_verbal"
+    ],
+    "moodNote": "high: Lê Tuấn Ngân vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_003",
+    "date": "2026-03-16",
+    "durationMin": 54,
     "sessionStart": "20:10:00",
-    "sessionEnd": "21:20:00",
+    "sessionEnd": "20:04:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_outline",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Lê Tuấn Ngân học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_003",
+    "date": "2026-03-20",
+    "durationMin": 83,
+    "sessionStart": "20:36:00",
+    "sessionEnd": "21:59:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Lê Tuấn Ngân học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_004",
+    "date": "2026-03-14",
+    "durationMin": 105,
+    "sessionStart": "20:05:00",
+    "sessionEnd": "21:50:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_math",
+      "sat_verbal",
+      "essay_outline"
+    ],
+    "moodNote": "high: Phạm Bích Bảo vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_004",
+    "date": "2026-03-16",
+    "durationMin": 40,
+    "sessionStart": "20:24:00",
+    "sessionEnd": "20:04:00",
     "studied": true,
     "streakDay": 2,
     "scoreDelta": 0.0,
-    "activities": ["sat_verbal", "essay_outline"],
-    "moodNote": "medium: Quang Duy giảm thời lượng học 2 ngày gần đây do tập trung hoạt động ngoại khóa | Nhắc con quay lại lịch SAT cuối tuần"
+    "activities": [
+      "essay_revision",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Phạm Bích Bảo học đều 2 ngày gần đây | Tiếp tục theo dõi"
   },
   {
-    "studentId": "student_003",
+    "studentId": "student_004",
+    "date": "2026-03-17",
+    "durationMin": 113,
+    "sessionStart": "18:16:00",
+    "sessionEnd": "19:09:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_outline",
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Phạm Bích Bảo học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_005",
+    "date": "2026-03-09",
+    "durationMin": 60,
+    "sessionStart": "21:43:00",
+    "sessionEnd": "22:43:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "ielts_mock",
+      "writing_practice",
+      "essay_revision"
+    ],
+    "moodNote": "high: Dương Bích Bảo vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_005",
+    "date": "2026-03-18",
+    "durationMin": 57,
+    "sessionStart": "21:09:00",
+    "sessionEnd": "21:06:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_review",
+      "writing_task_1",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Dương Bích Bảo học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_005",
+    "date": "2026-03-20",
+    "durationMin": 100,
+    "sessionStart": "22:51:00",
+    "sessionEnd": "23:31:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Dương Bích Bảo học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_006",
+    "date": "2026-03-15",
+    "durationMin": 86,
+    "sessionStart": "18:58:00",
+    "sessionEnd": "19:24:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_math"
+    ],
+    "moodNote": "high: Cao Thanh Trang vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_006",
+    "date": "2026-03-16",
+    "durationMin": 61,
+    "sessionStart": "20:54:00",
+    "sessionEnd": "21:55:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_math",
+      "essay_outline"
+    ],
+    "moodNote": "medium: Cao Thanh Trang học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_006",
+    "date": "2026-03-16",
+    "durationMin": 102,
+    "sessionStart": "18:57:00",
+    "sessionEnd": "19:39:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "sat_math"
+    ],
+    "moodNote": "medium: Cao Thanh Trang học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_007",
+    "date": "2026-03-14",
+    "durationMin": 112,
+    "sessionStart": "18:35:00",
+    "sessionEnd": "19:27:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "sat_mock",
+      "sat_math"
+    ],
+    "moodNote": "high: Cao Bích Thảo vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_007",
+    "date": "2026-03-14",
+    "durationMin": 67,
+    "sessionStart": "22:04:00",
+    "sessionEnd": "23:11:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock",
+      "essay_outline"
+    ],
+    "moodNote": "medium: Cao Bích Thảo học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_007",
     "date": "2026-03-19",
-    "durationMin": 65,
-    "sessionStart": "19:30:00",
-    "sessionEnd": "20:35:00",
+    "durationMin": 48,
+    "sessionStart": "21:02:00",
+    "sessionEnd": "21:50:00",
     "studied": true,
     "streakDay": 3,
     "scoreDelta": 0.0,
-    "activities": ["application_planning"],
-    "moodNote": "medium: Quang Duy giảm thời lượng học 2 ngày gần đây do tập trung hoạt động ngoại khóa | Nhắc con quay lại lịch SAT cuối tuần"
+    "activities": [
+      "sat_verbal",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Cao Bích Thảo học đều 3 ngày gần đây | Tiếp tục theo dõi"
   },
   {
-    "studentId": "student_003",
-    "date": "2026-03-21",
-    "durationMin": 95,
-    "sessionStart": "20:30:00",
-    "sessionEnd": "22:05:00",
+    "studentId": "student_008",
+    "date": "2026-03-16",
+    "durationMin": 87,
+    "sessionStart": "21:28:00",
+    "sessionEnd": "22:55:00",
     "studied": true,
-    "streakDay": 4,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_2",
+      "writing_practice"
+    ],
+    "moodNote": "high: Đinh Thành Yến vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_008",
+    "date": "2026-03-19",
+    "durationMin": 55,
+    "sessionStart": "19:34:00",
+    "sessionEnd": "19:29:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening",
+      "speaking_mock",
+      "reading"
+    ],
+    "moodNote": "medium: Đinh Thành Yến học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_008",
+    "date": "2026-03-21",
+    "durationMin": 78,
+    "sessionStart": "21:43:00",
+    "sessionEnd": "22:01:00",
+    "studied": false,
+    "streakDay": 0,
     "scoreDelta": 0.2,
-    "activities": ["sat_math", "university_research"],
-    "moodNote": "medium: Quang Duy giảm thời lượng học 2 ngày gần đây do tập trung hoạt động ngoại khóa | Nhắc con quay lại lịch SAT cuối tuần"
+    "activities": [
+      "writing_task_2",
+      "vocabulary",
+      "essay_revision"
+    ],
+    "moodNote": "high: Đinh Thành Yến vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_009",
+    "date": "2026-03-11",
+    "durationMin": 64,
+    "sessionStart": "23:48:00",
+    "sessionEnd": "00:52:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "medium: Đinh Khánh Quỳnh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_009",
+    "date": "2026-03-17",
+    "durationMin": 42,
+    "sessionStart": "19:13:00",
+    "sessionEnd": "19:55:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_review"
+    ],
+    "moodNote": "medium: Đinh Khánh Quỳnh học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_009",
+    "date": "2026-03-15",
+    "durationMin": 46,
+    "sessionStart": "19:47:00",
+    "sessionEnd": "19:33:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_revision",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Đinh Khánh Quỳnh học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_010",
+    "date": "2026-03-17",
+    "durationMin": 47,
+    "sessionStart": "19:32:00",
+    "sessionEnd": "19:19:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "high: Lý Hà Duy vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_010",
+    "date": "2026-03-16",
+    "durationMin": 81,
+    "sessionStart": "19:19:00",
+    "sessionEnd": "20:40:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "university_research",
+      "sat_verbal",
+      "application_planning"
+    ],
+    "moodNote": "medium: Lý Hà Duy học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_010",
+    "date": "2026-03-17",
+    "durationMin": 111,
+    "sessionStart": "22:56:00",
+    "sessionEnd": "23:47:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_outline"
+    ],
+    "moodNote": "medium: Lý Hà Duy học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_011",
+    "date": "2026-03-13",
+    "durationMin": 84,
+    "sessionStart": "23:42:00",
+    "sessionEnd": "00:06:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_mock",
+      "essay_outline",
+      "application_planning"
+    ],
+    "moodNote": "medium: Tô Thị Bảo học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_011",
+    "date": "2026-03-15",
+    "durationMin": 63,
+    "sessionStart": "22:30:00",
+    "sessionEnd": "23:33:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock"
+    ],
+    "moodNote": "medium: Tô Thị Bảo học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_011",
+    "date": "2026-03-16",
+    "durationMin": 47,
+    "sessionStart": "22:26:00",
+    "sessionEnd": "22:13:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "university_research",
+      "sat_verbal",
+      "application_planning"
+    ],
+    "moodNote": "medium: Tô Thị Bảo học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_012",
+    "date": "2026-03-12",
+    "durationMin": 97,
+    "sessionStart": "20:05:00",
+    "sessionEnd": "21:42:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "speaking_mock",
+      "reading",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Vũ Đức Hân vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_012",
+    "date": "2026-03-17",
+    "durationMin": 45,
+    "sessionStart": "18:12:00",
+    "sessionEnd": "18:57:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "essay_revision",
+      "vocabulary",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Vũ Đức Hân học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_012",
+    "date": "2026-03-18",
+    "durationMin": 82,
+    "sessionStart": "20:58:00",
+    "sessionEnd": "21:20:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Vũ Đức Hân học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_013",
+    "date": "2026-03-16",
+    "durationMin": 101,
+    "sessionStart": "19:44:00",
+    "sessionEnd": "20:25:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_verbal",
+      "application_planning",
+      "essay_revision"
+    ],
+    "moodNote": "high: Bùi Quang Đức vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_013",
+    "date": "2026-03-18",
+    "durationMin": 99,
+    "sessionStart": "22:41:00",
+    "sessionEnd": "23:20:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Bùi Quang Đức học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_013",
+    "date": "2026-03-18",
+    "durationMin": 100,
+    "sessionStart": "20:58:00",
+    "sessionEnd": "21:38:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock",
+      "application_planning"
+    ],
+    "moodNote": "medium: Bùi Quang Đức học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_014",
+    "date": "2026-03-15",
+    "durationMin": 58,
+    "sessionStart": "18:16:00",
+    "sessionEnd": "18:14:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_review",
+      "writing_task_2",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Ngô Kim Mai vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_014",
+    "date": "2026-03-15",
+    "durationMin": 88,
+    "sessionStart": "22:53:00",
+    "sessionEnd": "23:21:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "vocabulary",
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Ngô Kim Mai học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_014",
+    "date": "2026-03-21",
+    "durationMin": 102,
+    "sessionStart": "21:10:00",
+    "sessionEnd": "22:52:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "listening",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Ngô Kim Mai học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_015",
+    "date": "2026-03-14",
+    "durationMin": 109,
+    "sessionStart": "23:03:00",
+    "sessionEnd": "00:52:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "writing_practice"
+    ],
+    "moodNote": "medium: Hoàng Phương Khôi học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_015",
+    "date": "2026-03-14",
+    "durationMin": 92,
+    "sessionStart": "19:53:00",
+    "sessionEnd": "20:25:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_practice"
+    ],
+    "moodNote": "medium: Hoàng Phương Khôi học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_015",
+    "date": "2026-03-20",
+    "durationMin": 67,
+    "sessionStart": "22:29:00",
+    "sessionEnd": "23:36:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_review"
+    ],
+    "moodNote": "medium: Hoàng Phương Khôi học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_016",
+    "date": "2026-03-14",
+    "durationMin": 42,
+    "sessionStart": "18:34:00",
+    "sessionEnd": "18:16:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_math",
+      "essay_revision"
+    ],
+    "moodNote": "high: Ngô Hoài Hương vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_016",
+    "date": "2026-03-18",
+    "durationMin": 42,
+    "sessionStart": "22:52:00",
+    "sessionEnd": "22:34:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "application_planning",
+      "sat_verbal",
+      "sat_math"
+    ],
+    "moodNote": "medium: Ngô Hoài Hương học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_016",
+    "date": "2026-03-19",
+    "durationMin": 64,
+    "sessionStart": "22:33:00",
+    "sessionEnd": "23:37:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock",
+      "application_planning"
+    ],
+    "moodNote": "medium: Ngô Hoài Hương học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_017",
+    "date": "2026-03-13",
+    "durationMin": 68,
+    "sessionStart": "20:43:00",
+    "sessionEnd": "21:51:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "high: Hoàng Văn Ngân vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_017",
+    "date": "2026-03-13",
+    "durationMin": 88,
+    "sessionStart": "22:30:00",
+    "sessionEnd": "23:58:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "reading",
+      "listening",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Hoàng Văn Ngân học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_017",
+    "date": "2026-03-21",
+    "durationMin": 82,
+    "sessionStart": "22:54:00",
+    "sessionEnd": "23:16:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "reading",
+      "speaking_mock",
+      "essay_review"
+    ],
+    "moodNote": "medium: Hoàng Văn Ngân học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_018",
+    "date": "2026-03-13",
+    "durationMin": 49,
+    "sessionStart": "23:59:00",
+    "sessionEnd": "23:48:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_review",
+      "reading",
+      "listening"
+    ],
+    "moodNote": "medium: Lê Tú Hân học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_018",
+    "date": "2026-03-13",
+    "durationMin": 115,
+    "sessionStart": "19:48:00",
+    "sessionEnd": "20:43:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_2",
+      "writing_practice",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Lê Tú Hân vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_018",
+    "date": "2026-03-19",
+    "durationMin": 89,
+    "sessionStart": "23:57:00",
+    "sessionEnd": "00:26:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "writing_task_2",
+      "listening"
+    ],
+    "moodNote": "medium: Lê Tú Hân học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_019",
+    "date": "2026-03-15",
+    "durationMin": 84,
+    "sessionStart": "18:06:00",
+    "sessionEnd": "19:30:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "high: Võ Văn Nhi vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_019",
+    "date": "2026-03-14",
+    "durationMin": 118,
+    "sessionStart": "22:25:00",
+    "sessionEnd": "23:23:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_math",
+      "essay_outline"
+    ],
+    "moodNote": "medium: Võ Văn Nhi học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_019",
+    "date": "2026-03-21",
+    "durationMin": 102,
+    "sessionStart": "19:22:00",
+    "sessionEnd": "20:04:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "application_planning",
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Võ Văn Nhi học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_020",
+    "date": "2026-03-16",
+    "durationMin": 119,
+    "sessionStart": "20:51:00",
+    "sessionEnd": "21:50:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_math",
+      "essay_revision",
+      "sat_mock"
+    ],
+    "moodNote": "high: Lê Tuấn Trang vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_020",
+    "date": "2026-03-17",
+    "durationMin": 59,
+    "sessionStart": "23:24:00",
+    "sessionEnd": "23:23:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_math",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Lê Tuấn Trang học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_020",
+    "date": "2026-03-17",
+    "durationMin": 74,
+    "sessionStart": "18:08:00",
+    "sessionEnd": "19:22:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "application_planning"
+    ],
+    "moodNote": "medium: Lê Tuấn Trang học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_021",
+    "date": "2026-03-14",
+    "durationMin": 53,
+    "sessionStart": "18:05:00",
+    "sessionEnd": "18:58:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "essay_review",
+      "writing_task_1"
+    ],
+    "moodNote": "high: Phạm Minh Bảo vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_021",
+    "date": "2026-03-14",
+    "durationMin": 89,
+    "sessionStart": "18:46:00",
+    "sessionEnd": "19:15:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_review"
+    ],
+    "moodNote": "medium: Phạm Minh Bảo học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_021",
+    "date": "2026-03-19",
+    "durationMin": 88,
+    "sessionStart": "19:08:00",
+    "sessionEnd": "20:36:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "ielts_mock",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Phạm Minh Bảo học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_022",
+    "date": "2026-03-10",
+    "durationMin": 93,
+    "sessionStart": "20:30:00",
+    "sessionEnd": "21:03:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_1"
+    ],
+    "moodNote": "high: Ngô Thành Anh vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_022",
+    "date": "2026-03-13",
+    "durationMin": 103,
+    "sessionStart": "22:39:00",
+    "sessionEnd": "23:22:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "listening"
+    ],
+    "moodNote": "medium: Ngô Thành Anh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_022",
+    "date": "2026-03-15",
+    "durationMin": 82,
+    "sessionStart": "22:24:00",
+    "sessionEnd": "23:46:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_revision",
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Ngô Thành Anh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_023",
+    "date": "2026-03-12",
+    "durationMin": 117,
+    "sessionStart": "23:12:00",
+    "sessionEnd": "00:09:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Cao Tuấn Linh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_023",
+    "date": "2026-03-16",
+    "durationMin": 102,
+    "sessionStart": "22:50:00",
+    "sessionEnd": "23:32:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_2",
+      "ielts_mock"
+    ],
+    "moodNote": "medium: Cao Tuấn Linh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_023",
+    "date": "2026-03-17",
+    "durationMin": 112,
+    "sessionStart": "19:37:00",
+    "sessionEnd": "20:29:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "medium: Cao Tuấn Linh học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_024",
+    "date": "2026-03-16",
+    "durationMin": 66,
+    "sessionStart": "21:51:00",
+    "sessionEnd": "22:57:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "writing_task_2",
+      "writing_revision"
+    ],
+    "moodNote": "high: Lưu Minh Trinh vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_024",
+    "date": "2026-03-17",
+    "durationMin": 72,
+    "sessionStart": "23:09:00",
+    "sessionEnd": "00:21:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_task_2",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Lưu Minh Trinh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_024",
+    "date": "2026-03-19",
+    "durationMin": 91,
+    "sessionStart": "22:32:00",
+    "sessionEnd": "23:03:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_2",
+      "vocabulary",
+      "reading"
+    ],
+    "moodNote": "medium: Lưu Minh Trinh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_025",
+    "date": "2026-03-15",
+    "durationMin": 50,
+    "sessionStart": "18:49:00",
+    "sessionEnd": "18:39:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision",
+      "writing_task_1",
+      "listening"
+    ],
+    "moodNote": "high: Trần Hoài Hải vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_025",
+    "date": "2026-03-18",
+    "durationMin": 91,
+    "sessionStart": "20:50:00",
+    "sessionEnd": "21:21:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "reading"
+    ],
+    "moodNote": "medium: Trần Hoài Hải học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_025",
+    "date": "2026-03-15",
+    "durationMin": 105,
+    "sessionStart": "23:33:00",
+    "sessionEnd": "00:18:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_review",
+      "speaking_mock",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Trần Hoài Hải học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_026",
+    "date": "2026-03-16",
+    "durationMin": 104,
+    "sessionStart": "19:22:00",
+    "sessionEnd": "20:06:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Tô Thanh Minh vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_026",
+    "date": "2026-03-13",
+    "durationMin": 58,
+    "sessionStart": "20:19:00",
+    "sessionEnd": "20:17:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "speaking_mock",
+      "vocabulary"
+    ],
+    "moodNote": "medium: Tô Thanh Minh học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_026",
+    "date": "2026-03-18",
+    "durationMin": 52,
+    "sessionStart": "21:46:00",
+    "sessionEnd": "21:38:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_task_1",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Tô Thanh Minh học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_027",
+    "date": "2026-03-16",
+    "durationMin": 42,
+    "sessionStart": "20:41:00",
+    "sessionEnd": "20:23:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening",
+      "speaking_mock",
+      "vocabulary"
+    ],
+    "moodNote": "high: Võ Gia Khang vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_027",
+    "date": "2026-03-16",
+    "durationMin": 111,
+    "sessionStart": "21:29:00",
+    "sessionEnd": "22:20:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision",
+      "listening"
+    ],
+    "moodNote": "medium: Võ Gia Khang học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_027",
+    "date": "2026-03-16",
+    "durationMin": 95,
+    "sessionStart": "21:01:00",
+    "sessionEnd": "22:36:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "speaking_mock",
+      "writing_revision",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Võ Gia Khang học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_028",
+    "date": "2026-03-15",
+    "durationMin": 75,
+    "sessionStart": "23:51:00",
+    "sessionEnd": "00:06:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "essay_review"
+    ],
+    "moodNote": "medium: Đặng Trung Ngân học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_028",
+    "date": "2026-03-18",
+    "durationMin": 63,
+    "sessionStart": "20:20:00",
+    "sessionEnd": "21:23:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "ielts_mock"
+    ],
+    "moodNote": "medium: Đặng Trung Ngân học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_028",
+    "date": "2026-03-20",
+    "durationMin": 107,
+    "sessionStart": "23:20:00",
+    "sessionEnd": "00:07:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_review",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Đặng Trung Ngân học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_029",
+    "date": "2026-03-11",
+    "durationMin": 119,
+    "sessionStart": "19:52:00",
+    "sessionEnd": "20:51:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_revision",
+      "sat_mock",
+      "university_research"
+    ],
+    "moodNote": "high: Hồ Tuấn Đạt vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_029",
+    "date": "2026-03-18",
+    "durationMin": 55,
+    "sessionStart": "19:19:00",
+    "sessionEnd": "19:14:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock"
+    ],
+    "moodNote": "medium: Hồ Tuấn Đạt học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_029",
+    "date": "2026-03-20",
+    "durationMin": 89,
+    "sessionStart": "21:38:00",
+    "sessionEnd": "22:07:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "application_planning",
+      "essay_revision",
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Hồ Tuấn Đạt học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_030",
+    "date": "2026-03-14",
+    "durationMin": 62,
+    "sessionStart": "22:10:00",
+    "sessionEnd": "23:12:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Đặng Trung Nhi học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_030",
+    "date": "2026-03-20",
+    "durationMin": 46,
+    "sessionStart": "20:00:00",
+    "sessionEnd": "20:46:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Đặng Trung Nhi học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_030",
+    "date": "2026-03-21",
+    "durationMin": 111,
+    "sessionStart": "22:41:00",
+    "sessionEnd": "23:32:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Đặng Trung Nhi học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_031",
+    "date": "2026-03-14",
+    "durationMin": 112,
+    "sessionStart": "18:50:00",
+    "sessionEnd": "19:42:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_mock"
+    ],
+    "moodNote": "high: Lưu Quang Tuấn vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_031",
+    "date": "2026-03-15",
+    "durationMin": 76,
+    "sessionStart": "19:49:00",
+    "sessionEnd": "20:05:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_outline",
+      "application_planning",
+      "university_research"
+    ],
+    "moodNote": "medium: Lưu Quang Tuấn học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_031",
+    "date": "2026-03-19",
+    "durationMin": 54,
+    "sessionStart": "20:49:00",
+    "sessionEnd": "20:43:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "university_research",
+      "sat_math"
+    ],
+    "moodNote": "medium: Lưu Quang Tuấn học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_032",
+    "date": "2026-03-15",
+    "durationMin": 94,
+    "sessionStart": "18:47:00",
+    "sessionEnd": "19:21:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "speaking_mock",
+      "ielts_mock",
+      "reading"
+    ],
+    "moodNote": "high: Trần Tuấn Hải vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_032",
+    "date": "2026-03-15",
+    "durationMin": 51,
+    "sessionStart": "21:55:00",
+    "sessionEnd": "21:46:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Trần Tuấn Hải học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_032",
+    "date": "2026-03-21",
+    "durationMin": 84,
+    "sessionStart": "23:39:00",
+    "sessionEnd": "00:03:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "listening",
+      "essay_review"
+    ],
+    "moodNote": "medium: Trần Tuấn Hải học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_033",
+    "date": "2026-03-15",
+    "durationMin": 84,
+    "sessionStart": "22:17:00",
+    "sessionEnd": "23:41:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening",
+      "writing_task_1",
+      "ielts_mock"
+    ],
+    "moodNote": "medium: Lý Xuân Bảo học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_033",
+    "date": "2026-03-16",
+    "durationMin": 105,
+    "sessionStart": "23:52:00",
+    "sessionEnd": "00:37:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Lý Xuân Bảo học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_033",
+    "date": "2026-03-17",
+    "durationMin": 56,
+    "sessionStart": "23:55:00",
+    "sessionEnd": "23:51:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening"
+    ],
+    "moodNote": "medium: Lý Xuân Bảo học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_034",
+    "date": "2026-03-16",
+    "durationMin": 90,
+    "sessionStart": "21:09:00",
+    "sessionEnd": "22:39:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "ielts_mock",
+      "writing_task_2",
+      "essay_review"
+    ],
+    "moodNote": "high: Hoàng Minh Hải vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_034",
+    "date": "2026-03-12",
+    "durationMin": 51,
+    "sessionStart": "21:32:00",
+    "sessionEnd": "21:23:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_task_1",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Hoàng Minh Hải học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_034",
+    "date": "2026-03-18",
+    "durationMin": 40,
+    "sessionStart": "23:05:00",
+    "sessionEnd": "23:45:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_revision",
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Hoàng Minh Hải học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_035",
+    "date": "2026-03-12",
+    "durationMin": 67,
+    "sessionStart": "21:17:00",
+    "sessionEnd": "22:24:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_1",
+      "vocabulary"
+    ],
+    "moodNote": "high: Nguyễn Kim Ngân vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_035",
+    "date": "2026-03-17",
+    "durationMin": 83,
+    "sessionStart": "23:48:00",
+    "sessionEnd": "00:11:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice"
+    ],
+    "moodNote": "medium: Nguyễn Kim Ngân học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_035",
+    "date": "2026-03-21",
+    "durationMin": 42,
+    "sessionStart": "18:59:00",
+    "sessionEnd": "18:41:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_revision"
+    ],
+    "moodNote": "medium: Nguyễn Kim Ngân học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_036",
+    "date": "2026-03-13",
+    "durationMin": 56,
+    "sessionStart": "23:19:00",
+    "sessionEnd": "23:15:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Huỳnh Xuân Trinh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_036",
+    "date": "2026-03-12",
+    "durationMin": 61,
+    "sessionStart": "18:25:00",
+    "sessionEnd": "19:26:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "speaking_mock",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Huỳnh Xuân Trinh học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_036",
+    "date": "2026-03-20",
+    "durationMin": 52,
+    "sessionStart": "18:13:00",
+    "sessionEnd": "18:05:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening"
+    ],
+    "moodNote": "high: Huỳnh Xuân Trinh vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_037",
+    "date": "2026-03-14",
+    "durationMin": 83,
+    "sessionStart": "18:55:00",
+    "sessionEnd": "19:18:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening",
+      "writing_revision",
+      "writing_practice"
+    ],
+    "moodNote": "high: Phan Xuân Phúc vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_037",
+    "date": "2026-03-17",
+    "durationMin": 53,
+    "sessionStart": "18:20:00",
+    "sessionEnd": "18:13:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening",
+      "writing_task_2"
+    ],
+    "moodNote": "high: Phan Xuân Phúc vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_037",
+    "date": "2026-03-20",
+    "durationMin": 58,
+    "sessionStart": "18:33:00",
+    "sessionEnd": "18:31:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_review"
+    ],
+    "moodNote": "high: Phan Xuân Phúc vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_038",
+    "date": "2026-03-15",
+    "durationMin": 59,
+    "sessionStart": "21:39:00",
+    "sessionEnd": "21:38:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_revision",
+      "sat_verbal"
+    ],
+    "moodNote": "high: Trần Hà Hải vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_038",
+    "date": "2026-03-13",
+    "durationMin": 55,
+    "sessionStart": "22:46:00",
+    "sessionEnd": "22:41:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "application_planning",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Trần Hà Hải học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_038",
+    "date": "2026-03-16",
+    "durationMin": 50,
+    "sessionStart": "19:35:00",
+    "sessionEnd": "19:25:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_outline",
+      "university_research",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Trần Hà Hải học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_039",
+    "date": "2026-03-17",
+    "durationMin": 78,
+    "sessionStart": "19:33:00",
+    "sessionEnd": "20:51:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "speaking_mock",
+      "writing_task_2",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Huỳnh Ngọc Duy vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_039",
+    "date": "2026-03-18",
+    "durationMin": 70,
+    "sessionStart": "21:24:00",
+    "sessionEnd": "22:34:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_revision"
+    ],
+    "moodNote": "medium: Huỳnh Ngọc Duy học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_039",
+    "date": "2026-03-20",
+    "durationMin": 107,
+    "sessionStart": "18:23:00",
+    "sessionEnd": "19:10:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Huỳnh Ngọc Duy học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_040",
+    "date": "2026-03-13",
+    "durationMin": 62,
+    "sessionStart": "21:49:00",
+    "sessionEnd": "22:51:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_review"
+    ],
+    "moodNote": "high: Cao Gia Thảo vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_040",
+    "date": "2026-03-13",
+    "durationMin": 45,
+    "sessionStart": "18:50:00",
+    "sessionEnd": "18:35:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "ielts_mock",
+      "vocabulary",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Cao Gia Thảo học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_040",
+    "date": "2026-03-18",
+    "durationMin": 50,
+    "sessionStart": "23:34:00",
+    "sessionEnd": "23:24:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening",
+      "ielts_mock",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Cao Gia Thảo học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_041",
+    "date": "2026-03-10",
+    "durationMin": 59,
+    "sessionStart": "22:20:00",
+    "sessionEnd": "22:19:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "writing_practice",
+      "ielts_mock"
+    ],
+    "moodNote": "medium: Ngô Thị Trâm học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_041",
+    "date": "2026-03-17",
+    "durationMin": 70,
+    "sessionStart": "18:15:00",
+    "sessionEnd": "19:25:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Ngô Thị Trâm học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_041",
+    "date": "2026-03-19",
+    "durationMin": 79,
+    "sessionStart": "23:47:00",
+    "sessionEnd": "00:06:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "listening",
+      "writing_practice",
+      "reading"
+    ],
+    "moodNote": "medium: Ngô Thị Trâm học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_042",
+    "date": "2026-03-09",
+    "durationMin": 84,
+    "sessionStart": "22:33:00",
+    "sessionEnd": "23:57:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "ielts_mock",
+      "listening",
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Dương Anh Thy học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_042",
+    "date": "2026-03-19",
+    "durationMin": 74,
+    "sessionStart": "23:56:00",
+    "sessionEnd": "00:10:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Dương Anh Thy học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_042",
+    "date": "2026-03-17",
+    "durationMin": 73,
+    "sessionStart": "23:36:00",
+    "sessionEnd": "00:49:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_revision"
+    ],
+    "moodNote": "medium: Dương Anh Thy học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_043",
+    "date": "2026-03-11",
+    "durationMin": 112,
+    "sessionStart": "19:23:00",
+    "sessionEnd": "20:15:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision",
+      "sat_math"
+    ],
+    "moodNote": "high: Tô Hà Đức vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_043",
+    "date": "2026-03-14",
+    "durationMin": 40,
+    "sessionStart": "18:54:00",
+    "sessionEnd": "18:34:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Tô Hà Đức học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_043",
+    "date": "2026-03-15",
+    "durationMin": 89,
+    "sessionStart": "19:11:00",
+    "sessionEnd": "20:40:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "university_research"
+    ],
+    "moodNote": "medium: Tô Hà Đức học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_044",
+    "date": "2026-03-16",
+    "durationMin": 81,
+    "sessionStart": "19:26:00",
+    "sessionEnd": "20:47:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "ielts_mock",
+      "writing_practice"
+    ],
+    "moodNote": "high: Hồ Đức Ngân vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_044",
+    "date": "2026-03-14",
+    "durationMin": 46,
+    "sessionStart": "19:14:00",
+    "sessionEnd": "19:00:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "reading",
+      "writing_task_2",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Hồ Đức Ngân học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_044",
+    "date": "2026-03-18",
+    "durationMin": 79,
+    "sessionStart": "20:05:00",
+    "sessionEnd": "21:24:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "reading",
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Hồ Đức Ngân học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_045",
+    "date": "2026-03-13",
+    "durationMin": 119,
+    "sessionStart": "19:29:00",
+    "sessionEnd": "20:28:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "application_planning",
+      "sat_verbal",
+      "university_research"
+    ],
+    "moodNote": "high: Đặng Thành Hải vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_045",
+    "date": "2026-03-14",
+    "durationMin": 92,
+    "sessionStart": "18:14:00",
+    "sessionEnd": "19:46:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_outline",
+      "essay_revision"
+    ],
+    "moodNote": "high: Đặng Thành Hải vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_045",
+    "date": "2026-03-17",
+    "durationMin": 88,
+    "sessionStart": "23:46:00",
+    "sessionEnd": "00:14:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Đặng Thành Hải học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_046",
+    "date": "2026-03-12",
+    "durationMin": 58,
+    "sessionStart": "23:17:00",
+    "sessionEnd": "23:15:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Vũ Kim Khôi học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_046",
+    "date": "2026-03-16",
+    "durationMin": 87,
+    "sessionStart": "21:47:00",
+    "sessionEnd": "22:14:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "vocabulary",
+      "listening"
+    ],
+    "moodNote": "medium: Vũ Kim Khôi học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_046",
+    "date": "2026-03-20",
+    "durationMin": 49,
+    "sessionStart": "22:36:00",
+    "sessionEnd": "22:25:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision",
+      "listening"
+    ],
+    "moodNote": "medium: Vũ Kim Khôi học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_047",
+    "date": "2026-03-16",
+    "durationMin": 90,
+    "sessionStart": "23:53:00",
+    "sessionEnd": "00:23:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "sat_mock",
+      "application_planning"
+    ],
+    "moodNote": "medium: Nguyễn Anh Ngân học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_047",
+    "date": "2026-03-14",
+    "durationMin": 65,
+    "sessionStart": "19:49:00",
+    "sessionEnd": "20:54:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_math",
+      "sat_verbal",
+      "essay_revision"
+    ],
+    "moodNote": "high: Nguyễn Anh Ngân vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_047",
+    "date": "2026-03-18",
+    "durationMin": 92,
+    "sessionStart": "18:34:00",
+    "sessionEnd": "19:06:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "application_planning"
+    ],
+    "moodNote": "high: Nguyễn Anh Ngân vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_048",
+    "date": "2026-03-16",
+    "durationMin": 60,
+    "sessionStart": "23:19:00",
+    "sessionEnd": "00:19:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "essay_review",
+      "reading",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Hoàng Minh Loan học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_048",
+    "date": "2026-03-14",
+    "durationMin": 71,
+    "sessionStart": "20:25:00",
+    "sessionEnd": "21:36:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "high: Hoàng Minh Loan vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_048",
+    "date": "2026-03-17",
+    "durationMin": 62,
+    "sessionStart": "18:25:00",
+    "sessionEnd": "19:27:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "vocabulary",
+      "essay_revision"
+    ],
+    "moodNote": "high: Hoàng Minh Loan vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_049",
+    "date": "2026-03-09",
+    "durationMin": 57,
+    "sessionStart": "18:00:00",
+    "sessionEnd": "18:57:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening"
+    ],
+    "moodNote": "high: Cao Phương Ngân vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_049",
+    "date": "2026-03-19",
+    "durationMin": 120,
+    "sessionStart": "23:05:00",
+    "sessionEnd": "01:05:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "ielts_mock",
+      "writing_practice",
+      "reading"
+    ],
+    "moodNote": "medium: Cao Phương Ngân học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_049",
+    "date": "2026-03-16",
+    "durationMin": 96,
+    "sessionStart": "19:05:00",
+    "sessionEnd": "20:41:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_practice",
+      "reading"
+    ],
+    "moodNote": "medium: Cao Phương Ngân học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_050",
+    "date": "2026-03-11",
+    "durationMin": 95,
+    "sessionStart": "23:25:00",
+    "sessionEnd": "00:00:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Nguyễn Phương Tuấn học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_050",
+    "date": "2026-03-15",
+    "durationMin": 67,
+    "sessionStart": "19:17:00",
+    "sessionEnd": "20:24:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening",
+      "reading"
+    ],
+    "moodNote": "medium: Nguyễn Phương Tuấn học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_050",
+    "date": "2026-03-19",
+    "durationMin": 71,
+    "sessionStart": "23:18:00",
+    "sessionEnd": "00:29:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "vocabulary",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Nguyễn Phương Tuấn học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_051",
+    "date": "2026-03-12",
+    "durationMin": 65,
+    "sessionStart": "23:56:00",
+    "sessionEnd": "00:01:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_verbal",
+      "essay_outline",
+      "university_research"
+    ],
+    "moodNote": "medium: Ngô Khánh Yến học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_051",
+    "date": "2026-03-16",
+    "durationMin": 85,
+    "sessionStart": "21:34:00",
+    "sessionEnd": "22:59:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_mock",
+      "university_research"
+    ],
+    "moodNote": "medium: Ngô Khánh Yến học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_051",
+    "date": "2026-03-19",
+    "durationMin": 74,
+    "sessionStart": "19:01:00",
+    "sessionEnd": "20:15:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_verbal",
+      "sat_math",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Ngô Khánh Yến học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_052",
+    "date": "2026-03-13",
+    "durationMin": 114,
+    "sessionStart": "19:10:00",
+    "sessionEnd": "20:04:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "high: Hồ Thành Đức vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_052",
+    "date": "2026-03-15",
+    "durationMin": 47,
+    "sessionStart": "19:36:00",
+    "sessionEnd": "19:23:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_1",
+      "listening"
+    ],
+    "moodNote": "medium: Hồ Thành Đức học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_052",
+    "date": "2026-03-16",
+    "durationMin": 80,
+    "sessionStart": "23:44:00",
+    "sessionEnd": "00:04:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "reading",
+      "writing_task_1",
+      "listening"
+    ],
+    "moodNote": "medium: Hồ Thành Đức học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_053",
+    "date": "2026-03-13",
+    "durationMin": 102,
+    "sessionStart": "18:05:00",
+    "sessionEnd": "19:47:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_review"
+    ],
+    "moodNote": "high: Huỳnh Hoài Đức vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_053",
+    "date": "2026-03-13",
+    "durationMin": 40,
+    "sessionStart": "20:58:00",
+    "sessionEnd": "20:38:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening"
+    ],
+    "moodNote": "medium: Huỳnh Hoài Đức học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_053",
+    "date": "2026-03-17",
+    "durationMin": 81,
+    "sessionStart": "18:01:00",
+    "sessionEnd": "19:22:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening",
+      "writing_practice",
+      "vocabulary"
+    ],
+    "moodNote": "medium: Huỳnh Hoài Đức học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_054",
+    "date": "2026-03-12",
+    "durationMin": 90,
+    "sessionStart": "22:06:00",
+    "sessionEnd": "23:36:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock",
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Bùi Khánh Quỳnh học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_054",
+    "date": "2026-03-17",
+    "durationMin": 102,
+    "sessionStart": "23:20:00",
+    "sessionEnd": "00:02:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "university_research",
+      "essay_outline",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Bùi Khánh Quỳnh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_054",
+    "date": "2026-03-16",
+    "durationMin": 62,
+    "sessionStart": "21:19:00",
+    "sessionEnd": "22:21:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "sat_mock",
+      "sat_verbal",
+      "essay_outline"
+    ],
+    "moodNote": "medium: Bùi Khánh Quỳnh học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_055",
+    "date": "2026-03-16",
+    "durationMin": 90,
+    "sessionStart": "22:02:00",
+    "sessionEnd": "23:32:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_1",
+      "essay_review",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Hồ Trung Đạt học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_055",
+    "date": "2026-03-16",
+    "durationMin": 103,
+    "sessionStart": "19:21:00",
+    "sessionEnd": "20:04:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Hồ Trung Đạt học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_055",
+    "date": "2026-03-17",
+    "durationMin": 61,
+    "sessionStart": "23:56:00",
+    "sessionEnd": "00:57:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision",
+      "writing_task_1",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Hồ Trung Đạt học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_056",
+    "date": "2026-03-11",
+    "durationMin": 84,
+    "sessionStart": "20:50:00",
+    "sessionEnd": "21:14:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "reading",
+      "essay_revision",
+      "writing_task_2"
+    ],
+    "moodNote": "high: Đặng Xuân Nam vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_056",
+    "date": "2026-03-17",
+    "durationMin": 61,
+    "sessionStart": "21:31:00",
+    "sessionEnd": "22:32:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "vocabulary",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Đặng Xuân Nam học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_056",
+    "date": "2026-03-15",
+    "durationMin": 113,
+    "sessionStart": "23:48:00",
+    "sessionEnd": "00:41:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "listening"
+    ],
+    "moodNote": "medium: Đặng Xuân Nam học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_057",
+    "date": "2026-03-11",
+    "durationMin": 73,
+    "sessionStart": "18:04:00",
+    "sessionEnd": "19:17:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "application_planning"
+    ],
+    "moodNote": "high: Vũ Khánh Tuấn vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_057",
+    "date": "2026-03-17",
+    "durationMin": 51,
+    "sessionStart": "20:38:00",
+    "sessionEnd": "20:29:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_outline",
+      "sat_math"
+    ],
+    "moodNote": "high: Vũ Khánh Tuấn vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_057",
+    "date": "2026-03-20",
+    "durationMin": 95,
+    "sessionStart": "19:03:00",
+    "sessionEnd": "20:38:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_verbal",
+      "essay_revision"
+    ],
+    "moodNote": "high: Vũ Khánh Tuấn vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_058",
+    "date": "2026-03-16",
+    "durationMin": 109,
+    "sessionStart": "20:42:00",
+    "sessionEnd": "21:31:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "speaking_mock",
+      "writing_practice"
+    ],
+    "moodNote": "high: Hồ Văn Trinh vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_058",
+    "date": "2026-03-17",
+    "durationMin": 102,
+    "sessionStart": "19:03:00",
+    "sessionEnd": "20:45:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Hồ Văn Trinh học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_058",
+    "date": "2026-03-15",
+    "durationMin": 120,
+    "sessionStart": "22:30:00",
+    "sessionEnd": "00:30:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "reading"
+    ],
+    "moodNote": "medium: Hồ Văn Trinh học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_059",
+    "date": "2026-03-11",
+    "durationMin": 100,
+    "sessionStart": "18:19:00",
+    "sessionEnd": "19:59:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_revision",
+      "essay_revision"
+    ],
+    "moodNote": "high: Hoàng Xuân Yến vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_059",
+    "date": "2026-03-14",
+    "durationMin": 89,
+    "sessionStart": "19:23:00",
+    "sessionEnd": "20:52:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "listening",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Hoàng Xuân Yến học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_059",
+    "date": "2026-03-15",
+    "durationMin": 99,
+    "sessionStart": "20:14:00",
+    "sessionEnd": "21:53:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "essay_review",
+      "reading"
+    ],
+    "moodNote": "medium: Hoàng Xuân Yến học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_060",
+    "date": "2026-03-14",
+    "durationMin": 84,
+    "sessionStart": "22:26:00",
+    "sessionEnd": "23:50:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": -0.1,
+    "activities": [
+      "speaking_mock",
+      "vocabulary",
+      "reading"
+    ],
+    "moodNote": "medium: Lý Bích Long học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_060",
+    "date": "2026-03-20",
+    "durationMin": 108,
+    "sessionStart": "23:55:00",
+    "sessionEnd": "00:43:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "speaking_mock",
+      "writing_revision",
+      "ielts_mock"
+    ],
+    "moodNote": "medium: Lý Bích Long học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_060",
+    "date": "2026-03-18",
+    "durationMin": 44,
+    "sessionStart": "22:36:00",
+    "sessionEnd": "22:20:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "essay_review",
+      "listening"
+    ],
+    "moodNote": "medium: Lý Bích Long học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_061",
+    "date": "2026-03-11",
+    "durationMin": 64,
+    "sessionStart": "19:02:00",
+    "sessionEnd": "20:06:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_outline"
+    ],
+    "moodNote": "high: Nguyễn Minh Mai vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_061",
+    "date": "2026-03-13",
+    "durationMin": 120,
+    "sessionStart": "19:53:00",
+    "sessionEnd": "21:53:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_mock",
+      "essay_outline"
+    ],
+    "moodNote": "medium: Nguyễn Minh Mai học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_061",
+    "date": "2026-03-21",
+    "durationMin": 89,
+    "sessionStart": "22:25:00",
+    "sessionEnd": "23:54:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Nguyễn Minh Mai học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_062",
+    "date": "2026-03-16",
+    "durationMin": 115,
+    "sessionStart": "22:50:00",
+    "sessionEnd": "23:45:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "application_planning"
+    ],
+    "moodNote": "medium: Bùi Hoài Quỳnh học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_062",
+    "date": "2026-03-13",
+    "durationMin": 114,
+    "sessionStart": "18:59:00",
+    "sessionEnd": "19:53:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision",
+      "sat_math",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Bùi Hoài Quỳnh học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_062",
+    "date": "2026-03-21",
+    "durationMin": 84,
+    "sessionStart": "21:16:00",
+    "sessionEnd": "22:40:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "application_planning",
+      "university_research",
+      "essay_outline"
+    ],
+    "moodNote": "medium: Bùi Hoài Quỳnh học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_063",
+    "date": "2026-03-11",
+    "durationMin": 58,
+    "sessionStart": "22:38:00",
+    "sessionEnd": "22:36:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_task_2",
+      "reading",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Nguyễn Gia Phúc học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_063",
+    "date": "2026-03-17",
+    "durationMin": 100,
+    "sessionStart": "20:57:00",
+    "sessionEnd": "21:37:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Nguyễn Gia Phúc học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_063",
+    "date": "2026-03-21",
+    "durationMin": 79,
+    "sessionStart": "20:53:00",
+    "sessionEnd": "21:12:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "writing_practice",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Nguyễn Gia Phúc học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_064",
+    "date": "2026-03-14",
+    "durationMin": 81,
+    "sessionStart": "20:46:00",
+    "sessionEnd": "21:07:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "writing_practice",
+      "speaking_mock"
+    ],
+    "moodNote": "high: Lý Anh Linh vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_064",
+    "date": "2026-03-14",
+    "durationMin": 92,
+    "sessionStart": "23:31:00",
+    "sessionEnd": "00:03:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_1",
+      "reading",
+      "vocabulary"
+    ],
+    "moodNote": "medium: Lý Anh Linh học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_064",
+    "date": "2026-03-15",
+    "durationMin": 104,
+    "sessionStart": "21:08:00",
+    "sessionEnd": "22:52:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "essay_review",
+      "reading",
+      "listening"
+    ],
+    "moodNote": "medium: Lý Anh Linh học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_065",
+    "date": "2026-03-15",
+    "durationMin": 44,
+    "sessionStart": "21:03:00",
+    "sessionEnd": "21:47:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "speaking_mock",
+      "ielts_mock",
+      "writing_task_1"
+    ],
+    "moodNote": "high: Cao Ngọc Huy vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_065",
+    "date": "2026-03-16",
+    "durationMin": 55,
+    "sessionStart": "23:01:00",
+    "sessionEnd": "23:56:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_revision",
+      "essay_review"
+    ],
+    "moodNote": "medium: Cao Ngọc Huy học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_065",
+    "date": "2026-03-16",
+    "durationMin": 100,
+    "sessionStart": "22:35:00",
+    "sessionEnd": "23:15:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening",
+      "ielts_mock"
+    ],
+    "moodNote": "medium: Cao Ngọc Huy học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_066",
+    "date": "2026-03-13",
+    "durationMin": 46,
+    "sessionStart": "19:54:00",
+    "sessionEnd": "19:40:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "speaking_mock"
+    ],
+    "moodNote": "high: Võ Hà Quân vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_066",
+    "date": "2026-03-17",
+    "durationMin": 92,
+    "sessionStart": "22:01:00",
+    "sessionEnd": "23:33:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "reading",
+      "writing_revision",
+      "listening"
+    ],
+    "moodNote": "medium: Võ Hà Quân học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_066",
+    "date": "2026-03-16",
+    "durationMin": 41,
+    "sessionStart": "19:16:00",
+    "sessionEnd": "19:57:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "ielts_mock"
+    ],
+    "moodNote": "medium: Võ Hà Quân học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_067",
+    "date": "2026-03-16",
+    "durationMin": 72,
+    "sessionStart": "19:29:00",
+    "sessionEnd": "20:41:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "university_research",
+      "essay_revision",
+      "application_planning"
+    ],
+    "moodNote": "high: Lưu Thành Nhi vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_067",
+    "date": "2026-03-13",
+    "durationMin": 87,
+    "sessionStart": "22:41:00",
+    "sessionEnd": "23:08:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_mock",
+      "essay_revision",
+      "sat_math"
+    ],
+    "moodNote": "medium: Lưu Thành Nhi học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_067",
+    "date": "2026-03-15",
+    "durationMin": 75,
+    "sessionStart": "23:20:00",
+    "sessionEnd": "00:35:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_mock",
+      "essay_outline"
+    ],
+    "moodNote": "medium: Lưu Thành Nhi học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_068",
+    "date": "2026-03-12",
+    "durationMin": 70,
+    "sessionStart": "18:51:00",
+    "sessionEnd": "19:01:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "application_planning",
+      "essay_outline",
+      "sat_mock"
+    ],
+    "moodNote": "high: Hoàng Quang Trinh vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_068",
+    "date": "2026-03-18",
+    "durationMin": 103,
+    "sessionStart": "20:16:00",
+    "sessionEnd": "21:59:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "application_planning",
+      "essay_outline"
+    ],
+    "moodNote": "high: Hoàng Quang Trinh vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_068",
+    "date": "2026-03-19",
+    "durationMin": 113,
+    "sessionStart": "19:21:00",
+    "sessionEnd": "20:14:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "sat_verbal",
+      "essay_outline",
+      "university_research"
+    ],
+    "moodNote": "high: Hoàng Quang Trinh vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_069",
+    "date": "2026-03-15",
+    "durationMin": 61,
+    "sessionStart": "23:56:00",
+    "sessionEnd": "00:57:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_mock"
+    ],
+    "moodNote": "medium: Võ Hoài Loan học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_069",
+    "date": "2026-03-16",
+    "durationMin": 73,
+    "sessionStart": "23:51:00",
+    "sessionEnd": "00:04:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_outline"
+    ],
+    "moodNote": "medium: Võ Hoài Loan học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_069",
+    "date": "2026-03-20",
+    "durationMin": 85,
+    "sessionStart": "19:47:00",
+    "sessionEnd": "20:12:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": -0.1,
+    "activities": [
+      "application_planning",
+      "sat_mock"
+    ],
+    "moodNote": "high: Võ Hoài Loan vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_070",
+    "date": "2026-03-12",
+    "durationMin": 55,
+    "sessionStart": "21:03:00",
+    "sessionEnd": "21:58:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "university_research",
+      "essay_revision",
+      "essay_outline"
+    ],
+    "moodNote": "high: Hồ Hà Bảo vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_070",
+    "date": "2026-03-17",
+    "durationMin": 104,
+    "sessionStart": "18:55:00",
+    "sessionEnd": "19:39:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "university_research",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Hồ Hà Bảo học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_070",
+    "date": "2026-03-18",
+    "durationMin": 59,
+    "sessionStart": "19:12:00",
+    "sessionEnd": "19:11:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "university_research",
+      "application_planning"
+    ],
+    "moodNote": "high: Hồ Hà Bảo vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_071",
+    "date": "2026-03-11",
+    "durationMin": 102,
+    "sessionStart": "20:40:00",
+    "sessionEnd": "21:22:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision",
+      "reading"
+    ],
+    "moodNote": "high: Lưu Đức Huy vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_071",
+    "date": "2026-03-17",
+    "durationMin": 61,
+    "sessionStart": "22:48:00",
+    "sessionEnd": "23:49:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice",
+      "listening"
+    ],
+    "moodNote": "medium: Lưu Đức Huy học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_071",
+    "date": "2026-03-18",
+    "durationMin": 91,
+    "sessionStart": "21:30:00",
+    "sessionEnd": "22:01:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "reading"
+    ],
+    "moodNote": "medium: Lưu Đức Huy học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_072",
+    "date": "2026-03-16",
+    "durationMin": 41,
+    "sessionStart": "20:48:00",
+    "sessionEnd": "20:29:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "speaking_mock",
+      "reading",
+      "essay_review"
+    ],
+    "moodNote": "high: Hồ Xuân Thảo vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_072",
+    "date": "2026-03-13",
+    "durationMin": 84,
+    "sessionStart": "20:08:00",
+    "sessionEnd": "21:32:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "vocabulary",
+      "essay_review"
+    ],
+    "moodNote": "medium: Hồ Xuân Thảo học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_072",
+    "date": "2026-03-17",
+    "durationMin": 45,
+    "sessionStart": "20:18:00",
+    "sessionEnd": "20:03:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "vocabulary",
+      "essay_review",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Hồ Xuân Thảo học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_073",
+    "date": "2026-03-15",
+    "durationMin": 83,
+    "sessionStart": "21:22:00",
+    "sessionEnd": "22:45:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_verbal"
+    ],
+    "moodNote": "high: Trần Kim Trang vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_073",
+    "date": "2026-03-13",
+    "durationMin": 56,
+    "sessionStart": "19:46:00",
+    "sessionEnd": "19:42:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "university_research",
+      "sat_verbal",
+      "sat_math"
+    ],
+    "moodNote": "medium: Trần Kim Trang học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_073",
+    "date": "2026-03-17",
+    "durationMin": 44,
+    "sessionStart": "21:56:00",
+    "sessionEnd": "21:40:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_revision",
+      "university_research"
+    ],
+    "moodNote": "medium: Trần Kim Trang học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_074",
+    "date": "2026-03-15",
+    "durationMin": 53,
+    "sessionStart": "23:53:00",
+    "sessionEnd": "23:46:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_practice"
+    ],
+    "moodNote": "medium: Dương Quang Nhi học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_074",
+    "date": "2026-03-15",
+    "durationMin": 110,
+    "sessionStart": "20:30:00",
+    "sessionEnd": "21:20:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Dương Quang Nhi học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_074",
+    "date": "2026-03-20",
+    "durationMin": 41,
+    "sessionStart": "20:26:00",
+    "sessionEnd": "20:07:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "medium: Dương Quang Nhi học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_075",
+    "date": "2026-03-15",
+    "durationMin": 57,
+    "sessionStart": "21:53:00",
+    "sessionEnd": "21:50:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_review",
+      "writing_practice",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Bùi Minh Loan vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_075",
+    "date": "2026-03-19",
+    "durationMin": 65,
+    "sessionStart": "22:12:00",
+    "sessionEnd": "23:17:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "vocabulary",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Bùi Minh Loan học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_075",
+    "date": "2026-03-20",
+    "durationMin": 60,
+    "sessionStart": "18:35:00",
+    "sessionEnd": "19:35:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "writing_revision"
+    ],
+    "moodNote": "medium: Bùi Minh Loan học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_076",
+    "date": "2026-03-10",
+    "durationMin": 51,
+    "sessionStart": "18:53:00",
+    "sessionEnd": "18:44:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "writing_revision",
+      "listening",
+      "writing_practice"
+    ],
+    "moodNote": "high: Nguyễn Thị Bảo vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_076",
+    "date": "2026-03-17",
+    "durationMin": 72,
+    "sessionStart": "23:14:00",
+    "sessionEnd": "00:26:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "ielts_mock",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Nguyễn Thị Bảo học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_076",
+    "date": "2026-03-15",
+    "durationMin": 45,
+    "sessionStart": "20:23:00",
+    "sessionEnd": "20:08:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_1",
+      "writing_task_2",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Nguyễn Thị Bảo học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_077",
+    "date": "2026-03-09",
+    "durationMin": 61,
+    "sessionStart": "20:22:00",
+    "sessionEnd": "21:23:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "ielts_mock",
+      "writing_practice",
+      "writing_task_1"
+    ],
+    "moodNote": "high: Đinh Ngọc Tuấn vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_077",
+    "date": "2026-03-13",
+    "durationMin": 91,
+    "sessionStart": "21:17:00",
+    "sessionEnd": "22:48:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_revision",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Đinh Ngọc Tuấn học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_077",
+    "date": "2026-03-20",
+    "durationMin": 61,
+    "sessionStart": "18:08:00",
+    "sessionEnd": "19:09:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "reading",
+      "listening",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Đinh Ngọc Tuấn học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_078",
+    "date": "2026-03-13",
+    "durationMin": 96,
+    "sessionStart": "19:39:00",
+    "sessionEnd": "20:15:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "university_research",
+      "sat_math"
+    ],
+    "moodNote": "high: Lưu Minh Hân vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_078",
+    "date": "2026-03-17",
+    "durationMin": 54,
+    "sessionStart": "21:28:00",
+    "sessionEnd": "21:22:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock"
+    ],
+    "moodNote": "medium: Lưu Minh Hân học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_078",
+    "date": "2026-03-20",
+    "durationMin": 107,
+    "sessionStart": "23:36:00",
+    "sessionEnd": "00:23:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "sat_verbal",
+      "essay_outline",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Lưu Minh Hân học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_079",
+    "date": "2026-03-16",
+    "durationMin": 95,
+    "sessionStart": "23:46:00",
+    "sessionEnd": "00:21:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_1",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Ngô Xuân Nam học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_079",
+    "date": "2026-03-20",
+    "durationMin": 118,
+    "sessionStart": "18:00:00",
+    "sessionEnd": "19:58:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "vocabulary"
+    ],
+    "moodNote": "medium: Ngô Xuân Nam học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_079",
+    "date": "2026-03-21",
+    "durationMin": 103,
+    "sessionStart": "19:04:00",
+    "sessionEnd": "20:47:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_1",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Ngô Xuân Nam học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_080",
+    "date": "2026-03-10",
+    "durationMin": 110,
+    "sessionStart": "23:24:00",
+    "sessionEnd": "00:14:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "writing_practice"
+    ],
+    "moodNote": "medium: Lê Quang Mai học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_080",
+    "date": "2026-03-16",
+    "durationMin": 97,
+    "sessionStart": "18:54:00",
+    "sessionEnd": "19:31:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "writing_task_1",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Lê Quang Mai học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_080",
+    "date": "2026-03-18",
+    "durationMin": 42,
+    "sessionStart": "18:25:00",
+    "sessionEnd": "18:07:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "vocabulary"
+    ],
+    "moodNote": "medium: Lê Quang Mai học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_081",
+    "date": "2026-03-17",
+    "durationMin": 117,
+    "sessionStart": "22:40:00",
+    "sessionEnd": "23:37:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "vocabulary",
+      "speaking_mock",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Đỗ Khánh Quân học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_081",
+    "date": "2026-03-14",
+    "durationMin": 68,
+    "sessionStart": "21:21:00",
+    "sessionEnd": "22:29:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_review",
+      "writing_revision",
+      "writing_task_1"
+    ],
+    "moodNote": "high: Đỗ Khánh Quân vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_081",
+    "date": "2026-03-15",
+    "durationMin": 68,
+    "sessionStart": "18:21:00",
+    "sessionEnd": "19:29:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "ielts_mock",
+      "vocabulary",
+      "essay_review"
+    ],
+    "moodNote": "high: Đỗ Khánh Quân vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_082",
+    "date": "2026-03-11",
+    "durationMin": 103,
+    "sessionStart": "19:52:00",
+    "sessionEnd": "20:35:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_task_2",
+      "writing_practice",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Lưu Thành Minh vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_082",
+    "date": "2026-03-13",
+    "durationMin": 90,
+    "sessionStart": "19:29:00",
+    "sessionEnd": "20:59:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Lưu Thành Minh học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_082",
+    "date": "2026-03-15",
+    "durationMin": 45,
+    "sessionStart": "23:53:00",
+    "sessionEnd": "23:38:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_practice",
+      "writing_revision",
+      "essay_review"
+    ],
+    "moodNote": "medium: Lưu Thành Minh học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_083",
+    "date": "2026-03-12",
+    "durationMin": 40,
+    "sessionStart": "22:47:00",
+    "sessionEnd": "22:27:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_2",
+      "essay_review",
+      "writing_revision"
+    ],
+    "moodNote": "medium: Lê Trung Trang học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_083",
+    "date": "2026-03-20",
+    "durationMin": 62,
+    "sessionStart": "23:37:00",
+    "sessionEnd": "00:39:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening",
+      "writing_practice",
+      "writing_task_2"
+    ],
+    "moodNote": "medium: Lê Trung Trang học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_083",
+    "date": "2026-03-19",
+    "durationMin": 81,
+    "sessionStart": "22:56:00",
+    "sessionEnd": "23:17:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_review",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Lê Trung Trang học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_084",
+    "date": "2026-03-12",
+    "durationMin": 57,
+    "sessionStart": "19:26:00",
+    "sessionEnd": "19:23:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "vocabulary",
+      "ielts_mock",
+      "essay_revision"
+    ],
+    "moodNote": "high: Lê Thành Tuấn vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_084",
+    "date": "2026-03-18",
+    "durationMin": 110,
+    "sessionStart": "23:13:00",
+    "sessionEnd": "00:03:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_review"
+    ],
+    "moodNote": "medium: Lê Thành Tuấn học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_084",
+    "date": "2026-03-17",
+    "durationMin": 56,
+    "sessionStart": "23:41:00",
+    "sessionEnd": "23:37:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "vocabulary",
+      "writing_task_1",
+      "writing_practice"
+    ],
+    "moodNote": "medium: Lê Thành Tuấn học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_085",
+    "date": "2026-03-15",
+    "durationMin": 93,
+    "sessionStart": "23:47:00",
+    "sessionEnd": "00:20:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_mock",
+      "application_planning",
+      "sat_math"
+    ],
+    "moodNote": "medium: Cao Hoài Đức học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_085",
+    "date": "2026-03-13",
+    "durationMin": 58,
+    "sessionStart": "18:42:00",
+    "sessionEnd": "18:40:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_mock"
+    ],
+    "moodNote": "high: Cao Hoài Đức vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_085",
+    "date": "2026-03-17",
+    "durationMin": 58,
+    "sessionStart": "18:44:00",
+    "sessionEnd": "18:42:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_verbal",
+      "university_research"
+    ],
+    "moodNote": "high: Cao Hoài Đức vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_086",
+    "date": "2026-03-10",
+    "durationMin": 111,
+    "sessionStart": "19:47:00",
+    "sessionEnd": "20:38:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "application_planning",
+      "sat_verbal",
+      "university_research"
+    ],
+    "moodNote": "high: Phạm Hà Hương vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_086",
+    "date": "2026-03-18",
+    "durationMin": 88,
+    "sessionStart": "21:26:00",
+    "sessionEnd": "22:54:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_mock",
+      "university_research",
+      "sat_math"
+    ],
+    "moodNote": "medium: Phạm Hà Hương học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_086",
+    "date": "2026-03-15",
+    "durationMin": 65,
+    "sessionStart": "22:55:00",
+    "sessionEnd": "23:00:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "essay_revision",
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Phạm Hà Hương học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_087",
+    "date": "2026-03-16",
+    "durationMin": 115,
+    "sessionStart": "22:47:00",
+    "sessionEnd": "23:42:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "medium: Ngô Hà Tuấn học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_087",
+    "date": "2026-03-15",
+    "durationMin": 62,
+    "sessionStart": "23:04:00",
+    "sessionEnd": "00:06:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_outline"
+    ],
+    "moodNote": "medium: Ngô Hà Tuấn học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_087",
+    "date": "2026-03-15",
+    "durationMin": 94,
+    "sessionStart": "20:35:00",
+    "sessionEnd": "21:09:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Ngô Hà Tuấn học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_088",
+    "date": "2026-03-11",
+    "durationMin": 59,
+    "sessionStart": "18:09:00",
+    "sessionEnd": "18:08:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "reading",
+      "essay_review",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Phạm Đức Mai vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_088",
+    "date": "2026-03-19",
+    "durationMin": 85,
+    "sessionStart": "18:50:00",
+    "sessionEnd": "19:15:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "vocabulary",
+      "speaking_mock"
+    ],
+    "moodNote": "medium: Phạm Đức Mai học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_088",
+    "date": "2026-03-16",
+    "durationMin": 104,
+    "sessionStart": "19:26:00",
+    "sessionEnd": "20:10:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "writing_task_2",
+      "writing_practice",
+      "writing_task_1"
+    ],
+    "moodNote": "medium: Phạm Đức Mai học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_089",
+    "date": "2026-03-14",
+    "durationMin": 86,
+    "sessionStart": "20:13:00",
+    "sessionEnd": "21:39:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "vocabulary",
+      "writing_revision",
+      "essay_revision"
+    ],
+    "moodNote": "high: Đỗ Kim Trâm vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_089",
+    "date": "2026-03-12",
+    "durationMin": 97,
+    "sessionStart": "19:57:00",
+    "sessionEnd": "20:34:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_review",
+      "speaking_mock",
+      "reading"
+    ],
+    "moodNote": "medium: Đỗ Kim Trâm học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_089",
+    "date": "2026-03-20",
+    "durationMin": 88,
+    "sessionStart": "18:24:00",
+    "sessionEnd": "19:52:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "ielts_mock",
+      "reading",
+      "vocabulary"
+    ],
+    "moodNote": "medium: Đỗ Kim Trâm học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_090",
+    "date": "2026-03-16",
+    "durationMin": 102,
+    "sessionStart": "18:18:00",
+    "sessionEnd": "19:00:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "sat_mock"
+    ],
+    "moodNote": "high: Dương Anh Vinh vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_090",
+    "date": "2026-03-14",
+    "durationMin": 108,
+    "sessionStart": "22:00:00",
+    "sessionEnd": "23:48:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Dương Anh Vinh học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_090",
+    "date": "2026-03-20",
+    "durationMin": 94,
+    "sessionStart": "18:13:00",
+    "sessionEnd": "19:47:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_outline",
+      "application_planning",
+      "sat_math"
+    ],
+    "moodNote": "medium: Dương Anh Vinh học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_091",
+    "date": "2026-03-12",
+    "durationMin": 82,
+    "sessionStart": "18:05:00",
+    "sessionEnd": "19:27:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.0,
+    "activities": [
+      "listening"
+    ],
+    "moodNote": "high: Đặng Thành Quân vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_091",
+    "date": "2026-03-18",
+    "durationMin": 69,
+    "sessionStart": "20:26:00",
+    "sessionEnd": "21:35:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_revision",
+      "writing_task_2"
+    ],
+    "moodNote": "high: Đặng Thành Quân vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_091",
+    "date": "2026-03-17",
+    "durationMin": 55,
+    "sessionStart": "22:00:00",
+    "sessionEnd": "22:55:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_review",
+      "writing_practice",
+      "reading"
+    ],
+    "moodNote": "medium: Đặng Thành Quân học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_092",
+    "date": "2026-03-13",
+    "durationMin": 78,
+    "sessionStart": "22:05:00",
+    "sessionEnd": "23:23:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_2",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Dương Anh Huy học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_092",
+    "date": "2026-03-13",
+    "durationMin": 108,
+    "sessionStart": "19:08:00",
+    "sessionEnd": "20:56:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "vocabulary",
+      "ielts_mock"
+    ],
+    "moodNote": "medium: Dương Anh Huy học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_092",
+    "date": "2026-03-20",
+    "durationMin": 87,
+    "sessionStart": "18:35:00",
+    "sessionEnd": "19:02:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": -0.1,
+    "activities": [
+      "listening",
+      "writing_practice",
+      "reading"
+    ],
+    "moodNote": "medium: Dương Anh Huy học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_093",
+    "date": "2026-03-13",
+    "durationMin": 110,
+    "sessionStart": "18:19:00",
+    "sessionEnd": "19:09:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": [
+      "writing_task_1",
+      "speaking_mock",
+      "writing_task_2"
+    ],
+    "moodNote": "high: Dương Trung Đức vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_093",
+    "date": "2026-03-15",
+    "durationMin": 118,
+    "sessionStart": "20:12:00",
+    "sessionEnd": "21:10:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "medium: Dương Trung Đức học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_093",
+    "date": "2026-03-21",
+    "durationMin": 46,
+    "sessionStart": "22:29:00",
+    "sessionEnd": "22:15:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "writing_practice",
+      "ielts_mock",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Dương Trung Đức học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_094",
+    "date": "2026-03-14",
+    "durationMin": 82,
+    "sessionStart": "20:08:00",
+    "sessionEnd": "21:30:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "speaking_mock",
+      "writing_practice",
+      "ielts_mock"
+    ],
+    "moodNote": "high: Đặng Thành Trâm vừa quay lại sau 2 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_094",
+    "date": "2026-03-13",
+    "durationMin": 97,
+    "sessionStart": "20:39:00",
+    "sessionEnd": "21:16:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.2,
+    "activities": [
+      "essay_review",
+      "listening"
+    ],
+    "moodNote": "medium: Đặng Thành Trâm học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_094",
+    "date": "2026-03-19",
+    "durationMin": 80,
+    "sessionStart": "21:10:00",
+    "sessionEnd": "22:30:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "speaking_mock",
+      "essay_revision"
+    ],
+    "moodNote": "medium: Đặng Thành Trâm học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_095",
+    "date": "2026-03-16",
+    "durationMin": 86,
+    "sessionStart": "19:43:00",
+    "sessionEnd": "20:09:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.2,
+    "activities": [
+      "application_planning",
+      "essay_revision"
+    ],
+    "moodNote": "high: Đặng Tuấn Long vừa quay lại sau 5 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_095",
+    "date": "2026-03-16",
+    "durationMin": 102,
+    "sessionStart": "22:06:00",
+    "sessionEnd": "23:48:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "university_research",
+      "sat_math",
+      "sat_mock"
+    ],
+    "moodNote": "medium: Đặng Tuấn Long học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_095",
+    "date": "2026-03-19",
+    "durationMin": 120,
+    "sessionStart": "18:46:00",
+    "sessionEnd": "20:46:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "essay_revision"
+    ],
+    "moodNote": "medium: Đặng Tuấn Long học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_096",
+    "date": "2026-03-11",
+    "durationMin": 114,
+    "sessionStart": "21:49:00",
+    "sessionEnd": "22:43:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_math"
+    ],
+    "moodNote": "high: Huỳnh Văn Phúc vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_096",
+    "date": "2026-03-18",
+    "durationMin": 109,
+    "sessionStart": "21:41:00",
+    "sessionEnd": "22:30:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "sat_mock"
+    ],
+    "moodNote": "medium: Huỳnh Văn Phúc học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_096",
+    "date": "2026-03-18",
+    "durationMin": 115,
+    "sessionStart": "23:54:00",
+    "sessionEnd": "00:49:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "application_planning"
+    ],
+    "moodNote": "medium: Huỳnh Văn Phúc học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_097",
+    "date": "2026-03-14",
+    "durationMin": 41,
+    "sessionStart": "23:15:00",
+    "sessionEnd": "23:56:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "essay_revision",
+      "listening",
+      "vocabulary"
+    ],
+    "moodNote": "medium: Lưu Bích Linh học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_097",
+    "date": "2026-03-15",
+    "durationMin": 112,
+    "sessionStart": "22:42:00",
+    "sessionEnd": "23:34:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": -0.1,
+    "activities": [
+      "writing_revision"
+    ],
+    "moodNote": "medium: Lưu Bích Linh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_097",
+    "date": "2026-03-15",
+    "durationMin": 102,
+    "sessionStart": "19:04:00",
+    "sessionEnd": "20:46:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": [
+      "speaking_mock",
+      "reading"
+    ],
+    "moodNote": "medium: Lưu Bích Linh học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_098",
+    "date": "2026-03-15",
+    "durationMin": 86,
+    "sessionStart": "21:30:00",
+    "sessionEnd": "22:56:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "reading"
+    ],
+    "moodNote": "high: Vũ Tuấn Hải vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_098",
+    "date": "2026-03-12",
+    "durationMin": 106,
+    "sessionStart": "23:53:00",
+    "sessionEnd": "00:39:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "ielts_mock",
+      "essay_review",
+      "vocabulary"
+    ],
+    "moodNote": "medium: Vũ Tuấn Hải học muộn 4 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_098",
+    "date": "2026-03-16",
+    "durationMin": 88,
+    "sessionStart": "20:37:00",
+    "sessionEnd": "21:05:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.2,
+    "activities": [
+      "vocabulary"
+    ],
+    "moodNote": "medium: Vũ Tuấn Hải học đều 3 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_099",
+    "date": "2026-03-11",
+    "durationMin": 85,
+    "sessionStart": "20:31:00",
+    "sessionEnd": "21:56:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": -0.1,
+    "activities": [
+      "university_research",
+      "sat_math"
+    ],
+    "moodNote": "high: Phan Tú Linh vừa quay lại sau 3 ngày vắng | Liên hệ phụ huynh"
+  },
+  {
+    "studentId": "student_099",
+    "date": "2026-03-16",
+    "durationMin": 49,
+    "sessionStart": "22:41:00",
+    "sessionEnd": "22:30:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": [
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Phan Tú Linh học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_099",
+    "date": "2026-03-16",
+    "durationMin": 55,
+    "sessionStart": "23:14:00",
+    "sessionEnd": "23:09:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": [
+      "essay_outline",
+      "sat_math"
+    ],
+    "moodNote": "medium: Phan Tú Linh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_100",
+    "date": "2026-03-14",
+    "durationMin": 60,
+    "sessionStart": "23:53:00",
+    "sessionEnd": "00:53:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.1,
+    "activities": [
+      "sat_verbal"
+    ],
+    "moodNote": "medium: Dương Trung Linh học muộn 2 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_100",
+    "date": "2026-03-14",
+    "durationMin": 60,
+    "sessionStart": "19:40:00",
+    "sessionEnd": "20:40:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.1,
+    "activities": [
+      "university_research"
+    ],
+    "moodNote": "medium: Dương Trung Linh học đều 2 ngày gần đây | Tiếp tục theo dõi"
+  },
+  {
+    "studentId": "student_100",
+    "date": "2026-03-16",
+    "durationMin": 73,
+    "sessionStart": "19:33:00",
+    "sessionEnd": "20:46:00",
+    "studied": false,
+    "streakDay": 0,
+    "scoreDelta": 0.1,
+    "activities": [
+      "university_research",
+      "essay_outline",
+      "sat_math"
+    ],
+    "moodNote": "high: Dương Trung Linh vừa quay lại sau 4 ngày vắng | Liên hệ phụ huynh"
   }
 ]

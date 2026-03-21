@@ -1,122 +1,2552 @@
 [
   {
-    "courseName": "Trại hè Writing tháng 7",
-    "reason": "Writing là điểm thiếu duy nhất để vào Melbourne",
+    "courseName": "IELTS Writing Sprint 6.0+",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
     "ctaUrl": "#",
-    "ctaLabel": "Xem chi tiết",
-    "slug": "trai-he-writing-thang-7",
-    "type": "camp",
-    "program": "AMP",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "ielts-writing-sprint-60plus-1",
+    "type": "workshop",
+    "program": "IELTS",
     "season": "2026",
-    "targetSkills": ["writing"],
-    "suitableFor": ["AMP", "melbourne_gap"],
-    "durationDays": 14,
-    "startDate": "2026-07-10",
-    "endDate": "2026-07-24",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "deadline_mode"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-08-03",
+    "endDate": "2026-08-13",
     "location": "TP.HCM",
-    "priceVnd": 8900000,
+    "priceVnd": 2400000,
     "displayOrder": 1,
     "isFeatured": true,
     "isActive": true
   },
   {
-    "courseName": "Khóa Speaking Intensive",
-    "reason": "Cải thiện Speaking để tăng Overall band",
+    "courseName": "IELTS Full Band 6.0",
+    "reason": "Thiết kế cho học viên cần nâng cao listening, reading",
     "ctaUrl": "#",
     "ctaLabel": "Xem chi tiết",
-    "slug": "khoa-speaking-intensive",
+    "slug": "ielts-full-band-60-2",
     "type": "course",
     "program": "IELTS",
     "season": "2026",
-    "targetSkills": ["speaking"],
-    "suitableFor": ["IELTS", "overall_band_boost"],
-    "durationDays": 28,
-    "startDate": "2026-04-05",
-    "endDate": "2026-05-03",
+    "targetSkills": [
+      "listening",
+      "reading",
+      "writing",
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 56,
+    "startDate": "2026-08-03",
+    "endDate": "2026-09-28",
     "location": "Online",
-    "priceVnd": 4200000,
+    "priceVnd": 7500000,
     "displayOrder": 2,
     "isFeatured": false,
     "isActive": true
   },
   {
-    "courseName": "IELTS Writing Sprint 6.5+",
-    "reason": "Thiết kế cho học viên cần kéo Writing lên trước deadline apply",
+    "courseName": "IELTS Speaking Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking",
     "ctaUrl": "#",
-    "ctaLabel": "Đăng ký tư vấn",
-    "slug": "ielts-writing-sprint-6-5",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-speaking-intensive-3",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-04-09",
+    "endDate": "2026-05-07",
+    "location": "Online",
+    "priceVnd": 4600000,
+    "displayOrder": 3,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Listening Mastery",
+    "reason": "Thiết kế cho học viên cần nâng cao listening",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "ielts-listening-mastery-4",
     "type": "workshop",
     "program": "IELTS",
     "season": "2026",
-    "targetSkills": ["writing"],
-    "suitableFor": ["IELTS", "uts_gap", "deadline_mode"],
-    "durationDays": 10,
-    "startDate": "2026-04-01",
-    "endDate": "2026-04-10",
-    "location": "TP.HCM",
-    "priceVnd": 2500000,
-    "displayOrder": 3,
+    "targetSkills": [
+      "listening"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-07-09",
+    "endDate": "2026-07-23",
+    "location": "Online",
+    "priceVnd": 2700000,
+    "displayOrder": 4,
     "isFeatured": true,
     "isActive": true
   },
   {
-    "courseName": "SAT Math Mastery",
-    "reason": "Giữ vững lợi thế SAT Math và củng cố score 1500+",
+    "courseName": "IELTS Reading Accelerator",
+    "reason": "Thiết kế cho học viên cần nâng cao reading",
     "ctaUrl": "#",
     "ctaLabel": "Xem lộ trình",
-    "slug": "sat-math-mastery",
+    "slug": "ielts-reading-accelerator-5",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-06-10",
+    "endDate": "2026-07-01",
+    "location": "Online",
+    "priceVnd": 3700000,
+    "displayOrder": 5,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Foundation 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, vocabulary",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-foundation-65-6",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "vocabulary"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "beginner_band"
+    ],
+    "durationDays": 60,
+    "startDate": "2026-04-14",
+    "endDate": "2026-06-13",
+    "location": "TP.HCM",
+    "priceVnd": 6400000,
+    "displayOrder": 6,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Math Mastery 5.5",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-math-mastery-55-7",
     "type": "course",
     "program": "SAT",
     "season": "2026",
-    "targetSkills": ["sat_math"],
-    "suitableFor": ["SAT", "score_1450_plus"],
+    "targetSkills": [
+      "sat_math"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
     "durationDays": 42,
-    "startDate": "2026-04-12",
-    "endDate": "2026-05-24",
+    "startDate": "2026-08-01",
+    "endDate": "2026-09-12",
     "location": "Online",
-    "priceVnd": 6800000,
-    "displayOrder": 4,
+    "priceVnd": 5400000,
+    "displayOrder": 7,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Verbal Boost",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_verbal, reading_writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-verbal-boost-8",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_verbal",
+      "reading_writing"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1300_plus"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-05-13",
+    "endDate": "2026-06-12",
+    "location": "Online",
+    "priceVnd": 4900000,
+    "displayOrder": 8,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Full Mock Marathon",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "sat-full-mock-marathon-9",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-04-06",
+    "endDate": "2026-04-13",
+    "location": "Online",
+    "priceVnd": 1900000,
+    "displayOrder": 9,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Score 1400+ Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "sat-score-1400plus-intensive-10",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 45,
+    "startDate": "2026-06-11",
+    "endDate": "2026-07-26",
+    "location": "Hybrid",
+    "priceVnd": 8400000,
+    "displayOrder": 10,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "Application Essay Lab",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, application_planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "application-essay-lab-11",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "application_planning"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-06-15",
+    "endDate": "2026-06-22",
+    "location": "TP.HCM",
+    "priceVnd": 3000000,
+    "displayOrder": 11,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "Canada Admissions Bootcamp",
+    "reason": "Thiết kế cho học viên cần nâng cao planning, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "canada-admissions-bootcamp-12",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "planning",
+      "research",
+      "essay"
+    ],
+    "suitableFor": [
+      "canada_applicants",
+      "college_prep"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-08-02",
+    "endDate": "2026-08-23",
+    "location": "Hybrid",
+    "priceVnd": 10900000,
+    "displayOrder": 12,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Writing Camp tháng 7",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "amp-writing-camp-tháng-7-13",
+    "type": "camp",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "AMP",
+      "melbourne_gap"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-21",
+    "location": "TP.HCM",
+    "priceVnd": 8100000,
+    "displayOrder": 13,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Strategy Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "amp-strategy-intensive-14",
+    "type": "course",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning",
+      "research"
+    ],
+    "suitableFor": [
+      "AMP"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-06-06",
+    "endDate": "2026-07-06",
+    "location": "Hybrid",
+    "priceVnd": 7200000,
+    "displayOrder": 14,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "UK University Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "uk-university-prep-15",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "research"
+    ],
+    "suitableFor": [
+      "uk_applicants",
+      "college_prep"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-07-14",
+    "endDate": "2026-07-28",
+    "location": "TP.HCM",
+    "priceVnd": 5600000,
+    "displayOrder": 15,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "Australia Scholarship Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "australia-scholarship-prep-16",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning"
+    ],
+    "suitableFor": [
+      "au_applicants",
+      "college_prep"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-07-11",
+    "endDate": "2026-07-21",
+    "location": "TP.HCM",
+    "priceVnd": 5900000,
+    "displayOrder": 16,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Academic Writing 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "ielts-academic-writing-65-17",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "uts_gap"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-07-18",
+    "endDate": "2026-07-28",
+    "location": "Online",
+    "priceVnd": 2400000,
+    "displayOrder": 17,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS General Training",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-general-training-18",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-08-20",
+    "endDate": "2026-09-17",
+    "location": "Online",
+    "priceVnd": 4600000,
+    "displayOrder": 18,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Essay Writing",
+    "reason": "Thiết kế cho học viên cần nâng cao essay",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "sat-essay-writing-19",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "essay"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 5,
+    "startDate": "2026-05-15",
+    "endDate": "2026-05-20",
+    "location": "Online",
+    "priceVnd": 1700000,
+    "displayOrder": 19,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "College Interview Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "college-interview-prep-20",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "speaking",
+      "planning"
+    ],
+    "suitableFor": [
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-08",
+    "location": "TP.HCM",
+    "priceVnd": 4900000,
+    "displayOrder": 20,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Writing Sprint 5.5+",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "ielts-writing-sprint-55plus-21",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "deadline_mode"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-05-07",
+    "endDate": "2026-05-17",
+    "location": "TP.HCM",
+    "priceVnd": 3300000,
+    "displayOrder": 21,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Full Band 6.0",
+    "reason": "Thiết kế cho học viên cần nâng cao listening, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-full-band-60-22",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "listening",
+      "reading",
+      "writing",
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 56,
+    "startDate": "2026-08-01",
+    "endDate": "2026-09-26",
+    "location": "Hybrid",
+    "priceVnd": 7100000,
+    "displayOrder": 22,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Speaking Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "ielts-speaking-intensive-23",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-04-16",
+    "endDate": "2026-05-14",
+    "location": "Online",
+    "priceVnd": 4900000,
+    "displayOrder": 23,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Listening Mastery",
+    "reason": "Thiết kế cho học viên cần nâng cao listening",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "ielts-listening-mastery-24",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "listening"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-06-04",
+    "endDate": "2026-06-18",
+    "location": "Online",
+    "priceVnd": 2200000,
+    "displayOrder": 24,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Reading Accelerator",
+    "reason": "Thiết kế cho học viên cần nâng cao reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "ielts-reading-accelerator-25",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-07-13",
+    "endDate": "2026-08-03",
+    "location": "TP.HCM",
+    "priceVnd": 3400000,
+    "displayOrder": 25,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Foundation 5.5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, vocabulary",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "ielts-foundation-55-26",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "vocabulary"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "beginner_band"
+    ],
+    "durationDays": 60,
+    "startDate": "2026-04-03",
+    "endDate": "2026-06-02",
+    "location": "TP.HCM",
+    "priceVnd": 5000000,
+    "displayOrder": 26,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Math Mastery 5.5",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-math-mastery-55-27",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 42,
+    "startDate": "2026-08-19",
+    "endDate": "2026-09-30",
+    "location": "Online",
+    "priceVnd": 7500000,
+    "displayOrder": 27,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Verbal Boost",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_verbal, reading_writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-verbal-boost-28",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_verbal",
+      "reading_writing"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1300_plus"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-07-18",
+    "endDate": "2026-08-17",
+    "location": "Online",
+    "priceVnd": 4700000,
+    "displayOrder": 28,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Full Mock Marathon",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-full-mock-marathon-29",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-07-14",
+    "endDate": "2026-07-21",
+    "location": "Online",
+    "priceVnd": 2400000,
+    "displayOrder": 29,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Score 1400+ Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "sat-score-1400plus-intensive-30",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 45,
+    "startDate": "2026-06-10",
+    "endDate": "2026-07-25",
+    "location": "Hybrid",
+    "priceVnd": 9000000,
+    "displayOrder": 30,
     "isFeatured": false,
     "isActive": true
   },
   {
     "courseName": "Application Essay Lab",
-    "reason": "Phù hợp học viên đang chuyển từ SAT sang hoàn thiện hồ sơ đại học",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, application_planning",
     "ctaUrl": "#",
-    "ctaLabel": "Xem workshop",
-    "slug": "application-essay-lab",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "application-essay-lab-31",
     "type": "workshop",
     "program": "College Prep",
     "season": "2026",
-    "targetSkills": ["essay", "application_planning"],
-    "suitableFor": ["SAT", "college_prep"],
+    "targetSkills": [
+      "essay",
+      "application_planning"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
     "durationDays": 7,
-    "startDate": "2026-05-01",
-    "endDate": "2026-05-07",
+    "startDate": "2026-04-01",
+    "endDate": "2026-04-08",
     "location": "TP.HCM",
     "priceVnd": 3200000,
-    "displayOrder": 5,
+    "displayOrder": 31,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "Canada Admissions Bootcamp",
+    "reason": "Thiết kế cho học viên cần nâng cao planning, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "canada-admissions-bootcamp-32",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "planning",
+      "research",
+      "essay"
+    ],
+    "suitableFor": [
+      "canada_applicants",
+      "college_prep"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-08-13",
+    "endDate": "2026-09-03",
+    "location": "Hybrid",
+    "priceVnd": 9600000,
+    "displayOrder": 32,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Writing Camp tháng 5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "amp-writing-camp-tháng-5-33",
+    "type": "camp",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "AMP",
+      "melbourne_gap"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-07-06",
+    "endDate": "2026-07-20",
+    "location": "TP.HCM",
+    "priceVnd": 9200000,
+    "displayOrder": 33,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Strategy Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "amp-strategy-intensive-34",
+    "type": "course",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning",
+      "research"
+    ],
+    "suitableFor": [
+      "AMP"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-08-04",
+    "endDate": "2026-09-03",
+    "location": "Hybrid",
+    "priceVnd": 9000000,
+    "displayOrder": 34,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "UK University Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "uk-university-prep-35",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "research"
+    ],
+    "suitableFor": [
+      "uk_applicants",
+      "college_prep"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-05-03",
+    "endDate": "2026-05-17",
+    "location": "TP.HCM",
+    "priceVnd": 4200000,
+    "displayOrder": 35,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "Australia Scholarship Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "australia-scholarship-prep-36",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning"
+    ],
+    "suitableFor": [
+      "au_applicants",
+      "college_prep"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-08-18",
+    "endDate": "2026-08-28",
+    "location": "TP.HCM",
+    "priceVnd": 5200000,
+    "displayOrder": 36,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Academic Writing 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "ielts-academic-writing-65-37",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "uts_gap"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-06-06",
+    "endDate": "2026-06-16",
+    "location": "Online",
+    "priceVnd": 2500000,
+    "displayOrder": 37,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS General Training",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-general-training-38",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-06-02",
+    "endDate": "2026-06-30",
+    "location": "Online",
+    "priceVnd": 4800000,
+    "displayOrder": 38,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Essay Writing",
+    "reason": "Thiết kế cho học viên cần nâng cao essay",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-essay-writing-39",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "essay"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 5,
+    "startDate": "2026-07-20",
+    "endDate": "2026-07-25",
+    "location": "Online",
+    "priceVnd": 1600000,
+    "displayOrder": 39,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "College Interview Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "college-interview-prep-40",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "speaking",
+      "planning"
+    ],
+    "suitableFor": [
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-04-16",
+    "endDate": "2026-04-23",
+    "location": "TP.HCM",
+    "priceVnd": 4600000,
+    "displayOrder": 40,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Writing Sprint 5.5+",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "ielts-writing-sprint-55plus-41",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "deadline_mode"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-04-16",
+    "endDate": "2026-04-26",
+    "location": "TP.HCM",
+    "priceVnd": 2200000,
+    "displayOrder": 41,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Full Band 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao listening, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-full-band-65-42",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "listening",
+      "reading",
+      "writing",
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 56,
+    "startDate": "2026-05-06",
+    "endDate": "2026-07-01",
+    "location": "Hybrid",
+    "priceVnd": 6900000,
+    "displayOrder": 42,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Speaking Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-speaking-intensive-43",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-06-12",
+    "endDate": "2026-07-10",
+    "location": "Online",
+    "priceVnd": 5000000,
+    "displayOrder": 43,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Listening Mastery",
+    "reason": "Thiết kế cho học viên cần nâng cao listening",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-listening-mastery-44",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "listening"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-05-20",
+    "endDate": "2026-06-03",
+    "location": "Online",
+    "priceVnd": 2000000,
+    "displayOrder": 44,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Reading Accelerator",
+    "reason": "Thiết kế cho học viên cần nâng cao reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "ielts-reading-accelerator-45",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-05-01",
+    "endDate": "2026-05-22",
+    "location": "Online",
+    "priceVnd": 3500000,
+    "displayOrder": 45,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Foundation 6.0",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, vocabulary",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-foundation-60-46",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "vocabulary"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "beginner_band"
+    ],
+    "durationDays": 60,
+    "startDate": "2026-06-16",
+    "endDate": "2026-08-15",
+    "location": "TP.HCM",
+    "priceVnd": 5600000,
+    "displayOrder": 46,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Math Mastery 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "sat-math-mastery-65-47",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 42,
+    "startDate": "2026-07-14",
+    "endDate": "2026-08-25",
+    "location": "Online",
+    "priceVnd": 6600000,
+    "displayOrder": 47,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Verbal Boost",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_verbal, reading_writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "sat-verbal-boost-48",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_verbal",
+      "reading_writing"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1300_plus"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-07-04",
+    "endDate": "2026-08-03",
+    "location": "Online",
+    "priceVnd": 4400000,
+    "displayOrder": 48,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Full Mock Marathon",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "sat-full-mock-marathon-49",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-07-14",
+    "endDate": "2026-07-21",
+    "location": "TP.HCM",
+    "priceVnd": 2200000,
+    "displayOrder": 49,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Score 1400+ Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-score-1400plus-intensive-50",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 45,
+    "startDate": "2026-08-12",
+    "endDate": "2026-09-26",
+    "location": "Hybrid",
+    "priceVnd": 7600000,
+    "displayOrder": 50,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "Application Essay Lab",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, application_planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "application-essay-lab-51",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "application_planning"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-06-19",
+    "endDate": "2026-06-26",
+    "location": "TP.HCM",
+    "priceVnd": 3600000,
+    "displayOrder": 51,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "Canada Admissions Bootcamp",
+    "reason": "Thiết kế cho học viên cần nâng cao planning, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "canada-admissions-bootcamp-52",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "planning",
+      "research",
+      "essay"
+    ],
+    "suitableFor": [
+      "canada_applicants",
+      "college_prep"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-06-14",
+    "endDate": "2026-07-05",
+    "location": "Hybrid",
+    "priceVnd": 9500000,
+    "displayOrder": 52,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Writing Camp tháng 6",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "amp-writing-camp-tháng-6-53",
+    "type": "camp",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "AMP",
+      "melbourne_gap"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-05-11",
+    "endDate": "2026-05-25",
+    "location": "TP.HCM",
+    "priceVnd": 8300000,
+    "displayOrder": 53,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Strategy Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "amp-strategy-intensive-54",
+    "type": "course",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning",
+      "research"
+    ],
+    "suitableFor": [
+      "AMP"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-07-19",
+    "endDate": "2026-08-18",
+    "location": "Hybrid",
+    "priceVnd": 8000000,
+    "displayOrder": 54,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "UK University Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "uk-university-prep-55",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "research"
+    ],
+    "suitableFor": [
+      "uk_applicants",
+      "college_prep"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-05-04",
+    "endDate": "2026-05-18",
+    "location": "Online",
+    "priceVnd": 5700000,
+    "displayOrder": 55,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "Australia Scholarship Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "australia-scholarship-prep-56",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning"
+    ],
+    "suitableFor": [
+      "au_applicants",
+      "college_prep"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-06-11",
+    "endDate": "2026-06-21",
+    "location": "TP.HCM",
+    "priceVnd": 5600000,
+    "displayOrder": 56,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Academic Writing 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-academic-writing-65-57",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "uts_gap"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-06-14",
+    "endDate": "2026-06-24",
+    "location": "Online",
+    "priceVnd": 2300000,
+    "displayOrder": 57,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS General Training",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-general-training-58",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-07-08",
+    "endDate": "2026-08-05",
+    "location": "Online",
+    "priceVnd": 4000000,
+    "displayOrder": 58,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Essay Writing",
+    "reason": "Thiết kế cho học viên cần nâng cao essay",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-essay-writing-59",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "essay"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 5,
+    "startDate": "2026-06-05",
+    "endDate": "2026-06-10",
+    "location": "Online",
+    "priceVnd": 2100000,
+    "displayOrder": 59,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "College Interview Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "college-interview-prep-60",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "speaking",
+      "planning"
+    ],
+    "suitableFor": [
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-11",
+    "location": "TP.HCM",
+    "priceVnd": 4800000,
+    "displayOrder": 60,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Writing Sprint 6.5+",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "ielts-writing-sprint-65plus-61",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "deadline_mode"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-04-18",
+    "endDate": "2026-04-28",
+    "location": "TP.HCM",
+    "priceVnd": 3000000,
+    "displayOrder": 61,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Full Band 7.0",
+    "reason": "Thiết kế cho học viên cần nâng cao listening, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-full-band-70-62",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "listening",
+      "reading",
+      "writing",
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 56,
+    "startDate": "2026-04-12",
+    "endDate": "2026-06-07",
+    "location": "Hybrid",
+    "priceVnd": 7900000,
+    "displayOrder": 62,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Speaking Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "ielts-speaking-intensive-63",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-04-11",
+    "endDate": "2026-05-09",
+    "location": "Online",
+    "priceVnd": 4800000,
+    "displayOrder": 63,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Listening Mastery",
+    "reason": "Thiết kế cho học viên cần nâng cao listening",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-listening-mastery-64",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "listening"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-04-02",
+    "endDate": "2026-04-16",
+    "location": "Online",
+    "priceVnd": 2400000,
+    "displayOrder": 64,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Reading Accelerator",
+    "reason": "Thiết kế cho học viên cần nâng cao reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-reading-accelerator-65",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-06-11",
+    "endDate": "2026-07-02",
+    "location": "Online",
+    "priceVnd": 3700000,
+    "displayOrder": 65,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Foundation 7.0",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, vocabulary",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "ielts-foundation-70-66",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "vocabulary"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "beginner_band"
+    ],
+    "durationDays": 60,
+    "startDate": "2026-05-11",
+    "endDate": "2026-07-10",
+    "location": "TP.HCM",
+    "priceVnd": 5400000,
+    "displayOrder": 66,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Math Mastery 6.0",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "sat-math-mastery-60-67",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 42,
+    "startDate": "2026-07-16",
+    "endDate": "2026-08-27",
+    "location": "Online",
+    "priceVnd": 5800000,
+    "displayOrder": 67,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Verbal Boost",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_verbal, reading_writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "sat-verbal-boost-68",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_verbal",
+      "reading_writing"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1300_plus"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-04-12",
+    "endDate": "2026-05-12",
+    "location": "Online",
+    "priceVnd": 4200000,
+    "displayOrder": 68,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Full Mock Marathon",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "sat-full-mock-marathon-69",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-05-01",
+    "endDate": "2026-05-08",
+    "location": "Online",
+    "priceVnd": 2100000,
+    "displayOrder": 69,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Score 1400+ Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "sat-score-1400plus-intensive-70",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 45,
+    "startDate": "2026-05-19",
+    "endDate": "2026-07-03",
+    "location": "Hybrid",
+    "priceVnd": 8900000,
+    "displayOrder": 70,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "Application Essay Lab",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, application_planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "application-essay-lab-71",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "application_planning"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-12",
+    "location": "TP.HCM",
+    "priceVnd": 3300000,
+    "displayOrder": 71,
     "isFeatured": true,
     "isActive": true
   },
   {
     "courseName": "Canada Admissions Bootcamp",
-    "reason": "Bổ sung chiến lược hồ sơ và kiểm soát timeline cho nhóm apply Canada",
+    "reason": "Thiết kế cho học viên cần nâng cao planning, research",
     "ctaUrl": "#",
-    "ctaLabel": "Nhận tư vấn",
-    "slug": "canada-admissions-bootcamp",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "canada-admissions-bootcamp-72",
     "type": "camp",
     "program": "College Prep",
     "season": "2026",
-    "targetSkills": ["planning", "research", "essay"],
-    "suitableFor": ["canada_applicants", "college_prep"],
+    "targetSkills": [
+      "planning",
+      "research",
+      "essay"
+    ],
+    "suitableFor": [
+      "canada_applicants",
+      "college_prep"
+    ],
     "durationDays": 21,
-    "startDate": "2026-05-10",
-    "endDate": "2026-05-31",
+    "startDate": "2026-05-03",
+    "endDate": "2026-05-24",
     "location": "Hybrid",
     "priceVnd": 9800000,
-    "displayOrder": 6,
+    "displayOrder": 72,
     "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Writing Camp tháng 5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "amp-writing-camp-tháng-5-73",
+    "type": "camp",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "AMP",
+      "melbourne_gap"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-18",
+    "location": "TP.HCM",
+    "priceVnd": 8300000,
+    "displayOrder": 73,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Strategy Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "amp-strategy-intensive-74",
+    "type": "course",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning",
+      "research"
+    ],
+    "suitableFor": [
+      "AMP"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-04-16",
+    "endDate": "2026-05-16",
+    "location": "Hybrid",
+    "priceVnd": 8600000,
+    "displayOrder": 74,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "UK University Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "uk-university-prep-75",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "research"
+    ],
+    "suitableFor": [
+      "uk_applicants",
+      "college_prep"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-07-07",
+    "endDate": "2026-07-21",
+    "location": "TP.HCM",
+    "priceVnd": 4400000,
+    "displayOrder": 75,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "Australia Scholarship Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "australia-scholarship-prep-76",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning"
+    ],
+    "suitableFor": [
+      "au_applicants",
+      "college_prep"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-06-12",
+    "endDate": "2026-06-22",
+    "location": "TP.HCM",
+    "priceVnd": 5300000,
+    "displayOrder": 76,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Academic Writing 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "ielts-academic-writing-65-77",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "uts_gap"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-06-07",
+    "endDate": "2026-06-17",
+    "location": "Online",
+    "priceVnd": 2800000,
+    "displayOrder": 77,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS General Training",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "ielts-general-training-78",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-07-04",
+    "endDate": "2026-08-01",
+    "location": "Online",
+    "priceVnd": 4100000,
+    "displayOrder": 78,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Essay Writing",
+    "reason": "Thiết kế cho học viên cần nâng cao essay",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-essay-writing-79",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "essay"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 5,
+    "startDate": "2026-08-09",
+    "endDate": "2026-08-14",
+    "location": "Online",
+    "priceVnd": 1800000,
+    "displayOrder": 79,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "College Interview Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "college-interview-prep-80",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "speaking",
+      "planning"
+    ],
+    "suitableFor": [
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-11",
+    "location": "TP.HCM",
+    "priceVnd": 4200000,
+    "displayOrder": 80,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Writing Sprint 6.0+",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-writing-sprint-60plus-81",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "deadline_mode"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-06-20",
+    "endDate": "2026-06-30",
+    "location": "TP.HCM",
+    "priceVnd": 2900000,
+    "displayOrder": 81,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Full Band 7.0",
+    "reason": "Thiết kế cho học viên cần nâng cao listening, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-full-band-70-82",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "listening",
+      "reading",
+      "writing",
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 56,
+    "startDate": "2026-05-06",
+    "endDate": "2026-07-01",
+    "location": "Hybrid",
+    "priceVnd": 7000000,
+    "displayOrder": 82,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Speaking Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-speaking-intensive-83",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "speaking"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "overall_band_boost"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-04-16",
+    "endDate": "2026-05-14",
+    "location": "Online",
+    "priceVnd": 4800000,
+    "displayOrder": 83,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Listening Mastery",
+    "reason": "Thiết kế cho học viên cần nâng cao listening",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-listening-mastery-84",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "listening"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-05-01",
+    "endDate": "2026-05-15",
+    "location": "Online",
+    "priceVnd": 2900000,
+    "displayOrder": 84,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Reading Accelerator",
+    "reason": "Thiết kế cho học viên cần nâng cao reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "ielts-reading-accelerator-85",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-07-04",
+    "endDate": "2026-07-25",
+    "location": "TP.HCM",
+    "priceVnd": 2600000,
+    "displayOrder": 85,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Foundation 6.0",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, vocabulary",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-foundation-60-86",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "vocabulary"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "beginner_band"
+    ],
+    "durationDays": 60,
+    "startDate": "2026-04-04",
+    "endDate": "2026-06-03",
+    "location": "TP.HCM",
+    "priceVnd": 5900000,
+    "displayOrder": 86,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Math Mastery 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "sat-math-mastery-65-87",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 42,
+    "startDate": "2026-06-16",
+    "endDate": "2026-07-28",
+    "location": "Online",
+    "priceVnd": 5800000,
+    "displayOrder": 87,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Verbal Boost",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_verbal, reading_writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-verbal-boost-88",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_verbal",
+      "reading_writing"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1300_plus"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-06-17",
+    "endDate": "2026-07-17",
+    "location": "Online",
+    "priceVnd": 5000000,
+    "displayOrder": 88,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Full Mock Marathon",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "sat-full-mock-marathon-89",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-07-08",
+    "endDate": "2026-07-15",
+    "location": "Online",
+    "priceVnd": 2000000,
+    "displayOrder": 89,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Score 1400+ Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao sat_math, sat_verbal",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "sat-score-1400plus-intensive-90",
+    "type": "course",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "sat_math",
+      "sat_verbal"
+    ],
+    "suitableFor": [
+      "SAT",
+      "score_1350_plus"
+    ],
+    "durationDays": 45,
+    "startDate": "2026-05-03",
+    "endDate": "2026-06-17",
+    "location": "Hybrid",
+    "priceVnd": 7100000,
+    "displayOrder": 90,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "Application Essay Lab",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, application_planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "application-essay-lab-91",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "application_planning"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-05-09",
+    "endDate": "2026-05-16",
+    "location": "TP.HCM",
+    "priceVnd": 4000000,
+    "displayOrder": 91,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "Canada Admissions Bootcamp",
+    "reason": "Thiết kế cho học viên cần nâng cao planning, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "canada-admissions-bootcamp-92",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "planning",
+      "research",
+      "essay"
+    ],
+    "suitableFor": [
+      "canada_applicants",
+      "college_prep"
+    ],
+    "durationDays": 21,
+    "startDate": "2026-06-07",
+    "endDate": "2026-06-28",
+    "location": "Hybrid",
+    "priceVnd": 9100000,
+    "displayOrder": 92,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Writing Camp tháng 8",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "amp-writing-camp-tháng-8-93",
+    "type": "camp",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "AMP",
+      "melbourne_gap"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-06-10",
+    "endDate": "2026-06-24",
+    "location": "TP.HCM",
+    "priceVnd": 8300000,
+    "displayOrder": 93,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "AMP Strategy Intensive",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "amp-strategy-intensive-94",
+    "type": "course",
+    "program": "AMP",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning",
+      "research"
+    ],
+    "suitableFor": [
+      "AMP"
+    ],
+    "durationDays": 30,
+    "startDate": "2026-05-17",
+    "endDate": "2026-06-16",
+    "location": "Hybrid",
+    "priceVnd": 7900000,
+    "displayOrder": 94,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "UK University Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, research",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "uk-university-prep-95",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "research"
+    ],
+    "suitableFor": [
+      "uk_applicants",
+      "college_prep"
+    ],
+    "durationDays": 14,
+    "startDate": "2026-04-15",
+    "endDate": "2026-04-29",
+    "location": "TP.HCM",
+    "priceVnd": 4100000,
+    "displayOrder": 95,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "Australia Scholarship Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao essay, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem lộ trình",
+    "slug": "australia-scholarship-prep-96",
+    "type": "camp",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "essay",
+      "planning"
+    ],
+    "suitableFor": [
+      "au_applicants",
+      "college_prep"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-07-10",
+    "endDate": "2026-07-20",
+    "location": "TP.HCM",
+    "priceVnd": 5000000,
+    "displayOrder": 96,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS Academic Writing 6.5",
+    "reason": "Thiết kế cho học viên cần nâng cao writing",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-academic-writing-65-97",
+    "type": "workshop",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing"
+    ],
+    "suitableFor": [
+      "IELTS",
+      "uts_gap"
+    ],
+    "durationDays": 10,
+    "startDate": "2026-06-05",
+    "endDate": "2026-06-15",
+    "location": "TP.HCM",
+    "priceVnd": 2700000,
+    "displayOrder": 97,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "IELTS General Training",
+    "reason": "Thiết kế cho học viên cần nâng cao writing, reading",
+    "ctaUrl": "#",
+    "ctaLabel": "Nhận tư vấn",
+    "slug": "ielts-general-training-98",
+    "type": "course",
+    "program": "IELTS",
+    "season": "2026",
+    "targetSkills": [
+      "writing",
+      "reading"
+    ],
+    "suitableFor": [
+      "IELTS"
+    ],
+    "durationDays": 28,
+    "startDate": "2026-05-14",
+    "endDate": "2026-06-11",
+    "location": "Online",
+    "priceVnd": 4200000,
+    "displayOrder": 98,
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "courseName": "SAT Essay Writing",
+    "reason": "Thiết kế cho học viên cần nâng cao essay",
+    "ctaUrl": "#",
+    "ctaLabel": "Xem chi tiết",
+    "slug": "sat-essay-writing-99",
+    "type": "workshop",
+    "program": "SAT",
+    "season": "2026",
+    "targetSkills": [
+      "essay"
+    ],
+    "suitableFor": [
+      "SAT",
+      "college_prep"
+    ],
+    "durationDays": 5,
+    "startDate": "2026-07-14",
+    "endDate": "2026-07-19",
+    "location": "Online",
+    "priceVnd": 2100000,
+    "displayOrder": 99,
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "courseName": "College Interview Prep",
+    "reason": "Thiết kế cho học viên cần nâng cao speaking, planning",
+    "ctaUrl": "#",
+    "ctaLabel": "Đăng ký ngay",
+    "slug": "college-interview-prep-100",
+    "type": "workshop",
+    "program": "College Prep",
+    "season": "2026",
+    "targetSkills": [
+      "speaking",
+      "planning"
+    ],
+    "suitableFor": [
+      "college_prep"
+    ],
+    "durationDays": 7,
+    "startDate": "2026-08-14",
+    "endDate": "2026-08-21",
+    "location": "Online",
+    "priceVnd": 4500000,
+    "displayOrder": 100,
+    "isFeatured": false,
     "isActive": true
   }
 ]

@@ -2,181 +2,6900 @@
   {
     "id": "student_001_ms_001",
     "studentId": "student_001",
-    "type": "essay_review",
-    "title": "Why I want to study at Melbourne - Draft 2",
-    "date": "2026-03-15",
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-04-14",
     "score": null,
     "scoreLabel": "",
-    "mentorId": "mentor_001",
-    "mentorApproved": true,
-    "authScore": 91,
-    "notes": "Bài viết tốt, giọng văn rõ ràng và nhất quán.",
-    "status": "completed",
-    "contributorType": "mentor",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
     "aiSummary": {
-      "summary": "Bài luận Melbourne Draft 2 được mentor xác nhận, thể hiện tư duy phản biện và giọng văn cá nhân rõ ràng.",
-      "skillsDemonstrated": ["Academic Writing", "Critical Thinking", "Self-reflection"],
-      "evidenceStrength": "high"
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Analytical Thinking",
+        "Research"
+      ],
+      "evidenceStrength": "medium"
     }
   },
   {
     "id": "student_001_ms_002",
     "studentId": "student_001",
-    "type": "mock_test",
-    "title": "IELTS Mock Test #5",
-    "date": "2026-03-10",
-    "score": 6.5,
-    "scoreLabel": "Band 6.5",
+    "type": "goal",
+    "title": "Hoàn thiện hồ sơ Canada",
+    "date": "2026-04-29",
+    "score": null,
+    "scoreLabel": "",
     "mentorId": null,
     "mentorApproved": false,
     "authScore": null,
-    "notes": "Tăng 0.5 so với lần trước. Writing cần cải thiện thêm.",
-    "status": "completed",
-    "contributorType": "student",
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
     "aiSummary": {
-      "summary": "Đạt Band 6.5 trong lần thi thử thứ 5, tăng 0.5 so với lần trước. Tiến bộ rõ rệt ở Listening và Reading.",
-      "skillsDemonstrated": ["Test-taking", "Listening", "Reading"],
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "Leadership"
+      ],
       "evidenceStrength": "medium"
     }
   },
   {
     "id": "student_001_ms_003",
     "studentId": "student_001",
-    "type": "consultation",
-    "title": "Melbourne application strategy review",
-    "date": "2026-03-18",
+    "type": "research",
+    "title": "Engineering program research",
+    "date": "2026-02-04",
     "score": null,
-    "scoreLabel": "Consultation",
-    "mentorId": "mentor_001",
-    "mentorApproved": true,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
     "authScore": null,
-    "notes": "Chốt timeline hồ sơ và essay revision.",
+    "notes": "Ghi chú được thêm bởi mentor.",
     "status": "completed",
     "contributorType": "parent",
     "aiSummary": {
-      "summary": "Buổi tư vấn tập trung vào deadline Melbourne và cách phân bổ thời gian ôn Writing.",
-      "skillsDemonstrated": ["Planning", "Time Management"],
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "SAT Verbal"
+      ],
       "evidenceStrength": "medium"
     }
   },
   {
     "id": "student_002_ms_001",
     "studentId": "student_002",
-    "type": "mock_test",
-    "title": "IELTS Mock Test #4",
-    "date": "2026-03-12",
-    "score": 6.0,
-    "scoreLabel": "Band 6.0",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-04-20",
+    "score": null,
+    "scoreLabel": "",
     "mentorId": null,
     "mentorApproved": false,
     "authScore": null,
-    "notes": "Reading và Speaking ổn, Writing Task 2 còn lan man.",
-    "status": "completed",
-    "contributorType": "student",
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
     "aiSummary": {
-      "summary": "Gia Hân giữ mức 6.0 ổn định, cần tập trung phát triển luận điểm ở Writing.",
-      "skillsDemonstrated": ["Reading", "Speaking"],
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Consistency",
+        "Presentation"
+      ],
       "evidenceStrength": "medium"
     }
   },
   {
     "id": "student_002_ms_002",
     "studentId": "student_002",
-    "type": "essay_review",
-    "title": "Task 2 Opinion Essay - Final Review",
-    "date": "2026-03-16",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-02-10",
     "score": null,
-    "scoreLabel": "Reviewed",
-    "mentorId": "mentor_001",
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
     "mentorApproved": true,
-    "authScore": 86,
-    "notes": "Luận điểm tốt hơn, cần thêm evidence cụ thể.",
+    "authScore": 87,
+    "notes": "Ghi chú được thêm bởi mentor.",
     "status": "completed",
     "contributorType": "mentor",
     "aiSummary": {
-      "summary": "Bài essay đã có cấu trúc rõ hơn, mentor xác nhận tiến bộ rõ ở coherence.",
-      "skillsDemonstrated": ["Academic Writing", "Coherence"],
-      "evidenceStrength": "high"
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
     }
   },
   {
     "id": "student_002_ms_003",
     "studentId": "student_002",
-    "type": "goal",
-    "title": "Target IELTS 6.5 before UTS deadline",
-    "date": "2026-04-20",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-02-21",
     "score": null,
-    "scoreLabel": "Target",
-    "mentorId": "mentor_001",
+    "scoreLabel": "",
+    "mentorId": null,
     "mentorApproved": false,
     "authScore": null,
-    "notes": "Cần thêm 0.5 band Writing.",
-    "status": "upcoming",
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
     "contributorType": "student",
     "aiSummary": {
-      "summary": "Milestone học tập trọng tâm của Gia Hân trong 1 tháng tới.",
-      "skillsDemonstrated": ["Goal Setting"],
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Vocabulary",
+        "Consistency"
+      ],
       "evidenceStrength": "medium"
     }
   },
   {
     "id": "student_003_ms_001",
     "studentId": "student_003",
-    "type": "mock_test",
-    "title": "SAT Mock Test #6",
-    "date": "2026-03-09",
-    "score": 1450,
-    "scoreLabel": "SAT 1450",
-    "mentorId": "mentor_002",
-    "mentorApproved": true,
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-02-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
     "authScore": null,
-    "notes": "Đạt target SAT sớm hơn kế hoạch.",
+    "notes": "Ghi chú được thêm bởi mentor.",
     "status": "completed",
-    "contributorType": "student",
+    "contributorType": "parent",
     "aiSummary": {
-      "summary": "Quang Duy vượt ngưỡng SAT mục tiêu, đặc biệt nổi bật ở phần Math.",
-      "skillsDemonstrated": ["SAT Math", "Test-taking"],
-      "evidenceStrength": "high"
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "Problem Solving",
+        "SAT Math"
+      ],
+      "evidenceStrength": "low"
     }
   },
   {
     "id": "student_003_ms_002",
     "studentId": "student_003",
     "type": "research",
-    "title": "Canada university shortlist complete",
-    "date": "2026-03-14",
+    "title": "Canada university shortlist",
+    "date": "2026-03-11",
     "score": null,
-    "scoreLabel": "Research",
-    "mentorId": "mentor_002",
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
     "mentorApproved": true,
     "authScore": 88,
-    "notes": "Đã phân loại reach, match, safety cho 6 trường.",
+    "notes": "Ghi chú được thêm bởi mentor.",
     "status": "completed",
     "contributorType": "mentor",
     "aiSummary": {
-      "summary": "Danh sách trường Canada đã được mentor xác nhận, thể hiện tư duy chiến lược tốt.",
-      "skillsDemonstrated": ["Research", "Planning"],
-      "evidenceStrength": "high"
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking",
+        "Leadership",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
     }
   },
   {
     "id": "student_003_ms_003",
     "studentId": "student_003",
-    "type": "ielts_requirement",
-    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
-    "date": "2026-04-25",
+    "type": "essay_review",
+    "title": "Common App Essay - Draft 8",
+    "date": "2026-02-26",
     "score": null,
-    "scoreLabel": "Requirement",
-    "mentorId": "mentor_002",
+    "scoreLabel": "",
+    "mentorId": null,
     "mentorApproved": false,
     "authScore": null,
-    "notes": "Phần còn thiếu lớn nhất trong profile hiện tại.",
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math",
+        "Planning"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_004_ms_001",
+    "studentId": "student_004",
+    "type": "essay_review",
+    "title": "Supplemental Essay Review",
+    "date": "2026-02-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 87,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_004_ms_002",
+    "studentId": "student_004",
+    "type": "goal",
+    "title": "Chốt danh sách trường Canada",
+    "date": "2026-05-16",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_004_ms_003",
+    "studentId": "student_004",
+    "type": "consultation",
+    "title": "SAT strategy review",
+    "date": "2026-05-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "SAT Math"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_005_ms_001",
+    "studentId": "student_005",
+    "type": "consultation",
+    "title": "Score improvement consultation",
+    "date": "2026-04-24",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
     "status": "upcoming",
     "contributorType": "student",
     "aiSummary": {
-      "summary": "Đây là milestone quyết định để hồ sơ Canada hoàn chỉnh.",
-      "skillsDemonstrated": ["Planning"],
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Consistency"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_005_ms_002",
+    "studentId": "student_005",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-04-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
       "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_005_ms_003",
+    "studentId": "student_005",
+    "type": "essay_review",
+    "title": "Task 1 Report - Bar Chart",
+    "date": "2026-03-04",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 90,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_006_ms_001",
+    "studentId": "student_006",
+    "type": "goal",
+    "title": "Hoàn thiện hồ sơ Canada",
+    "date": "2026-04-16",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "Planning",
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_006_ms_002",
+    "studentId": "student_006",
+    "type": "mock_test",
+    "title": "SAT Mock Test #5",
+    "date": "2026-04-29",
+    "score": 1450,
+    "scoreLabel": "SAT 1450",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_006_ms_003",
+    "studentId": "student_006",
+    "type": "consultation",
+    "title": "College application planning",
+    "date": "2026-04-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "Research",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_007_ms_001",
+    "studentId": "student_007",
+    "type": "research",
+    "title": "Engineering program research",
+    "date": "2026-05-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_007_ms_002",
+    "studentId": "student_007",
+    "type": "essay_review",
+    "title": "Supplemental Essay Review",
+    "date": "2026-02-11",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_007_ms_003",
+    "studentId": "student_007",
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-02-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 70,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_008_ms_001",
+    "studentId": "student_008",
+    "type": "goal",
+    "title": "Target IELTS 6.0 before deadline",
+    "date": "2026-04-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_008_ms_002",
+    "studentId": "student_008",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-02-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_008_ms_003",
+    "studentId": "student_008",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-02-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Listening",
+        "Test-taking"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_009_ms_001",
+    "studentId": "student_009",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-05-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_009_ms_002",
+    "studentId": "student_009",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-03-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_009_ms_003",
+    "studentId": "student_009",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 6",
+    "date": "2026-02-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_010_ms_001",
+    "studentId": "student_010",
+    "type": "essay_review",
+    "title": "Supplemental Essay Review",
+    "date": "2026-03-04",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 92,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_010_ms_002",
+    "studentId": "student_010",
+    "type": "goal",
+    "title": "Đạt SAT 1500 trước deadline",
+    "date": "2026-05-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "Planning",
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_010_ms_003",
+    "studentId": "student_010",
+    "type": "mock_test",
+    "title": "SAT Full Practice #5",
+    "date": "2026-03-03",
+    "score": 1350,
+    "scoreLabel": "SAT 1350",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 75,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_011_ms_001",
+    "studentId": "student_011",
+    "type": "goal",
+    "title": "Đạt SAT 1500 trước deadline",
+    "date": "2026-05-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "Planning",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_011_ms_002",
+    "studentId": "student_011",
+    "type": "research",
+    "title": "Canada university shortlist",
+    "date": "2026-04-27",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "Problem Solving",
+        "Planning"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_011_ms_003",
+    "studentId": "student_011",
+    "type": "mock_test",
+    "title": "SAT Full Practice #6",
+    "date": "2026-03-05",
+    "score": 1500,
+    "scoreLabel": "SAT 1500",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_012_ms_001",
+    "studentId": "student_012",
+    "type": "goal",
+    "title": "Target IELTS 7.0 before deadline",
+    "date": "2026-04-04",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Reading"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_012_ms_002",
+    "studentId": "student_012",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-02-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 91,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Presentation",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_012_ms_003",
+    "studentId": "student_012",
+    "type": "research",
+    "title": "Research scholarship requirements",
+    "date": "2026-03-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 94,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_013_ms_001",
+    "studentId": "student_013",
+    "type": "goal",
+    "title": "Chốt danh sách trường Canada",
+    "date": "2026-04-11",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "Planning",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_013_ms_002",
+    "studentId": "student_013",
+    "type": "consultation",
+    "title": "SAT strategy review",
+    "date": "2026-02-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 85,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "Analytical Thinking",
+        "Research"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_013_ms_003",
+    "studentId": "student_013",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-05-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Leadership"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_014_ms_001",
+    "studentId": "student_014",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #6",
+    "date": "2026-03-13",
+    "score": 5.0,
+    "scoreLabel": "Band 5.0",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Presentation"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_014_ms_002",
+    "studentId": "student_014",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-03-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Coherence",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_014_ms_003",
+    "studentId": "student_014",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-02-28",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 83,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Consistency"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_015_ms_001",
+    "studentId": "student_015",
+    "type": "goal",
+    "title": "Đạt Writing 6.5 trong 6 tuần",
+    "date": "2026-05-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking",
+        "Vocabulary",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_015_ms_002",
+    "studentId": "student_015",
+    "type": "research",
+    "title": "Research scholarship requirements",
+    "date": "2026-02-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 87,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_015_ms_003",
+    "studentId": "student_015",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 7",
+    "date": "2026-03-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Listening"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_016_ms_001",
+    "studentId": "student_016",
+    "type": "essay_review",
+    "title": "Activity List Review",
+    "date": "2026-03-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_016_ms_002",
+    "studentId": "student_016",
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-02-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 93,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "Planning"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_016_ms_003",
+    "studentId": "student_016",
+    "type": "mock_test",
+    "title": "SAT Mock Test #4",
+    "date": "2026-04-09",
+    "score": 1450,
+    "scoreLabel": "SAT 1450",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "Leadership",
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_017_ms_001",
+    "studentId": "student_017",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #5",
+    "date": "2026-03-11",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_017_ms_002",
+    "studentId": "student_017",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-02-28",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 71,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_017_ms_003",
+    "studentId": "student_017",
+    "type": "goal",
+    "title": "Target IELTS 6.5 before deadline",
+    "date": "2026-05-11",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_018_ms_001",
+    "studentId": "student_018",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #7",
+    "date": "2026-03-19",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 73,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Listening",
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_018_ms_002",
+    "studentId": "student_018",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-02-21",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Speaking",
+        "Consistency"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_018_ms_003",
+    "studentId": "student_018",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-02-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 71,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_019_ms_001",
+    "studentId": "student_019",
+    "type": "research",
+    "title": "Scholarship research",
+    "date": "2026-03-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 79,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_019_ms_002",
+    "studentId": "student_019",
+    "type": "goal",
+    "title": "Hoàn thiện hồ sơ Canada",
+    "date": "2026-04-19",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Leadership",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_019_ms_003",
+    "studentId": "student_019",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_020_ms_001",
+    "studentId": "student_020",
+    "type": "essay_review",
+    "title": "Activity List Review",
+    "date": "2026-02-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 94,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "Planning"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_020_ms_002",
+    "studentId": "student_020",
+    "type": "ielts_requirement",
+    "title": "Thi IELTS lần đầu",
+    "date": "2026-05-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_020_ms_003",
+    "studentId": "student_020",
+    "type": "goal",
+    "title": "Hoàn thiện hồ sơ Canada",
+    "date": "2026-05-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_021_ms_001",
+    "studentId": "student_021",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-04-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Test-taking",
+        "Consistency"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_021_ms_002",
+    "studentId": "student_021",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #3",
+    "date": "2026-02-21",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 72,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Reading"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_021_ms_003",
+    "studentId": "student_021",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-05-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking",
+        "Listening",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_022_ms_001",
+    "studentId": "student_022",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 7",
+    "date": "2026-04-23",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_022_ms_002",
+    "studentId": "student_022",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-05-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_022_ms_003",
+    "studentId": "student_022",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #7",
+    "date": "2026-03-11",
+    "score": 6.0,
+    "scoreLabel": "Band 6.0",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking",
+        "Test-taking",
+        "Listening"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_023_ms_001",
+    "studentId": "student_023",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #8",
+    "date": "2026-03-14",
+    "score": 5.0,
+    "scoreLabel": "Band 5.0",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 85,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_023_ms_002",
+    "studentId": "student_023",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-02-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Presentation",
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_023_ms_003",
+    "studentId": "student_023",
+    "type": "research",
+    "title": "Research scholarship requirements",
+    "date": "2026-02-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Reading"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_024_ms_001",
+    "studentId": "student_024",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-04-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Test-taking",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_024_ms_002",
+    "studentId": "student_024",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-02-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 83,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_024_ms_003",
+    "studentId": "student_024",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-02-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 91,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Academic Writing",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_025_ms_001",
+    "studentId": "student_025",
+    "type": "essay_review",
+    "title": "Task 1 Report - Bar Chart",
+    "date": "2026-03-04",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Consistency"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_025_ms_002",
+    "studentId": "student_025",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-04-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_025_ms_003",
+    "studentId": "student_025",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #1",
+    "date": "2026-02-05",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Vocabulary",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_026_ms_001",
+    "studentId": "student_026",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 2",
+    "date": "2026-04-29",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Presentation",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_026_ms_002",
+    "studentId": "student_026",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #6",
+    "date": "2026-03-19",
+    "score": 7.0,
+    "scoreLabel": "Band 7.0",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 74,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_026_ms_003",
+    "studentId": "student_026",
+    "type": "goal",
+    "title": "Target IELTS 7.0 before deadline",
+    "date": "2026-04-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_027_ms_001",
+    "studentId": "student_027",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #7",
+    "date": "2026-03-14",
+    "score": 6.0,
+    "scoreLabel": "Band 6.0",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_027_ms_002",
+    "studentId": "student_027",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-02-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 88,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Listening",
+        "Presentation"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_027_ms_003",
+    "studentId": "student_027",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-05-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_028_ms_001",
+    "studentId": "student_028",
+    "type": "research",
+    "title": "Research scholarship requirements",
+    "date": "2026-03-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_028_ms_002",
+    "studentId": "student_028",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 5",
+    "date": "2026-02-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 86,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Listening"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_028_ms_003",
+    "studentId": "student_028",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #6",
+    "date": "2026-02-02",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_029_ms_001",
+    "studentId": "student_029",
+    "type": "mock_test",
+    "title": "SAT Full Practice #8",
+    "date": "2026-02-17",
+    "score": 1500,
+    "scoreLabel": "SAT 1500",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_029_ms_002",
+    "studentId": "student_029",
+    "type": "goal",
+    "title": "Hoàn thiện hồ sơ Canada",
+    "date": "2026-04-27",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math",
+        "Self-Discipline",
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_029_ms_003",
+    "studentId": "student_029",
+    "type": "consultation",
+    "title": "SAT strategy review",
+    "date": "2026-03-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 85,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_030_ms_001",
+    "studentId": "student_030",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #4",
+    "date": "2026-02-13",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 85,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Speaking",
+        "Consistency"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_030_ms_002",
+    "studentId": "student_030",
+    "type": "essay_review",
+    "title": "Task 1 Report - Bar Chart",
+    "date": "2026-02-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_030_ms_003",
+    "studentId": "student_030",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-03-09",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 82,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_031_ms_001",
+    "studentId": "student_031",
+    "type": "ielts_requirement",
+    "title": "Thi IELTS lần đầu",
+    "date": "2026-04-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_031_ms_002",
+    "studentId": "student_031",
+    "type": "goal",
+    "title": "Đạt SAT 1450 trước deadline",
+    "date": "2026-05-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_031_ms_003",
+    "studentId": "student_031",
+    "type": "research",
+    "title": "Canada university shortlist",
+    "date": "2026-02-28",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_032_ms_001",
+    "studentId": "student_032",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-04-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Presentation",
+        "Consistency"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_032_ms_002",
+    "studentId": "student_032",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-02-09",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_032_ms_003",
+    "studentId": "student_032",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 5",
+    "date": "2026-02-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 78,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Presentation"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_033_ms_001",
+    "studentId": "student_033",
+    "type": "consultation",
+    "title": "Score improvement consultation",
+    "date": "2026-02-22",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 94,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_033_ms_002",
+    "studentId": "student_033",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-04-28",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Presentation"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_033_ms_003",
+    "studentId": "student_033",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #2",
+    "date": "2026-02-24",
+    "score": 6.0,
+    "scoreLabel": "Band 6.0",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Presentation",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_034_ms_001",
+    "studentId": "student_034",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-02-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_034_ms_002",
+    "studentId": "student_034",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-03-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Speaking",
+        "Listening"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_034_ms_003",
+    "studentId": "student_034",
+    "type": "research",
+    "title": "Research scholarship requirements",
+    "date": "2026-03-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_035_ms_001",
+    "studentId": "student_035",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-03-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 74,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Coherence",
+        "Speaking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_035_ms_002",
+    "studentId": "student_035",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 6",
+    "date": "2026-03-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 74,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Consistency",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_035_ms_003",
+    "studentId": "student_035",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-05-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Speaking",
+        "Reading"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_036_ms_001",
+    "studentId": "student_036",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-02-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 94,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Academic Writing",
+        "Consistency"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_036_ms_002",
+    "studentId": "student_036",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-02-24",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Listening",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_036_ms_003",
+    "studentId": "student_036",
+    "type": "goal",
+    "title": "Đạt Writing 6.5 trong 6 tuần",
+    "date": "2026-04-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Speaking",
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_037_ms_001",
+    "studentId": "student_037",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 4",
+    "date": "2026-02-13",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 81,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Reading"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_037_ms_002",
+    "studentId": "student_037",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-03-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_037_ms_003",
+    "studentId": "student_037",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-03-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 85,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Reading",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_038_ms_001",
+    "studentId": "student_038",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "Research",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_038_ms_002",
+    "studentId": "student_038",
+    "type": "goal",
+    "title": "Chốt danh sách trường Canada",
+    "date": "2026-05-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math",
+        "Research"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_038_ms_003",
+    "studentId": "student_038",
+    "type": "essay_review",
+    "title": "Supplemental Essay Review",
+    "date": "2026-02-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 74,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "SAT Math",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_039_ms_001",
+    "studentId": "student_039",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-03-09",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Test-taking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_039_ms_002",
+    "studentId": "student_039",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-05-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_039_ms_003",
+    "studentId": "student_039",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #7",
+    "date": "2026-02-03",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 93,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Reading"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_040_ms_001",
+    "studentId": "student_040",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-03-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_040_ms_002",
+    "studentId": "student_040",
+    "type": "consultation",
+    "title": "Score improvement consultation",
+    "date": "2026-02-16",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 88,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_040_ms_003",
+    "studentId": "student_040",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #8",
+    "date": "2026-02-27",
+    "score": 7.0,
+    "scoreLabel": "Band 7.0",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Coherence"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_041_ms_001",
+    "studentId": "student_041",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #3",
+    "date": "2026-02-10",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Academic Writing",
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_041_ms_002",
+    "studentId": "student_041",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-04-09",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Coherence"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_041_ms_003",
+    "studentId": "student_041",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-03-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 73,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_042_ms_001",
+    "studentId": "student_042",
+    "type": "goal",
+    "title": "Target IELTS 7.0 before deadline",
+    "date": "2026-04-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_042_ms_002",
+    "studentId": "student_042",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #5",
+    "date": "2026-03-13",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 81,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Speaking",
+        "Coherence"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_042_ms_003",
+    "studentId": "student_042",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 1",
+    "date": "2026-03-12",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_043_ms_001",
+    "studentId": "student_043",
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-03-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_043_ms_002",
+    "studentId": "student_043",
+    "type": "research",
+    "title": "Engineering program research",
+    "date": "2026-02-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 95,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_043_ms_003",
+    "studentId": "student_043",
+    "type": "ielts_requirement",
+    "title": "Thi IELTS lần đầu",
+    "date": "2026-04-21",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_044_ms_001",
+    "studentId": "student_044",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 1",
+    "date": "2026-03-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 94,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Listening"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_044_ms_002",
+    "studentId": "student_044",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-02-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 81,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_044_ms_003",
+    "studentId": "student_044",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #4",
+    "date": "2026-02-02",
+    "score": 6.0,
+    "scoreLabel": "Band 6.0",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 76,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_045_ms_001",
+    "studentId": "student_045",
+    "type": "goal",
+    "title": "Chốt danh sách trường Canada",
+    "date": "2026-03-31",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_045_ms_002",
+    "studentId": "student_045",
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-03-09",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 89,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "SAT Math",
+        "Research"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_045_ms_003",
+    "studentId": "student_045",
+    "type": "mock_test",
+    "title": "SAT Mock Test #3",
+    "date": "2026-03-19",
+    "score": 1280,
+    "scoreLabel": "SAT 1280",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 91,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_046_ms_001",
+    "studentId": "student_046",
+    "type": "goal",
+    "title": "Đạt Writing 6.5 trong 6 tuần",
+    "date": "2026-05-13",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Presentation",
+        "Reading"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_046_ms_002",
+    "studentId": "student_046",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #1",
+    "date": "2026-02-21",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_046_ms_003",
+    "studentId": "student_046",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-04-19",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_047_ms_001",
+    "studentId": "student_047",
+    "type": "goal",
+    "title": "Chốt danh sách trường Canada",
+    "date": "2026-04-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math",
+        "Leadership"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_047_ms_002",
+    "studentId": "student_047",
+    "type": "mock_test",
+    "title": "SAT Mock Test #2",
+    "date": "2026-03-13",
+    "score": 1200,
+    "scoreLabel": "SAT 1200",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 72,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_047_ms_003",
+    "studentId": "student_047",
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-03-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "SAT Math",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_048_ms_001",
+    "studentId": "student_048",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #2",
+    "date": "2026-03-11",
+    "score": 7.0,
+    "scoreLabel": "Band 7.0",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 70,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Consistency"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_048_ms_002",
+    "studentId": "student_048",
+    "type": "consultation",
+    "title": "Score improvement consultation",
+    "date": "2026-02-22",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 73,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_048_ms_003",
+    "studentId": "student_048",
+    "type": "goal",
+    "title": "Target IELTS 7.0 before deadline",
+    "date": "2026-04-22",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_049_ms_001",
+    "studentId": "student_049",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-03-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 79,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Reading",
+        "Listening"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_049_ms_002",
+    "studentId": "student_049",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #5",
+    "date": "2026-03-15",
+    "score": 5.0,
+    "scoreLabel": "Band 5.0",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 77,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Academic Writing",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_049_ms_003",
+    "studentId": "student_049",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-04-30",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Vocabulary",
+        "Test-taking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_050_ms_001",
+    "studentId": "student_050",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-02-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 92,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_050_ms_002",
+    "studentId": "student_050",
+    "type": "goal",
+    "title": "Đạt Writing 7.0 trong 6 tuần",
+    "date": "2026-04-13",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_050_ms_003",
+    "studentId": "student_050",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-04-28",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_051_ms_001",
+    "studentId": "student_051",
+    "type": "essay_review",
+    "title": "Common App Essay - Draft 4",
+    "date": "2026-03-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_051_ms_002",
+    "studentId": "student_051",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-24",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "Problem Solving",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_051_ms_003",
+    "studentId": "student_051",
+    "type": "consultation",
+    "title": "SAT strategy review",
+    "date": "2026-03-12",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 92,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_052_ms_001",
+    "studentId": "student_052",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-02-16",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 94,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking",
+        "Coherence",
+        "Test-taking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_052_ms_002",
+    "studentId": "student_052",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-03-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 85,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_052_ms_003",
+    "studentId": "student_052",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-05-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Vocabulary",
+        "Speaking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_053_ms_001",
+    "studentId": "student_053",
+    "type": "consultation",
+    "title": "Score improvement consultation",
+    "date": "2026-03-13",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 88,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Speaking",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_053_ms_002",
+    "studentId": "student_053",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-02-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 81,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_053_ms_003",
+    "studentId": "student_053",
+    "type": "goal",
+    "title": "Đạt Writing 7.0 trong 6 tuần",
+    "date": "2026-04-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Consistency",
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_054_ms_001",
+    "studentId": "student_054",
+    "type": "goal",
+    "title": "Chốt danh sách trường Canada",
+    "date": "2026-04-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_054_ms_002",
+    "studentId": "student_054",
+    "type": "ielts_requirement",
+    "title": "Thi IELTS lần đầu",
+    "date": "2026-04-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "Leadership",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_054_ms_003",
+    "studentId": "student_054",
+    "type": "research",
+    "title": "Canada university shortlist",
+    "date": "2026-02-22",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_055_ms_001",
+    "studentId": "student_055",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 1",
+    "date": "2026-02-26",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 88,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Consistency",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_055_ms_002",
+    "studentId": "student_055",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-03-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 87,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_055_ms_003",
+    "studentId": "student_055",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-03-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 70,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_056_ms_001",
+    "studentId": "student_056",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #4",
+    "date": "2026-02-26",
+    "score": 7.0,
+    "scoreLabel": "Band 7.0",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 79,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_056_ms_002",
+    "studentId": "student_056",
+    "type": "goal",
+    "title": "Đạt Writing 6.5 trong 6 tuần",
+    "date": "2026-04-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_056_ms_003",
+    "studentId": "student_056",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-02-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_057_ms_001",
+    "studentId": "student_057",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-24",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_057_ms_002",
+    "studentId": "student_057",
+    "type": "research",
+    "title": "Scholarship research",
+    "date": "2026-02-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_057_ms_003",
+    "studentId": "student_057",
+    "type": "goal",
+    "title": "Hoàn thiện hồ sơ Canada",
+    "date": "2026-04-24",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_058_ms_001",
+    "studentId": "student_058",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-05-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Coherence",
+        "Listening"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_058_ms_002",
+    "studentId": "student_058",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 2",
+    "date": "2026-03-09",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 84,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_058_ms_003",
+    "studentId": "student_058",
+    "type": "essay_review",
+    "title": "Task 1 Report - Bar Chart",
+    "date": "2026-02-12",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 75,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Consistency",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_059_ms_001",
+    "studentId": "student_059",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-03-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_059_ms_002",
+    "studentId": "student_059",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #6",
+    "date": "2026-02-21",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 78,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_059_ms_003",
+    "studentId": "student_059",
+    "type": "goal",
+    "title": "Target IELTS 7.0 before deadline",
+    "date": "2026-04-24",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Speaking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_060_ms_001",
+    "studentId": "student_060",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #6",
+    "date": "2026-02-05",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Reading",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_060_ms_002",
+    "studentId": "student_060",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-04-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Reading",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_060_ms_003",
+    "studentId": "student_060",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 3",
+    "date": "2026-05-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_061_ms_001",
+    "studentId": "student_061",
+    "type": "ielts_requirement",
+    "title": "Thi IELTS lần đầu",
+    "date": "2026-05-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_061_ms_002",
+    "studentId": "student_061",
+    "type": "mock_test",
+    "title": "SAT Mock Test #6",
+    "date": "2026-04-26",
+    "score": 1200,
+    "scoreLabel": "SAT 1200",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_061_ms_003",
+    "studentId": "student_061",
+    "type": "research",
+    "title": "Scholarship research",
+    "date": "2026-03-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_062_ms_001",
+    "studentId": "student_062",
+    "type": "mock_test",
+    "title": "SAT Mock Test #4",
+    "date": "2026-02-08",
+    "score": 1200,
+    "scoreLabel": "SAT 1200",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_062_ms_002",
+    "studentId": "student_062",
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-02-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "SAT Math"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_062_ms_003",
+    "studentId": "student_062",
+    "type": "research",
+    "title": "Engineering program research",
+    "date": "2026-02-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 95,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "Self-Discipline",
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_063_ms_001",
+    "studentId": "student_063",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 3",
+    "date": "2026-03-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 80,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_063_ms_002",
+    "studentId": "student_063",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-04-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_063_ms_003",
+    "studentId": "student_063",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-04-23",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_064_ms_001",
+    "studentId": "student_064",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-04-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Test-taking",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_064_ms_002",
+    "studentId": "student_064",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #6",
+    "date": "2026-02-04",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 95,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking",
+        "Test-taking",
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_064_ms_003",
+    "studentId": "student_064",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 1",
+    "date": "2026-04-12",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_065_ms_001",
+    "studentId": "student_065",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #2",
+    "date": "2026-03-19",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_065_ms_002",
+    "studentId": "student_065",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-03-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_065_ms_003",
+    "studentId": "student_065",
+    "type": "research",
+    "title": "Research scholarship requirements",
+    "date": "2026-03-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_066_ms_001",
+    "studentId": "student_066",
+    "type": "research",
+    "title": "Research scholarship requirements",
+    "date": "2026-02-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 85,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_066_ms_002",
+    "studentId": "student_066",
+    "type": "essay_review",
+    "title": "Task 1 Report - Bar Chart",
+    "date": "2026-05-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Consistency",
+        "Speaking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_066_ms_003",
+    "studentId": "student_066",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 7",
+    "date": "2026-03-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_067_ms_001",
+    "studentId": "student_067",
+    "type": "essay_review",
+    "title": "Supplemental Essay Review",
+    "date": "2026-02-24",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 90,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "Planning"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_067_ms_002",
+    "studentId": "student_067",
+    "type": "ielts_requirement",
+    "title": "Thi IELTS lần đầu",
+    "date": "2026-05-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "Self-Discipline",
+        "Research"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_067_ms_003",
+    "studentId": "student_067",
+    "type": "goal",
+    "title": "Đạt SAT 1400 trước deadline",
+    "date": "2026-03-31",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_068_ms_001",
+    "studentId": "student_068",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-16",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "Self-Discipline",
+        "Leadership"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_068_ms_002",
+    "studentId": "student_068",
+    "type": "research",
+    "title": "Engineering program research",
+    "date": "2026-05-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_068_ms_003",
+    "studentId": "student_068",
+    "type": "mock_test",
+    "title": "SAT Full Practice #5",
+    "date": "2026-02-01",
+    "score": 1500,
+    "scoreLabel": "SAT 1500",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "Research",
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_069_ms_001",
+    "studentId": "student_069",
+    "type": "goal",
+    "title": "Chốt danh sách trường Canada",
+    "date": "2026-04-12",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "Research"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_069_ms_002",
+    "studentId": "student_069",
+    "type": "essay_review",
+    "title": "Activity List Review",
+    "date": "2026-04-11",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_069_ms_003",
+    "studentId": "student_069",
+    "type": "research",
+    "title": "Scholarship research",
+    "date": "2026-04-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_070_ms_001",
+    "studentId": "student_070",
+    "type": "mock_test",
+    "title": "SAT Full Practice #8",
+    "date": "2026-04-17",
+    "score": 1500,
+    "scoreLabel": "SAT 1500",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_070_ms_002",
+    "studentId": "student_070",
+    "type": "research",
+    "title": "Scholarship research",
+    "date": "2026-03-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 89,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_070_ms_003",
+    "studentId": "student_070",
+    "type": "essay_review",
+    "title": "Common App Essay - Draft 6",
+    "date": "2026-02-04",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 80,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_071_ms_001",
+    "studentId": "student_071",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-05-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_071_ms_002",
+    "studentId": "student_071",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-02-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 80,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_071_ms_003",
+    "studentId": "student_071",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #8",
+    "date": "2026-03-12",
+    "score": 6.0,
+    "scoreLabel": "Band 6.0",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 83,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Test-taking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_072_ms_001",
+    "studentId": "student_072",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-03-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 84,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_072_ms_002",
+    "studentId": "student_072",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-03-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 73,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_072_ms_003",
+    "studentId": "student_072",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #4",
+    "date": "2026-03-15",
+    "score": 5.5,
+    "scoreLabel": "Band 5.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Listening",
+        "Test-taking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_073_ms_001",
+    "studentId": "student_073",
+    "type": "research",
+    "title": "Scholarship research",
+    "date": "2026-03-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 83,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_073_ms_002",
+    "studentId": "student_073",
+    "type": "ielts_requirement",
+    "title": "Thi IELTS lần đầu",
+    "date": "2026-04-21",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking",
+        "Planning",
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_073_ms_003",
+    "studentId": "student_073",
+    "type": "mock_test",
+    "title": "SAT Full Practice #7",
+    "date": "2026-03-10",
+    "score": 1500,
+    "scoreLabel": "SAT 1500",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 82,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Leadership"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_074_ms_001",
+    "studentId": "student_074",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-02-19",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 85,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Reading",
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_074_ms_002",
+    "studentId": "student_074",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-03-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 90,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_074_ms_003",
+    "studentId": "student_074",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 1",
+    "date": "2026-02-14",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 95,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_075_ms_001",
+    "studentId": "student_075",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-03-16",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 81,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_075_ms_002",
+    "studentId": "student_075",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-04-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_075_ms_003",
+    "studentId": "student_075",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-03-01",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 79,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_076_ms_001",
+    "studentId": "student_076",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-02-28",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 75,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_076_ms_002",
+    "studentId": "student_076",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #1",
+    "date": "2026-02-10",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 77,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_076_ms_003",
+    "studentId": "student_076",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-02-25",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 95,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Consistency",
+        "Test-taking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_077_ms_001",
+    "studentId": "student_077",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-05-11",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Speaking",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_077_ms_002",
+    "studentId": "student_077",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-04-24",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Coherence"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_077_ms_003",
+    "studentId": "student_077",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-03-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Consistency",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_078_ms_001",
+    "studentId": "student_078",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_078_ms_002",
+    "studentId": "student_078",
+    "type": "mock_test",
+    "title": "SAT Mock Test #3",
+    "date": "2026-02-03",
+    "score": 1200,
+    "scoreLabel": "SAT 1200",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "Problem Solving",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_078_ms_003",
+    "studentId": "student_078",
+    "type": "essay_review",
+    "title": "Activity List Review",
+    "date": "2026-05-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_079_ms_001",
+    "studentId": "student_079",
+    "type": "consultation",
+    "title": "Score improvement consultation",
+    "date": "2026-02-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_079_ms_002",
+    "studentId": "student_079",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-03-19",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 72,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Presentation",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_079_ms_003",
+    "studentId": "student_079",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 2",
+    "date": "2026-02-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 72,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Speaking",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_080_ms_001",
+    "studentId": "student_080",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 3",
+    "date": "2026-03-11",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Presentation"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_080_ms_002",
+    "studentId": "student_080",
+    "type": "research",
+    "title": "Research scholarship requirements",
+    "date": "2026-02-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 77,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing",
+        "Listening"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_080_ms_003",
+    "studentId": "student_080",
+    "type": "essay_review",
+    "title": "Task 1 Report - Bar Chart",
+    "date": "2026-02-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 95,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_081_ms_001",
+    "studentId": "student_081",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-05-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Test-taking",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_081_ms_002",
+    "studentId": "student_081",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-05-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Academic Writing",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_081_ms_003",
+    "studentId": "student_081",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #7",
+    "date": "2026-04-22",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Presentation",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_082_ms_001",
+    "studentId": "student_082",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 6",
+    "date": "2026-04-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_082_ms_002",
+    "studentId": "student_082",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #8",
+    "date": "2026-03-19",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Listening",
+        "Speaking"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_082_ms_003",
+    "studentId": "student_082",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-03-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Academic Writing",
+        "Coherence"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_083_ms_001",
+    "studentId": "student_083",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-02-04",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 82,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_083_ms_002",
+    "studentId": "student_083",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-02-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Speaking",
+        "Reading"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_083_ms_003",
+    "studentId": "student_083",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-04-29",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_084_ms_001",
+    "studentId": "student_084",
+    "type": "consultation",
+    "title": "Deadline planning review",
+    "date": "2026-02-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 74,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Consistency"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_084_ms_002",
+    "studentId": "student_084",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-02-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 75,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Listening",
+        "Speaking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_084_ms_003",
+    "studentId": "student_084",
+    "type": "goal",
+    "title": "Target IELTS 7.0 before deadline",
+    "date": "2026-03-31",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_085_ms_001",
+    "studentId": "student_085",
+    "type": "mock_test",
+    "title": "SAT Full Practice #6",
+    "date": "2026-03-03",
+    "score": 1350,
+    "scoreLabel": "SAT 1350",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 73,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "Research"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_085_ms_002",
+    "studentId": "student_085",
+    "type": "essay_review",
+    "title": "Activity List Review",
+    "date": "2026-03-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 82,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_085_ms_003",
+    "studentId": "student_085",
+    "type": "goal",
+    "title": "Đạt SAT 1350 trước deadline",
+    "date": "2026-05-19",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking",
+        "SAT Math",
+        "Planning"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_086_ms_001",
+    "studentId": "student_086",
+    "type": "research",
+    "title": "Engineering program research",
+    "date": "2026-04-27",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_086_ms_002",
+    "studentId": "student_086",
+    "type": "mock_test",
+    "title": "SAT Full Practice #2",
+    "date": "2026-02-28",
+    "score": 1450,
+    "scoreLabel": "SAT 1450",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_086_ms_003",
+    "studentId": "student_086",
+    "type": "goal",
+    "title": "Hoàn thiện hồ sơ Canada",
+    "date": "2026-04-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_087_ms_001",
+    "studentId": "student_087",
+    "type": "goal",
+    "title": "Đạt SAT 1500 trước deadline",
+    "date": "2026-05-03",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_087_ms_002",
+    "studentId": "student_087",
+    "type": "mock_test",
+    "title": "SAT Full Practice #1",
+    "date": "2026-02-20",
+    "score": 1350,
+    "scoreLabel": "SAT 1350",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_087_ms_003",
+    "studentId": "student_087",
+    "type": "essay_review",
+    "title": "Supplemental Essay Review",
+    "date": "2026-05-12",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning",
+        "SAT Verbal",
+        "Problem Solving"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_088_ms_001",
+    "studentId": "student_088",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-02-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_088_ms_002",
+    "studentId": "student_088",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #6",
+    "date": "2026-02-18",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_088_ms_003",
+    "studentId": "student_088",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-04-12",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Listening",
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_089_ms_001",
+    "studentId": "student_089",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-03-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Vocabulary",
+        "Presentation",
+        "Speaking"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_089_ms_002",
+    "studentId": "student_089",
+    "type": "goal",
+    "title": "Target IELTS 6.5 before deadline",
+    "date": "2026-04-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Coherence",
+        "Reading",
+        "Consistency"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_089_ms_003",
+    "studentId": "student_089",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-03-07",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 72,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_090_ms_001",
+    "studentId": "student_090",
+    "type": "goal",
+    "title": "Đạt SAT 1400 trước deadline",
+    "date": "2026-05-06",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_090_ms_002",
+    "studentId": "student_090",
+    "type": "ielts_requirement",
+    "title": "Thi IELTS lần đầu",
+    "date": "2026-05-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Verbal",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_090_ms_003",
+    "studentId": "student_090",
+    "type": "consultation",
+    "title": "Canada admissions consultation",
+    "date": "2026-02-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 78,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_091_ms_001",
+    "studentId": "student_091",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #6",
+    "date": "2026-02-27",
+    "score": 6.0,
+    "scoreLabel": "Band 6.0",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 80,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_091_ms_002",
+    "studentId": "student_091",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 3",
+    "date": "2026-03-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Coherence",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_091_ms_003",
+    "studentId": "student_091",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-02-26",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_092_ms_001",
+    "studentId": "student_092",
+    "type": "goal",
+    "title": "Target IELTS 6.0 before deadline",
+    "date": "2026-04-12",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Reading",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_092_ms_002",
+    "studentId": "student_092",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #3",
+    "date": "2026-02-13",
+    "score": 5.0,
+    "scoreLabel": "Band 5.0",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking",
+        "Consistency"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_092_ms_003",
+    "studentId": "student_092",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS",
+    "date": "2026-02-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_093_ms_001",
+    "studentId": "student_093",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #1",
+    "date": "2026-02-06",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Reading",
+        "Presentation"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_093_ms_002",
+    "studentId": "student_093",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-02-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_093_ms_003",
+    "studentId": "student_093",
+    "type": "essay_review",
+    "title": "Task 2 Discussion Essay",
+    "date": "2026-02-02",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_094_ms_001",
+    "studentId": "student_094",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 3",
+    "date": "2026-04-18",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Listening",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_094_ms_002",
+    "studentId": "student_094",
+    "type": "goal",
+    "title": "Target IELTS 7.0 before deadline",
+    "date": "2026-04-11",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_094_ms_003",
+    "studentId": "student_094",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #3",
+    "date": "2026-02-19",
+    "score": 5.0,
+    "scoreLabel": "Band 5.0",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency",
+        "Vocabulary"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_095_ms_001",
+    "studentId": "student_095",
+    "type": "mock_test",
+    "title": "SAT Mock Test #6",
+    "date": "2026-03-03",
+    "score": 1200,
+    "scoreLabel": "SAT 1200",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 88,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research",
+        "SAT Verbal"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_095_ms_002",
+    "studentId": "student_095",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-20",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_095_ms_003",
+    "studentId": "student_095",
+    "type": "essay_review",
+    "title": "Activity List Review",
+    "date": "2026-03-08",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 87,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking",
+        "Self-Discipline"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_096_ms_001",
+    "studentId": "student_096",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-13",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_096_ms_002",
+    "studentId": "student_096",
+    "type": "goal",
+    "title": "Đạt SAT 1450 trước deadline",
+    "date": "2026-05-19",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Research"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_096_ms_003",
+    "studentId": "student_096",
+    "type": "essay_review",
+    "title": "Activity List Review",
+    "date": "2026-02-04",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_003",
+    "mentorApproved": true,
+    "authScore": 73,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Problem Solving",
+        "Analytical Thinking",
+        "Planning"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_097_ms_001",
+    "studentId": "student_097",
+    "type": "goal",
+    "title": "Hoàn thiện profile IELTS",
+    "date": "2026-04-30",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone goal của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Reading",
+        "Academic Writing",
+        "Listening"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_097_ms_002",
+    "studentId": "student_097",
+    "type": "consultation",
+    "title": "IELTS strategy session",
+    "date": "2026-02-27",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Consistency"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_097_ms_003",
+    "studentId": "student_097",
+    "type": "mock_test",
+    "title": "IELTS Practice Test #8",
+    "date": "2026-03-14",
+    "score": 6.0,
+    "scoreLabel": "Band 6.0",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 73,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Academic Writing"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_098_ms_001",
+    "studentId": "student_098",
+    "type": "essay_review",
+    "title": "Writing Task 2 Opinion Essay",
+    "date": "2026-02-17",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_004",
+    "mentorApproved": true,
+    "authScore": 86,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Speaking",
+        "Test-taking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_098_ms_002",
+    "studentId": "student_098",
+    "type": "research",
+    "title": "University shortlist Australia",
+    "date": "2026-02-04",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone research của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Presentation"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_098_ms_003",
+    "studentId": "student_098",
+    "type": "ielts_requirement",
+    "title": "Thi chính thức IELTS lần 8",
+    "date": "2026-02-11",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Test-taking",
+        "Speaking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_099_ms_001",
+    "studentId": "student_099",
+    "type": "mock_test",
+    "title": "SAT Full Practice #1",
+    "date": "2026-04-06",
+    "score": 1200,
+    "scoreLabel": "SAT 1200",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_099_ms_002",
+    "studentId": "student_099",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ",
+    "date": "2026-04-05",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone ielts_requirement của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "SAT Math",
+        "Research",
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_099_ms_003",
+    "studentId": "student_099",
+    "type": "consultation",
+    "title": "College application planning",
+    "date": "2026-02-19",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 86,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Planning"
+      ],
+      "evidenceStrength": "low"
+    }
+  },
+  {
+    "id": "student_100_ms_001",
+    "studentId": "student_100",
+    "type": "consultation",
+    "title": "College application planning",
+    "date": "2026-02-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone consultation của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Self-Discipline",
+        "Research"
+      ],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_100_ms_002",
+    "studentId": "student_100",
+    "type": "essay_review",
+    "title": "Common App Essay - Draft 3",
+    "date": "2026-05-10",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "upcoming",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Milestone essay_review của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Analytical Thinking"
+      ],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_100_ms_003",
+    "studentId": "student_100",
+    "type": "mock_test",
+    "title": "SAT Mock Test #3",
+    "date": "2026-02-09",
+    "score": 1350,
+    "scoreLabel": "SAT 1350",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Ghi chú được thêm bởi mentor.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Milestone mock_test của học viên, thể hiện tiến bộ trong lộ trình.",
+      "skillsDemonstrated": [
+        "Leadership",
+        "SAT Math",
+        "Planning"
+      ],
+      "evidenceStrength": "low"
     }
   }
 ]

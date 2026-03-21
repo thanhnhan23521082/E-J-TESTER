@@ -50,16 +50,17 @@ python -m alembic downgrade -1
 ## Cấu trúc migration chain
 
 ```
-036a1db07894  →  002  →  003  →  0f14cd11bfb9 (HEAD)
-001_schema       trig  seed     users
+001 →  002  →  003_seed_from_data_folder (HEAD)
+001_schema       trigger_digest   seed_from_json
 ```
 
 | Migration | Mô tả |
 |-----------|--------|
-| `036a1db07894` | Tạo 7 bảng: mentors, parents, students, courses, behavioral_logs, conversations, milestones |
+| `001` | Tạo schema nền: users, mentors, parents, students, schools, courses, behavioral_logs, conversations, milestones |
 | `002` | Tạo trigger `sync_student_digest_from_milestones` |
-| `003` | Seed demo data (Nguyen Ha Minh Anh) |
-| `0f14cd11bfb9` | Tạo bảng `users` cho auth |
+| `003_seed_from_data_folder` | Seed dữ liệu tự động từ `alembic/data/*.json` |
+
+Lưu ý: Seed chạy idempotent (upsert), có thể chạy lại an toàn.
 
 ## Thêm migration mới
 
