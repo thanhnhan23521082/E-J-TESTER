@@ -334,7 +334,7 @@ class BehavioralLog(Base):
         Numeric(4, 1), server_default="0", default=Decimal("0.0")
     )
     activities: Mapped[list] = mapped_column(
-        JSONB, server_default="'[]'::jsonb", default=list
+        JSONB, server_default="[]", default=list
     )
     mood_note: Mapped[str | None] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(

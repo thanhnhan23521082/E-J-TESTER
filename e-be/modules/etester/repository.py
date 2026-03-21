@@ -9,7 +9,7 @@ from datetime import datetime
 from sqlalchemy import and_, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from shared.model import ETESTERCore, Milestone, Student
+from shared.model import Milestone, Student
 
 
 async def get_student(student_id: str, db: AsyncSession) -> Student | None:
@@ -101,11 +101,9 @@ async def get_all_milestones(
 async def get_etester_core(
     student_id: str,
     db: AsyncSession,
-) -> ETESTERCore | None:
-    """Fetch the ETESTER core record for a student, or None."""
-    result = await db.execute(
-        select(ETESTERCore).where(ETESTERCore.student_id == student_id)
-    )
+) -> Student | None:
+    """Fetch a student with ETESTER aggregate fields, or None."""
+    result = await db.execute(select(Student).where(Student.student_id == student_id))
     return result.scalar_one_or_none()
 
 
@@ -123,59 +121,21 @@ async def save_etester_core(
     total_contributions: int = 0,
     narrative_cache: str | None = None,
     badge_issued: str | None = None,
-) -> ETESTERCore:
-    """
-    Upsert (insert or update) an ETESTERCore record for a student.
+) -> Student:
+    """Update the student's ETESTER aggregate fields and return the row."""
+    student = await get_student(student_id, db)
+    if student is None:
+        raise ValueError(f"Student not found: {student_id}")
 
-    Args:
-        db: Async session.
-        student_id: Target student.
-        ...: All core fields.
+    student.ielts_score = academic_score
+    student.skill_breakdown = skills
+    student.progress_pct = total_contributions
+    student.priority_action = badge_issued
+    student.weakest_skill = institutional_stamp
 
-    Returns:
-        The upserted ETESTERCore row.
-    """
-    existing = await get_etester_core(student_id, db)
-
-    import json
-
-    if existing:
-        for attr, val in {
-            "academic_score": academic_score,
-            "writing_growth": writing_growth,
-            "skills": json.dumps(skills) if skills else None,
-            "mentor_verifications": mentor_verifications,
-            "parent_support_level": parent_support_level,
-            "institutional_stamp": institutional_stamp,
-            "consistency_score": consistency_score,
-            "total_contributions": total_contributions,
-            "narrative_cache": narrative_cache,
-            "badge_issued": badge_issued,
-        }.items():
-            if val is not None:
-                setattr(existing, attr, val)
-        existing.last_updated = datetime.utcnow()
-        await db.commit()
-        await db.refresh(existing)
-        return existing
-    else:
-        core = ETESTERCore(
-            student_id=student_id,
-            academic_score=academic_score,
-            writing_growth=writing_growth,
-            skills=json.dumps(skills) if skills else None,
-            mentor_verifications=mentor_verifications,
-            parent_support_level=parent_support_level,
-            institutional_stamp=institutional_stamp,
-            consistency_score=consistency_score,
-            total_contributions=total_contributions,
-            narrative_cache=narrative_cache,
-            badge_issued=badge_issued,
-        )
-        db.add(core)
-        await db.commit()
-        await db.refresh(core)
-        return core
+    await db.commit()
+    await db.refresh(student)
+    return student
 
 
 async def get_essay_history(
