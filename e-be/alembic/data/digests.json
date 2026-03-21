@@ -1,0 +1,32 @@
+[
+  {
+    "studentId": "student_001",
+    "progressPct": 68,
+    "milestonesCompleted": 17,
+    "nextDeadlineDate": "2026-05-07",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 47,
+    "priorityAction": "Ôn Writing Task 2 trước deadline Melbourne",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_002",
+    "progressPct": 54,
+    "milestonesCompleted": 11,
+    "nextDeadlineDate": "2026-04-28",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 38,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_003",
+    "progressPct": 73,
+    "milestonesCompleted": 14,
+    "nextDeadlineDate": "2026-05-15",
+    "nextDeadlineLabel": "University of Toronto",
+    "daysLeft": 55,
+    "priorityAction": "Chốt danh sách hoạt động ngoại khóa cho hồ sơ Canada",
+    "weakestSkill": "IELTS requirement"
+  }
+]

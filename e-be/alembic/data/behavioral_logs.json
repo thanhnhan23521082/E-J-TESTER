@@ -1,0 +1,110 @@
+[
+  {
+    "studentId": "student_001",
+    "date": "2026-03-19",
+    "durationMin": 95,
+    "sessionStart": "22:35:00",
+    "sessionEnd": "00:05:00",
+    "studied": true,
+    "streakDay": 1,
+    "scoreDelta": 0.0,
+    "activities": ["late_night_study", "writing_practice"],
+    "moodNote": "medium: Minh Anh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_001",
+    "date": "2026-03-20",
+    "durationMin": 100,
+    "sessionStart": "22:50:00",
+    "sessionEnd": "00:20:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": ["late_night_study", "ielts_mock"],
+    "moodNote": "medium: Minh Anh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_001",
+    "date": "2026-03-21",
+    "durationMin": 90,
+    "sessionStart": "23:00:00",
+    "sessionEnd": "00:30:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": ["late_night_study", "essay_revision"],
+    "moodNote": "medium: Minh Anh học muộn 3 đêm liên tiếp tuần này | Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_002",
+    "date": "2026-03-18",
+    "durationMin": 80,
+    "sessionStart": "19:30:00",
+    "sessionEnd": "20:50:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.1,
+    "activities": ["reading", "speaking_mock"],
+    "moodNote": "low: Gia Hân duy trì nhịp học ổn định 5 ngày liên tiếp | Tiếp tục giữ lịch học và nghỉ ngơi hiện tại"
+  },
+  {
+    "studentId": "student_002",
+    "date": "2026-03-19",
+    "durationMin": 85,
+    "sessionStart": "19:45:00",
+    "sessionEnd": "21:10:00",
+    "studied": true,
+    "streakDay": 4,
+    "scoreDelta": 0.1,
+    "activities": ["writing_task_2", "reading"],
+    "moodNote": "low: Gia Hân duy trì nhịp học ổn định 5 ngày liên tiếp | Tiếp tục giữ lịch học và nghỉ ngơi hiện tại"
+  },
+  {
+    "studentId": "student_002",
+    "date": "2026-03-20",
+    "durationMin": 75,
+    "sessionStart": "20:00:00",
+    "sessionEnd": "21:15:00",
+    "studied": true,
+    "streakDay": 5,
+    "scoreDelta": 0.0,
+    "activities": ["writing_revision"],
+    "moodNote": "low: Gia Hân duy trì nhịp học ổn định 5 ngày liên tiếp | Tiếp tục giữ lịch học và nghỉ ngơi hiện tại"
+  },
+  {
+    "studentId": "student_003",
+    "date": "2026-03-17",
+    "durationMin": 70,
+    "sessionStart": "20:10:00",
+    "sessionEnd": "21:20:00",
+    "studied": true,
+    "streakDay": 2,
+    "scoreDelta": 0.0,
+    "activities": ["sat_verbal", "essay_outline"],
+    "moodNote": "medium: Quang Duy giảm thời lượng học 2 ngày gần đây do tập trung hoạt động ngoại khóa | Nhắc con quay lại lịch SAT cuối tuần"
+  },
+  {
+    "studentId": "student_003",
+    "date": "2026-03-19",
+    "durationMin": 65,
+    "sessionStart": "19:30:00",
+    "sessionEnd": "20:35:00",
+    "studied": true,
+    "streakDay": 3,
+    "scoreDelta": 0.0,
+    "activities": ["application_planning"],
+    "moodNote": "medium: Quang Duy giảm thời lượng học 2 ngày gần đây do tập trung hoạt động ngoại khóa | Nhắc con quay lại lịch SAT cuối tuần"
+  },
+  {
+    "studentId": "student_003",
+    "date": "2026-03-21",
+    "durationMin": 95,
+    "sessionStart": "20:30:00",
+    "sessionEnd": "22:05:00",
+    "studied": true,
+    "streakDay": 4,
+    "scoreDelta": 0.2,
+    "activities": ["sat_math", "university_research"],
+    "moodNote": "medium: Quang Duy giảm thời lượng học 2 ngày gần đây do tập trung hoạt động ngoại khóa | Nhắc con quay lại lịch SAT cuối tuần"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "studentId": "student_001",
+    "alert": true,
+    "severity": "medium",
+    "message": "Minh Anh học muộn 3 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_002",
+    "alert": false,
+    "severity": "low",
+    "message": "Gia Hân duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học và nghỉ ngơi hiện tại"
+  },
+  {
+    "studentId": "student_003",
+    "alert": true,
+    "severity": "medium",
+    "message": "Quang Duy giảm thời lượng học 2 ngày gần đây do tập trung hoạt động ngoại khóa",
+    "action": "Nhắc con quay lại lịch SAT cuối tuần"
+  }
+]

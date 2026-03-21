@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mentor_001",
+    "dbId": 101,
+    "name": "Thầy Nguyễn Minh",
+    "email": "mentor.mock001@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "specialty": "IELTS Writing, AMP mentoring",
+    "bio": "Mentor phụ trách nhóm AMP và IELTS, tập trung cải thiện writing cùng chiến lược hồ sơ.",
+    "avatarUrl": null,
+    "programs": ["AMP", "IELTS"],
+    "studentIds": ["student_001", "student_002"],
+    "maxStudents": 8,
+    "activeStudents": 2
+  },
+  {
+    "id": "mentor_002",
+    "dbId": 102,
+    "name": "Cô Trần Thu Hà",
+    "email": "mentor.mock002@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "specialty": "SAT chiến lược và application planning",
+    "bio": "Mentor phụ trách SAT và xây dựng lộ trình apply cho học sinh nhắm trường top.",
+    "avatarUrl": null,
+    "programs": ["SAT", "College Prep"],
+    "studentIds": ["student_003"],
+    "maxStudents": 6,
+    "activeStudents": 1
+  }
+]

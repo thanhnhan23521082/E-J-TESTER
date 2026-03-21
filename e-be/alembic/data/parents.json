@@ -1,0 +1,32 @@
+[
+  {
+    "id": "parent_001",
+    "dbId": 101,
+    "name": "Chị Thu Anh",
+    "email": "parent.mock001@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901000001",
+    "telegramId": null,
+    "studentId": "student_001"
+  },
+  {
+    "id": "parent_002",
+    "dbId": 102,
+    "name": "Anh Quốc Bảo",
+    "email": "parent.mock002@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901000002",
+    "telegramId": "giahan_parent",
+    "studentId": "student_002"
+  },
+  {
+    "id": "parent_003",
+    "dbId": 103,
+    "name": "Chị Minh Tâm",
+    "email": "parent.mock003@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901000003",
+    "telegramId": null,
+    "studentId": "student_003"
+  }
+]
