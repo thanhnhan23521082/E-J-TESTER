@@ -1,18 +1,53 @@
-import { MOCK_STUDENT, MOCK_ETESTER, MOCK_MILESTONES } from '../../data/mock'
-import { Calendar, Award, FileCheck, TrendingUp, ChevronRight, Clock, CheckCircle } from 'lucide-react'
+import { Calendar, Award, FileCheck, TrendingUp, ChevronRight, Clock, CheckCircle, Loader2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { useStudentData } from '../../hooks/useStudentData'
 import EtesterSeal from '../../components/shared/EtesterSeal'
 
 export default function StudentHome() {
   const navigate = useNavigate()
-  const student = MOCK_STUDENT
-  const etester = MOCK_ETESTER
-  const recentMilestones = MOCK_MILESTONES.slice(0, 3)
+  const { student, etester, milestones, loading, error } = useStudentData()
+
+  const recentMilestones = (milestones || []).slice(0, 3)
+
   const upcomingDeadlines = [
     { id: 1, title: 'Essay Common App', due: '3 ngày', type: 'essay' },
     { id: 2, title: 'Điểm thi thử IELTS', due: '1 tuần', type: 'test' },
     { id: 3, title: 'Hoạt động CSR', due: '2 tuần', type: 'activity' },
   ]
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-16">
+        <Loader2 className="w-8 h-8 text-etest-teal animate-spin" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center py-16">
+        <div className="text-center">
+          <div className="text-etest-red text-lg font-semibold mb-2">Lỗi tải dữ liệu</div>
+          <div className="text-etest-subtext">{error}</div>
+        </div>
+      </div>
+    )
+  }
+
+  if (!student) {
+    return (
+      <div className="flex items-center justify-center py-16">
+        <div className="text-center">
+          <div className="text-etest-subtext text-lg font-semibold mb-2">
+            Chưa có hồ sơ học viên
+          </div>
+          <div className="text-etest-hint text-sm">
+            Tài khoản của bạn chưa được liên kết với hồ sơ học viên nào.
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-12">
@@ -26,9 +61,11 @@ export default function StudentHome() {
             </span>
           </div>
           {/* Badge */}
-          <div className="absolute -bottom-1 -right-1 bg-etest-red text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
-            Level {etester.academicScore}
-          </div>
+          {etester && (
+            <div className="absolute -bottom-1 -right-1 bg-etest-red text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-sm">
+              Level {etester.academicScore}
+            </div>
+          )}
         </div>
 
         {/* User Info */}
@@ -41,16 +78,18 @@ export default function StudentHome() {
           </p>
 
           {/* Quick Stats */}
-          <div className="flex gap-4 mt-6">
-            <div className="bg-etest-bg-secondary rounded-2xl px-6 py-4">
-              <p className="text-3xl font-bold text-etest-teal">{etester.totalContributions}</p>
-              <p className="text-xs text-etest-subtext mt-1">Đóng góp</p>
+          {etester && (
+            <div className="flex gap-4 mt-6">
+              <div className="bg-etest-bg-secondary rounded-2xl px-6 py-4">
+                <p className="text-3xl font-bold text-etest-teal">{etester.totalContributions}</p>
+                <p className="text-xs text-etest-subtext mt-1">Đóng góp</p>
+              </div>
+              <div className="bg-amber-100 rounded-2xl px-6 py-4">
+                <p className="text-3xl font-bold text-amber-600">{etester.mentorVerifications}</p>
+                <p className="text-xs text-etest-subtext mt-1">Đã xác nhận</p>
+              </div>
             </div>
-            <div className="bg-amber-100 rounded-2xl px-6 py-4">
-              <p className="text-3xl font-bold text-amber-600">{etester.mentorVerifications}</p>
-              <p className="text-xs text-etest-subtext mt-1">Đã xác nhận</p>
-            </div>
-          </div>
+          )}
         </div>
       </section>
 
@@ -82,7 +121,7 @@ export default function StudentHome() {
               <TrendingUp className="w-5 h-5 text-etest-teal" />
             </div>
           </div>
-          <p className="text-3xl font-bold text-etest-text">{etester.totalContributions}</p>
+          <p className="text-3xl font-bold text-etest-text">{etester?.totalContributions ?? 0}</p>
           <p className="text-sm text-etest-subtext mt-1">Đóng góp</p>
         </div>
 
@@ -148,34 +187,36 @@ export default function StudentHome() {
           </div>
 
           {/* ETESTER Snapshot Card */}
-          <div className="bg-etest-bg-secondary rounded-3xl p-8">
-            <div className="flex justify-between items-start mb-6">
-              <h2 className="text-lg font-bold text-etest-text">ETESTER Snapshot</h2>
-              <EtesterSeal verified={etester.badgeIssued} size="sm" />
-            </div>
+          {etester && (
+            <div className="bg-etest-bg-secondary rounded-3xl p-8">
+              <div className="flex justify-between items-start mb-6">
+                <h2 className="text-lg font-bold text-etest-text">ETESTER Snapshot</h2>
+                <EtesterSeal verified={etester.badgeIssued} size="sm" />
+              </div>
 
-            <div className="grid grid-cols-3 gap-6">
-              <div>
-                <p className="text-3xl font-bold text-etest-teal">{etester.consistencyScore}%</p>
-                <p className="text-sm text-etest-subtext mt-1">Độ nhất quán</p>
+              <div className="grid grid-cols-3 gap-6">
+                <div>
+                  <p className="text-3xl font-bold text-etest-teal">{etester.consistencyScore}%</p>
+                  <p className="text-sm text-etest-subtext mt-1">Độ nhất quán</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-etest-text">{etester.skills.length}</p>
+                  <p className="text-sm text-etest-subtext mt-1">Kỹ năng</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-etest-green">{etester.mentorVerifications}</p>
+                  <p className="text-sm text-etest-subtext mt-1">Xác nhận mentor</p>
+                </div>
               </div>
-              <div>
-                <p className="text-3xl font-bold text-etest-text">{etester.skills.length}</p>
-                <p className="text-sm text-etest-subtext mt-1">Kỹ năng</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-etest-green">{etester.mentorVerifications}</p>
-                <p className="text-sm text-etest-subtext mt-1">Xác nhận mentor</p>
-              </div>
-            </div>
 
-            <button
-              onClick={() => navigate('/student/etester')}
-              className="w-full mt-6 py-3 border border-etest-teal text-etest-teal font-semibold rounded-xl hover:bg-etest-teal-light transition-colors"
-            >
-              Xem ETESTER đầy đủ
-            </button>
-          </div>
+              <button
+                onClick={() => navigate('/student/etester')}
+                className="w-full mt-6 py-3 border border-etest-teal text-etest-teal font-semibold rounded-xl hover:bg-etest-teal-light transition-colors"
+              >
+                Xem ETESTER đầy đủ
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Right Column */}
@@ -221,25 +262,31 @@ export default function StudentHome() {
             </div>
 
             <div className="space-y-3">
-              {recentMilestones.map((milestone) => (
-                <div
-                  key={milestone.id}
-                  className="flex items-center gap-3 p-3 bg-etest-bg rounded-xl"
-                >
-                  <div className="w-8 h-8 rounded-full bg-etest-green-bg flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-4 h-4 text-etest-green" />
+              {recentMilestones.length > 0 ? (
+                recentMilestones.map((milestone) => (
+                  <div
+                    key={milestone.id}
+                    className="flex items-center gap-3 p-3 bg-etest-bg rounded-xl"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-etest-green-bg flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-etest-green" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-etest-text truncate">{milestone.title}</p>
+                      <p className="text-xs text-etest-subtext">{milestone.date}</p>
+                    </div>
+                    {milestone.mentorApproved && (
+                      <span className="text-[10px] font-bold text-etest-green bg-etest-green-bg px-2 py-0.5 rounded-full">
+                        Đã xác nhận
+                      </span>
+                    )}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-etest-text truncate">{milestone.title}</p>
-                    <p className="text-xs text-etest-subtext">{milestone.date}</p>
-                  </div>
-                  {milestone.mentorApproved && (
-                    <span className="text-[10px] font-bold text-etest-green bg-etest-green-bg px-2 py-0.5 rounded-full">
-                      Đã xác nhận
-                    </span>
-                  )}
-                </div>
-              ))}
+                ))
+              ) : (
+                <p className="text-sm text-etest-hint text-center py-4">
+                  Chưa có thành tựu nào
+                </p>
+              )}
             </div>
           </div>
         </div>

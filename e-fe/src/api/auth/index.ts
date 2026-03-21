@@ -1,4 +1,4 @@
-export type AuthRole = 'parent' | 'mentor' | 'admin'
+export type AuthRole = 'parent' | 'mentor' | 'student' | 'manager'
 
 export interface LoginPayload {
   email: string
@@ -9,6 +9,17 @@ export interface RegisterPayload {
   email: string
   password: string
   role: AuthRole
+  full_name: string
+  phone?: string
+  // Parent-specific
+  telegram_id?: string
+  // Mentor-specific
+  specialty?: string
+  bio?: string
+  // Student-specific
+  program?: string
+  // Manager-specific
+  department?: string
 }
 
 export interface TokenResponse {
@@ -22,7 +33,22 @@ export interface UserResponse {
   id: number
   email: string
   role: AuthRole
+  full_name: string | null
+  phone: string | null
   created_at: string
+}
+
+export interface MeResponse {
+  id: number
+  email: string
+  role: AuthRole
+  full_name: string | null
+  phone: string | null
+  created_at: string
+  student_id: string | null
+  parent_id: number | null
+  mentor_id: number | null
+  manager_id: number | null
 }
 
 const AUTH_BASE_URL =
@@ -33,6 +59,12 @@ async function parseApiError(response: Response): Promise<string> {
     const payload = await response.json()
     if (typeof payload?.detail === 'string') {
       return payload.detail
+    }
+    if (Array.isArray(payload?.detail)) {
+      // Pydantic validation errors
+      return payload.detail
+        .map((e: { msg: string; loc: string[] }) => `${e.loc.join('.')}: ${e.msg}`)
+        .join('; ')
     }
     return `HTTP ${response.status}: ${response.statusText}`
   } catch {
@@ -64,6 +96,23 @@ export const authApi = {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
+    })
+
+    if (!response.ok) {
+      throw new Error(await parseApiError(response))
+    }
+
+    return response.json()
+  },
+
+  async getMe(): Promise<MeResponse> {
+    const token = localStorage.getItem('access_token')
+    const response = await fetch(`${AUTH_BASE_URL}/api/auth/me`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
     })
 
     if (!response.ok) {

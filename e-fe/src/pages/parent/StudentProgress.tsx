@@ -14,6 +14,23 @@ export default function StudentProgress() {
     )
   }
 
+  const isSatProgram = student.program === 'SAT'
+  const overallLabel = isSatProgram ? 'SAT' : 'IELTS'
+  const overallScore = isSatProgram ? (student.satScore ?? 0) : student.ieltsScore
+  const overallScoreText = isSatProgram ? String(Math.round(overallScore)) : overallScore.toFixed(1)
+  const skillCards = isSatProgram
+    ? [
+        { label: 'Math', value: student.skillBreakdown.L },
+        { label: 'R&W', value: student.skillBreakdown.R },
+        { label: 'Essay', value: student.skillBreakdown.W },
+      ]
+    : [
+        { label: 'L', value: student.skillBreakdown.L },
+        { label: 'R', value: student.skillBreakdown.R },
+        { label: 'W', value: student.skillBreakdown.W },
+        { label: 'S', value: student.skillBreakdown.S },
+      ]
+
   return (
     <div className="space-y-6">
       {/* Student Info Header */}
@@ -39,9 +56,9 @@ export default function StudentProgress() {
               <div className="w-8 h-8 rounded-lg bg-white/50 flex items-center justify-center">
                 <Award className="w-4 h-4 text-etest-teal" />
               </div>
-              <span className="text-xs text-etest-subtext">IELTS</span>
+              <span className="text-xs text-etest-subtext">{overallLabel}</span>
             </div>
-            <p className="text-3xl font-bold text-etest-teal">{student.ieltsScore.toFixed(1)}</p>
+            <p className="text-3xl font-bold text-etest-teal">{overallScoreText}</p>
           </div>
           <div className="bg-etest-bg-secondary rounded-2xl p-4">
             <div className="flex items-center gap-2 mb-2">
@@ -99,19 +116,19 @@ export default function StudentProgress() {
         </div>
       </section>
 
-      {/* IELTS Skills Breakdown */}
+      {/* Program Skills Breakdown */}
       <section className="bg-white rounded-3xl border border-etest-border/40 shadow-sm p-6">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-xl bg-etest-teal-light flex items-center justify-center">
             <TrendingUp className="w-5 h-5 text-etest-teal" />
           </div>
-          <h3 className="text-base font-bold text-etest-text">Kỹ năng IELTS</h3>
+          <h3 className="text-base font-bold text-etest-text">Kỹ năng {overallLabel}</h3>
         </div>
-        <div className="grid grid-cols-4 gap-3">
-          {Object.entries(student.skillBreakdown).map(([skill, score]) => (
-            <div key={skill} className="bg-etest-bg rounded-2xl p-3 text-center">
-              <p className="text-xs text-etest-subtext mb-1">{skill}</p>
-              <p className="text-2xl font-bold text-etest-text">{score}</p>
+        <div className={`grid gap-3 ${isSatProgram ? 'grid-cols-3' : 'grid-cols-4'}`}>
+          {skillCards.map((skill) => (
+            <div key={skill.label} className="bg-etest-bg rounded-2xl p-3 text-center">
+              <p className="text-xs text-etest-subtext mb-1">{skill.label}</p>
+              <p className="text-2xl font-bold text-etest-text">{skill.value}</p>
             </div>
           ))}
         </div>
