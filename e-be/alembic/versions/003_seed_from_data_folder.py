@@ -1,10 +1,10 @@
-"""seed frontend mock data from alembic data files
+"""seed data from alembic/data
 
-Revision ID: 20260321_seed_frontend_mock_data
-Revises: 5d52fa0c6c5d
-Create Date: 2026-03-21 23:05:00
+Revision ID: 003_seed_from_data_folder
+Revises: 002
+Create Date: 2026-03-22
 
-This migration seeds backend tables from JSON files stored in:
+This migration seeds backend tables from JSON files under:
     e-be/alembic/data/
 """
 
@@ -21,8 +21,8 @@ import sqlalchemy as sa
 from sqlalchemy.dialects.postgresql import JSONB, insert as pg_insert
 
 # revision identifiers, used by Alembic.
-revision: str = "20260321_seed_frontend_mock_data"
-down_revision: Union[str, Sequence[str], None] = "5d52fa0c6c5d"
+revision: str = "003_seed_from_data_folder"
+down_revision: Union[str, Sequence[str], None] = "002"
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
@@ -177,8 +177,7 @@ def _upsert_rows(
     if not rows:
         return
 
-    # PostgreSQL raises CardinalityViolation when a single INSERT .. ON CONFLICT
-    # receives duplicate constrained keys in the same batch. Keep the last row.
+    # Keep the last row for each conflict key to avoid same-key conflicts in one batch.
     deduped_rows: dict[tuple[Any, ...], dict[str, Any]] = {}
     for row in rows:
         deduped_rows[tuple(row[column_name] for column_name in index_elements)] = row
