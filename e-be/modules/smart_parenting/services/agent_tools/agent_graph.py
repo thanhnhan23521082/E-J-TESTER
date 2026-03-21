@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from typing import Any, TypedDict
 
 from langgraph.graph import END, StateGraph
@@ -17,6 +18,8 @@ from modules.smart_parenting.services.agent_tools.tools import (
     set_tool_runtime_context,
 )
 
+logger = logging.getLogger(__name__)
+
 
 class AgentState(TypedDict, total=False):
     db: AsyncSession
@@ -27,6 +30,7 @@ class AgentState(TypedDict, total=False):
     tool_outputs: dict[str, Any]
     final_answer: str
     escalated: bool
+    orchestration_trace: list[dict[str, Any]]
 
 
 def _contains_any(text: str, keywords: list[str]) -> bool:
@@ -34,44 +38,79 @@ def _contains_any(text: str, keywords: list[str]) -> bool:
     return any(keyword in text_lower for keyword in keywords)
 
 
-def _select_tools(question: str, prompt_cfg: dict[str, Any]) -> list[str]:
+def _select_tools_with_reasons(question: str, prompt_cfg: dict[str, Any]) -> tuple[list[str], dict[str, str]]:
     rules = prompt_cfg.get("agent", {}).get("tool_selection_rules", {})
     selected = ["get_student_profile", "get_conversation_history"]
+    reasons: dict[str, str] = {
+        "get_student_profile": "always include student profile for baseline context",
+        "get_conversation_history": "always include conversation history for continuity",
+    }
 
     if _contains_any(question, rules.get("mentor_keywords", [])):
         selected.append("get_mentor_info")
+        reasons["get_mentor_info"] = "matched mentor keywords"
     if _contains_any(question, rules.get("behavior_keywords", [])):
         selected.append("get_behavioral_logs")
+        reasons["get_behavioral_logs"] = "matched behavior keywords"
     if _contains_any(question, rules.get("milestone_keywords", [])):
         selected.append("get_milestones")
+        reasons["get_milestones"] = "matched milestone keywords"
     if _contains_any(question, rules.get("summary_keywords", [])):
         selected.append("get_weekly_digest")
+        reasons["get_weekly_digest"] = "matched summary keywords"
     if _contains_any(question, rules.get("course_keywords", [])):
         selected.append("search_courses")
+        reasons["search_courses"] = "matched course keywords"
     if _contains_any(question, rules.get("school_keywords", [])):
         selected.append("get_school_info")
+        reasons["get_school_info"] = "matched school keywords"
     if _contains_any(question, rules.get("summary_keywords", [])):
         selected.append("get_progress_summary")
+        reasons["get_progress_summary"] = "matched summary keywords"
     if _contains_any(question, rules.get("web_keywords", [])):
         selected.append("web_search")
+        reasons["web_search"] = "matched web keywords"
     if _contains_any(question, rules.get("escalate_keywords", [])):
         selected.append("escalate")
+        reasons["escalate"] = "matched escalate keywords"
 
     deduped: list[str] = []
     for tool_name in selected:
         if tool_name not in deduped:
             deduped.append(tool_name)
-    return deduped
+    return deduped, reasons
 
 
 async def prepare_node(state: AgentState) -> AgentState:
     cfg = load_parent_agent_prompt()
-    selected = _select_tools(state["question"], cfg)
+    selected, reasons = _select_tools_with_reasons(state["question"], cfg)
 
     if len(selected) == 2 and len(state["question"].split()) < 6:
         selected = ["chitchat"]
+        reasons = {"chitchat": "short question with no specialized keyword match"}
 
-    return {**state, "selected_tools": selected, "tool_outputs": {}, "escalated": False}
+    trace: list[dict[str, Any]] = [
+        {
+            "phase": "prepare",
+            "question": state["question"],
+            "selected_tools": selected,
+            "selection_reasons": reasons,
+        }
+    ]
+    logger.info(
+        "orchestrator.prepare selected_tools=%s reasons=%s question=%s",
+        selected,
+        json.dumps(reasons, ensure_ascii=False),
+        state["question"],
+    )
+
+    return {
+        **state,
+        "selected_tools": selected,
+        "tool_outputs": {},
+        "escalated": False,
+        "orchestration_trace": trace,
+    }
 
 
 async def tools_node(state: AgentState) -> AgentState:
@@ -82,16 +121,18 @@ async def tools_node(state: AgentState) -> AgentState:
 
     outputs: dict[str, Any] = {}
 
-    def _build_tool_input(tool_name: str) -> dict[str, Any]:
+    trace = list(state.get("orchestration_trace", []))
+
+    def _build_tool_input(tool_name: str) -> tuple[dict[str, Any], str]:
         if tool_name == "chitchat":
-            return {"query": question}
+            return {"query": question}, "direct answer mode for general question"
         if tool_name == "web_search":
-            return {"query": question, "count": 3}
+            return {"query": question, "count": 3}, "need realtime web context"
         if tool_name == "escalate":
             return {
                 "student_id": student_id,
                 "reason": "Auto-escalated by keyword policy",
-            }
+            }, "question indicates escalation policy"
         if tool_name == "get_school_info":
             profile = outputs.get("get_student_profile") or {}
             schools = profile.get("target_schools") or []
@@ -99,30 +140,69 @@ async def tools_node(state: AgentState) -> AgentState:
                 school_names = list(schools.values())
             else:
                 school_names = schools
-            return {"school_names": school_names}
+            return {"school_names": school_names}, "derive school names from student profile"
         if tool_name == "search_courses":
             profile = outputs.get("get_student_profile") or {}
             return {
                 "student_id": student_id,
                 "skill": profile.get("weakest_skill"),
                 "program": profile.get("program"),
-            }
+            }, "derive course filters from student profile"
         if tool_name == "get_behavioral_logs":
-            return {"student_id": student_id, "days": 14}
+            return {"student_id": student_id, "days": 14}, "analyze last 14 days behavior"
         if tool_name == "get_milestones":
-            return {"student_id": student_id, "status": None, "type_filter": None, "limit": 10}
+            return {
+                "student_id": student_id,
+                "status": None,
+                "type_filter": None,
+                "limit": 10,
+            }, "retrieve recent milestones for progress context"
         if tool_name == "get_conversation_history":
-            return {"student_id": student_id, "limit": 20}
-        return {"student_id": student_id}
+            return {"student_id": student_id, "limit": 20}, "preserve prior conversation context"
+        return {"student_id": student_id}, "default student-scoped input"
 
     token = set_tool_runtime_context(db=db, parent_id=parent_id)
     try:
-        for tool_name in state.get("selected_tools", []):
+        selected_tools = state.get("selected_tools", [])
+        logger.info("orchestrator.tools start selected_tools=%s", selected_tools)
+        for idx, tool_name in enumerate(selected_tools, start=1):
             tool_obj = LANGGRAPH_TOOLS.get(tool_name)
             if tool_obj is None:
+                logger.warning("orchestrator.tools skip unknown_tool=%s", tool_name)
                 continue
-            tool_input = _build_tool_input(tool_name)
-            outputs[tool_name] = await tool_obj.ainvoke(tool_input)
+            tool_input, reason = _build_tool_input(tool_name)
+            logger.info(
+                "orchestrator.tools step=%s/%s tool=%s reason=%s input=%s",
+                idx,
+                len(selected_tools),
+                tool_name,
+                reason,
+                json.dumps(tool_input, ensure_ascii=False, default=str),
+            )
+            tool_output = await tool_obj.ainvoke(tool_input)
+            outputs[tool_name] = tool_output
+            logger.info(
+                "orchestrator.tools result tool=%s output=%s",
+                tool_name,
+                json.dumps(tool_output, ensure_ascii=False, default=str),
+            )
+            trace.append(
+                {
+                    "phase": "tool",
+                    "step": idx,
+                    "total_steps": len(selected_tools),
+                    "tool": tool_name,
+                    "reason": reason,
+                    "input": tool_input,
+                    "output": tool_output,
+                    "next_tool": selected_tools[idx] if idx < len(selected_tools) else None,
+                    "next_tool_decision": (
+                        "pre-planned sequence from prepare step"
+                        if idx < len(selected_tools)
+                        else "tool sequence completed"
+                    ),
+                }
+            )
     finally:
         reset_tool_runtime_context(token)
 
@@ -130,6 +210,7 @@ async def tools_node(state: AgentState) -> AgentState:
         **state,
         "tool_outputs": outputs,
         "escalated": "escalate" in outputs,
+        "orchestration_trace": trace,
     }
 
 
@@ -145,6 +226,12 @@ async def respond_node(state: AgentState) -> AgentState:
         "Write final answer in Vietnamese for parent."
     )
 
+    logger.info(
+        "orchestrator.respond using_tools=%s style_rules=%s",
+        state.get("selected_tools", []),
+        json.dumps(style, ensure_ascii=False, default=str),
+    )
+
     answer = await call_text(
         prompt=prompt,
         system_prompt=system_prompt,
@@ -152,7 +239,18 @@ async def respond_node(state: AgentState) -> AgentState:
         max_tokens=900,
     )
 
-    return {**state, "final_answer": answer}
+    logger.info("orchestrator.respond answer_generated length=%s", len(answer))
+
+    trace = list(state.get("orchestration_trace", []))
+    trace.append(
+        {
+            "phase": "respond",
+            "used_tools": state.get("selected_tools", []),
+            "answer_length": len(answer),
+        }
+    )
+
+    return {**state, "final_answer": answer, "orchestration_trace": trace}
 
 
 async def persist_node(state: AgentState) -> AgentState:
@@ -160,6 +258,7 @@ async def persist_node(state: AgentState) -> AgentState:
     context_snapshot = {
         "selected_tools": state.get("selected_tools", []),
         "tool_outputs": state.get("tool_outputs", {}),
+        "orchestration_trace": state.get("orchestration_trace", []),
     }
 
     record = Conversation(
@@ -172,6 +271,12 @@ async def persist_node(state: AgentState) -> AgentState:
     )
     db.add(record)
     await db.commit()
+    logger.info(
+        "orchestrator.persist saved_conversation parent_id=%s student_id=%s escalated=%s",
+        state["parent_id"],
+        state["student_id"],
+        bool(state.get("escalated", False)),
+    )
 
     return state
 

@@ -1,13 +1,10 @@
 """
 core/security.py
 ────────────────
-Synchronous password hashing via bcrypt (passlib wrapper).
+Synchronous password hashing via bcrypt.
 """
 
-from passlib.context import CryptContext
-
-# ── bcrypt context ────────────────────────────────────────────────────────────
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto", bcrypt__rounds=12)
+import bcrypt
 
 
 def hash_password(plain: str) -> str:
@@ -22,7 +19,7 @@ def hash_password(plain: str) -> str:
     """
     if not plain:
         raise ValueError("Password cannot be empty")
-    return pwd_context.hash(plain)
+    return bcrypt.hashpw(plain.encode("utf-8"), bcrypt.gensalt(rounds=12)).decode("utf-8")
 
 
 def verify_password(plain: str, hashed: str) -> bool:
@@ -36,4 +33,9 @@ def verify_password(plain: str, hashed: str) -> bool:
     Returns:
         True if the password matches, False otherwise.
     """
-    return pwd_context.verify(plain, hashed)
+    if not plain or not hashed:
+        return False
+    try:
+        return bcrypt.checkpw(plain.encode("utf-8"), hashed.encode("utf-8"))
+    except ValueError:
+        return False

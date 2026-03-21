@@ -42,7 +42,8 @@ def _service_mode() -> str:
 
 
 def _should_run_db_init() -> bool:
-    value = os.getenv("RUN_DB_INIT", "true").strip().lower()
+    # Keep schema changes migration-driven by default.
+    value = os.getenv("RUN_DB_INIT", "false").strip().lower()
     return value in {"1", "true", "yes", "on"}
 
 

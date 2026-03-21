@@ -8,8 +8,33 @@
 import type { ApiResponse } from '../types'
 import type { Student, WellbeingAlert, DigestData } from '../../types'
 import { mockStudents, mockWellbeingAlerts, mockDigestData } from '../../data/mockData'
+import { apiClient } from '../client'
+
+export interface ChatCompletionRequest {
+  student_id: string
+  message: string
+}
+
+export interface ChatCompletionResponse {
+  answer: string
+  tools_used: string[]
+  escalated: boolean
+  tool_outputs: Record<string, unknown>
+}
 
 export class ParentApi {
+  /**
+   * Unified chatbot completion endpoint.
+   */
+  async chatCompletion(
+    payload: ChatCompletionRequest
+  ): Promise<ApiResponse<ChatCompletionResponse>> {
+    return apiClient.post<ChatCompletionResponse, ChatCompletionRequest>(
+      '/chat/completion',
+      payload
+    )
+  }
+
   /**
    * Get all children for a parent
    */

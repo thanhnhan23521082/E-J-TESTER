@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { GraduationCap, Users, Award, Check } from 'lucide-react'
 import { useRole } from '../hooks/useRole'
 import type { Role } from '../types'
+import { authApi, type AuthRole } from '../api/auth'
 
 const roles: { id: Role; label: string; icon: typeof GraduationCap }[] = [
   { id: 'student', label: 'Học viên', icon: GraduationCap },
@@ -12,25 +13,74 @@ const roles: { id: Role; label: string; icon: typeof GraduationCap }[] = [
 
 export default function Login() {
   const [selectedRole, setSelectedRole] = useState<Role | null>(null)
+  const [mode, setMode] = useState<'login' | 'register'>('login')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState<string | null>(null)
   const { setRole } = useRole()
   const navigate = useNavigate()
 
-  const handleLogin = () => {
+  const normalizeRoleForRegister = (role: Role | null): AuthRole | null => {
+    if (role === 'parent' || role === 'mentor') {
+      return role
+    }
+    return null
+  }
+
+  const handleAuth = async () => {
     if (!selectedRole) return
+    if (!email.trim() || !password.trim()) {
+      setError('Vui lòng nhập email và mật khẩu')
+      return
+    }
 
-    setRole(selectedRole)
+    setError(null)
+    setSuccess(null)
+    setIsSubmitting(true)
 
-    // Navigate to the appropriate portal
-    switch (selectedRole) {
-      case 'student':
-        navigate('/student')
-        break
-      case 'parent':
-        navigate('/parent')
-        break
-      case 'mentor':
-        navigate('/mentor')
-        break
+    try {
+      if (mode === 'register') {
+        const backendRole = normalizeRoleForRegister(selectedRole)
+        if (!backendRole) {
+          throw new Error('Đăng ký hiện chỉ hỗ trợ vai trò Phụ huynh hoặc Mentor')
+        }
+
+        await authApi.register({
+          email: email.trim(),
+          password,
+          role: backendRole,
+        })
+        setSuccess('Đăng ký thành công. Bạn có thể đăng nhập ngay bây giờ.')
+        setMode('login')
+      }
+
+      const token = await authApi.login({
+        email: email.trim(),
+        password,
+      })
+
+      localStorage.setItem('access_token', token.access_token)
+      localStorage.setItem('refresh_token', token.refresh_token)
+
+      setRole(selectedRole)
+
+      switch (selectedRole) {
+        case 'student':
+          navigate('/student')
+          break
+        case 'parent':
+          navigate('/parent')
+          break
+        case 'mentor':
+          navigate('/mentor')
+          break
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Đã xảy ra lỗi không xác định')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -118,6 +168,8 @@ export default function Login() {
             <input
               type="text"
               placeholder="Nhập số điện thoại hoặc email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full h-[44px] px-4 bg-etest-bg rounded-xl border border-etest-border/30 text-etest-text placeholder:text-etest-hint focus:outline-none focus:border-etest-red/50 transition-colors"
             />
           </div>
@@ -135,9 +187,19 @@ export default function Login() {
             <input
               type="password"
               placeholder="Nhập mật khẩu"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full h-[44px] px-4 bg-etest-bg rounded-xl border border-etest-border/30 text-etest-text placeholder:text-etest-hint focus:outline-none focus:border-etest-red/50 transition-colors"
             />
           </div>
+
+          {error && (
+            <p className="text-sm font-medium text-red-600">{error}</p>
+          )}
+
+          {success && (
+            <p className="text-sm font-medium text-green-600">{success}</p>
+          )}
 
           {/* Remember Me */}
           <label className="flex items-center gap-2 cursor-pointer">
@@ -150,15 +212,33 @@ export default function Login() {
 
           {/* Login Button */}
           <button
-            onClick={handleLogin}
-            disabled={!selectedRole}
+            onClick={handleAuth}
+            disabled={!selectedRole || isSubmitting}
             className={`w-full h-[52px] rounded-2xl font-bold text-base transition-all ${
-              selectedRole
+              selectedRole && !isSubmitting
                 ? 'btn-primary text-white shadow-button hover:opacity-90'
                 : 'bg-etest-border/30 text-etest-hint cursor-not-allowed'
             }`}
           >
-            Đăng nhập
+            {isSubmitting
+              ? 'Đang xử lý...'
+              : mode === 'login'
+                ? 'Đăng nhập'
+                : 'Đăng ký và đăng nhập'}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => {
+              setMode(mode === 'login' ? 'register' : 'login')
+              setError(null)
+              setSuccess(null)
+            }}
+            className="w-full text-sm font-semibold text-etest-red hover:opacity-80 transition-opacity"
+          >
+            {mode === 'login'
+              ? 'Chưa có tài khoản? Đăng ký ngay'
+              : 'Đã có tài khoản? Quay lại đăng nhập'}
           </button>
 
           {/* Divider */}

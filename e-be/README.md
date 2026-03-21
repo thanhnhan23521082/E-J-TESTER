@@ -399,7 +399,7 @@ cp .env.example .env
 psql -U postgres -c "CREATE DATABASE etest_one;"
 
 # 6. Chạy migrations (sync)
-# (Lần đầu: tables được tạo tự động bởi create_all_tables() trong main.py)
+# (Lần đầu: schema được khởi tạo bằng Alembic qua service db-init)
 # Để dùng Alembic cho production:
 #   pip install alembic
 #   alembic init alembic

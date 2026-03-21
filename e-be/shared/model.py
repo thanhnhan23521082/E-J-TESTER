@@ -138,7 +138,11 @@ class Parent(Base, TimestampMixin):
 
     # Relations
     student: Mapped["Student | None"] = relationship(
-        "Student", back_populates="parent", foreign_keys=[student_id]
+        "Student",
+        back_populates="parent",
+        primaryjoin="Parent.parent_id == Student.parent_id",
+        foreign_keys="Student.parent_id",
+        uselist=False,
     )
     conversations: Mapped[list["Conversation"]] = relationship(
         "Conversation", back_populates="parent"
