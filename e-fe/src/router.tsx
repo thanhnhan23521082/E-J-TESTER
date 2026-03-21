@@ -3,6 +3,7 @@ import PublicLayout from './layouts/PublicLayout'
 import ParentLayout from './layouts/ParentLayout'
 import MentorLayout from './layouts/MentorLayout'
 import StudentLayout from './layouts/StudentLayout'
+import ManagerLayout from './layouts/ManagerLayout'
 
 // Public pages
 import Homepage from './pages/Homepage'
@@ -27,6 +28,12 @@ import StudentEtester from './pages/student/StudentEtester'
 import StudentContribute from './pages/student/StudentContribute'
 import StudentTimeline from './pages/student/StudentTimeline'
 import EssayCheck from './pages/student/EssayCheck'
+import ArtifactForm from './pages/student/ArtifactForm'
+import ArtifactGraphPage from './pages/student/ArtifactGraphPage'
+
+// Manager pages
+import ManagerHome from './pages/manager/ManagerHome'
+import ManagerBadge from './pages/manager/ManagerBadge'
 
 // Shared pages
 import EtesterPublic from './pages/shared/EtesterPublic'
@@ -68,8 +75,18 @@ export const router = createBrowserRouter([
       { index: true, element: <StudentHome /> },
       { path: 'etester', element: <StudentEtester /> },
       { path: 'contribute', element: <StudentContribute /> },
+      { path: 'contribute/artifact', element: <ArtifactForm /> },
+      { path: 'etester/graph', element: <ArtifactGraphPage /> },
       { path: 'timeline', element: <StudentTimeline /> },
       { path: 'essay-check', element: <EssayCheck /> },
+    ],
+  },
+  {
+    path: '/manager',
+    element: <ManagerLayout />,
+    children: [
+      { index: true, element: <ManagerHome /> },
+      { path: 'badges/:studentId', element: <ManagerBadge /> },
     ],
   },
   {

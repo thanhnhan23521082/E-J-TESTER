@@ -1,24 +1,18 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { GraduationCap, Users, Award, Check } from 'lucide-react'
+import { GraduationCap, Users, Award, Shield, Check } from 'lucide-react'
 import { useRole } from '../hooks/useRole'
-import type { Role } from '../types'
-import { authApi, type AuthRole } from '../api/auth'
+import type { AllRoles } from '../types'
 
-const roles: { id: Role; label: string; icon: typeof GraduationCap }[] = [
+const roles: { id: AllRoles; label: string; icon: typeof GraduationCap }[] = [
   { id: 'student', label: 'Học viên', icon: GraduationCap },
   { id: 'parent', label: 'Phụ huynh', icon: Users },
   { id: 'mentor', label: 'Mentor', icon: Award },
+  { id: 'manager', label: 'Manager', icon: Shield },
 ]
 
 export default function Login() {
-  const [selectedRole, setSelectedRole] = useState<Role | null>(null)
-  const [mode, setMode] = useState<'login' | 'register'>('login')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [success, setSuccess] = useState<string | null>(null)
+  const [selectedRole, setSelectedRole] = useState<AllRoles | null>(null)
   const { setRole } = useRole()
   const navigate = useNavigate()
 
@@ -61,26 +55,21 @@ export default function Login() {
         password,
       })
 
-      localStorage.setItem('access_token', token.access_token)
-      localStorage.setItem('refresh_token', token.refresh_token)
+    setRole(selectedRole)
 
-      setRole(selectedRole)
-
-      switch (selectedRole) {
-        case 'student':
-          navigate('/student')
-          break
-        case 'parent':
-          navigate('/parent')
-          break
-        case 'mentor':
-          navigate('/mentor')
-          break
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Đã xảy ra lỗi không xác định')
-    } finally {
-      setIsSubmitting(false)
+    switch (selectedRole) {
+      case 'student':
+        navigate('/student')
+        break
+      case 'parent':
+        navigate('/parent')
+        break
+      case 'mentor':
+        navigate('/mentor')
+        break
+      case 'manager':
+        navigate('/manager')
+        break
     }
   }
 

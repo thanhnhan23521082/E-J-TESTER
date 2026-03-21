@@ -1,214 +1,273 @@
-import { MOCK_STUDENT, MOCK_ETESTER, MOCK_MILESTONES } from '../../data/mock'
-import EtesterSeal from '../../components/shared/EtesterSeal'
+import { useState } from 'react'
+import { MOCK_STUDENT, MOCK_ETESTER, MOCK_MILESTONES, MOCK_TRACE_LINKS } from '../../data/mock'
 import ContributorDonut from '../../components/shared/ContributorDonut'
-import QrBadge from '../../components/shared/QrBadge'
-import { Award, CheckCircle, TrendingUp, Zap } from 'lucide-react'
+import NarrativeCard from '../../components/etester/NarrativeCard'
+import MiniArtifactGraph from '../../components/etester/MiniArtifactGraph'
+import { Link } from 'react-router-dom'
+import {
+  Share2,
+  Download,
+  X,
+  AlertCircle,
+  ExternalLink,
+  CheckCircle,
+  ArrowRight,
+} from 'lucide-react'
+
+type TimelineFilter = 'all' | 'essay' | 'academic' | 'activities' | 'verified'
 
 export default function StudentEtester() {
   const student = MOCK_STUDENT
   const etester = MOCK_ETESTER
-  const recentMilestones = MOCK_MILESTONES.slice(0, 3)
+  const traceLinks = MOCK_TRACE_LINKS
+  const milestones = MOCK_MILESTONES
+  const [activeFilter, setActiveFilter] = useState<TimelineFilter>('all')
+  const [showMentorBanner, setShowMentorBanner] = useState(true)
+
+  const pendingLinks = traceLinks.filter(tl => tl.status === 'pending').length
+
+  const filters: { key: TimelineFilter; label: string }[] = [
+    { key: 'all', label: 'All' },
+    { key: 'essay', label: 'Essay' },
+    { key: 'academic', label: 'Academic' },
+    { key: 'activities', label: 'Activities' },
+    { key: 'verified', label: 'Verified' },
+  ]
+
+  const filteredMilestones = milestones.filter(m => {
+    if (activeFilter === 'all') return true
+    if (activeFilter === 'essay') return m.type === 'essay_draft' || m.type === 'essay_review'
+    if (activeFilter === 'academic') return m.type === 'mock_test'
+    if (activeFilter === 'activities') return m.type === 'camp' || m.type === 'csr' || m.type === 'other'
+    if (activeFilter === 'verified') return m.mentorApproved
+    return true
+  })
 
   return (
-    <div className="space-y-12">
-      {/* Header Section: Hero Profile */}
-      <section className="bg-white rounded-3xl border border-etest-border/40 shadow-sm overflow-hidden relative">
-        {/* Decorative blurred circles */}
+    <div className="space-y-10">
+      {/* Hero Profile Header */}
+      <section className="bg-white rounded-3xl overflow-hidden relative">
         <div className="absolute right-0 -top-24 w-96 h-96 bg-etest-red/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -left-24 top-44 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative flex items-center gap-8 p-10">
-          {/* Avatar & Stamp */}
+        <div className="relative flex items-center gap-6 p-8">
           <div className="relative flex-shrink-0">
-            {/* Rotated stamp effect behind avatar */}
-            <div className="absolute -right-4 -bottom-4 w-48 h-48 bg-white rounded-3xl shadow-lg rotate-[-3deg] opacity-80" />
-            <div className="relative w-48 h-48 rounded-full bg-gradient-to-br from-etest-red to-red-800 flex items-center justify-center shadow-lg">
-              <EtesterSeal verified={etester.badgeIssued} size="lg" />
+            <div className="w-14 h-14 rounded-2xl bg-etest-red flex items-center justify-center shadow-lg">
+              <span className="text-white font-black text-lg">E</span>
             </div>
+            {etester.badgeIssued && (
+              <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-etest-green border-2 border-white flex items-center justify-center">
+                <CheckCircle className="w-3 h-3 text-white" />
+              </div>
+            )}
           </div>
-
-          {/* Identity Info */}
-          <div className="flex-1">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-etest-red-light px-3 py-1.5 rounded-full mb-4">
-              <span className="text-xs font-bold text-etest-red">
-                Level {etester.academicScore}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-3">
+              <h1 className="text-xl font-bold text-etest-text truncate">{student.name}</h1>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-etest-green-bg text-etest-green text-[10px] font-bold rounded-full border border-etest-green/20">
+                ETEST Verified Learner
               </span>
             </div>
-
-            {/* Name */}
-            <h1 className="text-3xl font-bold text-etest-text mb-2">
-              {student.name}
-            </h1>
-
-            {/* Program info */}
-            <p className="text-sm text-etest-subtext mb-6">
-              {student.program} • {student.monthsEnrolled} tháng học
+            <p className="text-sm text-etest-subtext mt-0.5">
+              {student.monthsEnrolled} months · {student.program}
             </p>
-
-            {/* Quick stats row */}
-            <div className="flex gap-4">
-              <div className="bg-etest-bg-secondary rounded-2xl px-6 py-4 min-w-[140px]">
-                <p className="text-3xl font-bold text-etest-teal">{etester.totalContributions}</p>
-                <p className="text-xs text-etest-subtext mt-1">Đóng góp</p>
-              </div>
-              <div className="bg-amber-100 rounded-2xl px-6 py-4 min-w-[140px]">
-                <p className="text-3xl font-bold text-amber-600">{etester.mentorVerifications}</p>
-                <p className="text-xs text-etest-subtext mt-1">Xác nhận mentor</p>
-              </div>
-              <div className="bg-etest-green-bg rounded-2xl px-6 py-4 min-w-[140px]">
-                <p className="text-3xl font-bold text-etest-green">{etester.consistencyScore}%</p>
-                <p className="text-xs text-etest-subtext mt-1">Độ nhất quán</p>
-              </div>
-            </div>
           </div>
-        </div>
-
-        {/* Background branding */}
-        <div className="absolute right-10 top-10 opacity-10 pointer-events-none">
-          <span className="text-6xl font-black text-etest-red">ETEST</span>
+          <div className="flex items-center gap-3">
+            <button className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-etest-subtext bg-etest-bg-secondary rounded-xl hover:bg-etest-surface-container transition-colors">
+              <Share2 className="w-4 h-4" /> Share
+            </button>
+            <button className="inline-flex items-center gap-2 px-4 py-2 text-sm font-bold text-white btn-primary rounded-xl shadow-button hover:opacity-90 transition-opacity">
+              <Download className="w-4 h-4" /> Download QR
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Stats & Insights Bento Grid */}
-      <section className="grid grid-cols-12 gap-8">
-        {/* Left Column - Core Stats */}
-        <div className="col-span-8 space-y-8">
-          {/* 4 Stat Cards Row */}
-          <div className="grid grid-cols-4 gap-4">
-            <div className="bg-white rounded-3xl border border-etest-border/10 p-6 text-center">
-              <div className="w-12 h-12 rounded-2xl bg-etest-bg-secondary mx-auto mb-4 flex items-center justify-center">
-                <Award className="w-6 h-6 text-etest-teal" />
-              </div>
-              <p className="text-3xl font-bold text-etest-text">{student.ieltsScore.toFixed(1)}</p>
-              <p className="text-xs text-etest-subtext mt-1">IELTS</p>
-            </div>
-            <div className="bg-white rounded-3xl border border-etest-border/10 p-6 text-center">
-              <div className="w-12 h-12 rounded-2xl bg-etest-bg-secondary mx-auto mb-4 flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-etest-teal" />
-              </div>
-              <p className="text-3xl font-bold text-etest-text">{student.satScore ?? '—'}</p>
-              <p className="text-xs text-etest-subtext mt-1">SAT</p>
-            </div>
-            <div className="bg-white rounded-3xl border border-etest-border/10 p-6 text-center">
-              <div className="w-12 h-12 rounded-2xl bg-etest-bg-secondary mx-auto mb-4 flex items-center justify-center">
-                <CheckCircle className="w-6 h-6 text-etest-teal" />
-              </div>
-              <p className="text-3xl font-bold text-etest-text">{etester.mentorVerifications}</p>
-              <p className="text-xs text-etest-subtext mt-1">Xác nhận</p>
-            </div>
-            <div className="bg-white rounded-3xl border border-etest-border/10 p-6 text-center">
-              <div className="w-12 h-12 rounded-2xl bg-etest-bg-secondary mx-auto mb-4 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-etest-teal" />
-              </div>
-              <p className="text-3xl font-bold text-etest-text">{etester.skills.length}</p>
-              <p className="text-xs text-etest-subtext mt-1">Kỹ năng</p>
-            </div>
-          </div>
-
-          {/* AI Narrative Card */}
-          <div className="bg-[#d8e2ff] rounded-3xl p-8">
-            <h3 className="font-bold text-etest-text mb-4">Câu chuyện của bạn</h3>
-            <p className="text-sm text-etest-subtext leading-relaxed whitespace-pre-line">
-              {etester.narrativeCache}
+      {/* Mentor Review Banner */}
+      {showMentorBanner && pendingLinks > 0 && (
+        <div className="flex items-center justify-between px-5 py-3 bg-etest-gold-light/60 rounded-2xl">
+          <div className="flex items-center gap-3">
+            <AlertCircle className="w-4 h-4 text-etest-gold" />
+            <p className="text-sm font-medium text-etest-gold-dark">
+              Your mentor has {pendingLinks} connections to review
             </p>
           </div>
+          <button onClick={() => setShowMentorBanner(false)}>
+            <X className="w-4 h-4 text-etest-gold-dark/50" />
+          </button>
+        </div>
+      )}
 
-          {/* Skills Tags */}
-          <div className="bg-white rounded-3xl border border-etest-border/40 shadow-sm p-8">
-            <h3 className="font-bold text-etest-text mb-4">Kỹ năng đã xác thực</h3>
-            <div className="flex flex-wrap gap-3">
-              {etester.skills.map((skill, index) => (
-                <span
-                  key={index}
-                  className="px-4 py-2 bg-etest-teal-light text-etest-teal text-sm font-medium rounded-full border border-etest-teal-border"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+      {/* Stats Row */}
+      <section className="grid grid-cols-4 gap-5">
+        {[
+          { label: 'Total Progress', value: etester.totalContributions.toString(), sub: 'Contributions', color: 'text-etest-red' },
+          { label: 'Validation', value: etester.mentorVerifications.toString(), sub: 'Mentor verified', color: 'text-etest-blue' },
+          { label: 'Reliability', value: `${etester.consistencyScore}%`, sub: 'Authenticity', color: 'text-etest-green' },
+          { label: 'Duration', value: student.monthsEnrolled.toString(), sub: 'Months active', color: 'text-etest-text' },
+        ].map(stat => (
+          <div key={stat.label} className="bg-white rounded-2xl p-5">
+            <p className="text-[10px] font-bold text-etest-hint uppercase tracking-widest mb-1">{stat.label}</p>
+            <p className={`text-3xl font-black ${stat.color}`}>{stat.value}</p>
+            <p className="text-xs text-etest-subtext mt-0.5">{stat.sub}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* Contributor Breakdown + Narrative */}
+      <section className="grid grid-cols-12 gap-6">
+        <div className="col-span-5 bg-white rounded-3xl p-8">
+          <h3 className="font-bold text-etest-text mb-6">Contributor Breakdown</h3>
+          <div className="flex justify-center mb-4">
+            <ContributorDonut
+              data={[
+                { name: 'Student (45%)', value: etester.totalContributions - etester.mentorVerifications, color: '#3B82F6' },
+                { name: 'Mentor (25%)', value: etester.mentorVerifications, color: '#0D9488' },
+                { name: 'Parent (10%)', value: 2, color: '#F59E0B' },
+                ...(etester.institutionalStamp ? [{ name: 'Institution (20%)', value: 4, color: '#7C3AED' }] : []),
+              ]}
+            />
+          </div>
+          <div className="space-y-2 mt-4">
+            {[
+              { name: 'Student (45%)', color: 'bg-blue-500' },
+              { name: 'Mentor (25%)', color: 'bg-etest-teal' },
+              { name: 'Parent (10%)', color: 'bg-amber-500' },
+              { name: 'Institution (20%)', color: 'bg-etest-purple' },
+            ].map(item => (
+              <div key={item.name} className="flex items-center gap-2 text-sm">
+                <div className={`w-2.5 h-2.5 rounded-full ${item.color}`} />
+                <span className="text-etest-subtext">{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="col-span-7">
+          <NarrativeCard
+            narrative={etester.narrativeCache}
+            studentName={student.name.split(' ').pop()}
+            onRefresh={() => {}}
+          />
+        </div>
+      </section>
+
+      {/* Learning Graph */}
+      <section className="space-y-3">
+        <MiniArtifactGraph />
+        <div className="flex justify-end px-2">
+          <Link
+            to="/student/etester/graph"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-etest-blue hover:text-etest-blue-dark transition-colors"
+          >
+            View full graph <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Milestone Timeline */}
+      <section className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-etest-text">Milestone Timeline</h2>
+          <div className="flex gap-2">
+            {filters.map(f => (
+              <button
+                key={f.key}
+                onClick={() => setActiveFilter(f.key)}
+                className={`px-4 py-1.5 text-sm font-semibold rounded-lg transition-all ${
+                  activeFilter === f.key
+                    ? 'text-etest-red bg-etest-red-light'
+                    : 'text-etest-hint hover:text-etest-text hover:bg-etest-bg-secondary'
+                }`}
+              >
+                {f.label}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Right Column - Donut & QR */}
-        <div className="col-span-4 space-y-8">
-          {/* Contributor Breakdown Donut */}
-          <div className="bg-white rounded-3xl border border-etest-border/40 shadow-sm p-8">
-            <h3 className="font-bold text-etest-text mb-6">Nguồn đóng góp</h3>
-            <div className="flex justify-center mb-6">
-              <ContributorDonut
-                data={[
-                  { name: 'Học viên', value: etester.totalContributions - etester.mentorVerifications, color: '#3B82F6' },
-                  { name: 'Mentor', value: etester.mentorVerifications, color: '#0D9488' },
-                  ...(etester.institutionalStamp ? [{ name: 'Trường', value: 1, color: '#F59E0B' }] : []),
-                ]}
-              />
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-blue-500" />
-                  <span className="text-etest-subtext">Học viên</span>
-                </div>
-                <span className="font-medium text-etest-text">{etester.totalContributions - etester.mentorVerifications}</span>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-etest-teal" />
-                  <span className="text-etest-subtext">Mentor</span>
-                </div>
-                <span className="font-medium text-etest-text">{etester.mentorVerifications}</span>
-              </div>
-              {etester.institutionalStamp && (
-                <div className="flex items-center justify-between text-sm">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-amber-500" />
-                    <span className="text-etest-subtext">Trường</span>
-                  </div>
-                  <span className="font-medium text-etest-text">1</span>
-                </div>
-              )}
-            </div>
-          </div>
+        <div className="relative space-y-0">
+          {/* Timeline line */}
+          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-etest-border/20" />
 
-          {/* QR Code Profile Card */}
-          <div className="bg-white rounded-3xl border-2 border-etest-red/5 shadow-sm p-8">
-            <h3 className="font-bold text-etest-text mb-6">Mã xác thực QR</h3>
-            <div className="flex justify-center mb-4">
-              <QrBadge value={`https://etest.vn/etester/verify/${student.id}`} size={140} />
-            </div>
-            <p className="text-xs text-center text-etest-subtext">
-              Quét để xác thực hồ sơ ETESTER
-            </p>
-          </div>
+          {filteredMilestones.slice(0, 5).map((milestone) => {
+            const relatedLinks = traceLinks.filter(tl => tl.targetTitle === milestone.title || tl.sourceTitle === milestone.title)
+            const dotColor = milestone.mentorApproved ? 'bg-etest-red' : 'bg-etest-blue'
 
-          {/* Recent Milestones */}
-          <div className="bg-white rounded-3xl border border-etest-border/40 shadow-sm p-8">
-            <h3 className="font-bold text-etest-text mb-4">Thành tựu gần đây</h3>
-            <div className="space-y-3">
-              {recentMilestones.map((milestone) => (
-                <div
-                  key={milestone.id}
-                  className="flex items-center gap-3 p-3 bg-etest-bg rounded-xl"
-                >
-                  <div className="w-8 h-8 rounded-full bg-etest-green-bg flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-4 h-4 text-etest-green" />
+            return (
+              <div key={milestone.id} className="relative pl-12 pb-8 group">
+                <div className={`absolute left-[11px] top-2 w-3 h-3 rounded-full ${dotColor} border-2 border-white shadow-sm z-10`} />
+
+                <div className="bg-white rounded-2xl p-6 hover:shadow-md transition-shadow">
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <h4 className="font-bold text-etest-text">{milestone.title}</h4>
+                        {milestone.mentorApproved && (
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-etest-green-bg text-etest-green text-[10px] font-bold rounded-full">
+                            <CheckCircle className="w-3 h-3" /> Mentor
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs text-etest-hint mt-1">
+                        {new Date(milestone.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                        {' · '}
+                        <span className="capitalize">{milestone.type.replace(/_/g, ' ')}</span>
+                      </p>
+                    </div>
+                    {milestone.authScore && (
+                      <span className="text-xs font-bold text-etest-subtext bg-etest-bg-secondary px-2 py-1 rounded">
+                        {milestone.status === 'in_progress' ? '⏳ Pending' : `${milestone.authScore}% Auth`}
+                      </span>
+                    )}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-etest-text truncate">{milestone.title}</p>
-                    <p className="text-xs text-etest-subtext">{milestone.date}</p>
-                  </div>
-                  {milestone.mentorApproved && (
-                    <span className="text-[10px] font-bold text-etest-green bg-etest-green-bg px-2 py-0.5 rounded-full">
-                      Đã xác nhận
-                    </span>
+
+                  {/* Trace Links */}
+                  {relatedLinks.length > 0 && (
+                    <div className="mt-3 pt-3 border-t border-etest-border/10">
+                      <p className="text-[10px] font-bold text-etest-hint uppercase tracking-widest mb-2">Trace Links</p>
+                      <div className="flex flex-wrap gap-2">
+                        {relatedLinks.map(link => (
+                          <div
+                            key={link.id}
+                            className="inline-flex items-center gap-2 px-3 py-1.5 bg-etest-bg rounded-lg text-xs"
+                          >
+                            <ExternalLink className="w-3 h-3 text-etest-hint" />
+                            <span className="font-medium text-etest-text">{link.sourceTitle === milestone.title ? link.targetTitle : link.sourceTitle}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            )
+          })}
         </div>
       </section>
+
+      {/* Public Profile CTA */}
+      <section className="bg-white rounded-3xl p-8">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-5">
+            <div className="w-14 h-14 rounded-2xl bg-etest-purple-light flex items-center justify-center">
+              <ExternalLink className="w-6 h-6 text-etest-purple" />
+            </div>
+            <div>
+              <p className="font-bold text-etest-text">ETESTER Public Profile</p>
+              <p className="text-xs text-etest-hint mt-0.5">Verified credential page for university submissions</p>
+            </div>
+          </div>
+          <Link
+            to={`/etester/verify/${student.id}`}
+            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white bg-etest-purple rounded-xl shadow-lg shadow-etest-purple/20 hover:bg-etest-purple/90 transition-all"
+          >
+            View public profile <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-xs text-etest-hint py-4">
+        ETESTER Digital Passport System © 2024 · Blockchain Verified Credentials
+      </footer>
     </div>
   )
 }
