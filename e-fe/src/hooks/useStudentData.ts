@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { studentApi, parentApi } from '../api'
+import { studentApi, parentApi, authApi } from '../api'
 import type { Student, Milestone, EtesterCore, WellbeingAlert, DigestData } from '../types'
 import type { ParentBehavioralLog } from '../api/parent'
 
@@ -19,17 +19,32 @@ export function useStudentData(studentId?: string) {
       setError(null)
 
       try {
-        let resolvedStudentId = studentId ?? 'student_001'
+        let resolvedStudentId = studentId
 
-        if (!studentId) {
-          const meRes = await parentApi.getMe()
-          if (meRes.data?.studentId) {
-            resolvedStudentId = meRes.data.studentId
-          } else {
-            console.warn(
-              'Parent account is not linked to a student. Falling back to default student_001.'
-            )
+        // If no studentId was passed, resolve from logged-in user
+        if (!resolvedStudentId) {
+          try {
+            const me = await authApi.getMe()
+
+            if (me.role === 'student' && me.student_id) {
+              // Current user IS a student
+              resolvedStudentId = me.student_id
+            } else if (me.role === 'parent') {
+              // Current user is a parent — fetch their linked student
+              const meRes = await parentApi.getMe()
+              if (meRes.data?.studentId) {
+                resolvedStudentId = meRes.data.studentId
+              }
+            }
+          } catch {
+            console.warn('Could not resolve student ID from auth context')
           }
+        }
+
+        if (!resolvedStudentId) {
+          setError('Không tìm thấy thông tin học viên liên kết với tài khoản này')
+          setLoading(false)
+          return
         }
 
         const [studentRes, wellbeingRes, digestRes, etesterRes, milestonesRes] =

@@ -14,6 +14,7 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { authApi } from '../api'
+import { useRole } from '../hooks/useRole'
 import type { AllRoles } from '../types'
 import type { AuthRole } from '../api/auth'
 
@@ -62,6 +63,7 @@ const roles: {
 /* ────────────────────────────────────────────────────────── */
 export default function Register() {
   const navigate = useNavigate()
+  const { setRole } = useRole()
 
   // Step navigation
   const [step, setStep] = useState<1 | 2>(1)
@@ -143,10 +145,25 @@ export default function Register() {
       localStorage.setItem('access_token', token.access_token)
       localStorage.setItem('refresh_token', token.refresh_token)
 
-      // Navigate to login with success message
-      navigate('/login', {
-        state: { registrationSuccess: true },
-      })
+      // Set role context and navigate to dashboard
+      setRole(selectedRole!)
+
+      switch (selectedRole) {
+        case 'student':
+          navigate('/student')
+          break
+        case 'parent':
+          navigate('/parent')
+          break
+        case 'mentor':
+          navigate('/mentor')
+          break
+        case 'manager':
+          navigate('/manager')
+          break
+        default:
+          navigate('/login', { state: { registrationSuccess: true } })
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Đã xảy ra lỗi')
     } finally {
