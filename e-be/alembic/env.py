@@ -29,6 +29,7 @@ from shared.model import (          # noqa: F401
     Mentor,
     Parent,
     Student,
+    School,
     Course,
     BehavioralLog,
     Conversation,
