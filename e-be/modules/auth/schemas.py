@@ -100,3 +100,22 @@ class UserResponse(BaseModel):
     created_at: str  # ISO 8601 string
 
     model_config = {"from_attributes": True}
+
+
+class MeResponse(BaseModel):
+    """Authenticated user profile with role-specific IDs."""
+
+    id: int
+    email: str
+    role: str
+    full_name: str | None = None
+    phone: str | None = None
+    created_at: str
+
+    # Role-specific profile IDs
+    student_id: str | None = None    # e.g. "S-12E519CC"
+    parent_id: int | None = None
+    mentor_id: int | None = None
+    manager_id: int | None = None
+
+    model_config = {"from_attributes": True}

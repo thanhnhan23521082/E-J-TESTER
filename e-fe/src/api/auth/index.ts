@@ -38,6 +38,19 @@ export interface UserResponse {
   created_at: string
 }
 
+export interface MeResponse {
+  id: number
+  email: string
+  role: AuthRole
+  full_name: string | null
+  phone: string | null
+  created_at: string
+  student_id: string | null
+  parent_id: number | null
+  mentor_id: number | null
+  manager_id: number | null
+}
+
 const AUTH_BASE_URL =
   import.meta.env.VITE_AUTH_API_BASE_URL?.trim() || 'http://localhost:8001'
 
@@ -83,6 +96,23 @@ export const authApi = {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
+    })
+
+    if (!response.ok) {
+      throw new Error(await parseApiError(response))
+    }
+
+    return response.json()
+  },
+
+  async getMe(): Promise<MeResponse> {
+    const token = localStorage.getItem('access_token')
+    const response = await fetch(`${AUTH_BASE_URL}/api/auth/me`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
     })
 
     if (!response.ok) {

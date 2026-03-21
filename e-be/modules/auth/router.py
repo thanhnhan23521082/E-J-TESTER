@@ -17,6 +17,7 @@ from core.exceptions import DuplicateEmail, InvalidCredentials
 from core.security import hash_password, verify_password
 from modules.auth.schemas import (
     LoginRequest,
+    MeResponse,
     RefreshRequest,
     RegisterRequest,
     TokenResponse,
@@ -28,6 +29,7 @@ from shared.auth import (
     decode_refresh_token,
 )
 from shared.model import Manager, Mentor, Parent, Student, User
+from shared.deps import get_current_user
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 settings = get_settings()
@@ -235,6 +237,62 @@ async def refresh_token(
         refresh_token=body.refresh_token,
         token_type="bearer",
         expires_in=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+    )
+
+
+@router.get(
+    "/me",
+    response_model=MeResponse,
+    summary="Get current authenticated user profile",
+)
+async def me(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> MeResponse:
+    """
+    Return the authenticated user's profile including role-specific IDs.
+    Requires a valid Bearer access token.
+    """
+    student_id = None
+    parent_id = None
+    mentor_id = None
+    manager_id = None
+
+    if current_user.role == "student":
+        result = await db.execute(
+            select(Student.student_id).where(Student.name == current_user.full_name)
+        )
+        student_id = result.scalar_one_or_none()
+
+    elif current_user.role == "parent":
+        result = await db.execute(
+            select(Parent.parent_id).where(Parent.email == current_user.email)
+        )
+        parent_id = result.scalar_one_or_none()
+
+    elif current_user.role == "mentor":
+        result = await db.execute(
+            select(Mentor.mentor_id).where(Mentor.email == current_user.email)
+        )
+        mentor_id = result.scalar_one_or_none()
+
+    elif current_user.role == "manager":
+        result = await db.execute(
+            select(Manager.manager_id).where(Manager.email == current_user.email)
+        )
+        manager_id = result.scalar_one_or_none()
+
+    return MeResponse(
+        id=current_user.id,
+        email=current_user.email,
+        role=current_user.role,
+        full_name=current_user.full_name,
+        phone=current_user.phone,
+        created_at=current_user.created_at.isoformat(),
+        student_id=student_id,
+        parent_id=parent_id,
+        mentor_id=mentor_id,
+        manager_id=manager_id,
     )
 
 
