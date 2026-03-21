@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { GraduationCap, Users, Award, Shield, Check } from 'lucide-react'
 import { useRole } from '../hooks/useRole'
 import type { AllRoles } from '../types'
+import { authApi } from '../api/auth'
+import type { AuthRole } from '../api/auth'
 
 const roles: { id: AllRoles; label: string; icon: typeof GraduationCap }[] = [
   { id: 'student', label: 'Học viên', icon: GraduationCap },
@@ -13,10 +15,17 @@ const roles: { id: AllRoles; label: string; icon: typeof GraduationCap }[] = [
 
 export default function Login() {
   const [selectedRole, setSelectedRole] = useState<AllRoles | null>(null)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState<string | null>(null)
+  const [success, setSuccess] = useState<string | null>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [mode, setMode] = useState<'login' | 'register'>('login')
+
   const { setRole } = useRole()
   const navigate = useNavigate()
 
-  const normalizeRoleForRegister = (role: Role | null): AuthRole | null => {
+  const normalizeRoleForRegister = (role: AllRoles | null): AuthRole | null => {
     if (role === 'parent' || role === 'mentor') {
       return role
     }
@@ -48,6 +57,7 @@ export default function Login() {
         })
         setSuccess('Đăng ký thành công. Bạn có thể đăng nhập ngay bây giờ.')
         setMode('login')
+        return
       }
 
       const token = await authApi.login({
@@ -55,21 +65,28 @@ export default function Login() {
         password,
       })
 
-    setRole(selectedRole)
+      localStorage.setItem('access_token', token.access_token)
 
-    switch (selectedRole) {
-      case 'student':
-        navigate('/student')
-        break
-      case 'parent':
-        navigate('/parent')
-        break
-      case 'mentor':
-        navigate('/mentor')
-        break
-      case 'manager':
-        navigate('/manager')
-        break
+      setRole(selectedRole)
+
+      switch (selectedRole) {
+        case 'student':
+          navigate('/student')
+          break
+        case 'parent':
+          navigate('/parent')
+          break
+        case 'mentor':
+          navigate('/mentor')
+          break
+        case 'manager':
+          navigate('/manager')
+          break
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Đăng nhập thất bại, thử lại sau.')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -115,9 +132,7 @@ export default function Login() {
                     : 'bg-white border-2 border-transparent shadow-glass hover:border-etest-border/30'
                 }`}
                 style={{
-                  boxShadow: isSelected
-                    ? '0 1px 2px 0 rgba(0, 0, 0, 0.05)'
-                    : '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                  boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
                 }}
               >
                 {/* Selected indicator */}
@@ -135,11 +150,7 @@ export default function Login() {
                 />
 
                 {/* Label */}
-                <span
-                  className={`text-sm font-bold ${
-                    isSelected ? 'text-etest-text' : 'text-etest-text'
-                  }`}
-                >
+                <span className="text-sm font-bold text-etest-text">
                   {role.label}
                 </span>
               </button>
