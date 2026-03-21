@@ -5,7 +5,7 @@ Authentication endpoints: register, login, refresh, logout.
 All routes live under /api/auth.
 """
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Response, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -88,6 +88,7 @@ async def register(
 )
 async def login(
     body: LoginRequest,
+    response: Response,
     db: AsyncSession = Depends(get_db),
 ) -> TokenResponse:
     """
@@ -95,6 +96,7 @@ async def login(
 
     - Access token: valid for `ACCESS_TOKEN_EXPIRE_MINUTES` (default 30 min)
     - Refresh token: valid for `REFRESH_TOKEN_EXPIRE_DAYS` (default 7 days)
+    - Sets HttpOnly cookie `access_token` so browser auto-sends it on subsequent requests.
     """
     user = await _get_user_by_email(db, body.email)
     if not user or not verify_password(body.password, user.hashed_password):
@@ -106,6 +108,17 @@ async def login(
 
     access_token = create_access_token(user_id=user.id, role=user.role)
     refresh_token = create_refresh_token(user_id=user.id)
+
+    # Set HttpOnly cookie — browser auto-sends this on every request
+    response.set_cookie(
+        key="access_token",
+        value=access_token,
+        httponly=True,
+        secure=not settings.DEBUG,  # True in production (requires HTTPS)
+        samesite="lax",
+        max_age=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+        path="/",
+    )
 
     return TokenResponse(
         access_token=access_token,
@@ -122,6 +135,7 @@ async def login(
 )
 async def refresh_token(
     body: RefreshRequest,
+    response: Response,
     db: AsyncSession = Depends(get_db),
 ) -> TokenResponse:
     """
@@ -129,6 +143,7 @@ async def refresh_token(
 
     The refresh token itself is not renewed (rotation is not used to keep the
     implementation simple; in production consider refresh token rotation).
+    Sets a new HttpOnly cookie with the refreshed access token.
     """
     try:
         user_id = decode_refresh_token(body.refresh_token)
@@ -147,6 +162,17 @@ async def refresh_token(
         )
 
     access_token = create_access_token(user_id=user.id, role=user.role)
+
+    # Update HttpOnly cookie with refreshed token
+    response.set_cookie(
+        key="access_token",
+        value=access_token,
+        httponly=True,
+        secure=not settings.DEBUG,
+        samesite="lax",
+        max_age=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+        path="/",
+    )
 
     return TokenResponse(
         access_token=access_token,

@@ -7,7 +7,7 @@ Initialises:
   • SQLAlchemy tables (create_all_tables)
   • Request-ID middleware
   • CORS middleware
-  • All routers (auth, smart_parenting, etester)
+  • All routers (auth, smart_parenting, etester, mentor)
   • Health-check endpoint
 """
 
@@ -24,6 +24,7 @@ from core.database import create_all_tables
 from core.logging import RequestIDMiddleware
 from modules.auth.router import router as auth_router
 from modules.etester.router import router as etester_router
+from modules.mentor.router import router as mentor_router
 from modules.smart_parenting.chatbot_router import router as smart_parenting_chatbot_router
 from modules.smart_parenting.router import router as smart_parenting_router
 
@@ -116,6 +117,8 @@ def create_app() -> FastAPI:
         app.include_router(smart_parenting_chatbot_router)
     if mode in {"all", "etester"}:
         app.include_router(etester_router)
+    if mode in {"all", "mentors"}:
+        app.include_router(mentor_router)
 
     # ── Health check ────────────────────────────────────────────────────────
     @app.get("/", tags=["health"])
@@ -126,7 +129,7 @@ def create_app() -> FastAPI:
             "status": "healthy",
         }
 
-    @app.get("/health", tags=["health"])
+    @app.get("/health", tags=["health"], dependencies=[])
     async def health():
         return {"status": "ok"}
 

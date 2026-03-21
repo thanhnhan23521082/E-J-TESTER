@@ -10,13 +10,27 @@ from datetime import datetime
 from sqlalchemy import and_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from shared.model import BehavioralLog, Conversation, Milestone, Student
+from shared.model import BehavioralLog, Conversation, Milestone, Parent, Student
 
 
 async def get_student(student_id: str, db: AsyncSession) -> Student | None:
     """Fetch a student by primary key, or None if not found."""
     result = await db.execute(select(Student).where(Student.student_id == student_id))
     return result.scalar_one_or_none()
+
+
+async def get_parent(parent_id: int, db: AsyncSession) -> Parent | None:
+    """Fetch a parent by their integer primary key."""
+    result = await db.execute(select(Parent).where(Parent.parent_id == parent_id))
+    return result.scalar_one_or_none()
+
+
+async def get_children_of_parent(parent_id: int, db: AsyncSession) -> list[Student]:
+    """Return all students linked to this parent."""
+    result = await db.execute(
+        select(Student).where(Student.parent_id == parent_id)
+    )
+    return list(result.scalars().all())
 
 
 async def get_behavioral_logs(
@@ -27,14 +41,6 @@ async def get_behavioral_logs(
     """
     Fetch the most recent `days` days of behavioural logs for a student,
     ordered newest-first.
-
-    Args:
-        student_id: Target student.
-        days: Number of days to look back (default 30).
-        db: Async SQLAlchemy session.
-
-    Returns:
-        List of BehavioralLog rows, newest first.
     """
     since = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
     since = since - datetime.timedelta(days=days)
@@ -50,6 +56,29 @@ async def get_behavioral_logs(
         .order_by(BehavioralLog.date.desc())
     )
     return list(result.scalars().all())
+
+
+async def save_parent_message(
+    db: AsyncSession,
+    parent_id: int,
+    mentor_id: int,
+    message: str,
+) -> Conversation:
+    """
+    Persist a parent → mentor direct message as a Conversation.
+    Flags as escalated so a human consultant follows up.
+    """
+    conv = Conversation(
+        parent_id=parent_id,
+        student_id="",
+        question=message,
+        ai_response=f"[Queued for mentor {mentor_id}]",
+        escalated=True,
+    )
+    db.add(conv)
+    await db.commit()
+    await db.refresh(conv)
+    return conv
 
 
 async def save_conversation(
@@ -98,14 +127,6 @@ async def get_student_milestones(
 ) -> list[Milestone]:
     """
     Fetch the most recent `limit` milestones for a student.
-
-    Args:
-        student_id: Target student.
-        db: Async session.
-        limit: Maximum rows to return (default 20).
-
-    Returns:
-        List of Milestone rows, newest first.
     """
     result = await db.execute(
         select(Milestone)
@@ -124,15 +145,6 @@ async def get_conversation_history(
 ) -> list[Conversation]:
     """
     Fetch the most recent `limit` conversation turns for a parent–student pair.
-
-    Args:
-        parent_id: Authenticated parent's user ID.
-        student_id: Target student.
-        limit: Maximum rows to return (default 5).
-        db: Async session.
-
-    Returns:
-        List of Conversation rows, newest first.
     """
     result = await db.execute(
         select(Conversation)

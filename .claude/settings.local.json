@@ -4,7 +4,14 @@
       "Bash(npm run:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(npm test:*)"
+      "Bash(npm test:*)",
+      "mcp__gitnexus__list_repos",
+      "Bash(ls:*)",
+      "Bash(python:*)",
+      "Bash(npx tsc:*)",
+      "mcp__gitnexus__detect_changes",
+      "Bash(cd:*)",
+      "Bash(find \"D:\\\\Trong\\\\docs\\\\E-J-TESTER\\\\e-be\\\\modules\" -name \"__pycache__\" -type d -exec rm -rf {} +)"
     ]
   }
 }

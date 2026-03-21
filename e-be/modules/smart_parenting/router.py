@@ -13,14 +13,25 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from core.database import get_db
 from modules.smart_parenting.repository import (
     get_behavioral_logs,
+    get_children_of_parent,
+    get_parent,
     get_student,
+    get_student_milestones,
+    save_parent_message,
 )
 from modules.smart_parenting.schemas import (
+    AiSummary,
     BehavioralLogListResponse,
     BehavioralLogResponse,
+    DigestDataFE,
     DigestResponse,
+    MilestoneResponse,
+    ParentMessageRequest,
+    ParentMessageResponse,
     StudentProfile,
+    StudentResponse,
     UpsellResponse,
+    WellbeingAlertFE,
     WellbeingRequest,
     WellbeingResponse,
 )
@@ -178,3 +189,172 @@ async def get_upsell(
     based on their current profile and progress.
     """
     return await upsell_service(student_id=student_id, db=db)
+
+
+# ── FE-aligned endpoints (camelCase, matching e-fe/src/types/index.ts) ───
+
+def _not_found(detail: str):
+    from fastapi import HTTPException
+    raise HTTPException(status_code=404, detail=detail)
+
+
+def _parse_int(raw: str, name: str) -> int:
+    try:
+        return int(raw)
+    except ValueError:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=400, detail=f"Invalid {name}: must be an integer")
+
+
+# GET /api/students/{studentId}  (FE-aligned: camelCase, full fields)
+@router.get(
+    "/students/{student_id}",
+    response_model=StudentResponse,
+    summary="Get student profile (FE-aligned)",
+)
+async def get_student_fe(
+    student_id: str,
+    db: AsyncSession = Depends(get_db),
+    _current_user: User = Depends(get_current_user),
+) -> StudentResponse:
+    s = await get_student(student_id, db)
+    if not s:
+        _not_found(f"Student {student_id} not found")
+    return StudentResponse.from_orm(s)
+
+
+# GET /api/students/{studentId}/milestones  (FE-aligned)
+@router.get(
+    "/students/{student_id}/milestones",
+    response_model=list[MilestoneResponse],
+    summary="Get student milestones (FE-aligned)",
+)
+async def get_milestones_fe(
+    student_id: str,
+    db: AsyncSession = Depends(get_db),
+    _current_user: User = Depends(get_current_user),
+) -> list[MilestoneResponse]:
+    s = await get_student(student_id, db)
+    if not s:
+        _not_found(f"Student {student_id} not found")
+    milestones = await get_student_milestones(student_id, db)
+    return [MilestoneResponse.from_orm(m) for m in milestones]
+
+
+# GET /api/students/{studentId}/wellbeing  (FE-aligned flat alert)
+@router.get(
+    "/students/{student_id}/wellbeing",
+    response_model=WellbeingAlertFE,
+    summary="Get wellbeing alert (FE-aligned flat)",
+)
+async def get_wellbeing_fe(
+    student_id: str,
+    db: AsyncSession = Depends(get_db),
+    _current_user: User = Depends(get_current_user),
+) -> WellbeingAlertFE:
+    s = await get_student(student_id, db)
+    if not s:
+        _not_found(f"Student {student_id} not found")
+    logs = await get_behavioral_logs(student_id, days=14, db=db)
+    if not logs:
+        return WellbeingAlertFE(
+            alert=False,
+            severity="low",
+            message="No activity data.",
+            action="Encourage daily practice.",
+        )
+    studied_days = sum(1 for log in logs if log.studied)
+    avg_delta = sum(float(log.score_delta or 0) for log in logs) / len(logs)
+    streak = max((log.streak_day for log in logs), default=0)
+    if avg_delta < -1.0 or streak < 2:
+        return WellbeingAlertFE(
+            alert=True, severity="high",
+            message=f"Decline: avg score delta {avg_delta:.1f}, streak {streak} days.",
+            action="Schedule a mentor check-in.",
+        )
+    elif avg_delta < 0 or streak < 5:
+        return WellbeingAlertFE(
+            alert=True, severity="medium",
+            message=f"Slight decline: streak {streak} days.",
+            action="Monitor closely.",
+        )
+    elif studied_days / len(logs) < 0.5:
+        return WellbeingAlertFE(
+            alert=True, severity="medium",
+            message=f"Only {studied_days}/{len(logs)} days with study activity.",
+            action="Encourage 5-6 study days/week.",
+        )
+    return WellbeingAlertFE(
+        alert=False, severity="low",
+        message="Study activity is healthy.",
+        action="Keep up the great work!",
+    )
+
+
+# GET /api/students/{studentId}/digest  (FE-aligned flat digest)
+@router.get(
+    "/students/{student_id}/digest",
+    response_model=DigestDataFE,
+    summary="Get digest (FE-aligned flat)",
+)
+async def get_digest_fe(
+    student_id: str,
+    db: AsyncSession = Depends(get_db),
+    _current_user: User = Depends(get_current_user),
+) -> DigestDataFE:
+    s = await get_student(student_id, db)
+    if not s:
+        _not_found(f"Student {student_id} not found")
+    return DigestDataFE(
+        progressPct=s.progress_pct or 0,
+        milestonesCompleted=s.milestones_done or 0,
+        nextDeadline=str(s.next_deadline) if s.next_deadline else "",
+        daysLeft=s.days_left or 0,
+        priorityAction=s.priority_action or "Keep up the great work!",
+        weakestSkill=s.weakest_skill or "Writing",
+    )
+
+
+# GET /api/parents/{parentId}/children  (FE-aligned)
+@router.get(
+    "/parents/{parent_id}/children",
+    response_model=list[StudentResponse],
+    summary="Get parent's children (FE-aligned)",
+)
+async def get_children(
+    parent_id: str,
+    db: AsyncSession = Depends(get_db),
+    _current_user: User = Depends(get_current_user),
+) -> list[StudentResponse]:
+    pid = _parse_int(parent_id, "parentId")
+    parent = await get_parent(pid, db)
+    if not parent:
+        _not_found(f"Parent {parent_id} not found")
+    children = await get_children_of_parent(pid, db)
+    return [StudentResponse.from_orm(c) for c in children]
+
+
+# POST /api/parents/{parentId}/messages
+@router.post(
+    "/parents/{parent_id}/messages",
+    response_model=ParentMessageResponse,
+    status_code=201,
+    summary="Send message to mentor",
+)
+async def send_message(
+    parent_id: str,
+    body: ParentMessageRequest,
+    db: AsyncSession = Depends(get_db),
+    _current_user: User = Depends(get_current_user),
+) -> ParentMessageResponse:
+    pid = _parse_int(parent_id, "parentId")
+    parent = await get_parent(pid, db)
+    if not parent:
+        _not_found(f"Parent {parent_id} not found")
+    conv = await save_parent_message(
+        db,
+        parent_id=pid,
+        mentor_id=int(body.mentorId),
+        message=body.message,
+    )
+    return ParentMessageResponse(messageId=str(conv.id))

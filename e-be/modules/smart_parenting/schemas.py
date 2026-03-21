@@ -26,6 +26,153 @@ class StudentProfile(BaseModel):
     model_config = {"from_attributes": True}
 
 
+# ── FE-aligned schemas (camelCase, matching e-fe/src/types/index.ts) ─────────
+
+class SkillBreakdown(BaseModel):
+    """Khớp FE Student.skillBreakdown: {L, R, W, S}."""
+    L: float
+    R: float
+    W: float
+    S: float
+
+
+class TargetSchool(BaseModel):
+    """Khớp FE Student.targetSchools[]."""
+    name: str
+    country: str
+    deadline: str
+    ieltsRequired: float
+    satRequired: float | None
+    daysUntilDeadline: int
+    isEligible: bool
+    gapIelts: float
+    gapSat: float | None
+
+
+class StudentResponse(BaseModel):
+    """
+    Full student record — khớp Student interface ở e-fe/src/types/index.ts.
+    CamelCase field names, nested objects, string IDs.
+    """
+    id: str
+    name: str
+    program: str
+    monthsEnrolled: int
+    ieltsScore: float | None
+    satScore: float | None
+    gpa: float | None
+    skillBreakdown: SkillBreakdown | None
+    targetSchools: list[TargetSchool] = Field(default_factory=list)
+    parentId: str
+    mentorId: str
+
+    model_config = {"populate_by_name": True, "from_attributes": True}
+
+    @classmethod
+    def from_orm(cls, s) -> "StudentResponse":
+        return cls(
+            id=s.student_id,
+            name=s.name,
+            program=s.program or "IELTS",
+            monthsEnrolled=s.months_enrolled or 0,
+            ieltsScore=float(s.ielts_score) if s.ielts_score is not None else None,
+            satScore=float(s.sat_score) if s.sat_score is not None else None,
+            gpa=float(s.gpa) if s.gpa is not None else None,
+            skillBreakdown=SkillBreakdown(**s.skill_breakdown)
+            if s.skill_breakdown
+            else None,
+            targetSchools=[TargetSchool(**t) for t in (s.target_schools or [])],
+            parentId=str(s.parent_id) if s.parent_id is not None else "",
+            mentorId=str(s.mentor_id) if s.mentor_id is not None else "",
+        )
+
+
+class AiSummary(BaseModel):
+    """Khớp FE Milestone.aiSummary."""
+    summary: str
+    skillsDemonstrated: list[str]
+    evidenceStrength: str  # 'low'|'medium'|'high'|'highest'
+
+
+class MilestoneResponse(BaseModel):
+    """
+    Milestone record — khớp Milestone interface ở e-fe/src/types/index.ts.
+    """
+    id: str
+    studentId: str
+    type: str
+    title: str
+    date: str
+    score: float | None
+    scoreLabel: str
+    mentorId: str | None
+    mentorApproved: bool
+    authScore: float | None
+    notes: str
+    status: str
+    contributorType: str
+    aiSummary: AiSummary
+
+    model_config = {"populate_by_name": True, "from_attributes": True}
+
+    @classmethod
+    def from_orm(cls, m) -> "MilestoneResponse":
+        ai = m.ai_summary or {}
+        return cls(
+            id=m.milestone_id,
+            studentId=m.student_id,
+            type=m.type,
+            title=m.title,
+            date=m.date.isoformat(),
+            score=float(m.score) if m.score is not None else None,
+            scoreLabel=m.score_label or "",
+            mentorId=str(m.mentor_id) if m.mentor_id is not None else None,
+            mentorApproved=m.mentor_approved or False,
+            authScore=float(m.auth_score) if m.auth_score is not None else None,
+            notes=m.notes or "",
+            status=m.status,
+            contributorType=m.contributor_type,
+            aiSummary=AiSummary(
+                summary=ai.get("summary", ""),
+                skillsDemonstrated=ai.get("skills_demonstrated", []),
+                evidenceStrength=ai.get("evidence_strength", "medium"),
+            ),
+        )
+
+
+class WellbeingAlertFE(BaseModel):
+    """
+    Flat wellbeing alert — khớp WellbeingAlert interface ở e-fe/src/types/index.ts.
+    """
+    alert: bool
+    severity: str
+    message: str
+    action: str
+
+
+class DigestDataFE(BaseModel):
+    """
+    Digest data — khớp DigestData interface ở e-fe/src/types/index.ts.
+    """
+    progressPct: int
+    milestonesCompleted: int
+    nextDeadline: str
+    daysLeft: int
+    priorityAction: str
+    weakestSkill: str
+
+
+class ParentMessageRequest(BaseModel):
+    """Payload for parent → mentor message."""
+    mentorId: str
+    message: str
+
+
+class ParentMessageResponse(BaseModel):
+    """Response after parent sends message."""
+    messageId: str
+
+
 class BehavioralMetrics(BaseModel):
     """Computed behavioural metrics from a set of logs."""
 

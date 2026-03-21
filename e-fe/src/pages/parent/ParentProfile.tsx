@@ -1,31 +1,30 @@
+import { useState, useEffect } from 'react'
 import { User, GraduationCap, Award, TrendingUp } from 'lucide-react'
+import { parentApi } from '../../api'
+import { useAuth } from '../../hooks/useAuth'
+import type { Student } from '../../types'
 
 export default function ParentProfile() {
-  // Mock data for children profiles
-  const children = [
-    {
-      id: 'std_001',
-      name: 'Nguyễn Văn An',
-      grade: 'Lớp 12',
-      program: 'SAT Advanced',
-      ieltsScore: 7.0,
-      satScore: 1450,
-      gpa: 3.8,
-      status: 'Đang học',
-      joinDate: '01/09/2024',
-    },
-    {
-      id: 'std_002',
-      name: 'Nguyễn Thị Bình',
-      grade: 'Lớp 10',
-      program: 'IELTS Foundation',
-      ieltsScore: 5.5,
-      satScore: null,
-      gpa: 3.5,
-      status: 'Đang học',
-      joinDate: '15/10/2024',
-    },
-  ]
+  const { id: parentId } = useAuth()
+  const [children, setChildren] = useState<Student[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    parentApi.getChildren(parentId).then((res) => {
+      if (!res.error && res.data) {
+        setChildren(res.data)
+      }
+      setLoading(false)
+    })
+  }, [parentId])
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-16">
+        <div className="w-8 h-8 border-2 border-etest-teal border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-6">
@@ -56,11 +55,13 @@ export default function ParentProfile() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-etest-text">{child.name}</h3>
-                  <p className="text-sm text-etest-subtext">{child.grade}</p>
+                  <p className="text-sm text-etest-subtext">
+                    {child.monthsEnrolled} tháng theo học
+                  </p>
                 </div>
               </div>
               <span className="px-3 py-1 bg-etest-green-light text-etest-green text-xs font-bold rounded-full">
-                {child.status}
+                Đang học
               </span>
             </div>
 
@@ -69,28 +70,36 @@ export default function ParentProfile() {
               <div className="bg-etest-bg rounded-xl p-4 text-center">
                 <GraduationCap className="w-5 h-5 text-etest-teal mx-auto mb-2" />
                 <p className="text-xs text-etest-subtext mb-1">Chương trình</p>
-                <p className="text-sm font-semibold text-etest-text">{child.program}</p>
+                <p className="text-sm font-semibold text-etest-text">{child.program ?? '—'}</p>
               </div>
               <div className="bg-etest-bg rounded-xl p-4 text-center">
                 <Award className="w-5 h-5 text-etest-red mx-auto mb-2" />
                 <p className="text-xs text-etest-subtext mb-1">IELTS</p>
-                <p className="text-sm font-semibold text-etest-text">{child.ieltsScore.toFixed(1)}</p>
+                <p className="text-sm font-semibold text-etest-text">
+                  {child.ieltsScore != null ? child.ieltsScore.toFixed(1) : '—'}
+                </p>
               </div>
               <div className="bg-etest-bg rounded-xl p-4 text-center">
                 <TrendingUp className="w-5 h-5 text-etest-blue mx-auto mb-2" />
                 <p className="text-xs text-etest-subtext mb-1">SAT</p>
-                <p className="text-sm font-semibold text-etest-text">{child.satScore ?? '—'}</p>
+                <p className="text-sm font-semibold text-etest-text">
+                  {child.satScore != null ? child.satScore.toFixed(0) : '—'}
+                </p>
               </div>
               <div className="bg-etest-bg rounded-xl p-4 text-center">
                 <User className="w-5 h-5 text-etest-purple mx-auto mb-2" />
                 <p className="text-xs text-etest-subtext mb-1">GPA</p>
-                <p className="text-sm font-semibold text-etest-text">{child.gpa.toFixed(1)}</p>
+                <p className="text-sm font-semibold text-etest-text">
+                  {child.gpa != null ? child.gpa.toFixed(1) : '—'}
+                </p>
               </div>
             </div>
 
             {/* Actions */}
             <div className="flex items-center justify-between pt-4 border-t border-etest-border/20">
-              <p className="text-xs text-etest-hint">Ngày tham gia: {child.joinDate}</p>
+              <p className="text-xs text-etest-hint">
+                {child.monthsEnrolled} tháng theo học tại ETEST
+              </p>
               <div className="flex gap-2">
                 <button className="px-4 py-2 text-sm font-semibold text-etest-teal bg-etest-teal-light rounded-xl hover:bg-etest-teal/20 transition-colors">
                   Xem ETESTER

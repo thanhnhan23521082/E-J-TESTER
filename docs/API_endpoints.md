@@ -54,39 +54,7 @@ interface ApiConfig {
 
 ## Authentication
 
-> **Note:** Authentication is not yet implemented. The following structure is proposed for future implementation.
-
-### Proposed Auth Flow
-
-```http
-POST /auth/login
-Content-Type: application/json
-
-{
-  "email": "user@example.com",
-  "password": "********",
-  "role": "student" | "parent" | "mentor"
-}
-```
-
-**Response:**
-```json
-{
-  "data": {
-    "token": "jwt_token_here",
-    "user": { ... },
-    "expiresIn": 3600
-  },
-  "error": null,
-  "status": 200
-}
-```
-
-### Authorization Header (Future)
-
-```http
-Authorization: Bearer <jwt_token>
-```
+> **Note:** Authentication is handled via **HttpOnly cookie** — the backend sets `access_token` as an `HttpOnly; SameSite=Lax` cookie on login/refresh. The frontend does **not** need to manually inject the `Authorization` header; the browser sends the cookie automatically on every request (requires `credentials: 'include'` in fetch calls).
 
 ---
 
@@ -1086,18 +1054,25 @@ src/data/
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/auth/login` | POST | User authentication |
-| `/auth/logout` | POST | Session termination |
-| `/auth/refresh` | POST | Token refresh |
-| `/parents/{id}/ai-chat` | POST | AI chatbot |
-| `/mentors/{id}/session-notes` | POST | Session note creation |
-| `/students/{id}/contributions` | POST | Student contribution submission |
+| `/parents/{id}/ai-chat` | POST | AI chatbot (client-side mock only) |
 | `/upload` | POST | File upload |
 | `/students/{id}/behavioral-logs` | GET | Study behavior logs |
+| `/mentors/{id}/session-notes` | POST | Session note creation |
+
+> **Note:** `/auth/login`, `/auth/logout`, `/auth/refresh` are implemented in the backend but not documented here (see `modules/auth/router.py`).
 
 ---
 
 ## Changelog
+
+### v1.1.0 (2026-03-22)
+- **Implemented:** All Student API endpoints (`GET /students/{id}`, `GET /students/{id}/milestones`, `GET /students/{id}/etester`, `POST /students/{id}/essays`)
+- **Implemented:** All Parent API endpoints (`GET /parents/{id}/children`, `GET /students/{id}/wellbeing`, `GET /students/{id}/digest`, `POST /parents/{id}/messages`)
+- **Implemented:** All Mentor API endpoints (`GET /mentors/{id}`, `GET /mentors/{id}/students`, `GET /mentors/{id}/pending-essays`, `POST /mentors/{id}/reviews`)
+- **Implemented:** Health check (`GET /health`) — no auth required
+- **Auth:** Backend now sets `HttpOnly` cookie on login/refresh — frontend no longer needs to inject `Authorization` header
+- **Backend routers:** New routers at `/api/students/`, `/api/parents/`, `/api/mentors/`
+- All BE responses use camelCase field names matching frontend domain types
 
 ### v1.0.0 (2026-03-21)
 - Initial API documentation

@@ -1,16 +1,18 @@
 /**
  * Base API Client
  *
- * Provides HTTP methods for making API requests
- * TODO: Replace with actual backend API calls when backend is ready
+ * HTTP client for making API requests to the ETEST ONE backend.
+ * Auth: HttpOnly cookie auto-sent by the browser on every request.
+ * credentials: 'include' ensures cookies are sent cross-origin.
  */
 
 import type { ApiResponse, ApiConfig } from './types'
 
 class ApiClient {
-  private config: ApiConfig = {
+  private config: ApiConfig & { credentials: RequestCredentials } = {
     baseUrl: 'http://localhost:3000/api',
     timeout: 10000,
+    credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -21,6 +23,7 @@ class ApiClient {
       const response = await fetch(`${this.config.baseUrl}${endpoint}`, {
         method: 'GET',
         headers: this.config.headers,
+        credentials: this.config.credentials,
         signal: AbortSignal.timeout(this.config.timeout),
       })
 
@@ -55,6 +58,7 @@ class ApiClient {
       const response = await fetch(`${this.config.baseUrl}${endpoint}`, {
         method: 'POST',
         headers: this.config.headers,
+        credentials: this.config.credentials,
         body: JSON.stringify(body),
         signal: AbortSignal.timeout(this.config.timeout),
       })
