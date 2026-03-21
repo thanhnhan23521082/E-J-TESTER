@@ -45,16 +45,34 @@ async def _create_chat_completion(
 ) -> str:
     """Single place to call Chat Completions with shared parameters."""
     client = _get_client()
-    response = await client.chat.completions.create(
-        model=model,
-        max_tokens=max_tokens,
-        temperature=temperature,
-        messages=[
+
+    # Prefer max_completion_tokens for newer models (e.g. GPT-5 family),
+    # but fall back to max_tokens for older model compatibility.
+    request_base: dict[str, Any] = {
+        "model": model,
+        "temperature": temperature,
+        "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},
         ],
-        timeout=10.0,
-    )
+        "timeout": 10.0,
+    }
+
+    try:
+        response = await client.chat.completions.create(
+            **request_base,
+            max_completion_tokens=max_tokens,
+        )
+    except APIError as exc:
+        message = str(exc)
+        if "max_completion_tokens" not in message:
+            raise
+
+        response = await client.chat.completions.create(
+            **request_base,
+            max_tokens=max_tokens,
+        )
+
     return response.choices[0].message.content or ""  # type: ignore[union-attr]
 
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from contextvars import ContextVar, Token
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import date, datetime, time
 from decimal import Decimal
 from typing import Any
 
@@ -51,7 +51,7 @@ def _require_runtime_context() -> ToolRuntimeContext:
 def _to_jsonable(value: Any) -> Any:
     if isinstance(value, Decimal):
         return float(value)
-    if isinstance(value, (date, datetime)):
+    if isinstance(value, (date, datetime, time)):
         return value.isoformat()
     if isinstance(value, list):
         return [_to_jsonable(v) for v in value]

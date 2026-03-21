@@ -21,6 +21,11 @@ from modules.smart_parenting.services.agent_tools.tools import (
 logger = logging.getLogger(__name__)
 
 
+def _sanitize_json(value: Any) -> Any:
+    """Ensure value is JSON-serializable for JSONB persistence."""
+    return json.loads(json.dumps(value, ensure_ascii=False, default=str))
+
+
 class AgentState(TypedDict, total=False):
     db: AsyncSession
     student_id: str
@@ -255,11 +260,11 @@ async def respond_node(state: AgentState) -> AgentState:
 
 async def persist_node(state: AgentState) -> AgentState:
     db = state["db"]
-    context_snapshot = {
+    context_snapshot = _sanitize_json({
         "selected_tools": state.get("selected_tools", []),
         "tool_outputs": state.get("tool_outputs", {}),
         "orchestration_trace": state.get("orchestration_trace", []),
-    }
+    })
 
     record = Conversation(
         parent_id=state["parent_id"],
