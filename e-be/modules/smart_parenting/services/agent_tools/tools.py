@@ -441,9 +441,30 @@ async def web_search(query: str, count: int = 3) -> dict[str, Any]:
     }
 
     async with httpx.AsyncClient(timeout=10.0) as client:
-        response = await client.get(url, headers=headers, params=params)
-        response.raise_for_status()
-        data = response.json()
+        try:
+            response = await client.get(url, headers=headers, params=params)
+            if response.status_code == 422:
+                # Some Brave plans/regions reject certain locale combinations.
+                fallback_params = {
+                    **params,
+                    "search_lang": "en",
+                    "country": "US",
+                }
+                response = await client.get(url, headers=headers, params=fallback_params)
+            response.raise_for_status()
+            data = response.json()
+        except httpx.HTTPStatusError as exc:
+            return {
+                "query": query,
+                "results": [],
+                "error": f"Brave API HTTP {exc.response.status_code}",
+            }
+        except httpx.HTTPError as exc:
+            return {
+                "query": query,
+                "results": [],
+                "error": f"Brave API request failed: {exc}",
+            }
 
     results: list[dict[str, Any]] = []
     for item in data.get("web", {}).get("results", []):
