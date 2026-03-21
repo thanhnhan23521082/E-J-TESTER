@@ -2,13 +2,165 @@
  * Parent API Module
  *
  * Handles all parent-related API calls
- * TODO: Replace mock implementations with actual backend API calls
  */
 
 import type { ApiResponse } from '../types'
 import type { Student, WellbeingAlert, DigestData } from '../../types'
-import { mockStudents, mockWellbeingAlerts, mockDigestData } from '../../data/mockData'
 import { apiClient } from '../client'
+
+const CHATBOT_BASE_URL =
+  import.meta.env.VITE_PARENTING_AGENT_API_BASE_URL?.trim() ||
+  'http://localhost:8003/api'
+
+interface ParentMeResponse {
+  parent_id: number
+  full_name: string
+  email: string
+  phone: string | null
+  telegram_id: string | null
+  student_id: string | null
+}
+
+interface BehavioralLogDto {
+  date: string
+  duration_min: number | null
+  studied: boolean
+  session_start: string | null
+  is_late_night: boolean
+  mood_note: string | null
+}
+
+interface BehavioralLogListDto {
+  student_id: string
+  days: number
+  logs: BehavioralLogDto[]
+}
+
+interface StudentDigestDto {
+  progress_pct: number | null
+  milestones_done: number | null
+  next_deadline: string | null
+  days_left: number | null
+  priority_action: string | null
+  weakest_skill: string | null
+}
+
+interface StudentProfileDto extends StudentDigestDto {
+  student_id: string
+  name: string
+  program?: string | null
+  months_enrolled?: number | null
+  ielts_score?: number | null
+  sat_score?: number | null
+  gpa?: number | null
+  skill_breakdown?: Record<string, unknown> | null
+  target_schools?: Array<Record<string, unknown>> | null
+  parent_id?: number | null
+  mentor_id?: number | null
+}
+
+export interface ParentMe {
+  parentId: number
+  fullName: string
+  email: string
+  phone: string | null
+  telegramId: string | null
+  studentId: string | null
+}
+
+export interface ParentBehavioralLog {
+  date: string
+  durationMin: number
+  studied: boolean
+  sessionStart: string | null
+  isLateNight: boolean
+  moodNote: string | null
+}
+
+const normalizeTargetSchools = (
+  schools: Array<Record<string, unknown>> | null | undefined
+): Student['targetSchools'] => {
+  if (!schools) return []
+
+  return schools.map((school) => ({
+    name: typeof school.name === 'string' ? school.name : 'Unknown School',
+    country: typeof school.country === 'string' ? school.country : '',
+    deadline: typeof school.deadline === 'string' ? school.deadline : '',
+    ieltsRequired: typeof school.ieltsRequired === 'number' ? school.ieltsRequired : 0,
+    satRequired: typeof school.satRequired === 'number' ? school.satRequired : null,
+    daysUntilDeadline:
+      typeof school.daysUntilDeadline === 'number' ? school.daysUntilDeadline : 0,
+    isEligible: Boolean(school.isEligible),
+    gapIelts: typeof school.gapIelts === 'number' ? school.gapIelts : 0,
+    gapSat: typeof school.gapSat === 'number' ? school.gapSat : null,
+  }))
+}
+
+const normalizeSkills = (
+  skills: Record<string, unknown> | null | undefined
+): Student['skillBreakdown'] => {
+  if (!skills) {
+    return { L: 0, R: 0, W: 0, S: 0 }
+  }
+
+  const readNumber = (key: string): number =>
+    typeof skills[key] === 'number' ? Number(skills[key]) : 0
+
+  return {
+    L: readNumber('L') || readNumber('listening') || readNumber('math'),
+    R: readNumber('R') || readNumber('reading') || readNumber('reading_writing'),
+    W: readNumber('W') || readNumber('writing') || readNumber('essay'),
+    S: readNumber('S') || readNumber('speaking'),
+  }
+}
+
+const mapStudent = (dto: StudentProfileDto): Student => ({
+  id: dto.student_id,
+  name: dto.name,
+  program: (dto.program ?? 'IELTS') as Student['program'],
+  monthsEnrolled: dto.months_enrolled ?? 0,
+  ieltsScore: dto.ielts_score ?? 0,
+  satScore: dto.sat_score ?? null,
+  gpa: dto.gpa ?? 0,
+  skillBreakdown: normalizeSkills(dto.skill_breakdown),
+  targetSchools: normalizeTargetSchools(dto.target_schools),
+  parentId: dto.parent_id != null ? String(dto.parent_id) : '',
+  mentorId: dto.mentor_id != null ? String(dto.mentor_id) : '',
+})
+
+const mapDigest = (dto: StudentDigestDto): DigestData => ({
+  progressPct: dto.progress_pct ?? 0,
+  milestonesCompleted: dto.milestones_done ?? 0,
+  nextDeadline: dto.next_deadline ?? '',
+  daysLeft: dto.days_left ?? 0,
+  priorityAction: dto.priority_action ?? '',
+  weakestSkill: dto.weakest_skill ?? '',
+})
+
+const mapBehavioralLogs = (logs: BehavioralLogDto[]): ParentBehavioralLog[] => {
+  return logs.map((log) => ({
+    date: log.date,
+    durationMin: log.duration_min ?? 0,
+    studied: log.studied,
+    sessionStart: log.session_start,
+    isLateNight: log.is_late_night,
+    moodNote: log.mood_note,
+  }))
+}
+
+const buildWellbeingFromLogs = (logs: ParentBehavioralLog[]): WellbeingAlert => {
+  const lateNightCount = logs.filter((log) => log.isLateNight && log.studied).length
+  const hasAlert = lateNightCount >= 3
+
+  return {
+    alert: hasAlert,
+    severity: hasAlert ? 'high' : lateNightCount > 0 ? 'medium' : 'low',
+    message: hasAlert
+      ? `Con học muộn ${lateNightCount} đêm liên tiếp tuần này`
+      : 'Không có cảnh báo học muộn trong tuần này',
+    action: 'Nhắn hỏi thăm con tối nay',
+  }
+}
 
 export interface ChatCompletionRequest {
   student_id: string
@@ -23,31 +175,156 @@ export interface ChatCompletionResponse {
 }
 
 export class ParentApi {
+  async getMe(): Promise<ApiResponse<ParentMe>> {
+    const response = await apiClient.get<ParentMeResponse>('/parents/me')
+    if (!response.data || response.error) {
+      return {
+        data: null,
+        error: response.error,
+        status: response.status,
+      }
+    }
+
+    return {
+      data: {
+        parentId: response.data.parent_id,
+        fullName: response.data.full_name,
+        email: response.data.email,
+        phone: response.data.phone,
+        telegramId: response.data.telegram_id,
+        studentId: response.data.student_id,
+      },
+      error: null,
+      status: response.status,
+    }
+  }
+
+  async getMyStudent(): Promise<ApiResponse<Student>> {
+    const meRes = await this.getMe()
+    if (!meRes.data || !meRes.data.studentId) {
+      return {
+        data: null,
+        error: meRes.error ?? 'Tài khoản phụ huynh chưa liên kết học viên',
+        status: meRes.status || 404,
+      }
+    }
+
+    const studentRes = await apiClient.get<StudentProfileDto>(`/students/${meRes.data.studentId}`)
+    if (!studentRes.data || studentRes.error) {
+      return {
+        data: null,
+        error: studentRes.error,
+        status: studentRes.status,
+      }
+    }
+
+    return {
+      data: mapStudent(studentRes.data),
+      error: null,
+      status: studentRes.status,
+    }
+  }
+
+  async getBehavioralLogs(
+    studentId: string,
+    days: number = 7
+  ): Promise<ApiResponse<ParentBehavioralLog[]>> {
+    const response = await apiClient.get<BehavioralLogListDto>(
+      `/behavioral-log/${studentId}?days=${days}`
+    )
+
+    if (!response.data || response.error) {
+      return {
+        data: null,
+        error: response.error,
+        status: response.status,
+      }
+    }
+
+    return {
+      data: mapBehavioralLogs(response.data.logs),
+      error: null,
+      status: response.status,
+    }
+  }
+
   /**
    * Unified chatbot completion endpoint.
    */
   async chatCompletion(
     payload: ChatCompletionRequest
   ): Promise<ApiResponse<ChatCompletionResponse>> {
-    return apiClient.post<ChatCompletionResponse, ChatCompletionRequest>(
-      '/chat/completion',
-      payload
-    )
+    const accessToken = localStorage.getItem('access_token')
+
+    if (!accessToken) {
+      return {
+        data: null,
+        error: 'Bạn chưa đăng nhập hoặc phiên đăng nhập đã hết hạn.',
+        status: 401,
+      }
+    }
+
+    try {
+      const response = await fetch(`${CHATBOT_BASE_URL}/chat/completion`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${accessToken}`,
+        },
+        // Backend schema chỉ nhận 2 field: student_id, message.
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        let error = `HTTP ${response.status}: ${response.statusText}`
+        try {
+          const errorPayload = await response.json()
+          error =
+            (typeof errorPayload?.detail === 'string' && errorPayload.detail) ||
+            (typeof errorPayload?.message === 'string' && errorPayload.message) ||
+            (typeof errorPayload?.error === 'string' && errorPayload.error) ||
+            error
+        } catch {
+          // Keep fallback error text.
+        }
+
+        return {
+          data: null,
+          error,
+          status: response.status,
+        }
+      }
+
+      const data = (await response.json()) as ChatCompletionResponse
+      return {
+        data,
+        error: null,
+        status: response.status,
+      }
+    } catch (error) {
+      return {
+        data: null,
+        error: error instanceof Error ? error.message : 'Unknown error',
+        status: 500,
+      }
+    }
   }
 
   /**
    * Get all children for a parent
    */
   async getChildren(_parentId: string): Promise<ApiResponse<Student[]>> {
-    // TODO: Replace with actual API call
-    // return apiClient.get<Student[]>(`/parents/${parentId}/children`)
+    const studentRes = await this.getMyStudent()
+    if (!studentRes.data || studentRes.error) {
+      return {
+        data: null,
+        error: studentRes.error,
+        status: studentRes.status,
+      }
+    }
 
-    // Mock implementation with artificial delay
-    await new Promise((resolve) => setTimeout(resolve, 100))
-
-    // For now, return all mock students
     return {
-      data: mockStudents,
+      data: [studentRes.data],
       error: null,
       status: 200,
     }
@@ -56,24 +333,18 @@ export class ParentApi {
   /**
    * Get wellbeing alerts for a student
    */
-  async getWellbeingAlerts(_studentId: string): Promise<ApiResponse<WellbeingAlert>> {
-    // TODO: Replace with actual API call
-    // return apiClient.get<WellbeingAlert>(`/students/${studentId}/wellbeing`)
-
-    // Mock implementation with artificial delay
-    await new Promise((resolve) => setTimeout(resolve, 150))
-
-    const alert = mockWellbeingAlerts[0]
-    if (!alert) {
+  async getWellbeingAlerts(studentId: string): Promise<ApiResponse<WellbeingAlert>> {
+    const logsRes = await this.getBehavioralLogs(studentId, 7)
+    if (!logsRes.data || logsRes.error) {
       return {
         data: null,
-        error: 'Wellbeing alert not found',
-        status: 404,
+        error: logsRes.error,
+        status: logsRes.status,
       }
     }
 
     return {
-      data: alert,
+      data: buildWellbeingFromLogs(logsRes.data),
       error: null,
       status: 200,
     }
@@ -82,26 +353,20 @@ export class ParentApi {
   /**
    * Get digest data for a student
    */
-  async getDigest(_studentId: string): Promise<ApiResponse<DigestData>> {
-    // TODO: Replace with actual API call
-    // return apiClient.get<DigestData>(`/students/${studentId}/digest`)
-
-    // Mock implementation with artificial delay
-    await new Promise((resolve) => setTimeout(resolve, 100))
-
-    const digest = mockDigestData[0]
-    if (!digest) {
+  async getDigest(studentId: string): Promise<ApiResponse<DigestData>> {
+    const response = await apiClient.get<StudentDigestDto>(`/students/${studentId}`)
+    if (!response.data || response.error) {
       return {
         data: null,
-        error: 'Digest data not found',
-        status: 404,
+        error: response.error,
+        status: response.status,
       }
     }
 
     return {
-      data: digest,
+      data: mapDigest(response.data),
       error: null,
-      status: 200,
+      status: response.status,
     }
   }
 

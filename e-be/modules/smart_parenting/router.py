@@ -19,6 +19,7 @@ from modules.smart_parenting.schemas import (
     BehavioralLogListResponse,
     BehavioralLogResponse,
     DigestResponse,
+    ParentMeResponse,
     StudentProfile,
     UpsellResponse,
     WellbeingRequest,
@@ -30,10 +31,49 @@ from modules.smart_parenting.services.wellbeing import (
     compute_metrics,
     wellbeing_check_service_from_logs,
 )
+from modules.smart_parenting.services.agent_tools.tools import resolve_parent_id
 from shared.deps import get_current_user
-from shared.model import User
+from shared.model import Parent, User
 
 router = APIRouter(prefix="/api", tags=["smart_parenting"])
+
+
+# ── Parent profile ──────────────────────────────────────────────────────────
+
+@router.get(
+    "/parents/me",
+    response_model=ParentMeResponse,
+    summary="Get current parent profile",
+)
+async def get_parent_me(
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+) -> ParentMeResponse:
+    """Resolve and return the authenticated parent profile."""
+    from fastapi import HTTPException
+    from sqlalchemy import select
+
+    parent_id = await resolve_parent_id(
+        db=db,
+        user_id=current_user.id,
+        user_email=current_user.email,
+    )
+    if parent_id is None:
+        raise HTTPException(status_code=403, detail="Parent account is not linked")
+
+    result = await db.execute(select(Parent).where(Parent.parent_id == parent_id))
+    parent = result.scalar_one_or_none()
+    if parent is None:
+        raise HTTPException(status_code=404, detail="Parent not found")
+
+    return ParentMeResponse(
+        parent_id=parent.parent_id,
+        full_name=parent.full_name,
+        email=parent.email,
+        phone=parent.phone,
+        telegram_id=parent.telegram_id,
+        student_id=parent.student_id,
+    )
 
 
 # ── Student profile ─────────────────────────────────────────────────────────
@@ -66,6 +106,17 @@ async def get_student_profile(
         gpa=student.gpa,
         months_enrolled=student.months_enrolled,
         program=student.program,
+        skill_breakdown=student.skill_breakdown,
+        target_schools=student.target_schools or [],
+        parent_id=student.parent_id,
+        mentor_id=student.mentor_id,
+        progress_pct=student.progress_pct,
+        milestones_done=student.milestones_done,
+        next_deadline=student.next_deadline.isoformat() if student.next_deadline else None,
+        next_deadline_label=student.next_deadline_label,
+        days_left=student.days_left,
+        priority_action=student.priority_action,
+        weakest_skill=student.weakest_skill,
         created_at=student.created_at.isoformat(),
     )
 
@@ -101,9 +152,12 @@ async def get_behavioural_log(
             student_id=log.student_id,
             date=log.date.isoformat(),
             duration_min=log.duration_min,
+            session_start=log.session_start.isoformat() if log.session_start else None,
             studied=log.studied or False,
+            is_late_night=log.is_late_night,
             streak_day=log.streak_day,
             score_delta=log.score_delta,
+            mood_note=log.mood_note,
         )
         for log in logs
     ]

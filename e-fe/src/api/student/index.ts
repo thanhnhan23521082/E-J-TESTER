@@ -2,35 +2,233 @@
  * Student API Module
  *
  * Handles all student-related API calls
- * TODO: Replace mock implementations with actual backend API calls
  */
 
 import type { ApiResponse } from '../types'
 import type { Student, Milestone, EtesterCore } from '../../types'
-import { mockStudents, mockMilestones, mockEtesterScores } from '../../data/mockData'
+import { apiClient } from '../client'
+
+const ETESTER_BASE_URL =
+  import.meta.env.VITE_ETESTER_API_BASE_URL?.trim() ||
+  'http://localhost:8004/api/etester'
+
+interface StudentProfileDto {
+  student_id: string
+  name: string
+  program?: string | null
+  months_enrolled?: number | null
+  ielts_score?: number | null
+  sat_score?: number | null
+  gpa?: number | null
+  skill_breakdown?: Record<string, unknown> | null
+  target_schools?: Array<Record<string, unknown>> | null
+  parent_id?: number | null
+  mentor_id?: number | null
+}
+
+interface EtesterMilestoneDto {
+  milestone_id: string
+  student_id: string
+  type: string
+  title: string
+  date: string
+  score: number | null
+  score_label: string | null
+  mentor_id?: string | null
+  mentor_approved?: boolean | null
+  auth_score: number | null
+  notes: string | null
+  status: 'completed' | 'in_progress' | 'upcoming'
+  contributor_type: 'student' | 'mentor' | 'parent' | 'institution'
+  ai_summary:
+    | {
+        summary?: string
+        skills_demonstrated?: string[]
+        evidence_strength?: 'low' | 'medium' | 'high' | 'highest'
+      }
+    | string
+    | null
+}
+
+interface EtesterProfileDto {
+  core: {
+    student_id: string
+    academic_score: number | null
+    writing_growth: number | null
+    skills: Record<string, number> | null
+    mentor_verifications: number
+    parent_support_level: number | null
+    institutional_stamp: string | null
+    consistency_score: number | null
+    total_contributions: number
+    badge_issued: string | null
+    last_updated: string
+  }
+  recent_milestones: EtesterMilestoneDto[]
+  narrative: string | null
+}
+
+const normalizeTargetSchools = (
+  schools: Array<Record<string, unknown>> | null | undefined
+): Student['targetSchools'] => {
+  if (!schools) return []
+
+  return schools.map((school) => {
+    const deadline = typeof school.deadline === 'string' ? school.deadline : ''
+    return {
+      name: typeof school.name === 'string' ? school.name : 'Unknown School',
+      country: typeof school.country === 'string' ? school.country : '',
+      deadline,
+      ieltsRequired:
+        typeof school.ieltsRequired === 'number' ? school.ieltsRequired : 0,
+      satRequired: typeof school.satRequired === 'number' ? school.satRequired : null,
+      daysUntilDeadline:
+        typeof school.daysUntilDeadline === 'number' ? school.daysUntilDeadline : 0,
+      isEligible: Boolean(school.isEligible),
+      gapIelts: typeof school.gapIelts === 'number' ? school.gapIelts : 0,
+      gapSat: typeof school.gapSat === 'number' ? school.gapSat : null,
+    }
+  })
+}
+
+const normalizeSkills = (
+  skills: Record<string, unknown> | null | undefined
+): Student['skillBreakdown'] => {
+  if (!skills) {
+    return { L: 0, R: 0, W: 0, S: 0 }
+  }
+
+  const fallback = (key: string) =>
+    typeof skills[key] === 'number' ? Number(skills[key]) : 0
+
+  return {
+    L: fallback('L') || fallback('listening') || fallback('math'),
+    R: fallback('R') || fallback('reading') || fallback('reading_writing'),
+    W: fallback('W') || fallback('writing') || fallback('essay'),
+    S: fallback('S') || fallback('speaking'),
+  }
+}
+
+const mapStudent = (dto: StudentProfileDto): Student => {
+  return {
+    id: dto.student_id,
+    name: dto.name,
+    program: (dto.program ?? 'IELTS') as Student['program'],
+    monthsEnrolled: dto.months_enrolled ?? 0,
+    ieltsScore: dto.ielts_score ?? 0,
+    satScore: dto.sat_score ?? null,
+    gpa: dto.gpa ?? 0,
+    skillBreakdown: normalizeSkills(dto.skill_breakdown),
+    targetSchools: normalizeTargetSchools(dto.target_schools),
+    parentId: dto.parent_id != null ? String(dto.parent_id) : '',
+    mentorId: dto.mentor_id != null ? String(dto.mentor_id) : '',
+  }
+}
+
+const mapMilestone = (dto: EtesterMilestoneDto): Milestone => {
+  const aiSummaryObject =
+    typeof dto.ai_summary === 'object' && dto.ai_summary !== null ? dto.ai_summary : null
+
+  return {
+    id: dto.milestone_id,
+    studentId: dto.student_id,
+    type: dto.type as Milestone['type'],
+    title: dto.title,
+    date: dto.date,
+    score: dto.score,
+    scoreLabel: dto.score_label ?? '',
+    mentorId: dto.mentor_id ?? null,
+    mentorApproved: Boolean(dto.mentor_approved),
+    authScore: dto.auth_score,
+    notes: dto.notes ?? '',
+    status: dto.status,
+    contributorType: dto.contributor_type,
+    aiSummary: {
+      summary: aiSummaryObject?.summary ?? '',
+      skillsDemonstrated: aiSummaryObject?.skills_demonstrated ?? [],
+      evidenceStrength: aiSummaryObject?.evidence_strength ?? 'medium',
+    },
+  }
+}
+
+const mapEtesterCore = (dto: EtesterProfileDto['core'], narrative: string | null): EtesterCore => {
+  const supportLevelRaw = dto.parent_support_level
+  const parentSupportLevel: EtesterCore['parentSupportLevel'] =
+    supportLevelRaw == null
+      ? 'medium'
+      : supportLevelRaw >= 0.75
+        ? 'high'
+        : supportLevelRaw >= 0.5
+          ? 'active'
+          : supportLevelRaw >= 0.25
+            ? 'medium'
+            : 'low'
+
+  return {
+    studentId: dto.student_id,
+    academicScore: dto.academic_score ?? 0,
+    writingGrowth: dto.writing_growth ?? 0,
+    skills: Object.keys(dto.skills ?? {}),
+    mentorVerifications: dto.mentor_verifications,
+    parentSupportLevel,
+    institutionalStamp: Boolean(dto.institutional_stamp),
+    consistencyScore: dto.consistency_score ?? 0,
+    totalContributions: dto.total_contributions,
+    lastUpdated: dto.last_updated,
+    narrativeCache: narrative ?? '',
+    badgeIssued: Boolean(dto.badge_issued),
+  }
+}
 
 export class StudentApi {
+  private async getEtesterProfile(studentId: string): Promise<ApiResponse<EtesterProfileDto>> {
+    const token = localStorage.getItem('access_token')
+    try {
+      const response = await fetch(`${ETESTER_BASE_URL}/${studentId}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+      })
+
+      if (!response.ok) {
+        let error = `HTTP ${response.status}: ${response.statusText}`
+        try {
+          const payload = (await response.json()) as { detail?: string; message?: string; error?: string }
+          error = payload.detail || payload.message || payload.error || error
+        } catch {
+          // Keep fallback error text.
+        }
+        return { data: null, error, status: response.status }
+      }
+
+      const data = (await response.json()) as EtesterProfileDto
+      return { data, error: null, status: response.status }
+    } catch (error) {
+      return {
+        data: null,
+        error: error instanceof Error ? error.message : 'Unknown error',
+        status: 500,
+      }
+    }
+  }
+
   /**
    * Get student profile by ID
    */
   async getStudent(studentId: string): Promise<ApiResponse<Student>> {
-    // TODO: Replace with actual API call
-    // return apiClient.get<Student>(`/students/${studentId}`)
-
-    // Mock implementation with artificial delay
-    await new Promise((resolve) => setTimeout(resolve, 100))
-
-    const student = mockStudents.find((s) => s.id === studentId)
-    if (!student) {
+    const response = await apiClient.get<StudentProfileDto>(`/students/${studentId}`)
+    if (!response.data || response.error) {
       return {
         data: null,
-        error: 'Student not found',
-        status: 404,
+        error: response.error,
+        status: response.status,
       }
     }
 
     return {
-      data: student,
+      data: mapStudent(response.data),
       error: null,
       status: 200,
     }
@@ -40,16 +238,17 @@ export class StudentApi {
    * Get student milestones
    */
   async getMilestones(studentId: string): Promise<ApiResponse<Milestone[]>> {
-    // TODO: Replace with actual API call
-    // return apiClient.get<Milestone[]>(`/students/${studentId}/milestones`)
-
-    // Mock implementation with artificial delay
-    await new Promise((resolve) => setTimeout(resolve, 150))
-
-    const milestones = mockMilestones.filter((m) => m.studentId === studentId)
+    const response = await this.getEtesterProfile(studentId)
+    if (!response.data || response.error) {
+      return {
+        data: null,
+        error: response.error,
+        status: response.status,
+      }
+    }
 
     return {
-      data: milestones,
+      data: response.data.recent_milestones.map(mapMilestone),
       error: null,
       status: 200,
     }
@@ -59,23 +258,17 @@ export class StudentApi {
    * Get student E-Tester score
    */
   async getEtesterScore(studentId: string): Promise<ApiResponse<EtesterCore>> {
-    // TODO: Replace with actual API call
-    // return apiClient.get<EtesterCore>(`/students/${studentId}/etester`)
-
-    // Mock implementation with artificial delay
-    await new Promise((resolve) => setTimeout(resolve, 100))
-
-    const score = mockEtesterScores.find((s) => s.studentId === studentId)
-    if (!score) {
+    const response = await this.getEtesterProfile(studentId)
+    if (!response.data || response.error) {
       return {
         data: null,
-        error: 'E-Tester score not found',
-        status: 404,
+        error: response.error,
+        status: response.status,
       }
     }
 
     return {
-      data: score,
+      data: mapEtesterCore(response.data.core, response.data.narrative),
       error: null,
       status: 200,
     }

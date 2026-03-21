@@ -7,9 +7,10 @@ import {
   ChevronDown,
   Search,
 } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import UserDropdown from '../components/shared/UserDropdown'
 import NotificationDropdown from '../components/shared/NotificationDropdown'
+import { parentApi } from '../api'
 
 const navItems = [
   { icon: Home, label: 'Trang chủ', path: '/parent' },
@@ -20,6 +21,26 @@ const navItems = [
 
 export default function ParentLayout() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const [parentName, setParentName] = useState('Trần Thị B')
+
+  useEffect(() => {
+    const loadParentProfile = async () => {
+      const response = await parentApi.getMe()
+      if (response.data?.fullName) {
+        setParentName(response.data.fullName)
+      }
+    }
+
+    void loadParentProfile()
+  }, [])
+
+  const initials = useMemo(() => {
+    const parts = parentName.trim().split(/\s+/)
+    if (parts.length === 0) return 'PH'
+    const first = parts[0]?.[0] ?? 'P'
+    const last = parts[parts.length - 1]?.[0] ?? 'H'
+    return `${first}${last}`.toUpperCase()
+  }, [parentName])
 
   return (
     <div className="min-h-screen bg-etest-bg flex">
@@ -116,9 +137,9 @@ export default function ParentLayout() {
 
             {/* User Profile Dropdown */}
             <UserDropdown
-              name="Trần Thị B"
+              name={parentName}
               role="Phụ huynh"
-              initials="TT"
+              initials={initials}
               avatarColor="bg-etest-teal-light"
               textColor="text-etest-teal"
             />

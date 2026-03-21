@@ -4,7 +4,35 @@ import { useStudentData } from '../../hooks/useStudentData'
 
 export default function ParentHome() {
   const navigate = useNavigate()
-  const { student, wellbeing, digest, loading, error } = useStudentData()
+  const { student, wellbeing, digest, behavioralLogs, loading, error } = useStudentData()
+
+  const weekLogs = behavioralLogs.slice(0, 7)
+  const studiedDaysPerWeek = weekLogs.filter((log) => log.studied).length
+  const studiedDurations = weekLogs
+    .filter((log) => log.studied)
+    .map((log) => log.durationMin)
+    .filter((duration) => duration > 0)
+  const avgHoursPerDay =
+    studiedDurations.length > 0
+      ? studiedDurations.reduce((sum, duration) => sum + duration, 0) /
+        studiedDurations.length /
+        60
+      : 0
+
+  const lateNightByDate = new Map(
+    weekLogs.filter((log) => log.isLateNight).map((log) => [log.date.slice(0, 10), true])
+  )
+  const dayOrder = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
+  const formatLocalDate = (date: Date) => {
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    const day = String(date.getDate()).padStart(2, '0')
+    return `${year}-${month}-${day}`
+  }
+  const today = new Date()
+  const monday = new Date(today)
+  monday.setDate(today.getDate() - ((today.getDay() + 6) % 7))
+  const isUrgent = (digest?.daysLeft ?? 0) > 0 && (digest?.daysLeft ?? 0) <= 14
 
   if (loading) {
     return (
@@ -48,12 +76,16 @@ export default function ParentHome() {
                 <div>
                   <h3 className="text-lg font-bold text-etest-text">Deadline gần nhất</h3>
                   <p className="text-sm text-etest-subtext">
-                    {student.targetSchools[0]?.name || 'University of Melbourne'}
+                    {digest?.nextDeadline || student.targetSchools[0]?.name || 'Chưa có deadline'}
                   </p>
                 </div>
               </div>
-              <div className="px-3 py-1 bg-[#ffdad6] rounded-full">
-                <span className="text-xs font-semibold text-etest-red">Urgent</span>
+              <div className={`px-3 py-1 rounded-full ${isUrgent ? 'bg-[#ffdad6]' : 'bg-etest-bg'}`}>
+                <span
+                  className={`text-xs font-semibold ${isUrgent ? 'text-etest-red' : 'text-etest-subtext'}`}
+                >
+                  {isUrgent ? 'Urgent' : 'Bình thường'}
+                </span>
               </div>
             </div>
 
@@ -88,18 +120,25 @@ export default function ParentHome() {
 
                   {/* Day indicators */}
                   <div className="flex gap-2 mb-4">
-                    {['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map((day, idx) => (
-                      <div
-                        key={day}
-                        className={`w-10 h-10 rounded-xl flex items-center justify-center text-xs font-semibold ${
-                          idx < 3
-                            ? 'bg-etest-red text-white'
-                            : 'bg-white text-etest-subtext border border-etest-border/30'
-                        }`}
-                      >
-                        {day}
-                      </div>
-                    ))}
+                    {dayOrder.map((day, idx) => {
+                      const date = new Date(monday)
+                      date.setDate(monday.getDate() + idx)
+                      const key = formatLocalDate(date)
+                      const lateNight = lateNightByDate.get(key) === true
+
+                      return (
+                        <div
+                          key={day}
+                          className={`w-10 h-10 rounded-xl flex items-center justify-center text-xs font-semibold ${
+                            lateNight
+                              ? 'bg-etest-red text-white'
+                              : 'bg-white text-etest-subtext border border-etest-border/30'
+                          }`}
+                        >
+                          {day}
+                        </div>
+                      )
+                    })}
                   </div>
 
                   <button
@@ -160,7 +199,7 @@ export default function ParentHome() {
                 <div className="w-10 h-10 rounded-xl bg-etest-teal-light mx-auto mb-2 flex items-center justify-center">
                   <Calendar className="w-5 h-5 text-etest-teal" />
                 </div>
-                <div className="text-2xl font-bold text-etest-text mb-1">6</div>
+                <div className="text-2xl font-bold text-etest-text mb-1">{studiedDaysPerWeek}</div>
                 <div className="text-xs text-etest-subtext">Ngày/tuần</div>
               </div>
 
@@ -168,7 +207,7 @@ export default function ParentHome() {
                 <div className="w-10 h-10 rounded-xl bg-etest-amber-bg mx-auto mb-2 flex items-center justify-center">
                   <Clock className="w-5 h-5 text-etest-amber" />
                 </div>
-                <div className="text-2xl font-bold text-etest-text mb-1">2.5</div>
+                <div className="text-2xl font-bold text-etest-text mb-1">{avgHoursPerDay.toFixed(1)}</div>
                 <div className="text-xs text-etest-subtext">Giờ/ngày</div>
               </div>
 

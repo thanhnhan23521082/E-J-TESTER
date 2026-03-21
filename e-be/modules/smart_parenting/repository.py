@@ -5,7 +5,7 @@ Async data-access functions for the Smart Parenting module.
 All functions are pure DB queries – no AI logic here.
 """
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from sqlalchemy import and_, select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -37,7 +37,7 @@ async def get_behavioral_logs(
         List of BehavioralLog rows, newest first.
     """
     since = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
-    since = since - datetime.timedelta(days=days)
+    since = since - timedelta(days=days)
 
     result = await db.execute(
         select(BehavioralLog)
