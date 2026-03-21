@@ -95,7 +95,7 @@ async def digest_service(
     )
 
     try:
-        digest_text = call_text(
+        digest_text = await call_text(
             prompt=prompt,
             system_prompt=DIGEST_SYSTEM,
             max_tokens=1024,

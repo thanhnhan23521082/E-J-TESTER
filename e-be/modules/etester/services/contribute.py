@@ -50,7 +50,7 @@ async def _summarize_milestone(
     date: str,
 ) -> str | None:
     """
-    Call Claude to generate a short AI summary for a milestone.
+    Call OpenAI to generate a short AI summary for a milestone.
 
     Returns None on failure (non-critical – we don't fail the whole request).
     """
@@ -63,7 +63,7 @@ async def _summarize_milestone(
         date=date,
     )
     try:
-        return call_text(
+        return await call_text(
             prompt=prompt,
             system_prompt=SUMMARIZE_SYSTEM,
             max_tokens=256,

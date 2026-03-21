@@ -28,8 +28,8 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
-    # ── Claude API ───────────────────────────────────────────────────────────
-    ANTHROPIC_API_KEY: str = ""
+    # ── OpenAI API ──────────────────────────────────────────────────────────
+    OPENAI_API_KEY: str = ""
 
     # ── AWS (optional) ───────────────────────────────────────────────────────
     AWS_REGION: str = "ap-southeast-1"
