@@ -1,31 +1,38 @@
+import { useEffect, useState } from 'react'
 import { User, GraduationCap, Award, TrendingUp } from 'lucide-react'
+import { parentApi } from '../../api'
+import { useStudentData } from '../../hooks/useStudentData'
 
 export default function ParentProfile() {
-  // Mock data for children profiles
-  const children = [
-    {
-      id: 'std_001',
-      name: 'Nguyễn Văn An',
-      grade: 'Lớp 12',
-      program: 'SAT Advanced',
-      ieltsScore: 7.0,
-      satScore: 1450,
-      gpa: 3.8,
-      status: 'Đang học',
-      joinDate: '01/09/2024',
-    },
-    {
-      id: 'std_002',
-      name: 'Nguyễn Thị Bình',
-      grade: 'Lớp 10',
-      program: 'IELTS Foundation',
-      ieltsScore: 5.5,
-      satScore: null,
-      gpa: 3.5,
-      status: 'Đang học',
-      joinDate: '15/10/2024',
-    },
-  ]
+  const { student } = useStudentData()
+  const [parentName, setParentName] = useState('Phụ huynh')
+
+  useEffect(() => {
+    const loadParentProfile = async () => {
+      const response = await parentApi.getMe()
+      if (response.data?.fullName) {
+        setParentName(response.data.fullName)
+      }
+    }
+
+    void loadParentProfile()
+  }, [])
+
+  const children = student
+    ? [
+        {
+          id: student.id,
+          name: student.name,
+          grade: 'Đang cập nhật',
+          program: student.program,
+          ieltsScore: student.ieltsScore,
+          satScore: student.satScore,
+          gpa: student.gpa,
+          status: 'Đang học',
+          joinDate: 'Đang cập nhật',
+        },
+      ]
+    : []
 
   return (
     <div className="space-y-6">
@@ -34,7 +41,7 @@ export default function ParentProfile() {
         <div>
           <h1 className="text-2xl font-bold text-etest-text">Hồ sơ con</h1>
           <p className="text-sm text-etest-subtext mt-1">
-            Xem thông tin và tiến độ học tập của con bạn
+            Xem thông tin và tiến độ học tập của con bạn • {parentName}
           </p>
         </div>
       </div>

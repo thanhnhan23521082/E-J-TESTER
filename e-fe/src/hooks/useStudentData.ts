@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react'
 import { studentApi, parentApi } from '../api'
 import type { Student, Milestone, EtesterCore, WellbeingAlert, DigestData } from '../types'
+import type { ParentBehavioralLog } from '../api/parent'
 
-export function useStudentData(studentId: string = 'student_001') {
+export function useStudentData(studentId?: string) {
   const [student, setStudent] = useState<Student | null>(null)
   const [wellbeing, setWellbeing] = useState<WellbeingAlert | null>(null)
   const [digest, setDigest] = useState<DigestData | null>(null)
   const [etester, setEtester] = useState<EtesterCore | null>(null)
   const [milestones, setMilestones] = useState<Milestone[]>([])
+  const [behavioralLogs, setBehavioralLogs] = useState<ParentBehavioralLog[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -17,14 +19,29 @@ export function useStudentData(studentId: string = 'student_001') {
       setError(null)
 
       try {
+        let resolvedStudentId = studentId ?? 'student_001'
+
+        if (!studentId) {
+          const meRes = await parentApi.getMe()
+          if (meRes.data?.studentId) {
+            resolvedStudentId = meRes.data.studentId
+          } else {
+            console.warn(
+              'Parent account is not linked to a student. Falling back to default student_001.'
+            )
+          }
+        }
+
         const [studentRes, wellbeingRes, digestRes, etesterRes, milestonesRes] =
           await Promise.all([
-            studentApi.getStudent(studentId),
-            parentApi.getWellbeingAlerts(studentId),
-            parentApi.getDigest(studentId),
-            studentApi.getEtesterScore(studentId),
-            studentApi.getMilestones(studentId),
+            studentApi.getStudent(resolvedStudentId),
+            parentApi.getWellbeingAlerts(resolvedStudentId),
+            parentApi.getDigest(resolvedStudentId),
+            studentApi.getEtesterScore(resolvedStudentId),
+            studentApi.getMilestones(resolvedStudentId),
           ])
+
+        const logsRes = await parentApi.getBehavioralLogs(resolvedStudentId, 7)
 
         if (studentRes.error) {
           setError(studentRes.error)
@@ -55,6 +72,12 @@ export function useStudentData(studentId: string = 'student_001') {
         } else {
           setMilestones(milestonesRes.data || [])
         }
+
+        if (logsRes.error) {
+          console.warn('Failed to fetch behavioral logs:', logsRes.error)
+        } else {
+          setBehavioralLogs(logsRes.data || [])
+        }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch student data')
       } finally {
@@ -62,7 +85,7 @@ export function useStudentData(studentId: string = 'student_001') {
       }
     }
 
-    fetchData()
+    void fetchData()
   }, [studentId])
 
   return {
@@ -71,6 +94,7 @@ export function useStudentData(studentId: string = 'student_001') {
     digest,
     etester,
     milestones,
+    behavioralLogs,
     loading,
     error,
   }

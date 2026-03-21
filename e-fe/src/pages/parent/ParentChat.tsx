@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Send, Bot, User, MessageCircle } from 'lucide-react'
 import QuickChatBar from '../../components/parent/QuickChatBar'
+import { parentApi } from '../../api'
 import type { ChatMessage } from '../../types'
 
 const initialMessages: ChatMessage[] = [
@@ -24,7 +25,19 @@ export default function ParentChat() {
   const [messages, setMessages] = useState<ChatMessage[]>(initialMessages)
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
+  const [selectedStudentId, setSelectedStudentId] = useState('student_001')
   const messagesEndRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const loadParent = async () => {
+      const response = await parentApi.getMe()
+      if (response.data?.studentId) {
+        setSelectedStudentId(response.data.studentId)
+      }
+    }
+
+    void loadParent()
+  }, [])
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -34,8 +47,8 @@ export default function ParentChat() {
     scrollToBottom()
   }, [messages])
 
-  const handleSend = (text: string) => {
-    if (!text.trim()) return
+  const handleSend = async (text: string) => {
+    if (!text.trim() || isTyping) return
 
     // Add user message
     const userMessage: ChatMessage = {
@@ -48,31 +61,34 @@ export default function ParentChat() {
     setInputValue('')
     setIsTyping(true)
 
-    // Simulate AI response
-    setTimeout(() => {
-      const aiResponses: Record<string, string> = {
-        'Minh Anh đang yếu môn nào?':
-          'Dựa trên dữ liệu gần nhất, Minh Anh đang yếu nhất ở kỹ năng Writing với band 6.0, thấp hơn 0.5 band so với yêu cầu của University of Melbourne. Các kỹ năng khác đều đạt hoặc vượt yêu cầu: Listening 7.0, Reading 6.5, Speaking 6.5.',
-        'Làm sao để cải thiện Writing?':
-          'Để cải thiện Writing từ 6.0 lên 7.0 trong 47 ngày tới, tôi khuyên:\n\n1. Tập trung vào Task 2 - chiếm 66% điểm\n2. Viết ít nhất 3 bài luận mỗi tuần\n3. Nộp qua ETESTER để kiểm tra AI\n4. Tham gia Trại hè Writing tháng 7\n\nBạn có muốn tôi gợi ý lịch học cụ thể không?',
-        'Tiến độ so với deadline?':
-          'Minh Anh có 47 ngày nữa đến deadline University of Melbourne (07/05/2026). Hiện tại em đủ điều kiện vào 1/2 trường mục tiêu (Monash University). Cần cải thiện thêm 0.5 band Writing để đủ điều kiện vào Melbourne.',
-        'Hoạt động gần đây của con?':
-          'Hoạt động gần đây của Minh Anh:\n\n• 15/03: Nộp essay "Why Melbourne" Draft 2\n• 10/03: Thi IELTS Mock Test #5 - đạt 6.5\n• 20/02: Hoạt động CSR tại Mái ấm Hoa Hồng\n\nEm đang duy trì streak học tập 12 ngày liên tiếp!',
-      }
-
-      const defaultResponse =
-        'Cảm ơn bạn đã hỏi! Dựa trên dữ liệu của Minh Anh, em đang có tiến độ tốt. Bạn có thể hỏi cụ thể hơn về:\n• Điểm mạnh/điểm yếu\n• Tiến độ so với deadline\n• Gợi ý cải thiện\n• Hoạt động gần đây'
+    try {
+      const response = await parentApi.chatCompletion({
+        student_id: selectedStudentId,
+        message: text.trim(),
+      })
 
       const aiMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         sender: 'ai',
-        content: aiResponses[text] || defaultResponse,
+        content:
+          response.data?.answer ||
+          response.error ||
+          'Hệ thống đang bận, vui lòng thử lại sau.',
+        timestamp: new Date().toISOString(),
+      }
+
+      setMessages((prev) => [...prev, aiMessage])
+    } catch {
+      const aiMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        sender: 'ai',
+        content: 'Không thể kết nối chatbot. Vui lòng kiểm tra backend và thử lại.',
         timestamp: new Date().toISOString(),
       }
       setMessages((prev) => [...prev, aiMessage])
+    } finally {
       setIsTyping(false)
-    }, 1500)
+    }
   }
 
   return (
@@ -159,13 +175,18 @@ export default function ParentChat() {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && handleSend(inputValue)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault()
+                    void handleSend(inputValue)
+                  }
+                }}
                 placeholder="Nhập câu hỏi của bạn..."
                 className="flex-1 h-12 px-4 bg-etest-bg rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-etest-teal/20 focus:bg-white transition-all"
               />
               <button
-                onClick={() => handleSend(inputValue)}
-                disabled={!inputValue.trim()}
+                onClick={() => void handleSend(inputValue)}
+                disabled={!inputValue.trim() || isTyping}
                 className="w-12 h-12 bg-etest-red text-white rounded-xl flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:bg-etest-red-secondary transition-colors shadow-button"
                 aria-label="Gửi tin nhắn"
               >
