@@ -1,0 +1,7 @@
+{
+  "id": "mentor_001",
+  "name": "Thầy Nguyễn Minh",
+  "studentIds": ["student_001"],
+  "pendingEssayCount": 3,
+  "pendingSessionNoteCount": 2
+}

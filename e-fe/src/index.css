@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Be Vietnam Pro', Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Glass morphism effect for navbar */
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.64);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Primary button gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #bb0016 0%, #e42027 100%);
+}
+
+/* Card shadow */
+.shadow-form {
+  box-shadow:
+    0 8px 8px -6px rgba(226, 232, 240, 0.5),
+    0 20px 22px -5px rgba(226, 232, 240, 0.5);
+}
+
+/* Button shadow */
+.shadow-button {
+  box-shadow:
+    0 4px 4px -4px rgba(187, 0, 22, 0.2),
+    0 10px 13px -3px rgba(187, 0, 22, 0.2);
+}
+
+/* Custom utility for safe area padding */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
