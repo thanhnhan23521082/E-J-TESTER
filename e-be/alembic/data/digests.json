@@ -1,32 +1,1002 @@
 [
   {
     "studentId": "student_001",
-    "progressPct": 68,
-    "milestonesCompleted": 17,
-    "nextDeadlineDate": "2026-05-07",
-    "nextDeadlineLabel": "University of Melbourne",
-    "daysLeft": 47,
-    "priorityAction": "Ôn Writing Task 2 trước deadline Melbourne",
-    "weakestSkill": "IELTS Writing"
+    "progressPct": 53,
+    "milestonesCompleted": 19,
+    "nextDeadlineDate": "2026-04-26",
+    "nextDeadlineLabel": "Queen's University",
+    "daysLeft": 36,
+    "priorityAction": "Ôn lại SAT Math - Algebra và Data Analysis",
+    "weakestSkill": "SAT Essay"
   },
   {
     "studentId": "student_002",
-    "progressPct": 54,
-    "milestonesCompleted": 11,
-    "nextDeadlineDate": "2026-04-28",
-    "nextDeadlineLabel": "University of Technology Sydney",
-    "daysLeft": 38,
+    "progressPct": 39,
+    "milestonesCompleted": 17,
+    "nextDeadlineDate": "2026-05-05",
+    "nextDeadlineLabel": "RMIT University",
+    "daysLeft": 45,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_003",
+    "progressPct": 75,
+    "milestonesCompleted": 22,
+    "nextDeadlineDate": "2026-04-30",
+    "nextDeadlineLabel": "McGill University",
+    "daysLeft": 40,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_004",
+    "progressPct": 35,
+    "milestonesCompleted": 14,
+    "nextDeadlineDate": "2026-04-25",
+    "nextDeadlineLabel": "University of British Columbia",
+    "daysLeft": 35,
+    "priorityAction": "Chốt danh sách hoạt động ngoại khóa cho hồ sơ",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_005",
+    "progressPct": 39,
+    "milestonesCompleted": 16,
+    "nextDeadlineDate": "2026-05-16",
+    "nextDeadlineLabel": "University of Sydney",
+    "daysLeft": 56,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_006",
+    "progressPct": 31,
+    "milestonesCompleted": 4,
+    "nextDeadlineDate": "2026-04-23",
+    "nextDeadlineLabel": "McGill University",
+    "daysLeft": 33,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_007",
+    "progressPct": 77,
+    "milestonesCompleted": 8,
+    "nextDeadlineDate": "2026-05-18",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 58,
+    "priorityAction": "Chốt danh sách hoạt động ngoại khóa cho hồ sơ",
+    "weakestSkill": "Application Essay"
+  },
+  {
+    "studentId": "student_008",
+    "progressPct": 36,
+    "milestonesCompleted": 19,
+    "nextDeadlineDate": "2026-06-02",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 73,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_009",
+    "progressPct": 81,
+    "milestonesCompleted": 21,
+    "nextDeadlineDate": "2026-05-18",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 58,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_010",
+    "progressPct": 30,
+    "milestonesCompleted": 19,
+    "nextDeadlineDate": "2026-04-15",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 25,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_011",
+    "progressPct": 82,
+    "milestonesCompleted": 17,
+    "nextDeadlineDate": "2026-05-01",
+    "nextDeadlineLabel": "University of Toronto",
+    "daysLeft": 41,
+    "priorityAction": "Chốt danh sách hoạt động ngoại khóa cho hồ sơ",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_012",
+    "progressPct": 48,
+    "milestonesCompleted": 5,
+    "nextDeadlineDate": "2026-06-11",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 82,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_013",
+    "progressPct": 39,
+    "milestonesCompleted": 19,
+    "nextDeadlineDate": "2026-04-23",
+    "nextDeadlineLabel": "University of Toronto",
+    "daysLeft": 33,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "Application Essay"
+  },
+  {
+    "studentId": "student_014",
+    "progressPct": 62,
+    "milestonesCompleted": 22,
+    "nextDeadlineDate": "2026-04-27",
+    "nextDeadlineLabel": "University of Adelaide",
+    "daysLeft": 37,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_015",
+    "progressPct": 33,
+    "milestonesCompleted": 12,
+    "nextDeadlineDate": "2026-05-09",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 49,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_016",
+    "progressPct": 83,
+    "milestonesCompleted": 6,
+    "nextDeadlineDate": "2026-04-26",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 36,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_017",
+    "progressPct": 41,
+    "milestonesCompleted": 10,
+    "nextDeadlineDate": "2026-06-25",
+    "nextDeadlineLabel": "RMIT University",
+    "daysLeft": 96,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_018",
+    "progressPct": 61,
+    "milestonesCompleted": 20,
+    "nextDeadlineDate": "2026-04-25",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 35,
     "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
     "weakestSkill": "IELTS Writing"
   },
   {
-    "studentId": "student_003",
-    "progressPct": 73,
-    "milestonesCompleted": 14,
-    "nextDeadlineDate": "2026-05-15",
+    "studentId": "student_019",
+    "progressPct": 49,
+    "milestonesCompleted": 10,
+    "nextDeadlineDate": "2026-06-20",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 91,
+    "priorityAction": "Ôn lại SAT Math - Algebra và Data Analysis",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_020",
+    "progressPct": 48,
+    "milestonesCompleted": 7,
+    "nextDeadlineDate": "2026-06-12",
     "nextDeadlineLabel": "University of Toronto",
-    "daysLeft": 55,
-    "priorityAction": "Chốt danh sách hoạt động ngoại khóa cho hồ sơ Canada",
+    "daysLeft": 83,
+    "priorityAction": "Hoàn thiện Common App Essay Draft 1",
+    "weakestSkill": "Application Essay"
+  },
+  {
+    "studentId": "student_021",
+    "progressPct": 66,
+    "milestonesCompleted": 22,
+    "nextDeadlineDate": "2026-06-24",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 95,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_022",
+    "progressPct": 79,
+    "milestonesCompleted": 21,
+    "nextDeadlineDate": "2026-04-21",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 31,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_023",
+    "progressPct": 64,
+    "milestonesCompleted": 12,
+    "nextDeadlineDate": "2026-04-19",
+    "nextDeadlineLabel": "University of Sydney",
+    "daysLeft": 29,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_024",
+    "progressPct": 51,
+    "milestonesCompleted": 21,
+    "nextDeadlineDate": "2026-05-30",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 70,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_025",
+    "progressPct": 36,
+    "milestonesCompleted": 15,
+    "nextDeadlineDate": "2026-04-28",
+    "nextDeadlineLabel": "RMIT University",
+    "daysLeft": 38,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_026",
+    "progressPct": 41,
+    "milestonesCompleted": 13,
+    "nextDeadlineDate": "2026-06-19",
+    "nextDeadlineLabel": "Deakin University",
+    "daysLeft": 90,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_027",
+    "progressPct": 74,
+    "milestonesCompleted": 16,
+    "nextDeadlineDate": "2026-06-03",
+    "nextDeadlineLabel": "King's College London",
+    "daysLeft": 74,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_028",
+    "progressPct": 72,
+    "milestonesCompleted": 11,
+    "nextDeadlineDate": "2026-05-25",
+    "nextDeadlineLabel": "Deakin University",
+    "daysLeft": 65,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_029",
+    "progressPct": 31,
+    "milestonesCompleted": 10,
+    "nextDeadlineDate": "2026-06-26",
+    "nextDeadlineLabel": "University of British Columbia",
+    "daysLeft": 97,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_030",
+    "progressPct": 75,
+    "milestonesCompleted": 14,
+    "nextDeadlineDate": "2026-05-06",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 46,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_031",
+    "progressPct": 35,
+    "milestonesCompleted": 16,
+    "nextDeadlineDate": "2026-04-20",
+    "nextDeadlineLabel": "University of British Columbia",
+    "daysLeft": 30,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_032",
+    "progressPct": 77,
+    "milestonesCompleted": 8,
+    "nextDeadlineDate": "2026-05-07",
+    "nextDeadlineLabel": "University of Adelaide",
+    "daysLeft": 47,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_033",
+    "progressPct": 30,
+    "milestonesCompleted": 6,
+    "nextDeadlineDate": "2026-06-11",
+    "nextDeadlineLabel": "University of Adelaide",
+    "daysLeft": 82,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_034",
+    "progressPct": 48,
+    "milestonesCompleted": 6,
+    "nextDeadlineDate": "2026-05-25",
+    "nextDeadlineLabel": "RMIT University",
+    "daysLeft": 65,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_035",
+    "progressPct": 71,
+    "milestonesCompleted": 16,
+    "nextDeadlineDate": "2026-06-02",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 73,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_036",
+    "progressPct": 70,
+    "milestonesCompleted": 5,
+    "nextDeadlineDate": "2026-05-28",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 68,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_037",
+    "progressPct": 53,
+    "milestonesCompleted": 4,
+    "nextDeadlineDate": "2026-05-18",
+    "nextDeadlineLabel": "University of Sydney",
+    "daysLeft": 58,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_038",
+    "progressPct": 37,
+    "milestonesCompleted": 5,
+    "nextDeadlineDate": "2026-05-13",
+    "nextDeadlineLabel": "University of Toronto",
+    "daysLeft": 53,
+    "priorityAction": "Chốt danh sách hoạt động ngoại khóa cho hồ sơ",
     "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_039",
+    "progressPct": 64,
+    "milestonesCompleted": 9,
+    "nextDeadlineDate": "2026-05-06",
+    "nextDeadlineLabel": "RMIT University",
+    "daysLeft": 46,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_040",
+    "progressPct": 40,
+    "milestonesCompleted": 4,
+    "nextDeadlineDate": "2026-05-23",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 63,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_041",
+    "progressPct": 42,
+    "milestonesCompleted": 16,
+    "nextDeadlineDate": "2026-06-12",
+    "nextDeadlineLabel": "Deakin University",
+    "daysLeft": 83,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_042",
+    "progressPct": 50,
+    "milestonesCompleted": 22,
+    "nextDeadlineDate": "2026-05-20",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 60,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_043",
+    "progressPct": 72,
+    "milestonesCompleted": 6,
+    "nextDeadlineDate": "2026-05-20",
+    "nextDeadlineLabel": "University of Waterloo",
+    "daysLeft": 60,
+    "priorityAction": "Chốt danh sách hoạt động ngoại khóa cho hồ sơ",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_044",
+    "progressPct": 71,
+    "milestonesCompleted": 21,
+    "nextDeadlineDate": "2026-04-26",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 36,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_045",
+    "progressPct": 47,
+    "milestonesCompleted": 12,
+    "nextDeadlineDate": "2026-05-30",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 70,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_046",
+    "progressPct": 54,
+    "milestonesCompleted": 16,
+    "nextDeadlineDate": "2026-04-27",
+    "nextDeadlineLabel": "King's College London",
+    "daysLeft": 37,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_047",
+    "progressPct": 41,
+    "milestonesCompleted": 9,
+    "nextDeadlineDate": "2026-06-16",
+    "nextDeadlineLabel": "University of British Columbia",
+    "daysLeft": 87,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_048",
+    "progressPct": 60,
+    "milestonesCompleted": 6,
+    "nextDeadlineDate": "2026-04-24",
+    "nextDeadlineLabel": "University of Adelaide",
+    "daysLeft": 34,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_049",
+    "progressPct": 46,
+    "milestonesCompleted": 7,
+    "nextDeadlineDate": "2026-06-10",
+    "nextDeadlineLabel": "University of Adelaide",
+    "daysLeft": 81,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_050",
+    "progressPct": 81,
+    "milestonesCompleted": 21,
+    "nextDeadlineDate": "2026-04-24",
+    "nextDeadlineLabel": "University of Sydney",
+    "daysLeft": 34,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_051",
+    "progressPct": 69,
+    "milestonesCompleted": 18,
+    "nextDeadlineDate": "2026-05-14",
+    "nextDeadlineLabel": "McGill University",
+    "daysLeft": 54,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_052",
+    "progressPct": 74,
+    "milestonesCompleted": 11,
+    "nextDeadlineDate": "2026-04-30",
+    "nextDeadlineLabel": "RMIT University",
+    "daysLeft": 40,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_053",
+    "progressPct": 68,
+    "milestonesCompleted": 18,
+    "nextDeadlineDate": "2026-05-19",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 59,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_054",
+    "progressPct": 55,
+    "milestonesCompleted": 7,
+    "nextDeadlineDate": "2026-05-29",
+    "nextDeadlineLabel": "University of Toronto",
+    "daysLeft": 69,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_055",
+    "progressPct": 49,
+    "milestonesCompleted": 11,
+    "nextDeadlineDate": "2026-05-17",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 57,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_056",
+    "progressPct": 51,
+    "milestonesCompleted": 15,
+    "nextDeadlineDate": "2026-05-11",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 51,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_057",
+    "progressPct": 69,
+    "milestonesCompleted": 12,
+    "nextDeadlineDate": "2026-06-06",
+    "nextDeadlineLabel": "University of Toronto",
+    "daysLeft": 77,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_058",
+    "progressPct": 30,
+    "milestonesCompleted": 16,
+    "nextDeadlineDate": "2026-06-12",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 83,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_059",
+    "progressPct": 60,
+    "milestonesCompleted": 9,
+    "nextDeadlineDate": "2026-05-21",
+    "nextDeadlineLabel": "RMIT University",
+    "daysLeft": 61,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_060",
+    "progressPct": 47,
+    "milestonesCompleted": 10,
+    "nextDeadlineDate": "2026-04-20",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 30,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_061",
+    "progressPct": 36,
+    "milestonesCompleted": 10,
+    "nextDeadlineDate": "2026-04-27",
+    "nextDeadlineLabel": "University of Toronto",
+    "daysLeft": 37,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_062",
+    "progressPct": 40,
+    "milestonesCompleted": 11,
+    "nextDeadlineDate": "2026-05-27",
+    "nextDeadlineLabel": "Queen's University",
+    "daysLeft": 67,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_063",
+    "progressPct": 39,
+    "milestonesCompleted": 10,
+    "nextDeadlineDate": "2026-05-06",
+    "nextDeadlineLabel": "King's College London",
+    "daysLeft": 46,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_064",
+    "progressPct": 34,
+    "milestonesCompleted": 7,
+    "nextDeadlineDate": "2026-06-02",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 73,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_065",
+    "progressPct": 68,
+    "milestonesCompleted": 19,
+    "nextDeadlineDate": "2026-04-24",
+    "nextDeadlineLabel": "University of Manchester",
+    "daysLeft": 34,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_066",
+    "progressPct": 73,
+    "milestonesCompleted": 21,
+    "nextDeadlineDate": "2026-04-17",
+    "nextDeadlineLabel": "RMIT University",
+    "daysLeft": 27,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_067",
+    "progressPct": 48,
+    "milestonesCompleted": 14,
+    "nextDeadlineDate": "2026-05-13",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 53,
+    "priorityAction": "Ôn lại SAT Math - Algebra và Data Analysis",
+    "weakestSkill": "Application Essay"
+  },
+  {
+    "studentId": "student_068",
+    "progressPct": 56,
+    "milestonesCompleted": 9,
+    "nextDeadlineDate": "2026-04-19",
+    "nextDeadlineLabel": "University of Waterloo",
+    "daysLeft": 29,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_069",
+    "progressPct": 50,
+    "milestonesCompleted": 11,
+    "nextDeadlineDate": "2026-05-19",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 59,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_070",
+    "progressPct": 28,
+    "milestonesCompleted": 20,
+    "nextDeadlineDate": "2026-05-31",
+    "nextDeadlineLabel": "McGill University",
+    "daysLeft": 71,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_071",
+    "progressPct": 85,
+    "milestonesCompleted": 21,
+    "nextDeadlineDate": "2026-06-25",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 96,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_072",
+    "progressPct": 50,
+    "milestonesCompleted": 9,
+    "nextDeadlineDate": "2026-05-15",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 55,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_073",
+    "progressPct": 69,
+    "milestonesCompleted": 20,
+    "nextDeadlineDate": "2026-06-06",
+    "nextDeadlineLabel": "McGill University",
+    "daysLeft": 77,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_074",
+    "progressPct": 69,
+    "milestonesCompleted": 4,
+    "nextDeadlineDate": "2026-05-09",
+    "nextDeadlineLabel": "University of Adelaide",
+    "daysLeft": 49,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_075",
+    "progressPct": 49,
+    "milestonesCompleted": 22,
+    "nextDeadlineDate": "2026-05-12",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 52,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_076",
+    "progressPct": 48,
+    "milestonesCompleted": 12,
+    "nextDeadlineDate": "2026-05-15",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 55,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_077",
+    "progressPct": 40,
+    "milestonesCompleted": 12,
+    "nextDeadlineDate": "2026-05-13",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 53,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_078",
+    "progressPct": 48,
+    "milestonesCompleted": 9,
+    "nextDeadlineDate": "2026-04-24",
+    "nextDeadlineLabel": "Queen's University",
+    "daysLeft": 34,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_079",
+    "progressPct": 38,
+    "milestonesCompleted": 17,
+    "nextDeadlineDate": "2026-04-27",
+    "nextDeadlineLabel": "King's College London",
+    "daysLeft": 37,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_080",
+    "progressPct": 79,
+    "milestonesCompleted": 16,
+    "nextDeadlineDate": "2026-04-23",
+    "nextDeadlineLabel": "University of Sydney",
+    "daysLeft": 33,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_081",
+    "progressPct": 36,
+    "milestonesCompleted": 22,
+    "nextDeadlineDate": "2026-04-21",
+    "nextDeadlineLabel": "Deakin University",
+    "daysLeft": 31,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_082",
+    "progressPct": 77,
+    "milestonesCompleted": 7,
+    "nextDeadlineDate": "2026-06-25",
+    "nextDeadlineLabel": "University of Technology Sydney",
+    "daysLeft": 96,
+    "priorityAction": "Ôn Writing Task 2 trước deadline",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_083",
+    "progressPct": 60,
+    "milestonesCompleted": 17,
+    "nextDeadlineDate": "2026-05-03",
+    "nextDeadlineLabel": "University of Adelaide",
+    "daysLeft": 43,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_084",
+    "progressPct": 34,
+    "milestonesCompleted": 8,
+    "nextDeadlineDate": "2026-05-05",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 45,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Speaking"
+  },
+  {
+    "studentId": "student_085",
+    "progressPct": 36,
+    "milestonesCompleted": 17,
+    "nextDeadlineDate": "2026-04-29",
+    "nextDeadlineLabel": "University of Waterloo",
+    "daysLeft": 39,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "SAT Verbal"
+  },
+  {
+    "studentId": "student_086",
+    "progressPct": 82,
+    "milestonesCompleted": 20,
+    "nextDeadlineDate": "2026-05-17",
+    "nextDeadlineLabel": "University of British Columbia",
+    "daysLeft": 57,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_087",
+    "progressPct": 75,
+    "milestonesCompleted": 19,
+    "nextDeadlineDate": "2026-04-24",
+    "nextDeadlineLabel": "Queen's University",
+    "daysLeft": 34,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_088",
+    "progressPct": 60,
+    "milestonesCompleted": 22,
+    "nextDeadlineDate": "2026-04-26",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 36,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_089",
+    "progressPct": 31,
+    "milestonesCompleted": 9,
+    "nextDeadlineDate": "2026-06-19",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 90,
+    "priorityAction": "Hoàn thành 2 bài Writing Task 2 mỗi tuần",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_090",
+    "progressPct": 77,
+    "milestonesCompleted": 12,
+    "nextDeadlineDate": "2026-05-07",
+    "nextDeadlineLabel": "Queen's University",
+    "daysLeft": 47,
+    "priorityAction": "Ôn lại SAT Math - Algebra và Data Analysis",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_091",
+    "progressPct": 53,
+    "milestonesCompleted": 14,
+    "nextDeadlineDate": "2026-04-23",
+    "nextDeadlineLabel": "University of Sydney",
+    "daysLeft": 33,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_092",
+    "progressPct": 48,
+    "milestonesCompleted": 21,
+    "nextDeadlineDate": "2026-06-13",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 84,
+    "priorityAction": "Luyện Speaking 15 phút mỗi ngày",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_093",
+    "progressPct": 47,
+    "milestonesCompleted": 4,
+    "nextDeadlineDate": "2026-04-20",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 30,
+    "priorityAction": "Tập trung vào Listening Section 3 và 4",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_094",
+    "progressPct": 47,
+    "milestonesCompleted": 10,
+    "nextDeadlineDate": "2026-04-27",
+    "nextDeadlineLabel": "Monash University",
+    "daysLeft": 37,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Writing"
+  },
+  {
+    "studentId": "student_095",
+    "progressPct": 74,
+    "milestonesCompleted": 13,
+    "nextDeadlineDate": "2026-05-01",
+    "nextDeadlineLabel": "Queen's University",
+    "daysLeft": 41,
+    "priorityAction": "Tăng SAT Verbal qua luyện đọc học thuật hàng ngày",
+    "weakestSkill": "SAT Essay"
+  },
+  {
+    "studentId": "student_096",
+    "progressPct": 68,
+    "milestonesCompleted": 20,
+    "nextDeadlineDate": "2026-04-17",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 27,
+    "priorityAction": "Hoàn thiện Common App Essay Draft 1",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_097",
+    "progressPct": 81,
+    "milestonesCompleted": 6,
+    "nextDeadlineDate": "2026-05-28",
+    "nextDeadlineLabel": "University of Melbourne",
+    "daysLeft": 68,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Listening"
+  },
+  {
+    "studentId": "student_098",
+    "progressPct": 54,
+    "milestonesCompleted": 8,
+    "nextDeadlineDate": "2026-05-21",
+    "nextDeadlineLabel": "University of Queensland",
+    "daysLeft": 61,
+    "priorityAction": "Tăng tốc độ đọc Reading trong 2 tuần tới",
+    "weakestSkill": "IELTS Reading"
+  },
+  {
+    "studentId": "student_099",
+    "progressPct": 51,
+    "milestonesCompleted": 22,
+    "nextDeadlineDate": "2026-06-07",
+    "nextDeadlineLabel": "McMaster University",
+    "daysLeft": 78,
+    "priorityAction": "Chốt danh sách hoạt động ngoại khóa cho hồ sơ",
+    "weakestSkill": "IELTS requirement"
+  },
+  {
+    "studentId": "student_100",
+    "progressPct": 30,
+    "milestonesCompleted": 9,
+    "nextDeadlineDate": "2026-04-25",
+    "nextDeadlineLabel": "University of Toronto",
+    "daysLeft": 35,
+    "priorityAction": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "weakestSkill": "SAT Verbal"
   }
 ]
