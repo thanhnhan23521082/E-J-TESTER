@@ -1,23 +1,702 @@
 [
   {
     "studentId": "student_001",
-    "alert": true,
-    "severity": "medium",
-    "message": "Minh Anh học muộn 3 đêm liên tiếp tuần này",
-    "action": "Nhắn hỏi thăm con tối nay"
+    "alert": false,
+    "severity": "low",
+    "message": "Hân có streak 5 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
   },
   {
     "studentId": "student_002",
-    "alert": false,
-    "severity": "low",
-    "message": "Gia Hân duy trì nhịp học ổn định 5 ngày liên tiếp",
-    "action": "Tiếp tục giữ lịch học và nghỉ ngơi hiện tại"
+    "alert": true,
+    "severity": "high",
+    "message": "Trang học lúc 1-2 giờ sáng 3 đêm liên tiếp",
+    "action": "Khuyến cáo phụ huynh điều chỉnh giờ học"
   },
   {
     "studentId": "student_003",
     "alert": true,
+    "severity": "high",
+    "message": "Ngân bỏ học 2 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_004",
+    "alert": false,
+    "severity": "low",
+    "message": "Bảo duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_005",
+    "alert": true,
     "severity": "medium",
-    "message": "Quang Duy giảm thời lượng học 2 ngày gần đây do tập trung hoạt động ngoại khóa",
-    "action": "Nhắc con quay lại lịch SAT cuối tuần"
+    "message": "Bảo giảm thời lượng học 5 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_006",
+    "alert": false,
+    "severity": "low",
+    "message": "Trang có streak 2 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_007",
+    "alert": true,
+    "severity": "high",
+    "message": "Thảo bỏ học 4 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_008",
+    "alert": false,
+    "severity": "low",
+    "message": "Yến duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_009",
+    "alert": true,
+    "severity": "high",
+    "message": "Quỳnh học lúc 1-2 giờ sáng 3 đêm liên tiếp",
+    "action": "Khuyến cáo phụ huynh điều chỉnh giờ học"
+  },
+  {
+    "studentId": "student_010",
+    "alert": false,
+    "severity": "low",
+    "message": "Duy duy trì nhịp học ổn định 2 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_011",
+    "alert": true,
+    "severity": "high",
+    "message": "Bảo bỏ học 5 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_012",
+    "alert": false,
+    "severity": "low",
+    "message": "Hân có streak 2 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_013",
+    "alert": true,
+    "severity": "medium",
+    "message": "Đức học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_014",
+    "alert": true,
+    "severity": "medium",
+    "message": "Mai học muộn 4 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_015",
+    "alert": false,
+    "severity": "low",
+    "message": "Khôi duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_016",
+    "alert": false,
+    "severity": "low",
+    "message": "Hương duy trì nhịp học ổn định 2 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_017",
+    "alert": true,
+    "severity": "high",
+    "message": "Ngân bỏ học 2 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_018",
+    "alert": false,
+    "severity": "low",
+    "message": "Hân có streak 4 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_019",
+    "alert": false,
+    "severity": "low",
+    "message": "Nhi có streak 4 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_020",
+    "alert": true,
+    "severity": "high",
+    "message": "Trang bỏ học 4 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_021",
+    "alert": false,
+    "severity": "low",
+    "message": "Bảo duy trì nhịp học ổn định 2 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_022",
+    "alert": false,
+    "severity": "low",
+    "message": "Anh có streak 2 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_023",
+    "alert": true,
+    "severity": "high",
+    "message": "Linh bỏ học 5 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_024",
+    "alert": true,
+    "severity": "medium",
+    "message": "Trinh giảm thời lượng học 3 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_025",
+    "alert": true,
+    "severity": "medium",
+    "message": "Hải học muộn 3 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_026",
+    "alert": true,
+    "severity": "high",
+    "message": "Minh học lúc 1-2 giờ sáng 3 đêm liên tiếp",
+    "action": "Khuyến cáo phụ huynh điều chỉnh giờ học"
+  },
+  {
+    "studentId": "student_027",
+    "alert": true,
+    "severity": "high",
+    "message": "Khang học lúc 1-2 giờ sáng 2 đêm liên tiếp",
+    "action": "Khuyến cáo phụ huynh điều chỉnh giờ học"
+  },
+  {
+    "studentId": "student_028",
+    "alert": true,
+    "severity": "high",
+    "message": "Ngân bỏ học 2 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_029",
+    "alert": false,
+    "severity": "low",
+    "message": "Đạt có streak 5 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_030",
+    "alert": false,
+    "severity": "low",
+    "message": "Nhi có streak 3 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_031",
+    "alert": true,
+    "severity": "medium",
+    "message": "Tuấn giảm thời lượng học 5 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_032",
+    "alert": true,
+    "severity": "medium",
+    "message": "Hải học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_033",
+    "alert": false,
+    "severity": "low",
+    "message": "Bảo có streak 2 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_034",
+    "alert": false,
+    "severity": "low",
+    "message": "Hải có streak 4 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_035",
+    "alert": true,
+    "severity": "medium",
+    "message": "Ngân học muộn 3 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_036",
+    "alert": true,
+    "severity": "high",
+    "message": "Trinh bỏ học 4 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_037",
+    "alert": false,
+    "severity": "low",
+    "message": "Phúc duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_038",
+    "alert": false,
+    "severity": "low",
+    "message": "Hải duy trì nhịp học ổn định 4 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_039",
+    "alert": true,
+    "severity": "high",
+    "message": "Duy bỏ học 3 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_040",
+    "alert": false,
+    "severity": "low",
+    "message": "Thảo có streak 5 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_041",
+    "alert": true,
+    "severity": "medium",
+    "message": "Trâm học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_042",
+    "alert": false,
+    "severity": "low",
+    "message": "Thy có streak 3 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_043",
+    "alert": true,
+    "severity": "medium",
+    "message": "Đức giảm thời lượng học 5 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_044",
+    "alert": true,
+    "severity": "high",
+    "message": "Ngân bỏ học 3 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_045",
+    "alert": true,
+    "severity": "medium",
+    "message": "Hải học muộn 5 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_046",
+    "alert": false,
+    "severity": "low",
+    "message": "Khôi duy trì nhịp học ổn định 3 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_047",
+    "alert": false,
+    "severity": "low",
+    "message": "Ngân có streak 5 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_048",
+    "alert": true,
+    "severity": "medium",
+    "message": "Loan giảm thời lượng học 3 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_049",
+    "alert": false,
+    "severity": "low",
+    "message": "Ngân có streak 3 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_050",
+    "alert": true,
+    "severity": "high",
+    "message": "Tuấn học lúc 1-2 giờ sáng 3 đêm liên tiếp",
+    "action": "Khuyến cáo phụ huynh điều chỉnh giờ học"
+  },
+  {
+    "studentId": "student_051",
+    "alert": true,
+    "severity": "medium",
+    "message": "Yến học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_052",
+    "alert": true,
+    "severity": "medium",
+    "message": "Đức giảm thời lượng học 2 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_053",
+    "alert": false,
+    "severity": "low",
+    "message": "Đức duy trì nhịp học ổn định 3 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_054",
+    "alert": false,
+    "severity": "low",
+    "message": "Quỳnh có streak 3 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_055",
+    "alert": true,
+    "severity": "medium",
+    "message": "Đạt học muộn 5 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_056",
+    "alert": false,
+    "severity": "low",
+    "message": "Nam có streak 4 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_057",
+    "alert": true,
+    "severity": "medium",
+    "message": "Tuấn học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_058",
+    "alert": false,
+    "severity": "low",
+    "message": "Trinh duy trì nhịp học ổn định 4 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_059",
+    "alert": true,
+    "severity": "high",
+    "message": "Yến học lúc 1-2 giờ sáng 5 đêm liên tiếp",
+    "action": "Khuyến cáo phụ huynh điều chỉnh giờ học"
+  },
+  {
+    "studentId": "student_060",
+    "alert": true,
+    "severity": "medium",
+    "message": "Long giảm thời lượng học 3 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_061",
+    "alert": false,
+    "severity": "low",
+    "message": "Mai duy trì nhịp học ổn định 3 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_062",
+    "alert": false,
+    "severity": "low",
+    "message": "Quỳnh duy trì nhịp học ổn định 2 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_063",
+    "alert": true,
+    "severity": "medium",
+    "message": "Phúc giảm thời lượng học 3 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_064",
+    "alert": false,
+    "severity": "low",
+    "message": "Linh có streak 4 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_065",
+    "alert": true,
+    "severity": "high",
+    "message": "Huy học lúc 1-2 giờ sáng 3 đêm liên tiếp",
+    "action": "Khuyến cáo phụ huynh điều chỉnh giờ học"
+  },
+  {
+    "studentId": "student_066",
+    "alert": true,
+    "severity": "medium",
+    "message": "Quân giảm thời lượng học 3 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_067",
+    "alert": false,
+    "severity": "low",
+    "message": "Nhi duy trì nhịp học ổn định 2 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_068",
+    "alert": true,
+    "severity": "medium",
+    "message": "Trinh học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_069",
+    "alert": false,
+    "severity": "low",
+    "message": "Loan duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_070",
+    "alert": false,
+    "severity": "low",
+    "message": "Bảo có streak 2 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_071",
+    "alert": true,
+    "severity": "medium",
+    "message": "Huy học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_072",
+    "alert": false,
+    "severity": "low",
+    "message": "Thảo duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_073",
+    "alert": false,
+    "severity": "low",
+    "message": "Trang duy trì nhịp học ổn định 4 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_074",
+    "alert": true,
+    "severity": "medium",
+    "message": "Nhi học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_075",
+    "alert": true,
+    "severity": "medium",
+    "message": "Loan giảm thời lượng học 3 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_076",
+    "alert": false,
+    "severity": "low",
+    "message": "Bảo duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_077",
+    "alert": true,
+    "severity": "medium",
+    "message": "Tuấn học muộn 5 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_078",
+    "alert": true,
+    "severity": "medium",
+    "message": "Hân giảm thời lượng học 5 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_079",
+    "alert": false,
+    "severity": "low",
+    "message": "Nam duy trì nhịp học ổn định 2 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_080",
+    "alert": true,
+    "severity": "medium",
+    "message": "Mai giảm thời lượng học 2 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_081",
+    "alert": true,
+    "severity": "medium",
+    "message": "Quân giảm thời lượng học 3 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_082",
+    "alert": false,
+    "severity": "low",
+    "message": "Minh duy trì nhịp học ổn định 4 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_083",
+    "alert": false,
+    "severity": "low",
+    "message": "Trang duy trì nhịp học ổn định 4 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_084",
+    "alert": false,
+    "severity": "low",
+    "message": "Tuấn duy trì nhịp học ổn định 5 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_085",
+    "alert": true,
+    "severity": "medium",
+    "message": "Đức học muộn 4 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_086",
+    "alert": true,
+    "severity": "medium",
+    "message": "Hương học muộn 3 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_087",
+    "alert": true,
+    "severity": "high",
+    "message": "Tuấn học lúc 1-2 giờ sáng 3 đêm liên tiếp",
+    "action": "Khuyến cáo phụ huynh điều chỉnh giờ học"
+  },
+  {
+    "studentId": "student_088",
+    "alert": false,
+    "severity": "low",
+    "message": "Mai có streak 3 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_089",
+    "alert": false,
+    "severity": "low",
+    "message": "Trâm duy trì nhịp học ổn định 4 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_090",
+    "alert": true,
+    "severity": "medium",
+    "message": "Vinh giảm thời lượng học 5 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_091",
+    "alert": true,
+    "severity": "medium",
+    "message": "Quân học muộn 4 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_092",
+    "alert": true,
+    "severity": "medium",
+    "message": "Huy giảm thời lượng học 2 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_093",
+    "alert": true,
+    "severity": "medium",
+    "message": "Đức giảm thời lượng học 5 ngày gần đây",
+    "action": "Nhắc con quay lại lịch cuối tuần"
+  },
+  {
+    "studentId": "student_094",
+    "alert": false,
+    "severity": "low",
+    "message": "Trâm duy trì nhịp học ổn định 3 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_095",
+    "alert": false,
+    "severity": "low",
+    "message": "Long có streak 2 ngày, hiệu suất tốt",
+    "action": "Giữ nguyên lịch học, cân nhắc tăng độ khó"
+  },
+  {
+    "studentId": "student_096",
+    "alert": true,
+    "severity": "high",
+    "message": "Phúc bỏ học 4 ngày liên tiếp tuần này",
+    "action": "Liên hệ phụ huynh ngay hôm nay"
+  },
+  {
+    "studentId": "student_097",
+    "alert": false,
+    "severity": "low",
+    "message": "Linh duy trì nhịp học ổn định 2 ngày liên tiếp",
+    "action": "Tiếp tục giữ lịch học hiện tại"
+  },
+  {
+    "studentId": "student_098",
+    "alert": true,
+    "severity": "medium",
+    "message": "Hải học muộn 3 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_099",
+    "alert": true,
+    "severity": "medium",
+    "message": "Linh học muộn 2 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
+  },
+  {
+    "studentId": "student_100",
+    "alert": true,
+    "severity": "medium",
+    "message": "Linh học muộn 5 đêm liên tiếp tuần này",
+    "action": "Nhắn hỏi thăm con tối nay"
   }
 ]

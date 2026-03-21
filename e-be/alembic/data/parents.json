@@ -2,31 +2,1001 @@
   {
     "id": "parent_001",
     "dbId": 101,
-    "name": "Chị Thu Anh",
+    "name": "Anh Trinh Vũ",
     "email": "parent.mock001@etest.vn",
     "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
-    "phone": "0901000001",
-    "telegramId": null,
+    "phone": "0908568671",
+    "telegramId": "parent_tg_001",
     "studentId": "student_001"
   },
   {
     "id": "parent_002",
     "dbId": 102,
-    "name": "Anh Quốc Bảo",
+    "name": "Anh Mai Trần",
     "email": "parent.mock002@etest.vn",
     "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
-    "phone": "0901000002",
-    "telegramId": "giahan_parent",
+    "phone": "0907651393",
+    "telegramId": "parent_tg_002",
     "studentId": "student_002"
   },
   {
     "id": "parent_003",
     "dbId": 103,
-    "name": "Chị Minh Tâm",
+    "name": "Anh Long Lê",
     "email": "parent.mock003@etest.vn",
     "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
-    "phone": "0901000003",
+    "phone": "0907289990",
     "telegramId": null,
     "studentId": "student_003"
+  },
+  {
+    "id": "parent_004",
+    "dbId": 104,
+    "name": "Chị Trinh Phạm",
+    "email": "parent.mock004@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906625238",
+    "telegramId": null,
+    "studentId": "student_004"
+  },
+  {
+    "id": "parent_005",
+    "dbId": 105,
+    "name": "Anh Anh Đặng",
+    "email": "parent.mock005@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908926478",
+    "telegramId": "parent_tg_005",
+    "studentId": "student_005"
+  },
+  {
+    "id": "parent_006",
+    "dbId": 106,
+    "name": "Anh Vinh Lý",
+    "email": "parent.mock006@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908526283",
+    "telegramId": "parent_tg_006",
+    "studentId": "student_006"
+  },
+  {
+    "id": "parent_007",
+    "dbId": 107,
+    "name": "Anh Minh Võ",
+    "email": "parent.mock007@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904618086",
+    "telegramId": "parent_tg_007",
+    "studentId": "student_007"
+  },
+  {
+    "id": "parent_008",
+    "dbId": 108,
+    "name": "Chị Duy Đặng",
+    "email": "parent.mock008@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904986941",
+    "telegramId": "parent_tg_008",
+    "studentId": "student_008"
+  },
+  {
+    "id": "parent_009",
+    "dbId": 109,
+    "name": "Anh Hải Ngô",
+    "email": "parent.mock009@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908669093",
+    "telegramId": null,
+    "studentId": "student_009"
+  },
+  {
+    "id": "parent_010",
+    "dbId": 110,
+    "name": "Chị Thy Tô",
+    "email": "parent.mock010@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901275739",
+    "telegramId": null,
+    "studentId": "student_010"
+  },
+  {
+    "id": "parent_011",
+    "dbId": 111,
+    "name": "Anh Khang Hoàng",
+    "email": "parent.mock011@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905886733",
+    "telegramId": "parent_tg_011",
+    "studentId": "student_011"
+  },
+  {
+    "id": "parent_012",
+    "dbId": 112,
+    "name": "Chị Hải Cao",
+    "email": "parent.mock012@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907988844",
+    "telegramId": null,
+    "studentId": "student_012"
+  },
+  {
+    "id": "parent_013",
+    "dbId": 113,
+    "name": "Anh Đức Đỗ",
+    "email": "parent.mock013@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0902135470",
+    "telegramId": null,
+    "studentId": "student_013"
+  },
+  {
+    "id": "parent_014",
+    "dbId": 114,
+    "name": "Anh Long Lý",
+    "email": "parent.mock014@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901730386",
+    "telegramId": "parent_tg_014",
+    "studentId": "student_014"
+  },
+  {
+    "id": "parent_015",
+    "dbId": 115,
+    "name": "Chị Bảo Nguyễn",
+    "email": "parent.mock015@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906991041",
+    "telegramId": "parent_tg_015",
+    "studentId": "student_015"
+  },
+  {
+    "id": "parent_016",
+    "dbId": 116,
+    "name": "Chị Hải Phạm",
+    "email": "parent.mock016@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906578736",
+    "telegramId": "parent_tg_016",
+    "studentId": "student_016"
+  },
+  {
+    "id": "parent_017",
+    "dbId": 117,
+    "name": "Chị Yến Bùi",
+    "email": "parent.mock017@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0903937508",
+    "telegramId": null,
+    "studentId": "student_017"
+  },
+  {
+    "id": "parent_018",
+    "dbId": 118,
+    "name": "Chị Khang Lý",
+    "email": "parent.mock018@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904058117",
+    "telegramId": "parent_tg_018",
+    "studentId": "student_018"
+  },
+  {
+    "id": "parent_019",
+    "dbId": 119,
+    "name": "Anh Khang Dương",
+    "email": "parent.mock019@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901620485",
+    "telegramId": "parent_tg_019",
+    "studentId": "student_019"
+  },
+  {
+    "id": "parent_020",
+    "dbId": 120,
+    "name": "Anh Loan Phan",
+    "email": "parent.mock020@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901703065",
+    "telegramId": null,
+    "studentId": "student_020"
+  },
+  {
+    "id": "parent_021",
+    "dbId": 121,
+    "name": "Chị Đức Hồ",
+    "email": "parent.mock021@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908942330",
+    "telegramId": null,
+    "studentId": "student_021"
+  },
+  {
+    "id": "parent_022",
+    "dbId": 122,
+    "name": "Anh Ngân Đỗ",
+    "email": "parent.mock022@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901802018",
+    "telegramId": null,
+    "studentId": "student_022"
+  },
+  {
+    "id": "parent_023",
+    "dbId": 123,
+    "name": "Chị Bảo Phạm",
+    "email": "parent.mock023@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907174337",
+    "telegramId": "parent_tg_023",
+    "studentId": "student_023"
+  },
+  {
+    "id": "parent_024",
+    "dbId": 124,
+    "name": "Chị Trâm Dương",
+    "email": "parent.mock024@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907486822",
+    "telegramId": null,
+    "studentId": "student_024"
+  },
+  {
+    "id": "parent_025",
+    "dbId": 125,
+    "name": "Anh Hương Lý",
+    "email": "parent.mock025@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907163058",
+    "telegramId": null,
+    "studentId": "student_025"
+  },
+  {
+    "id": "parent_026",
+    "dbId": 126,
+    "name": "Chị Loan Lê",
+    "email": "parent.mock026@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908121922",
+    "telegramId": "parent_tg_026",
+    "studentId": "student_026"
+  },
+  {
+    "id": "parent_027",
+    "dbId": 127,
+    "name": "Anh Yến Đặng",
+    "email": "parent.mock027@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906389033",
+    "telegramId": null,
+    "studentId": "student_027"
+  },
+  {
+    "id": "parent_028",
+    "dbId": 128,
+    "name": "Chị Nhi Đặng",
+    "email": "parent.mock028@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906142147",
+    "telegramId": null,
+    "studentId": "student_028"
+  },
+  {
+    "id": "parent_029",
+    "dbId": 129,
+    "name": "Chị Khôi Dương",
+    "email": "parent.mock029@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906897979",
+    "telegramId": null,
+    "studentId": "student_029"
+  },
+  {
+    "id": "parent_030",
+    "dbId": 130,
+    "name": "Chị Thy Ngô",
+    "email": "parent.mock030@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905606274",
+    "telegramId": null,
+    "studentId": "student_030"
+  },
+  {
+    "id": "parent_031",
+    "dbId": 131,
+    "name": "Anh Hân Hồ",
+    "email": "parent.mock031@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907095349",
+    "telegramId": "parent_tg_031",
+    "studentId": "student_031"
+  },
+  {
+    "id": "parent_032",
+    "dbId": 132,
+    "name": "Anh Minh Hoàng",
+    "email": "parent.mock032@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908351320",
+    "telegramId": null,
+    "studentId": "student_032"
+  },
+  {
+    "id": "parent_033",
+    "dbId": 133,
+    "name": "Anh Hải Đỗ",
+    "email": "parent.mock033@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907075878",
+    "telegramId": null,
+    "studentId": "student_033"
+  },
+  {
+    "id": "parent_034",
+    "dbId": 134,
+    "name": "Anh Thy Hoàng",
+    "email": "parent.mock034@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908548448",
+    "telegramId": null,
+    "studentId": "student_034"
+  },
+  {
+    "id": "parent_035",
+    "dbId": 135,
+    "name": "Chị Tuấn Lê",
+    "email": "parent.mock035@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0903310140",
+    "telegramId": "parent_tg_035",
+    "studentId": "student_035"
+  },
+  {
+    "id": "parent_036",
+    "dbId": 136,
+    "name": "Chị Phúc Võ",
+    "email": "parent.mock036@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905187788",
+    "telegramId": null,
+    "studentId": "student_036"
+  },
+  {
+    "id": "parent_037",
+    "dbId": 137,
+    "name": "Anh Trâm Huỳnh",
+    "email": "parent.mock037@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909372568",
+    "telegramId": "parent_tg_037",
+    "studentId": "student_037"
+  },
+  {
+    "id": "parent_038",
+    "dbId": 138,
+    "name": "Anh Bảo Võ",
+    "email": "parent.mock038@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908487220",
+    "telegramId": null,
+    "studentId": "student_038"
+  },
+  {
+    "id": "parent_039",
+    "dbId": 139,
+    "name": "Chị Khang Lý",
+    "email": "parent.mock039@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904358435",
+    "telegramId": null,
+    "studentId": "student_039"
+  },
+  {
+    "id": "parent_040",
+    "dbId": 140,
+    "name": "Anh Tuấn Huỳnh",
+    "email": "parent.mock040@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908467726",
+    "telegramId": null,
+    "studentId": "student_040"
+  },
+  {
+    "id": "parent_041",
+    "dbId": 141,
+    "name": "Chị Nhi Đỗ",
+    "email": "parent.mock041@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0902089496",
+    "telegramId": "parent_tg_041",
+    "studentId": "student_041"
+  },
+  {
+    "id": "parent_042",
+    "dbId": 142,
+    "name": "Chị Nam Đặng",
+    "email": "parent.mock042@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0903642499",
+    "telegramId": null,
+    "studentId": "student_042"
+  },
+  {
+    "id": "parent_043",
+    "dbId": 143,
+    "name": "Anh Loan Đỗ",
+    "email": "parent.mock043@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909535505",
+    "telegramId": "parent_tg_043",
+    "studentId": "student_043"
+  },
+  {
+    "id": "parent_044",
+    "dbId": 144,
+    "name": "Anh Loan Hoàng",
+    "email": "parent.mock044@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904971774",
+    "telegramId": null,
+    "studentId": "student_044"
+  },
+  {
+    "id": "parent_045",
+    "dbId": 145,
+    "name": "Anh Thảo Tô",
+    "email": "parent.mock045@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907189302",
+    "telegramId": "parent_tg_045",
+    "studentId": "student_045"
+  },
+  {
+    "id": "parent_046",
+    "dbId": 146,
+    "name": "Anh Thy Lê",
+    "email": "parent.mock046@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0902103070",
+    "telegramId": null,
+    "studentId": "student_046"
+  },
+  {
+    "id": "parent_047",
+    "dbId": 147,
+    "name": "Chị Đức Ngô",
+    "email": "parent.mock047@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907869154",
+    "telegramId": null,
+    "studentId": "student_047"
+  },
+  {
+    "id": "parent_048",
+    "dbId": 148,
+    "name": "Anh Linh Bùi",
+    "email": "parent.mock048@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0902244282",
+    "telegramId": "parent_tg_048",
+    "studentId": "student_048"
+  },
+  {
+    "id": "parent_049",
+    "dbId": 149,
+    "name": "Chị Linh Tô",
+    "email": "parent.mock049@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904052834",
+    "telegramId": null,
+    "studentId": "student_049"
+  },
+  {
+    "id": "parent_050",
+    "dbId": 150,
+    "name": "Anh Mai Đinh",
+    "email": "parent.mock050@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901929673",
+    "telegramId": "parent_tg_050",
+    "studentId": "student_050"
+  },
+  {
+    "id": "parent_051",
+    "dbId": 151,
+    "name": "Anh Ngân Huỳnh",
+    "email": "parent.mock051@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0903717354",
+    "telegramId": "parent_tg_051",
+    "studentId": "student_051"
+  },
+  {
+    "id": "parent_052",
+    "dbId": 152,
+    "name": "Anh Thảo Đinh",
+    "email": "parent.mock052@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905765539",
+    "telegramId": null,
+    "studentId": "student_052"
+  },
+  {
+    "id": "parent_053",
+    "dbId": 153,
+    "name": "Chị Trang Tô",
+    "email": "parent.mock053@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905604524",
+    "telegramId": "parent_tg_053",
+    "studentId": "student_053"
+  },
+  {
+    "id": "parent_054",
+    "dbId": 154,
+    "name": "Chị Thy Tô",
+    "email": "parent.mock054@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0902567468",
+    "telegramId": null,
+    "studentId": "student_054"
+  },
+  {
+    "id": "parent_055",
+    "dbId": 155,
+    "name": "Anh Quân Cao",
+    "email": "parent.mock055@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0903586950",
+    "telegramId": null,
+    "studentId": "student_055"
+  },
+  {
+    "id": "parent_056",
+    "dbId": 156,
+    "name": "Chị Đạt Cao",
+    "email": "parent.mock056@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901691125",
+    "telegramId": null,
+    "studentId": "student_056"
+  },
+  {
+    "id": "parent_057",
+    "dbId": 157,
+    "name": "Anh Hân Trần",
+    "email": "parent.mock057@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905440189",
+    "telegramId": "parent_tg_057",
+    "studentId": "student_057"
+  },
+  {
+    "id": "parent_058",
+    "dbId": 158,
+    "name": "Chị Thy Nguyễn",
+    "email": "parent.mock058@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909355692",
+    "telegramId": "parent_tg_058",
+    "studentId": "student_058"
+  },
+  {
+    "id": "parent_059",
+    "dbId": 159,
+    "name": "Chị Huy Đặng",
+    "email": "parent.mock059@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909102469",
+    "telegramId": "parent_tg_059",
+    "studentId": "student_059"
+  },
+  {
+    "id": "parent_060",
+    "dbId": 160,
+    "name": "Chị Ngân Dương",
+    "email": "parent.mock060@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0902224284",
+    "telegramId": null,
+    "studentId": "student_060"
+  },
+  {
+    "id": "parent_061",
+    "dbId": 161,
+    "name": "Anh Tuấn Ngô",
+    "email": "parent.mock061@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909124385",
+    "telegramId": "parent_tg_061",
+    "studentId": "student_061"
+  },
+  {
+    "id": "parent_062",
+    "dbId": 162,
+    "name": "Chị Thy Hoàng",
+    "email": "parent.mock062@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906244264",
+    "telegramId": null,
+    "studentId": "student_062"
+  },
+  {
+    "id": "parent_063",
+    "dbId": 163,
+    "name": "Chị Trâm Đỗ",
+    "email": "parent.mock063@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907689354",
+    "telegramId": "parent_tg_063",
+    "studentId": "student_063"
+  },
+  {
+    "id": "parent_064",
+    "dbId": 164,
+    "name": "Chị Đức Tô",
+    "email": "parent.mock064@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0902781470",
+    "telegramId": null,
+    "studentId": "student_064"
+  },
+  {
+    "id": "parent_065",
+    "dbId": 165,
+    "name": "Chị Duy Võ",
+    "email": "parent.mock065@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908542969",
+    "telegramId": null,
+    "studentId": "student_065"
+  },
+  {
+    "id": "parent_066",
+    "dbId": 166,
+    "name": "Anh Anh Đặng",
+    "email": "parent.mock066@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907444964",
+    "telegramId": null,
+    "studentId": "student_066"
+  },
+  {
+    "id": "parent_067",
+    "dbId": 167,
+    "name": "Chị Hải Huỳnh",
+    "email": "parent.mock067@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906493461",
+    "telegramId": "parent_tg_067",
+    "studentId": "student_067"
+  },
+  {
+    "id": "parent_068",
+    "dbId": 168,
+    "name": "Chị Trang Huỳnh",
+    "email": "parent.mock068@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909359508",
+    "telegramId": "parent_tg_068",
+    "studentId": "student_068"
+  },
+  {
+    "id": "parent_069",
+    "dbId": 169,
+    "name": "Chị Hương Đặng",
+    "email": "parent.mock069@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909344488",
+    "telegramId": "parent_tg_069",
+    "studentId": "student_069"
+  },
+  {
+    "id": "parent_070",
+    "dbId": 170,
+    "name": "Chị Đức Dương",
+    "email": "parent.mock070@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905038756",
+    "telegramId": null,
+    "studentId": "student_070"
+  },
+  {
+    "id": "parent_071",
+    "dbId": 171,
+    "name": "Chị Anh Trần",
+    "email": "parent.mock071@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905720376",
+    "telegramId": null,
+    "studentId": "student_071"
+  },
+  {
+    "id": "parent_072",
+    "dbId": 172,
+    "name": "Chị Ngân Tô",
+    "email": "parent.mock072@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901137194",
+    "telegramId": null,
+    "studentId": "student_072"
+  },
+  {
+    "id": "parent_073",
+    "dbId": 173,
+    "name": "Chị Linh Võ",
+    "email": "parent.mock073@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907136730",
+    "telegramId": "parent_tg_073",
+    "studentId": "student_073"
+  },
+  {
+    "id": "parent_074",
+    "dbId": 174,
+    "name": "Chị Anh Hồ",
+    "email": "parent.mock074@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901858283",
+    "telegramId": "parent_tg_074",
+    "studentId": "student_074"
+  },
+  {
+    "id": "parent_075",
+    "dbId": 175,
+    "name": "Anh Thảo Tô",
+    "email": "parent.mock075@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905841933",
+    "telegramId": "parent_tg_075",
+    "studentId": "student_075"
+  },
+  {
+    "id": "parent_076",
+    "dbId": 176,
+    "name": "Chị Vinh Tô",
+    "email": "parent.mock076@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0905692934",
+    "telegramId": null,
+    "studentId": "student_076"
+  },
+  {
+    "id": "parent_077",
+    "dbId": 177,
+    "name": "Anh Linh Phạm",
+    "email": "parent.mock077@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907608607",
+    "telegramId": "parent_tg_077",
+    "studentId": "student_077"
+  },
+  {
+    "id": "parent_078",
+    "dbId": 178,
+    "name": "Chị Yến Đỗ",
+    "email": "parent.mock078@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0903420404",
+    "telegramId": null,
+    "studentId": "student_078"
+  },
+  {
+    "id": "parent_079",
+    "dbId": 179,
+    "name": "Chị Đức Trần",
+    "email": "parent.mock079@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901760064",
+    "telegramId": null,
+    "studentId": "student_079"
+  },
+  {
+    "id": "parent_080",
+    "dbId": 180,
+    "name": "Chị Loan Lý",
+    "email": "parent.mock080@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909712957",
+    "telegramId": null,
+    "studentId": "student_080"
+  },
+  {
+    "id": "parent_081",
+    "dbId": 181,
+    "name": "Anh Phúc Lưu",
+    "email": "parent.mock081@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906344047",
+    "telegramId": null,
+    "studentId": "student_081"
+  },
+  {
+    "id": "parent_082",
+    "dbId": 182,
+    "name": "Chị Quân Bùi",
+    "email": "parent.mock082@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909511333",
+    "telegramId": null,
+    "studentId": "student_082"
+  },
+  {
+    "id": "parent_083",
+    "dbId": 183,
+    "name": "Chị Khang Cao",
+    "email": "parent.mock083@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906029651",
+    "telegramId": "parent_tg_083",
+    "studentId": "student_083"
+  },
+  {
+    "id": "parent_084",
+    "dbId": 184,
+    "name": "Anh Thảo Bùi",
+    "email": "parent.mock084@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0902838859",
+    "telegramId": null,
+    "studentId": "student_084"
+  },
+  {
+    "id": "parent_085",
+    "dbId": 185,
+    "name": "Chị Loan Nguyễn",
+    "email": "parent.mock085@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908962302",
+    "telegramId": "parent_tg_085",
+    "studentId": "student_085"
+  },
+  {
+    "id": "parent_086",
+    "dbId": 186,
+    "name": "Anh Trâm Trần",
+    "email": "parent.mock086@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909060593",
+    "telegramId": null,
+    "studentId": "student_086"
+  },
+  {
+    "id": "parent_087",
+    "dbId": 187,
+    "name": "Chị Linh Vũ",
+    "email": "parent.mock087@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0901529665",
+    "telegramId": null,
+    "studentId": "student_087"
+  },
+  {
+    "id": "parent_088",
+    "dbId": 188,
+    "name": "Anh Trang Nguyễn",
+    "email": "parent.mock088@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0908399399",
+    "telegramId": "parent_tg_088",
+    "studentId": "student_088"
+  },
+  {
+    "id": "parent_089",
+    "dbId": 189,
+    "name": "Anh Mai Phan",
+    "email": "parent.mock089@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907884990",
+    "telegramId": null,
+    "studentId": "student_089"
+  },
+  {
+    "id": "parent_090",
+    "dbId": 190,
+    "name": "Chị Quỳnh Trần",
+    "email": "parent.mock090@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0903316639",
+    "telegramId": null,
+    "studentId": "student_090"
+  },
+  {
+    "id": "parent_091",
+    "dbId": 191,
+    "name": "Chị Nhi Lý",
+    "email": "parent.mock091@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0909816043",
+    "telegramId": null,
+    "studentId": "student_091"
+  },
+  {
+    "id": "parent_092",
+    "dbId": 192,
+    "name": "Anh Tuấn Tô",
+    "email": "parent.mock092@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906743294",
+    "telegramId": null,
+    "studentId": "student_092"
+  },
+  {
+    "id": "parent_093",
+    "dbId": 193,
+    "name": "Chị Thy Lý",
+    "email": "parent.mock093@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904225657",
+    "telegramId": null,
+    "studentId": "student_093"
+  },
+  {
+    "id": "parent_094",
+    "dbId": 194,
+    "name": "Chị Yến Đặng",
+    "email": "parent.mock094@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904772642",
+    "telegramId": "parent_tg_094",
+    "studentId": "student_094"
+  },
+  {
+    "id": "parent_095",
+    "dbId": 195,
+    "name": "Chị Vinh Đặng",
+    "email": "parent.mock095@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904477544",
+    "telegramId": "parent_tg_095",
+    "studentId": "student_095"
+  },
+  {
+    "id": "parent_096",
+    "dbId": 196,
+    "name": "Chị Phúc Lý",
+    "email": "parent.mock096@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906851946",
+    "telegramId": "parent_tg_096",
+    "studentId": "student_096"
+  },
+  {
+    "id": "parent_097",
+    "dbId": 197,
+    "name": "Chị Ngân Phạm",
+    "email": "parent.mock097@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0907370211",
+    "telegramId": "parent_tg_097",
+    "studentId": "student_097"
+  },
+  {
+    "id": "parent_098",
+    "dbId": 198,
+    "name": "Chị Đạt Đỗ",
+    "email": "parent.mock098@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0903457461",
+    "telegramId": "parent_tg_098",
+    "studentId": "student_098"
+  },
+  {
+    "id": "parent_099",
+    "dbId": 199,
+    "name": "Chị Khang Lê",
+    "email": "parent.mock099@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0906811015",
+    "telegramId": null,
+    "studentId": "student_099"
+  },
+  {
+    "id": "parent_100",
+    "dbId": 200,
+    "name": "Chị Trâm Lý",
+    "email": "parent.mock100@etest.vn",
+    "passwordHash": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYfZ3ZZZZ",
+    "phone": "0904590102",
+    "telegramId": "parent_tg_100",
+    "studentId": "student_100"
   }
 ]

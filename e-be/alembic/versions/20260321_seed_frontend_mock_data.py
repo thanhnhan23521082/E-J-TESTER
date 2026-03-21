@@ -177,8 +177,14 @@ def _upsert_rows(
     if not rows:
         return
 
+    # PostgreSQL raises CardinalityViolation when a single INSERT .. ON CONFLICT
+    # receives duplicate constrained keys in the same batch. Keep the last row.
+    deduped_rows: dict[tuple[Any, ...], dict[str, Any]] = {}
+    for row in rows:
+        deduped_rows[tuple(row[column_name] for column_name in index_elements)] = row
+
     conflict_columns = [table.c[column_name] for column_name in index_elements]
-    stmt = pg_insert(table).values(rows)
+    stmt = pg_insert(table).values(list(deduped_rows.values()))
     connection.execute(
         stmt.on_conflict_do_update(
             index_elements=conflict_columns,
