@@ -57,13 +57,13 @@ class TimestampMixin:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# User  (auth accounts — parents, mentors, admins)
+# User  (auth accounts — parents, mentors, students, managers)
 # ──────────────────────────────────────────────────────────────────────────────
 
 class User(Base, TimestampMixin):
     """
     User — tài khoản auth (email + password).
-    Phân biệt role: parent | mentor | admin.
+    Phân biệt role: parent | mentor | student | manager | admin.
     """
 
     __tablename__ = "users"
@@ -71,7 +71,9 @@ class User(Base, TimestampMixin):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
     hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
-    role: Mapped[str] = mapped_column(String(50), default="parent")  # parent | mentor | admin
+    role: Mapped[str] = mapped_column(String(50), default="parent")  # parent | mentor | student | manager | admin
+    full_name: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    phone: Mapped[str | None] = mapped_column(String(50), nullable=True)
 
     def __repr__(self) -> str:
         return f"<User(id={self.id}, email={self.email}, role={self.role})>"
@@ -150,6 +152,31 @@ class Parent(Base, TimestampMixin):
 
     def __repr__(self) -> str:
         return f"<Parent(id={self.parent_id}, name={self.full_name})>"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Manager
+# ──────────────────────────────────────────────────────────────────────────────
+
+class Manager(Base, TimestampMixin):
+    """
+    Manager — quản lý trung tâm. Giám sát mentor + học viên.
+    """
+
+    __tablename__ = "managers"
+    __table_args__ = (
+        Index("idx_managers_email", "email"),
+    )
+
+    manager_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
+    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    full_name: Mapped[str] = mapped_column(String(255), nullable=False)
+    phone: Mapped[str | None] = mapped_column(String(50), nullable=True)
+    department: Mapped[str | None] = mapped_column(String(255), nullable=True)
+
+    def __repr__(self) -> str:
+        return f"<Manager(id={self.manager_id}, name={self.full_name})>"
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -490,6 +517,7 @@ __all__ = [
     # Domain
     "Mentor",
     "Parent",
+    "Manager",
     "Student",
     "School",
     "Course",

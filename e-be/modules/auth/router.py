@@ -5,6 +5,8 @@ Authentication endpoints: register, login, refresh, logout.
 All routes live under /api/auth.
 """
 
+import uuid
+
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -25,7 +27,7 @@ from shared.auth import (
     create_refresh_token,
     decode_refresh_token,
 )
-from shared.model import User
+from shared.model import Manager, Mentor, Parent, Student, User
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 settings = get_settings()
@@ -36,6 +38,64 @@ settings = get_settings()
 async def _get_user_by_email(db: AsyncSession, email: str) -> User | None:
     result = await db.execute(select(User).where(User.email == email))
     return result.scalar_one_or_none()
+
+
+async def _check_email_in_profile_tables(db: AsyncSession, email: str) -> bool:
+    """Check if email is already used in any profile table (mentor, parent, manager, student name)."""
+    for model in (Mentor, Parent, Manager):
+        result = await db.execute(select(model).where(model.email == email))
+        if result.scalar_one_or_none():
+            return True
+    return False
+
+
+async def _create_profile_record(
+    db: AsyncSession,
+    body: RegisterRequest,
+    hashed_pw: str,
+) -> None:
+    """Create the role-specific profile record alongside the User row."""
+
+    if body.role == "parent":
+        profile = Parent(
+            email=body.email,
+            hashed_password=hashed_pw,
+            full_name=body.full_name,
+            phone=body.phone,
+            telegram_id=body.telegram_id,
+        )
+        db.add(profile)
+
+    elif body.role == "mentor":
+        profile = Mentor(
+            email=body.email,
+            hashed_password=hashed_pw,
+            full_name=body.full_name,
+            specialty=body.specialty,
+            bio=body.bio,
+            programs=[],
+        )
+        db.add(profile)
+
+    elif body.role == "student":
+        # Generate a short unique student_id
+        student_id = f"S-{uuid.uuid4().hex[:8].upper()}"
+        profile = Student(
+            student_id=student_id,
+            name=body.full_name,
+            program=body.program,
+        )
+        db.add(profile)
+
+    elif body.role == "manager":
+        profile = Manager(
+            email=body.email,
+            hashed_password=hashed_pw,
+            full_name=body.full_name,
+            phone=body.phone,
+            department=body.department,
+        )
+        db.add(profile)
 
 
 # ── Routes ───────────────────────────────────────────────────────────────────
@@ -55,8 +115,12 @@ async def register(
 
     - **email**: unique email address
     - **password**: 8–128 characters
-    - **role**: `parent` (default) | `mentor` | `admin`
+    - **role**: `parent` | `mentor` | `student` | `manager`
+    - **full_name**: user's full name (required)
+    - **phone**: optional phone number
+    - Additional role-specific fields are accepted based on role.
     """
+    # Check duplicate in users table
     existing = await _get_user_by_email(db, body.email)
     if existing:
         raise HTTPException(
@@ -64,12 +128,28 @@ async def register(
             detail="Email already registered",
         )
 
+    # Check duplicate in profile tables
+    if await _check_email_in_profile_tables(db, body.email):
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Email already registered",
+        )
+
+    hashed_pw = hash_password(body.password)
+
+    # Create User auth record
     user = User(
         email=body.email,
-        hashed_password=hash_password(body.password),
+        hashed_password=hashed_pw,
         role=body.role,
+        full_name=body.full_name,
+        phone=body.phone,
     )
     db.add(user)
+
+    # Create role-specific profile record
+    await _create_profile_record(db, body, hashed_pw)
+
     await db.commit()
     await db.refresh(user)
 
@@ -77,6 +157,8 @@ async def register(
         id=user.id,
         email=user.email,
         role=user.role,
+        full_name=user.full_name,
+        phone=user.phone,
         created_at=user.created_at.isoformat(),
     )
 
