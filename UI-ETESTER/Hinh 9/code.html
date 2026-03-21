@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETESTERPublic - Digital Credential Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#f9f9ff",
+              "outline-variant": "#e7bdb8",
+              "on-primary-fixed-variant": "#93000f",
+              "inverse-surface": "#2a313d",
+              "surface-bright": "#f9f9ff",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#ebf1ff",
+              "surface-container-highest": "#dce2f3",
+              "secondary": "#6f5d21",
+              "tertiary-fixed": "#d8e2ff",
+              "secondary-fixed": "#fae197",
+              "on-secondary-fixed-variant": "#55450a",
+              "background": "#f9f9ff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed": "#001a42",
+              "on-surface": "#151c27",
+              "inverse-primary": "#ffb3ac",
+              "primary-fixed": "#ffdad6",
+              "on-secondary-container": "#756326",
+              "surface-dim": "#d3daea",
+              "on-error": "#ffffff",
+              "primary-container": "#e42027",
+              "tertiary-container": "#2170e4",
+              "surface-tint": "#c00017",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "on-tertiary": "#ffffff",
+              "outline": "#926f6b",
+              "on-background": "#151c27",
+              "error": "#ba1a1a",
+              "tertiary": "#0058be",
+              "on-primary-fixed": "#410003",
+              "surface-container-low": "#f0f3ff",
+              "secondary-fixed-dim": "#ddc57e",
+              "tertiary-fixed-dim": "#adc6ff",
+              "on-tertiary-fixed-variant": "#004395",
+              "surface-container-high": "#e2e8f8",
+              "primary": "#bb0016",
+              "on-surface-variant": "#5d3f3c",
+              "on-secondary-fixed": "#231b00",
+              "surface-container": "#e7eefe",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#fffbff",
+              "surface-variant": "#dce2f3",
+              "primary-fixed-dim": "#ffb3ac",
+              "on-tertiary-container": "#fefcff",
+              "secondary-container": "#fae197"
+            },
+            fontFamily: {
+              "headline": ["Be Vietnam Pro"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 12px 32px rgba(187, 0, 22, 0.04);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9ff;
+            color: #151c27;
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-[#F9F9FF] sticky top-0 z-50 transition-colors">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#BB0016] brand-font tracking-tight">
+                ETESTER
+            </div>
+<div class="flex items-center gap-6">
+<button class="text-slate-500 font-medium hover:bg-[#F0F3FF] transition-colors px-4 py-2 rounded-lg text-sm">
+                    Verify Another
+                </button>
+<div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full border border-emerald-100">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs font-bold uppercase tracking-wider">Official Verification</span>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-5xl mx-auto w-full px-6 py-12 space-y-12">
+<!-- 1. Trust Header -->
+<section class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-outline-variant/10">
+<div class="space-y-1">
+<h1 class="text-3xl font-bold text-on-surface tracking-tight">Verified by ETEST Vietnam</h1>
+<p class="text-slate-500 font-medium">Issued: March 21 2026 · Valid</p>
+</div>
+<div class="flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 text-emerald-600">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</section>
+<!-- 2. Student Identity Card & 5. Leadership Summary (Asymmetric Layout) -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<div class="lg:col-span-2 bg-surface-container-low rounded-xl p-8 flex items-center gap-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
+<div class="w-24 h-24 rounded-xl bg-surface-container-lowest editorial-shadow flex items-center justify-center overflow-hidden border border-outline-variant/10">
+<img alt="Student Profile Photo" class="w-full h-full object-cover" data-alt="Portrait of a young professional student smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEv808FD_iVe0h77cfERugC7hXKbigmb2q_vYGsVjKlakoH75JegTpPyuCDQHvbSIQLdJyWlLKVzcNWD4bcrflretYnap4RIPZZh0oBUGS5egFU3fSlQOg-vTiIXZXSyxyw8PXM6Fn7HNB4GF_CAqTvTzUY9YS8xutlza0GbStVl0EuUtMcwls9MqKtSzzbwUvY9hbFuuk_1V92X-pAclvf3tJqdROPI3_ldsx0FXenDqAX6bAgIepeUV1Vx-tgOTltgbgj1T22EA"/>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<h2 class="text-2xl font-bold text-on-surface">Nguyễn Hà Minh Anh</h2>
+<span class="bg-indigo-100 text-indigo-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-indigo-200 uppercase tracking-tighter">ETEST Verified</span>
+</div>
+<p class="text-slate-600 font-medium">AMP Program · 14 months enrolled</p>
+<div class="flex gap-2 pt-2">
+<span class="text-xs bg-surface-container-lowest px-2 py-1 rounded-md text-slate-500 border border-outline-variant/5">ID: ET-2026-8812</span>
+<span class="text-xs bg-surface-container-lowest px-2 py-1 rounded-md text-slate-500 border border-outline-variant/5">Cohort: Spring 2025</span>
+</div>
+</div>
+</div>
+<div class="bg-teal-50 border border-teal-100 rounded-xl p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-teal-900 font-bold flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-teal-600">military_tech</span>
+                        Leadership Summary
+                    </h3>
+<p class="text-teal-800/80 text-sm mb-4 leading-relaxed">Leadership documented across 4 activities · 6 months</p>
+<ul class="space-y-2">
+<li class="text-xs font-semibold text-teal-900 flex items-center gap-2">
+<span class="w-1 h-1 rounded-full bg-teal-500"></span> President, Debate Club
+                        </li>
+<li class="text-xs font-semibold text-teal-900 flex items-center gap-2">
+<span class="w-1 h-1 rounded-full bg-teal-500"></span> Team Lead, Green Earth Project
+                        </li>
+</ul>
+</div>
+<button class="mt-6 text-teal-700 text-xs font-bold uppercase tracking-widest hover:underline text-left">View details</button>
+</div>
+</section>
+<!-- 3. Requirements Coverage Grid -->
+<section class="space-y-6">
+<h3 class="text-xl font-bold text-on-surface">Profile requirements covered: 8 of 9</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-emerald-50 border border-emerald-100/50">
+<span class="material-symbols-outlined text-emerald-600 text-xl">check</span>
+<span class="text-sm font-medium text-emerald-900">English proficiency</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-emerald-50 border border-emerald-100/50">
+<span class="material-symbols-outlined text-emerald-600 text-xl">check</span>
+<span class="text-sm font-medium text-emerald-900">Standardized test</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-emerald-50 border border-emerald-100/50">
+<span class="material-symbols-outlined text-emerald-600 text-xl">check</span>
+<span class="text-sm font-medium text-emerald-900">Personal essay</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-emerald-50 border border-emerald-100/50">
+<span class="material-symbols-outlined text-emerald-600 text-xl">check</span>
+<span class="text-sm font-medium text-emerald-900">Extracurricular</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-emerald-50 border border-emerald-100/50">
+<span class="material-symbols-outlined text-emerald-600 text-xl">check</span>
+<span class="text-sm font-medium text-emerald-900">Community service</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-emerald-50 border border-emerald-100/50">
+<span class="material-symbols-outlined text-emerald-600 text-xl">check</span>
+<span class="text-sm font-medium text-emerald-900">Leadership evidence</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-emerald-50 border border-emerald-100/50">
+<span class="material-symbols-outlined text-emerald-600 text-xl">check</span>
+<span class="text-sm font-medium text-emerald-900">Academic record</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-emerald-50 border border-emerald-100/50">
+<span class="material-symbols-outlined text-emerald-600 text-xl">check</span>
+<span class="text-sm font-medium text-emerald-900">Recommendation</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 rounded-lg bg-slate-100 border border-slate-200 opacity-60">
+<span class="material-symbols-outlined text-slate-400 text-xl">remove</span>
+<span class="text-sm font-medium text-slate-500">Awards/honors</span>
+</div>
+</div>
+</section>
+<!-- 4. Verified Stats & 6. Trace Chain (Grid) -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="space-y-6">
+<h3 class="text-xl font-bold text-on-surface">Verified Performance Metrics</h3>
+<div class="overflow-hidden rounded-xl bg-surface-container-low">
+<table class="w-full text-left border-collapse">
+<tbody>
+<tr class="border-b border-white/50">
+<td class="px-6 py-4 text-sm font-medium text-slate-500">Time enrolled</td>
+<td class="px-6 py-4 text-sm font-bold text-on-surface text-right">14 months</td>
+</tr>
+<tr class="border-b border-white/50 bg-white/20">
+<td class="px-6 py-4 text-sm font-medium text-slate-500">Milestones</td>
+<td class="px-6 py-4 text-sm font-bold text-on-surface text-right">23</td>
+</tr>
+<tr class="border-b border-white/50">
+<td class="px-6 py-4 text-sm font-medium text-slate-500">Mentor verified</td>
+<td class="px-6 py-4 text-sm font-bold text-on-surface text-right">18</td>
+</tr>
+<tr class="border-b border-white/50 bg-white/20">
+<td class="px-6 py-4 text-sm font-medium text-slate-500">IELTS Score</td>
+<td class="px-6 py-4 text-sm font-bold text-primary text-right">6.5</td>
+</tr>
+<tr class="border-b border-white/50">
+<td class="px-6 py-4 text-sm font-medium text-slate-500">SAT Score</td>
+<td class="px-6 py-4 text-sm font-bold text-primary text-right">1320</td>
+</tr>
+<tr class="border-b border-white/50 bg-white/20">
+<td class="px-6 py-4 text-sm font-medium text-slate-500">Authenticity Score</td>
+<td class="px-6 py-4 text-sm font-bold text-emerald-600 text-right">91%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm font-medium text-slate-500">Essays Finalized</td>
+<td class="px-6 py-4 text-sm font-bold text-on-surface text-right">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="text-xl font-bold text-on-surface">Verification Integrity</h3>
+<div class="bg-indigo-50 border-l-4 border-indigo-500 p-8 rounded-r-xl space-y-4">
+<div class="flex items-center gap-3 text-indigo-900 font-bold">
+<span class="material-symbols-outlined">hub</span>
+                        Trace Chain Summary
+                    </div>
+<p class="text-indigo-800 text-sm leading-relaxed">
+                        Personal Statement verified through 9 connected artifacts, all mentor-confirmed. This ensures that every milestone in the student's journey is anchored by physical evidence and professional assessment.
+                    </p>
+<a class="inline-flex items-center gap-2 text-indigo-700 font-bold text-xs uppercase tracking-widest hover:text-indigo-900 transition-colors" href="#">
+                        View full learning graph
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- 7. Narrative Card -->
+<div class="bg-surface-container-lowest editorial-shadow rounded-xl p-8 border border-outline-variant/5 relative">
+<span class="absolute top-4 right-4 text-slate-200 material-symbols-outlined text-4xl">format_quote</span>
+<h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Academic Narrative</h4>
+<p class="text-on-surface leading-relaxed italic mb-4">
+                        "Nguyễn Hà Minh Anh demonstrates exceptional analytical growth, particularly in connecting environmental policy with local community initiatives. Her ability to synthesize complex data into actionable leadership strategies has been a consistent highlight of her 14-month engagement."
+                    </p>
+<p class="text-[10px] text-slate-400 font-medium">From verified activity records</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F0F3FF] mt-12 border-t border-outline-variant/5">
+<div class="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+<div class="flex flex-col gap-1">
+<div class="font-['Be_Vietnam_Pro'] font-semibold text-slate-900">ETEST Vietnam</div>
+<div class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Digital Credential Service</div>
+</div>
+<div class="text-slate-500 text-sm antialiased text-center md:text-left">
+                © 2024 ETEST Academic Atelier. Official Digital Credential Verification Service.
+                <div class="mt-2 text-[11px] text-slate-400 italic">This page is for verification purposes only</div>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-[#BB0016] transition-all text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-[#BB0016] transition-all text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-[#BB0016] transition-all text-sm font-medium" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>

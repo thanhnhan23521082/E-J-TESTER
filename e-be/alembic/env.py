@@ -35,6 +35,15 @@ from shared.model import (          # noqa: F401
     Conversation,
     Milestone,
 )
+from shared.etester_models import (  # noqa: F401
+    ETESTERCore,
+    MilestoneTraceLink,
+    MilestoneArtifact,
+    ArtifactForm,
+    MentorVerification,
+    AuthScoringResult,
+    ETESTERBadge,
+)
 
 target_metadata = Base.metadata
 

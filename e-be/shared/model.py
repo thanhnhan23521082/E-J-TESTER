@@ -263,6 +263,11 @@ class Student(Base, TimestampMixin):
         "Milestone", back_populates="student", cascade="all, delete-orphan"
     )
 
+    # ETESTER relationships (defined in shared/etester_models.py)
+    etester_core: Mapped["ETESTERCore | None"] = relationship(
+        "ETESTERCore", back_populates="student", uselist=False
+    )
+
     def __repr__(self) -> str:
         return f"<Student(id={self.student_id}, name={self.name})>"
 
@@ -500,6 +505,27 @@ class Milestone(Base):
     # Relations
     student: Mapped["Student"] = relationship("Student", back_populates="milestones")
     mentor: Mapped["Mentor | None"] = relationship("Mentor", back_populates="milestones")
+
+    # ETESTER relationships (defined in shared/etester_models.py)
+    artifact: Mapped["MilestoneArtifact | None"] = relationship(
+        "MilestoneArtifact", back_populates="milestone", uselist=False
+    )
+    form: Mapped["ArtifactForm | None"] = relationship(
+        "ArtifactForm", back_populates="milestone", uselist=False
+    )
+    trace_links_from: Mapped[list["MilestoneTraceLink"]] = relationship(
+        "MilestoneTraceLink",
+        foreign_keys="MilestoneTraceLink.from_milestone_id",
+        back_populates="from_milestone",
+    )
+    trace_links_to: Mapped[list["MilestoneTraceLink"]] = relationship(
+        "MilestoneTraceLink",
+        foreign_keys="MilestoneTraceLink.to_milestone_id",
+        back_populates="to_milestone",
+    )
+    auth_results: Mapped[list["AuthScoringResult"]] = relationship(
+        "AuthScoringResult", back_populates="milestone"
+    )
 
     def __repr__(self) -> str:
         return f"<Milestone(id={self.milestone_id}, type={self.type}, status={self.status})>"
