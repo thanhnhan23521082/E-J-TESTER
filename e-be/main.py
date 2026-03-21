@@ -12,6 +12,7 @@ Initialises:
 """
 
 import logging
+import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
@@ -23,6 +24,7 @@ from core.database import create_all_tables
 from core.logging import RequestIDMiddleware
 from modules.auth.router import router as auth_router
 from modules.etester.router import router as etester_router
+from modules.smart_parenting.chatbot_router import router as smart_parenting_chatbot_router
 from modules.smart_parenting.router import router as smart_parenting_router
 
 settings = get_settings()
@@ -35,16 +37,29 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def _service_mode() -> str:
+    return os.getenv("SERVICE_MODE", "all").strip().lower()
+
+
+def _should_run_db_init() -> bool:
+    value = os.getenv("RUN_DB_INIT", "true").strip().lower()
+    return value in {"1", "true", "yes", "on"}
+
+
 # ── Lifespan ─────────────────────────────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan: startup → running → shutdown."""
-    logger.info("Starting ETEST ONE Backend …")
-    try:
-        create_all_tables()
-        logger.info("Database tables ready")
-    except Exception as exc:
-        logger.error("Failed to create database tables: %s", exc)
+    mode = _service_mode()
+    logger.info("Starting ETEST ONE Backend (mode=%s) …", mode)
+    if _should_run_db_init():
+        try:
+            create_all_tables()
+            logger.info("Database tables ready")
+        except Exception as exc:
+            logger.error("Failed to create database tables: %s", exc)
+    else:
+        logger.info("Skipping DB init at startup (RUN_DB_INIT=false)")
 
     yield
 
@@ -91,10 +106,16 @@ def create_app() -> FastAPI:
             headers={"X-Request-ID": getattr(request.state, "request_id", None)},  # type: ignore[arg-type]
         )
 
-    # ── Include routers ───────────────────────────────────────────────────
-    app.include_router(auth_router)
-    app.include_router(smart_parenting_router)
-    app.include_router(etester_router)
+    # ── Include routers by service mode ──────────────────────────────────
+    mode = _service_mode()
+    if mode in {"all", "auth"}:
+        app.include_router(auth_router)
+    if mode in {"all", "parenting"}:
+        app.include_router(smart_parenting_router)
+    if mode in {"all", "parenting-agent"}:
+        app.include_router(smart_parenting_chatbot_router)
+    if mode in {"all", "etester"}:
+        app.include_router(etester_router)
 
     # ── Health check ────────────────────────────────────────────────────────
     @app.get("/", tags=["health"])

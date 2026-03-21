@@ -1,0 +1,1803 @@
+[
+  {
+    "studentId": "student_001",
+    "academicScore": 72,
+    "writingGrowth": 73,
+    "skills": [
+      "Analytical Thinking",
+      "Problem Solving",
+      "Leadership"
+    ],
+    "mentorVerifications": 15,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 78,
+    "totalContributions": 28,
+    "lastUpdated": "2026-03-21T13:10:00Z",
+    "narrativeCache": "Hân đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_002",
+    "academicScore": 60,
+    "writingGrowth": 48,
+    "skills": [
+      "Reading",
+      "Speaking"
+    ],
+    "mentorVerifications": 8,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 59,
+    "totalContributions": 20,
+    "lastUpdated": "2026-03-18T07:49:00Z",
+    "narrativeCache": "Trang duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_003",
+    "academicScore": 60,
+    "writingGrowth": 76,
+    "skills": [
+      "SAT Verbal",
+      "Problem Solving"
+    ],
+    "mentorVerifications": 15,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 73,
+    "totalContributions": 19,
+    "lastUpdated": "2026-03-19T09:33:00Z",
+    "narrativeCache": "Ngân có Math rất mạnh, cần kéo Verbal lên để tối ưu tổng điểm.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_004",
+    "academicScore": 75,
+    "writingGrowth": 65,
+    "skills": [
+      "SAT Math",
+      "Planning"
+    ],
+    "mentorVerifications": 17,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 90,
+    "totalContributions": 19,
+    "lastUpdated": "2026-03-19T18:34:00Z",
+    "narrativeCache": "Bảo đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_005",
+    "academicScore": 77,
+    "writingGrowth": 65,
+    "skills": [
+      "Consistency",
+      "Test-taking",
+      "Coherence",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 20,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 83,
+    "totalContributions": 14,
+    "lastUpdated": "2026-03-20T13:16:00Z",
+    "narrativeCache": "Bảo duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_006",
+    "academicScore": 77,
+    "writingGrowth": 53,
+    "skills": [
+      "SAT Math",
+      "Research"
+    ],
+    "mentorVerifications": 18,
+    "parentSupportLevel": "low",
+    "institutionalStamp": false,
+    "consistencyScore": 86,
+    "totalContributions": 20,
+    "lastUpdated": "2026-03-20T07:49:00Z",
+    "narrativeCache": "Trang có Math rất mạnh, cần kéo Verbal lên để tối ưu tổng điểm.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_007",
+    "academicScore": 67,
+    "writingGrowth": 61,
+    "skills": [
+      "Analytical Thinking",
+      "Leadership",
+      "SAT Math"
+    ],
+    "mentorVerifications": 20,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 65,
+    "totalContributions": 27,
+    "lastUpdated": "2026-03-21T13:14:00Z",
+    "narrativeCache": "Thảo đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_008",
+    "academicScore": 81,
+    "writingGrowth": 47,
+    "skills": [
+      "Speaking",
+      "Coherence",
+      "Reading"
+    ],
+    "mentorVerifications": 5,
+    "parentSupportLevel": "active",
+    "institutionalStamp": false,
+    "consistencyScore": 62,
+    "totalContributions": 25,
+    "lastUpdated": "2026-03-21T16:28:00Z",
+    "narrativeCache": "Yến duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_009",
+    "academicScore": 58,
+    "writingGrowth": 69,
+    "skills": [
+      "Consistency",
+      "Speaking",
+      "Reading",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 3,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 73,
+    "totalContributions": 13,
+    "lastUpdated": "2026-03-19T18:28:00Z",
+    "narrativeCache": "Quỳnh có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_010",
+    "academicScore": 86,
+    "writingGrowth": 48,
+    "skills": [
+      "SAT Verbal",
+      "Self-Discipline"
+    ],
+    "mentorVerifications": 13,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 86,
+    "totalContributions": 16,
+    "lastUpdated": "2026-03-21T18:50:00Z",
+    "narrativeCache": "Duy đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_011",
+    "academicScore": 80,
+    "writingGrowth": 39,
+    "skills": [
+      "Problem Solving",
+      "SAT Math"
+    ],
+    "mentorVerifications": 20,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 71,
+    "totalContributions": 17,
+    "lastUpdated": "2026-03-18T08:49:00Z",
+    "narrativeCache": "Bảo đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_012",
+    "academicScore": 67,
+    "writingGrowth": 64,
+    "skills": [
+      "Consistency",
+      "Speaking",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 6,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 68,
+    "totalContributions": 20,
+    "lastUpdated": "2026-03-21T17:19:00Z",
+    "narrativeCache": "Hân đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_013",
+    "academicScore": 71,
+    "writingGrowth": 65,
+    "skills": [
+      "SAT Math",
+      "Planning"
+    ],
+    "mentorVerifications": 12,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 58,
+    "totalContributions": 26,
+    "lastUpdated": "2026-03-19T08:15:00Z",
+    "narrativeCache": "Đức đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_014",
+    "academicScore": 92,
+    "writingGrowth": 42,
+    "skills": [
+      "Academic Writing",
+      "Reading",
+      "Test-taking"
+    ],
+    "mentorVerifications": 15,
+    "parentSupportLevel": "active",
+    "institutionalStamp": false,
+    "consistencyScore": 57,
+    "totalContributions": 23,
+    "lastUpdated": "2026-03-21T18:38:00Z",
+    "narrativeCache": "Mai duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_015",
+    "academicScore": 60,
+    "writingGrowth": 78,
+    "skills": [
+      "Speaking",
+      "Reading"
+    ],
+    "mentorVerifications": 22,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 95,
+    "totalContributions": 6,
+    "lastUpdated": "2026-03-18T12:41:00Z",
+    "narrativeCache": "Khôi tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_016",
+    "academicScore": 90,
+    "writingGrowth": 85,
+    "skills": [
+      "SAT Verbal",
+      "Self-Discipline",
+      "Analytical Thinking",
+      "Leadership"
+    ],
+    "mentorVerifications": 14,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 56,
+    "totalContributions": 27,
+    "lastUpdated": "2026-03-21T12:46:00Z",
+    "narrativeCache": "Hương đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_017",
+    "academicScore": 89,
+    "writingGrowth": 79,
+    "skills": [
+      "Consistency",
+      "Presentation"
+    ],
+    "mentorVerifications": 18,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 89,
+    "totalContributions": 16,
+    "lastUpdated": "2026-03-20T18:29:00Z",
+    "narrativeCache": "Ngân duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_018",
+    "academicScore": 83,
+    "writingGrowth": 53,
+    "skills": [
+      "Presentation",
+      "Reading",
+      "Academic Writing",
+      "Coherence"
+    ],
+    "mentorVerifications": 11,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 55,
+    "totalContributions": 25,
+    "lastUpdated": "2026-03-21T18:11:00Z",
+    "narrativeCache": "Hân có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_019",
+    "academicScore": 59,
+    "writingGrowth": 77,
+    "skills": [
+      "Planning",
+      "Leadership",
+      "Research",
+      "SAT Verbal"
+    ],
+    "mentorVerifications": 20,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 86,
+    "totalContributions": 22,
+    "lastUpdated": "2026-03-19T16:18:00Z",
+    "narrativeCache": "Nhi đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_020",
+    "academicScore": 57,
+    "writingGrowth": 43,
+    "skills": [
+      "Planning",
+      "SAT Math",
+      "Leadership",
+      "Research"
+    ],
+    "mentorVerifications": 8,
+    "parentSupportLevel": "active",
+    "institutionalStamp": false,
+    "consistencyScore": 86,
+    "totalContributions": 11,
+    "lastUpdated": "2026-03-18T07:36:00Z",
+    "narrativeCache": "Trang đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_021",
+    "academicScore": 69,
+    "writingGrowth": 73,
+    "skills": [
+      "Consistency",
+      "Coherence",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 5,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 68,
+    "totalContributions": 25,
+    "lastUpdated": "2026-03-21T08:29:00Z",
+    "narrativeCache": "Bảo duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_022",
+    "academicScore": 58,
+    "writingGrowth": 74,
+    "skills": [
+      "Vocabulary",
+      "Test-taking"
+    ],
+    "mentorVerifications": 11,
+    "parentSupportLevel": "low",
+    "institutionalStamp": false,
+    "consistencyScore": 59,
+    "totalContributions": 14,
+    "lastUpdated": "2026-03-18T10:33:00Z",
+    "narrativeCache": "Anh duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_023",
+    "academicScore": 91,
+    "writingGrowth": 75,
+    "skills": [
+      "Speaking",
+      "Test-taking",
+      "Listening",
+      "Consistency"
+    ],
+    "mentorVerifications": 8,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 81,
+    "totalContributions": 28,
+    "lastUpdated": "2026-03-18T17:36:00Z",
+    "narrativeCache": "Linh có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_024",
+    "academicScore": 90,
+    "writingGrowth": 60,
+    "skills": [
+      "Test-taking",
+      "Listening",
+      "Consistency"
+    ],
+    "mentorVerifications": 19,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 89,
+    "totalContributions": 24,
+    "lastUpdated": "2026-03-21T12:57:00Z",
+    "narrativeCache": "Trinh có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_025",
+    "academicScore": 75,
+    "writingGrowth": 73,
+    "skills": [
+      "Vocabulary",
+      "Test-taking",
+      "Consistency"
+    ],
+    "mentorVerifications": 10,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 79,
+    "totalContributions": 22,
+    "lastUpdated": "2026-03-20T12:28:00Z",
+    "narrativeCache": "Hải tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_026",
+    "academicScore": 88,
+    "writingGrowth": 43,
+    "skills": [
+      "Academic Writing",
+      "Presentation",
+      "Reading"
+    ],
+    "mentorVerifications": 12,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 69,
+    "totalContributions": 11,
+    "lastUpdated": "2026-03-20T07:49:00Z",
+    "narrativeCache": "Minh đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_027",
+    "academicScore": 77,
+    "writingGrowth": 44,
+    "skills": [
+      "Coherence",
+      "Reading",
+      "Academic Writing",
+      "Test-taking"
+    ],
+    "mentorVerifications": 7,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 92,
+    "totalContributions": 12,
+    "lastUpdated": "2026-03-19T11:51:00Z",
+    "narrativeCache": "Khang tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_028",
+    "academicScore": 85,
+    "writingGrowth": 46,
+    "skills": [
+      "Test-taking",
+      "Speaking",
+      "Vocabulary",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 18,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 61,
+    "totalContributions": 24,
+    "lastUpdated": "2026-03-20T07:46:00Z",
+    "narrativeCache": "Ngân duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_029",
+    "academicScore": 77,
+    "writingGrowth": 62,
+    "skills": [
+      "SAT Verbal",
+      "Leadership",
+      "SAT Math"
+    ],
+    "mentorVerifications": 16,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 69,
+    "totalContributions": 28,
+    "lastUpdated": "2026-03-18T17:49:00Z",
+    "narrativeCache": "Đạt đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_030",
+    "academicScore": 89,
+    "writingGrowth": 71,
+    "skills": [
+      "Coherence",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 7,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 69,
+    "totalContributions": 9,
+    "lastUpdated": "2026-03-18T17:46:00Z",
+    "narrativeCache": "Nhi duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_031",
+    "academicScore": 80,
+    "writingGrowth": 44,
+    "skills": [
+      "SAT Verbal",
+      "Self-Discipline",
+      "Analytical Thinking"
+    ],
+    "mentorVerifications": 7,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 91,
+    "totalContributions": 28,
+    "lastUpdated": "2026-03-18T15:25:00Z",
+    "narrativeCache": "Tuấn đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_032",
+    "academicScore": 63,
+    "writingGrowth": 65,
+    "skills": [
+      "Presentation",
+      "Test-taking",
+      "Consistency"
+    ],
+    "mentorVerifications": 20,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 96,
+    "totalContributions": 23,
+    "lastUpdated": "2026-03-19T15:39:00Z",
+    "narrativeCache": "Hải có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_033",
+    "academicScore": 75,
+    "writingGrowth": 78,
+    "skills": [
+      "Speaking",
+      "Presentation",
+      "Academic Writing",
+      "Reading"
+    ],
+    "mentorVerifications": 21,
+    "parentSupportLevel": "active",
+    "institutionalStamp": false,
+    "consistencyScore": 81,
+    "totalContributions": 18,
+    "lastUpdated": "2026-03-20T12:12:00Z",
+    "narrativeCache": "Bảo tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_034",
+    "academicScore": 94,
+    "writingGrowth": 44,
+    "skills": [
+      "Academic Writing",
+      "Coherence",
+      "Listening",
+      "Reading"
+    ],
+    "mentorVerifications": 17,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 69,
+    "totalContributions": 11,
+    "lastUpdated": "2026-03-20T09:48:00Z",
+    "narrativeCache": "Hải tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_035",
+    "academicScore": 94,
+    "writingGrowth": 44,
+    "skills": [
+      "Listening",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 12,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 62,
+    "totalContributions": 14,
+    "lastUpdated": "2026-03-21T14:01:00Z",
+    "narrativeCache": "Ngân có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_036",
+    "academicScore": 90,
+    "writingGrowth": 65,
+    "skills": [
+      "Presentation",
+      "Speaking",
+      "Listening",
+      "Coherence"
+    ],
+    "mentorVerifications": 22,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 97,
+    "totalContributions": 5,
+    "lastUpdated": "2026-03-21T16:57:00Z",
+    "narrativeCache": "Trinh duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_037",
+    "academicScore": 73,
+    "writingGrowth": 47,
+    "skills": [
+      "Coherence",
+      "Reading"
+    ],
+    "mentorVerifications": 22,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 96,
+    "totalContributions": 5,
+    "lastUpdated": "2026-03-18T13:42:00Z",
+    "narrativeCache": "Phúc đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_038",
+    "academicScore": 79,
+    "writingGrowth": 49,
+    "skills": [
+      "Planning",
+      "Leadership",
+      "SAT Math",
+      "Self-Discipline"
+    ],
+    "mentorVerifications": 15,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 61,
+    "totalContributions": 15,
+    "lastUpdated": "2026-03-21T16:34:00Z",
+    "narrativeCache": "Hải đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_039",
+    "academicScore": 57,
+    "writingGrowth": 50,
+    "skills": [
+      "Presentation",
+      "Consistency"
+    ],
+    "mentorVerifications": 19,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 80,
+    "totalContributions": 28,
+    "lastUpdated": "2026-03-19T07:22:00Z",
+    "narrativeCache": "Duy đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_040",
+    "academicScore": 58,
+    "writingGrowth": 75,
+    "skills": [
+      "Coherence",
+      "Speaking",
+      "Presentation"
+    ],
+    "mentorVerifications": 11,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 56,
+    "totalContributions": 22,
+    "lastUpdated": "2026-03-20T10:09:00Z",
+    "narrativeCache": "Thảo duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_041",
+    "academicScore": 88,
+    "writingGrowth": 78,
+    "skills": [
+      "Reading",
+      "Listening",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 22,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 81,
+    "totalContributions": 12,
+    "lastUpdated": "2026-03-19T13:19:00Z",
+    "narrativeCache": "Trâm tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_042",
+    "academicScore": 92,
+    "writingGrowth": 69,
+    "skills": [
+      "Consistency",
+      "Reading",
+      "Listening"
+    ],
+    "mentorVerifications": 9,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 88,
+    "totalContributions": 9,
+    "lastUpdated": "2026-03-21T09:41:00Z",
+    "narrativeCache": "Thy có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_043",
+    "academicScore": 66,
+    "writingGrowth": 55,
+    "skills": [
+      "Planning",
+      "SAT Math"
+    ],
+    "mentorVerifications": 7,
+    "parentSupportLevel": "low",
+    "institutionalStamp": false,
+    "consistencyScore": 75,
+    "totalContributions": 18,
+    "lastUpdated": "2026-03-21T11:28:00Z",
+    "narrativeCache": "Đức đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_044",
+    "academicScore": 63,
+    "writingGrowth": 46,
+    "skills": [
+      "Coherence",
+      "Reading",
+      "Test-taking",
+      "Listening"
+    ],
+    "mentorVerifications": 3,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 93,
+    "totalContributions": 23,
+    "lastUpdated": "2026-03-19T16:14:00Z",
+    "narrativeCache": "Ngân đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_045",
+    "academicScore": 63,
+    "writingGrowth": 67,
+    "skills": [
+      "Planning",
+      "SAT Math"
+    ],
+    "mentorVerifications": 22,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 78,
+    "totalContributions": 10,
+    "lastUpdated": "2026-03-21T14:30:00Z",
+    "narrativeCache": "Hải gần chạm mục tiêu SAT, cần thêm 1-2 mock test để chốt điểm.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_046",
+    "academicScore": 55,
+    "writingGrowth": 52,
+    "skills": [
+      "Speaking",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 16,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 67,
+    "totalContributions": 11,
+    "lastUpdated": "2026-03-18T09:59:00Z",
+    "narrativeCache": "Khôi tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_047",
+    "academicScore": 70,
+    "writingGrowth": 62,
+    "skills": [
+      "Self-Discipline",
+      "Planning",
+      "Problem Solving"
+    ],
+    "mentorVerifications": 15,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 79,
+    "totalContributions": 28,
+    "lastUpdated": "2026-03-20T13:39:00Z",
+    "narrativeCache": "Ngân gần chạm mục tiêu SAT, cần thêm 1-2 mock test để chốt điểm.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_048",
+    "academicScore": 84,
+    "writingGrowth": 37,
+    "skills": [
+      "Presentation",
+      "Academic Writing",
+      "Coherence",
+      "Consistency"
+    ],
+    "mentorVerifications": 10,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 57,
+    "totalContributions": 22,
+    "lastUpdated": "2026-03-21T15:48:00Z",
+    "narrativeCache": "Loan tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_049",
+    "academicScore": 80,
+    "writingGrowth": 54,
+    "skills": [
+      "Speaking",
+      "Coherence"
+    ],
+    "mentorVerifications": 12,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 73,
+    "totalContributions": 24,
+    "lastUpdated": "2026-03-18T18:33:00Z",
+    "narrativeCache": "Ngân tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_050",
+    "academicScore": 66,
+    "writingGrowth": 84,
+    "skills": [
+      "Consistency",
+      "Listening",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 21,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 80,
+    "totalContributions": 18,
+    "lastUpdated": "2026-03-20T14:01:00Z",
+    "narrativeCache": "Tuấn đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_051",
+    "academicScore": 65,
+    "writingGrowth": 80,
+    "skills": [
+      "Analytical Thinking",
+      "Self-Discipline",
+      "SAT Math",
+      "Problem Solving"
+    ],
+    "mentorVerifications": 6,
+    "parentSupportLevel": "active",
+    "institutionalStamp": false,
+    "consistencyScore": 83,
+    "totalContributions": 25,
+    "lastUpdated": "2026-03-20T08:33:00Z",
+    "narrativeCache": "Yến đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_052",
+    "academicScore": 57,
+    "writingGrowth": 84,
+    "skills": [
+      "Presentation",
+      "Reading",
+      "Speaking",
+      "Coherence"
+    ],
+    "mentorVerifications": 8,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 97,
+    "totalContributions": 9,
+    "lastUpdated": "2026-03-19T09:11:00Z",
+    "narrativeCache": "Đức tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_053",
+    "academicScore": 83,
+    "writingGrowth": 53,
+    "skills": [
+      "Test-taking",
+      "Coherence"
+    ],
+    "mentorVerifications": 8,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 67,
+    "totalContributions": 5,
+    "lastUpdated": "2026-03-20T07:29:00Z",
+    "narrativeCache": "Đức duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_054",
+    "academicScore": 68,
+    "writingGrowth": 72,
+    "skills": [
+      "SAT Math",
+      "Research",
+      "Analytical Thinking"
+    ],
+    "mentorVerifications": 18,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 60,
+    "totalContributions": 24,
+    "lastUpdated": "2026-03-18T10:56:00Z",
+    "narrativeCache": "Quỳnh có Math rất mạnh, cần kéo Verbal lên để tối ưu tổng điểm.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_055",
+    "academicScore": 58,
+    "writingGrowth": 76,
+    "skills": [
+      "Presentation",
+      "Speaking",
+      "Academic Writing",
+      "Listening"
+    ],
+    "mentorVerifications": 14,
+    "parentSupportLevel": "active",
+    "institutionalStamp": false,
+    "consistencyScore": 57,
+    "totalContributions": 26,
+    "lastUpdated": "2026-03-20T12:58:00Z",
+    "narrativeCache": "Đạt có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_056",
+    "academicScore": 73,
+    "writingGrowth": 74,
+    "skills": [
+      "Test-taking",
+      "Reading"
+    ],
+    "mentorVerifications": 22,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 66,
+    "totalContributions": 19,
+    "lastUpdated": "2026-03-20T07:05:00Z",
+    "narrativeCache": "Nam có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_057",
+    "academicScore": 90,
+    "writingGrowth": 39,
+    "skills": [
+      "Planning",
+      "Analytical Thinking",
+      "SAT Math"
+    ],
+    "mentorVerifications": 12,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 72,
+    "totalContributions": 15,
+    "lastUpdated": "2026-03-21T15:13:00Z",
+    "narrativeCache": "Tuấn gần chạm mục tiêu SAT, cần thêm 1-2 mock test để chốt điểm.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_058",
+    "academicScore": 85,
+    "writingGrowth": 81,
+    "skills": [
+      "Academic Writing",
+      "Listening",
+      "Coherence",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 22,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 93,
+    "totalContributions": 15,
+    "lastUpdated": "2026-03-20T15:36:00Z",
+    "narrativeCache": "Trinh đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_059",
+    "academicScore": 86,
+    "writingGrowth": 46,
+    "skills": [
+      "Reading",
+      "Consistency",
+      "Coherence"
+    ],
+    "mentorVerifications": 22,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 67,
+    "totalContributions": 5,
+    "lastUpdated": "2026-03-18T07:29:00Z",
+    "narrativeCache": "Yến tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_060",
+    "academicScore": 57,
+    "writingGrowth": 56,
+    "skills": [
+      "Speaking",
+      "Test-taking"
+    ],
+    "mentorVerifications": 14,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 68,
+    "totalContributions": 5,
+    "lastUpdated": "2026-03-19T18:18:00Z",
+    "narrativeCache": "Long tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_061",
+    "academicScore": 55,
+    "writingGrowth": 42,
+    "skills": [
+      "Research",
+      "Problem Solving"
+    ],
+    "mentorVerifications": 13,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 91,
+    "totalContributions": 24,
+    "lastUpdated": "2026-03-18T09:12:00Z",
+    "narrativeCache": "Mai đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_062",
+    "academicScore": 85,
+    "writingGrowth": 44,
+    "skills": [
+      "Self-Discipline",
+      "Analytical Thinking",
+      "SAT Math"
+    ],
+    "mentorVerifications": 17,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 84,
+    "totalContributions": 18,
+    "lastUpdated": "2026-03-18T15:19:00Z",
+    "narrativeCache": "Quỳnh có Math rất mạnh, cần kéo Verbal lên để tối ưu tổng điểm.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_063",
+    "academicScore": 77,
+    "writingGrowth": 39,
+    "skills": [
+      "Vocabulary",
+      "Academic Writing",
+      "Listening",
+      "Coherence"
+    ],
+    "mentorVerifications": 7,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 76,
+    "totalContributions": 17,
+    "lastUpdated": "2026-03-19T16:38:00Z",
+    "narrativeCache": "Phúc duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_064",
+    "academicScore": 72,
+    "writingGrowth": 61,
+    "skills": [
+      "Listening",
+      "Coherence",
+      "Vocabulary",
+      "Reading"
+    ],
+    "mentorVerifications": 5,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 78,
+    "totalContributions": 19,
+    "lastUpdated": "2026-03-20T10:33:00Z",
+    "narrativeCache": "Linh đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_065",
+    "academicScore": 60,
+    "writingGrowth": 63,
+    "skills": [
+      "Vocabulary",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 19,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 87,
+    "totalContributions": 9,
+    "lastUpdated": "2026-03-19T12:59:00Z",
+    "narrativeCache": "Huy có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_066",
+    "academicScore": 68,
+    "writingGrowth": 81,
+    "skills": [
+      "Coherence",
+      "Vocabulary",
+      "Listening",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 4,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 88,
+    "totalContributions": 8,
+    "lastUpdated": "2026-03-18T11:59:00Z",
+    "narrativeCache": "Quân có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_067",
+    "academicScore": 88,
+    "writingGrowth": 84,
+    "skills": [
+      "SAT Verbal",
+      "Problem Solving",
+      "Analytical Thinking",
+      "SAT Math"
+    ],
+    "mentorVerifications": 12,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 74,
+    "totalContributions": 25,
+    "lastUpdated": "2026-03-19T12:12:00Z",
+    "narrativeCache": "Nhi đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_068",
+    "academicScore": 72,
+    "writingGrowth": 44,
+    "skills": [
+      "Planning",
+      "Leadership",
+      "Analytical Thinking"
+    ],
+    "mentorVerifications": 8,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 94,
+    "totalContributions": 22,
+    "lastUpdated": "2026-03-18T10:34:00Z",
+    "narrativeCache": "Trinh đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_069",
+    "academicScore": 91,
+    "writingGrowth": 50,
+    "skills": [
+      "Research",
+      "SAT Verbal",
+      "Planning"
+    ],
+    "mentorVerifications": 8,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 76,
+    "totalContributions": 22,
+    "lastUpdated": "2026-03-21T07:08:00Z",
+    "narrativeCache": "Loan đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_070",
+    "academicScore": 82,
+    "writingGrowth": 60,
+    "skills": [
+      "SAT Math",
+      "Self-Discipline",
+      "Analytical Thinking",
+      "Leadership"
+    ],
+    "mentorVerifications": 8,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 92,
+    "totalContributions": 25,
+    "lastUpdated": "2026-03-21T16:22:00Z",
+    "narrativeCache": "Bảo đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_071",
+    "academicScore": 91,
+    "writingGrowth": 43,
+    "skills": [
+      "Presentation",
+      "Listening"
+    ],
+    "mentorVerifications": 5,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 84,
+    "totalContributions": 14,
+    "lastUpdated": "2026-03-21T14:14:00Z",
+    "narrativeCache": "Huy tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_072",
+    "academicScore": 66,
+    "writingGrowth": 79,
+    "skills": [
+      "Coherence",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 13,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 56,
+    "totalContributions": 7,
+    "lastUpdated": "2026-03-21T08:22:00Z",
+    "narrativeCache": "Thảo tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_073",
+    "academicScore": 93,
+    "writingGrowth": 71,
+    "skills": [
+      "Research",
+      "Leadership"
+    ],
+    "mentorVerifications": 7,
+    "parentSupportLevel": "low",
+    "institutionalStamp": false,
+    "consistencyScore": 61,
+    "totalContributions": 15,
+    "lastUpdated": "2026-03-18T11:34:00Z",
+    "narrativeCache": "Trang đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_074",
+    "academicScore": 85,
+    "writingGrowth": 59,
+    "skills": [
+      "Test-taking",
+      "Speaking",
+      "Coherence",
+      "Listening"
+    ],
+    "mentorVerifications": 5,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 92,
+    "totalContributions": 18,
+    "lastUpdated": "2026-03-21T16:50:00Z",
+    "narrativeCache": "Nhi có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_075",
+    "academicScore": 91,
+    "writingGrowth": 66,
+    "skills": [
+      "Speaking",
+      "Reading",
+      "Vocabulary",
+      "Test-taking"
+    ],
+    "mentorVerifications": 6,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 75,
+    "totalContributions": 22,
+    "lastUpdated": "2026-03-18T14:11:00Z",
+    "narrativeCache": "Loan đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_076",
+    "academicScore": 75,
+    "writingGrowth": 66,
+    "skills": [
+      "Listening",
+      "Presentation",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 4,
+    "parentSupportLevel": "active",
+    "institutionalStamp": false,
+    "consistencyScore": 63,
+    "totalContributions": 23,
+    "lastUpdated": "2026-03-18T09:42:00Z",
+    "narrativeCache": "Bảo tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_077",
+    "academicScore": 67,
+    "writingGrowth": 48,
+    "skills": [
+      "Coherence",
+      "Test-taking",
+      "Presentation",
+      "Consistency"
+    ],
+    "mentorVerifications": 13,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 74,
+    "totalContributions": 18,
+    "lastUpdated": "2026-03-20T08:37:00Z",
+    "narrativeCache": "Tuấn tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_078",
+    "academicScore": 78,
+    "writingGrowth": 70,
+    "skills": [
+      "Leadership",
+      "Self-Discipline",
+      "SAT Verbal",
+      "Problem Solving"
+    ],
+    "mentorVerifications": 4,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 77,
+    "totalContributions": 8,
+    "lastUpdated": "2026-03-20T07:15:00Z",
+    "narrativeCache": "Hân đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_079",
+    "academicScore": 79,
+    "writingGrowth": 62,
+    "skills": [
+      "Test-taking",
+      "Vocabulary",
+      "Consistency",
+      "Speaking"
+    ],
+    "mentorVerifications": 20,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 85,
+    "totalContributions": 9,
+    "lastUpdated": "2026-03-19T15:24:00Z",
+    "narrativeCache": "Nam tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_080",
+    "academicScore": 63,
+    "writingGrowth": 35,
+    "skills": [
+      "Test-taking",
+      "Reading",
+      "Consistency"
+    ],
+    "mentorVerifications": 5,
+    "parentSupportLevel": "low",
+    "institutionalStamp": false,
+    "consistencyScore": 86,
+    "totalContributions": 26,
+    "lastUpdated": "2026-03-21T09:05:00Z",
+    "narrativeCache": "Mai có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_081",
+    "academicScore": 84,
+    "writingGrowth": 67,
+    "skills": [
+      "Consistency",
+      "Test-taking",
+      "Coherence"
+    ],
+    "mentorVerifications": 16,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 79,
+    "totalContributions": 16,
+    "lastUpdated": "2026-03-19T09:27:00Z",
+    "narrativeCache": "Quân có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_082",
+    "academicScore": 81,
+    "writingGrowth": 69,
+    "skills": [
+      "Consistency",
+      "Speaking",
+      "Vocabulary",
+      "Coherence"
+    ],
+    "mentorVerifications": 21,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 57,
+    "totalContributions": 23,
+    "lastUpdated": "2026-03-21T18:23:00Z",
+    "narrativeCache": "Minh duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_083",
+    "academicScore": 84,
+    "writingGrowth": 68,
+    "skills": [
+      "Listening",
+      "Reading",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 5,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 60,
+    "totalContributions": 12,
+    "lastUpdated": "2026-03-21T17:47:00Z",
+    "narrativeCache": "Trang duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_084",
+    "academicScore": 89,
+    "writingGrowth": 84,
+    "skills": [
+      "Listening",
+      "Coherence",
+      "Consistency",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 3,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 85,
+    "totalContributions": 23,
+    "lastUpdated": "2026-03-20T13:22:00Z",
+    "narrativeCache": "Tuấn duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_085",
+    "academicScore": 91,
+    "writingGrowth": 51,
+    "skills": [
+      "Research",
+      "SAT Verbal",
+      "SAT Math"
+    ],
+    "mentorVerifications": 4,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 65,
+    "totalContributions": 23,
+    "lastUpdated": "2026-03-18T17:18:00Z",
+    "narrativeCache": "Đức đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_086",
+    "academicScore": 87,
+    "writingGrowth": 39,
+    "skills": [
+      "SAT Math",
+      "Problem Solving",
+      "Analytical Thinking",
+      "Self-Discipline"
+    ],
+    "mentorVerifications": 11,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 72,
+    "totalContributions": 13,
+    "lastUpdated": "2026-03-20T07:47:00Z",
+    "narrativeCache": "Hương có Math rất mạnh, cần kéo Verbal lên để tối ưu tổng điểm.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_087",
+    "academicScore": 78,
+    "writingGrowth": 46,
+    "skills": [
+      "Problem Solving",
+      "Planning"
+    ],
+    "mentorVerifications": 11,
+    "parentSupportLevel": "low",
+    "institutionalStamp": false,
+    "consistencyScore": 66,
+    "totalContributions": 21,
+    "lastUpdated": "2026-03-18T12:05:00Z",
+    "narrativeCache": "Tuấn gần chạm mục tiêu SAT, cần thêm 1-2 mock test để chốt điểm.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_088",
+    "academicScore": 70,
+    "writingGrowth": 77,
+    "skills": [
+      "Reading",
+      "Consistency",
+      "Test-taking",
+      "Speaking"
+    ],
+    "mentorVerifications": 17,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 68,
+    "totalContributions": 23,
+    "lastUpdated": "2026-03-20T07:41:00Z",
+    "narrativeCache": "Mai tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_089",
+    "academicScore": 80,
+    "writingGrowth": 65,
+    "skills": [
+      "Academic Writing",
+      "Reading"
+    ],
+    "mentorVerifications": 12,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 89,
+    "totalContributions": 12,
+    "lastUpdated": "2026-03-21T17:45:00Z",
+    "narrativeCache": "Trâm tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_090",
+    "academicScore": 73,
+    "writingGrowth": 63,
+    "skills": [
+      "Problem Solving",
+      "Research",
+      "Analytical Thinking"
+    ],
+    "mentorVerifications": 15,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 88,
+    "totalContributions": 26,
+    "lastUpdated": "2026-03-18T08:58:00Z",
+    "narrativeCache": "Vinh đã vượt ngưỡng SAT mục tiêu, đang chuyển trọng tâm sang hồ sơ.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_091",
+    "academicScore": 72,
+    "writingGrowth": 41,
+    "skills": [
+      "Test-taking",
+      "Coherence",
+      "Reading"
+    ],
+    "mentorVerifications": 11,
+    "parentSupportLevel": "low",
+    "institutionalStamp": true,
+    "consistencyScore": 84,
+    "totalContributions": 26,
+    "lastUpdated": "2026-03-19T18:43:00Z",
+    "narrativeCache": "Quân duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_092",
+    "academicScore": 75,
+    "writingGrowth": 70,
+    "skills": [
+      "Presentation",
+      "Vocabulary"
+    ],
+    "mentorVerifications": 3,
+    "parentSupportLevel": "low",
+    "institutionalStamp": false,
+    "consistencyScore": 59,
+    "totalContributions": 5,
+    "lastUpdated": "2026-03-21T08:33:00Z",
+    "narrativeCache": "Huy có nền tảng Listening tốt, cần bứt phá ở Writing để đạt target.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_093",
+    "academicScore": 71,
+    "writingGrowth": 47,
+    "skills": [
+      "Vocabulary",
+      "Speaking",
+      "Presentation"
+    ],
+    "mentorVerifications": 4,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 58,
+    "totalContributions": 24,
+    "lastUpdated": "2026-03-19T16:40:00Z",
+    "narrativeCache": "Đức duy trì học đều đặn, consistency là điểm mạnh nổi bật.",
+    "badgeIssued": false
+  },
+  {
+    "studentId": "student_094",
+    "academicScore": 91,
+    "writingGrowth": 46,
+    "skills": [
+      "Listening",
+      "Reading"
+    ],
+    "mentorVerifications": 6,
+    "parentSupportLevel": "low",
+    "institutionalStamp": false,
+    "consistencyScore": 73,
+    "totalContributions": 19,
+    "lastUpdated": "2026-03-18T17:29:00Z",
+    "narrativeCache": "Trâm tiến bộ rõ ở Speaking, Writing Task 2 vẫn là thách thức chính.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_095",
+    "academicScore": 71,
+    "writingGrowth": 45,
+    "skills": [
+      "Leadership",
+      "Planning",
+      "Self-Discipline"
+    ],
+    "mentorVerifications": 5,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 79,
+    "totalContributions": 17,
+    "lastUpdated": "2026-03-20T07:16:00Z",
+    "narrativeCache": "Long đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_096",
+    "academicScore": 67,
+    "writingGrowth": 74,
+    "skills": [
+      "Problem Solving",
+      "Analytical Thinking",
+      "SAT Math"
+    ],
+    "mentorVerifications": 15,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 61,
+    "totalContributions": 9,
+    "lastUpdated": "2026-03-21T10:39:00Z",
+    "narrativeCache": "Phúc gần chạm mục tiêu SAT, cần thêm 1-2 mock test để chốt điểm.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_097",
+    "academicScore": 59,
+    "writingGrowth": 71,
+    "skills": [
+      "Coherence",
+      "Listening",
+      "Academic Writing"
+    ],
+    "mentorVerifications": 11,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 86,
+    "totalContributions": 9,
+    "lastUpdated": "2026-03-18T07:42:00Z",
+    "narrativeCache": "Linh đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_098",
+    "academicScore": 87,
+    "writingGrowth": 80,
+    "skills": [
+      "Vocabulary",
+      "Test-taking"
+    ],
+    "mentorVerifications": 18,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": true,
+    "consistencyScore": 59,
+    "totalContributions": 22,
+    "lastUpdated": "2026-03-19T07:24:00Z",
+    "narrativeCache": "Hải đang tiến bộ đều ở Reading, Writing là kỹ năng cần tập trung.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_099",
+    "academicScore": 76,
+    "writingGrowth": 78,
+    "skills": [
+      "SAT Verbal",
+      "Research",
+      "Leadership"
+    ],
+    "mentorVerifications": 12,
+    "parentSupportLevel": "moderate",
+    "institutionalStamp": false,
+    "consistencyScore": 96,
+    "totalContributions": 7,
+    "lastUpdated": "2026-03-20T15:54:00Z",
+    "narrativeCache": "Linh đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  },
+  {
+    "studentId": "student_100",
+    "academicScore": 67,
+    "writingGrowth": 46,
+    "skills": [
+      "Self-Discipline",
+      "Leadership"
+    ],
+    "mentorVerifications": 20,
+    "parentSupportLevel": "active",
+    "institutionalStamp": true,
+    "consistencyScore": 97,
+    "totalContributions": 11,
+    "lastUpdated": "2026-03-20T18:24:00Z",
+    "narrativeCache": "Linh đang xây dựng profile hoạt động ổn định song song với SAT.",
+    "badgeIssued": true
+  }
+]

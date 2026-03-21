@@ -12,7 +12,6 @@ from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core.exceptions import AITimeout, InsufficientHistory, StudentNotFound
-from modules.smart_parenting.prompts import PARENT_CHAT_SYSTEM, PARENT_CHAT_USER_TEMPLATE
 from modules.smart_parenting.repository import (
     get_conversation_history,
     get_student,
@@ -52,7 +51,7 @@ async def parent_chat_service(
     Steps:
       1. Fetch student record (raises StudentNotFound if absent).
       2. Retrieve conversation history and RAG context.
-      3. Call Claude via RAGClient.
+      3. Call OpenAI via RAGClient.
       4. Persist the turn to the database.
       5. Return the response.
 
@@ -96,7 +95,7 @@ async def parent_chat_service(
     }
 
     try:
-        answer = rag.answer_parent_question(
+        answer = await rag.answer_parent_question(
             question=question,
             student_id=student_id,
             student_profile=student_profile_dict,
@@ -114,7 +113,6 @@ async def parent_chat_service(
     context_snapshot = json.dumps({
         "student_id": student_id,
         "rag_sources": ["mock_vector_store"],
-        "model": "claude-sonnet-4",
     })
     await save_conversation(
         db=db,

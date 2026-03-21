@@ -34,7 +34,7 @@ class StudentNotFound(AppHTTPException):
 
 
 class AITimeout(AppHTTPException):
-    """Raised when the Claude API call exceeds its timeout."""
+    """Raised when the OpenAI API call exceeds its timeout."""
 
     status_code = 504
     detail = "AI service timeout – please try again"

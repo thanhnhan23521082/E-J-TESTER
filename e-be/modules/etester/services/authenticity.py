@@ -1,7 +1,7 @@
 """
 modules/etester/services/authenticity.py
 ────────────────────────────────────────
-Score an essay's authenticity using Claude + RAG context.
+Score an essay's authenticity using OpenAI + RAG context.
 """
 
 import json
@@ -23,7 +23,7 @@ async def score_authenticity_service(
     db,
 ) -> AuthenticityResponse:
     """
-    Score an essay's authenticity using AI.
+    Score an essay's authenticity using OpenAI.
 
     The score reflects:
       - Voice consistency with the student's history
@@ -60,7 +60,7 @@ async def score_authenticity_service(
     rag = get_rag_client()
 
     try:
-        raw_result = rag.score_essay_authenticity(
+        raw_result = await rag.score_essay_authenticity(
             essay=essay,
             student_id=student_id,
             rubric_context=rubric_context,

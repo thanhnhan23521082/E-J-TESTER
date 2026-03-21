@@ -9,7 +9,7 @@ import json
 import logging
 from datetime import datetime
 
-from modules.smart_parenting.prompts import DIGEST_SYSTEM, DIGEST_USER_TEMPLATE
+from modules.smart_parenting.prompts.loader import get_prompt
 from modules.smart_parenting.repository import (
     get_behavioral_logs,
     get_student,
@@ -20,6 +20,9 @@ from shared.clients.llm_client import call_text
 from shared.constants import WELLBEING_THRESHOLDS
 
 logger = logging.getLogger(__name__)
+
+DIGEST_SYSTEM = get_prompt("digest", "system")
+DIGEST_USER_TEMPLATE = get_prompt("digest", "user_template")
 
 
 def _format_logs(logs: list) -> str:
@@ -95,7 +98,7 @@ async def digest_service(
     )
 
     try:
-        digest_text = call_text(
+        digest_text = await call_text(
             prompt=prompt,
             system_prompt=DIGEST_SYSTEM,
             max_tokens=1024,

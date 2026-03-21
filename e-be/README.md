@@ -157,7 +157,7 @@ Base URL: `http://localhost:8000`
 |--------|------|--------|------|
 | `GET` | `/api/students/{student_id}` | Lấy hồ sơ học sinh | ✅ |
 | `GET` | `/api/behavioral-log/{student_id}` | Dữ liệu hành vi + metrics tính toán | ✅ |
-| `POST` | `/api/ai/parent-chat` | Chat AI với phụ huynh (RAG-augmented) | ✅ |
+| `POST` | `/api/chat/completion` | Chat completion endpoint cho parent-agent (LangGraph tools) | ✅ |
 | `POST` | `/api/ai/wellbeing` | Đánh giá wellbeing (query: `student_id`, `days`) | ✅ |
 | `GET` | `/api/digest/{student_id}` | Tạo bản tin tuần cho phụ huynh | ✅ |
 | `GET` | `/api/upsell/{student_id}` | Gợi ý chương trình học phù hợp | ✅ |

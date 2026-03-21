@@ -9,7 +9,7 @@ import json
 import logging
 from dataclasses import dataclass
 
-from modules.smart_parenting.prompts import UPSELL_SYSTEM, UPSELL_USER_TEMPLATE
+from modules.smart_parenting.prompts.loader import get_prompt
 from modules.smart_parenting.repository import get_student
 from modules.smart_parenting.schemas import UpsellItem, UpsellResponse
 from shared.clients.llm_client import call_json
@@ -17,6 +17,9 @@ from shared.clients.rag_client import get_rag_client
 from shared.constants import ContributorType
 
 logger = logging.getLogger(__name__)
+
+UPSELL_SYSTEM = get_prompt("upsell", "system")
+UPSELL_USER_TEMPLATE = get_prompt("upsell", "user_template")
 
 
 # ── Programme catalogue (static, in-memory) ───────────────────────────────────
@@ -167,7 +170,7 @@ async def upsell_service(
                 months_enrolled=student.months_enrolled,
                 program=student.program or "chưa có",
             )
-            enhanced = call_text(
+            enhanced = await call_text(
                 prompt=prompt,
                 system_prompt=UPSELL_SYSTEM,
                 max_tokens=512,
