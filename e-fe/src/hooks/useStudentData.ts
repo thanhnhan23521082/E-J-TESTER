@@ -1,37 +1,78 @@
-import { useMemo } from 'react'
-import {
-  MOCK_STUDENT,
-  MOCK_WELLBEING,
-  MOCK_DIGEST,
-  MOCK_ETESTER,
-  getMilestonesByStudentId,
-} from '../data/mock'
+import { useState, useEffect } from 'react'
+import { studentApi, parentApi } from '../api'
+import type { Student, Milestone, EtesterCore, WellbeingAlert, DigestData } from '../types'
 
 export function useStudentData(studentId: string = 'student_001') {
-  const student = useMemo(() => {
-    if (studentId === MOCK_STUDENT.id) {
-      return MOCK_STUDENT
-    }
-    return null
-  }, [studentId])
+  const [student, setStudent] = useState<Student | null>(null)
+  const [wellbeing, setWellbeing] = useState<WellbeingAlert | null>(null)
+  const [digest, setDigest] = useState<DigestData | null>(null)
+  const [etester, setEtester] = useState<EtesterCore | null>(null)
+  const [milestones, setMilestones] = useState<Milestone[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
-  const etester = useMemo(() => {
-    if (studentId === MOCK_ETESTER.studentId) {
-      return MOCK_ETESTER
-    }
-    return null
-  }, [studentId])
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true)
+      setError(null)
 
-  const milestones = useMemo(() => {
-    return getMilestonesByStudentId(studentId)
+      try {
+        const [studentRes, wellbeingRes, digestRes, etesterRes, milestonesRes] =
+          await Promise.all([
+            studentApi.getStudent(studentId),
+            parentApi.getWellbeingAlerts(studentId),
+            parentApi.getDigest(studentId),
+            studentApi.getEtesterScore(studentId),
+            studentApi.getMilestones(studentId),
+          ])
+
+        if (studentRes.error) {
+          setError(studentRes.error)
+        } else {
+          setStudent(studentRes.data)
+        }
+
+        if (wellbeingRes.error) {
+          console.warn('Failed to fetch wellbeing:', wellbeingRes.error)
+        } else {
+          setWellbeing(wellbeingRes.data)
+        }
+
+        if (digestRes.error) {
+          console.warn('Failed to fetch digest:', digestRes.error)
+        } else {
+          setDigest(digestRes.data)
+        }
+
+        if (etesterRes.error) {
+          console.warn('Failed to fetch etester:', etesterRes.error)
+        } else {
+          setEtester(etesterRes.data)
+        }
+
+        if (milestonesRes.error) {
+          console.warn('Failed to fetch milestones:', milestonesRes.error)
+        } else {
+          setMilestones(milestonesRes.data || [])
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch student data')
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchData()
   }, [studentId])
 
   return {
     student,
-    wellbeing: MOCK_WELLBEING,
-    digest: MOCK_DIGEST,
+    wellbeing,
+    digest,
     etester,
     milestones,
+    loading,
+    error,
   }
 }
 
@@ -40,7 +81,7 @@ export function useMentorData() {
     mentor: {
       id: 'mentor_001',
       name: 'Thầy Nguyễn Minh',
-      students: [MOCK_STUDENT],
+      students: [],
     },
     pendingEssays: 3,
     pendingNotes: 2,

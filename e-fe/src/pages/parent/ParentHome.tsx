@@ -4,12 +4,31 @@ import { useStudentData } from '../../hooks/useStudentData'
 
 export default function ParentHome() {
   const navigate = useNavigate()
-  const { student, wellbeing, digest } = useStudentData()
+  const { student, wellbeing, digest, loading, error } = useStudentData()
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-16">
+        <div className="w-8 h-8 border-2 border-etest-teal border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center py-16">
+        <div className="text-center">
+          <div className="text-etest-red text-lg font-semibold mb-2">Lỗi tải dữ liệu</div>
+          <div className="text-etest-subtext">{error}</div>
+        </div>
+      </div>
+    )
+  }
 
   if (!student) {
     return (
       <div className="flex items-center justify-center py-16">
-        <div className="w-8 h-8 border-2 border-etest-teal border-t-transparent rounded-full animate-spin" />
+        <div className="text-etest-subtext">Không tìm thấy thông tin học sinh</div>
       </div>
     )
   }
@@ -40,7 +59,7 @@ export default function ParentHome() {
 
             <div className="text-center py-8">
               <div className="text-7xl font-black text-etest-text mb-2">
-                {digest.daysLeft}
+                {digest?.daysLeft || 0}
               </div>
               <div className="text-xl font-semibold text-etest-subtext">Ngày</div>
             </div>
@@ -57,7 +76,7 @@ export default function ParentHome() {
         {/* Right Column - Wellbeing Alert + Progress */}
         <div className="lg:col-span-7 space-y-6">
           {/* Wellbeing Alert Card - Medium */}
-          {wellbeing.alert && (
+          {wellbeing?.alert && (
             <div className="bg-[#fff8e1] rounded-3xl border border-amber-200 shadow-card p-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center flex-shrink-0">
@@ -179,17 +198,17 @@ export default function ParentHome() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-etest-bg-secondary rounded-2xl p-6">
-            <div className="text-3xl font-bold text-etest-text mb-2">{digest.progressPct}%</div>
+            <div className="text-3xl font-bold text-etest-text mb-2">{digest?.progressPct || 0}%</div>
             <div className="text-sm text-etest-subtext">Tiến độ hoàn thành</div>
           </div>
 
           <div className="bg-etest-bg-secondary rounded-2xl p-6">
-            <div className="text-3xl font-bold text-etest-text mb-2">{digest.milestonesCompleted}</div>
+            <div className="text-3xl font-bold text-etest-text mb-2">{digest?.milestonesCompleted || 0}</div>
             <div className="text-sm text-etest-subtext">Milestones đạt được</div>
           </div>
 
           <div className="bg-etest-bg-secondary rounded-2xl p-6">
-            <div className="text-3xl font-bold text-etest-text mb-2">{digest.daysLeft}</div>
+            <div className="text-3xl font-bold text-etest-text mb-2">{digest?.daysLeft || 0}</div>
             <div className="text-sm text-etest-subtext">Ngày còn lại</div>
           </div>
         </div>
