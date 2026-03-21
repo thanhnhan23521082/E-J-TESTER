@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETESTER ArtifactGraph - Learning Graph</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#dce2f3",
+                        "primary": "#bb0016",
+                        "on-primary-fixed": "#410003",
+                        "surface-container": "#e7eefe",
+                        "tertiary-fixed-dim": "#adc6ff",
+                        "on-surface": "#151c27",
+                        "on-surface-variant": "#5d3f3c",
+                        "outline": "#926f6b",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9ff",
+                        "primary-container": "#e42027",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#fefcff",
+                        "surface-variant": "#dce2f3",
+                        "on-tertiary-fixed-variant": "#004395",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#55450a",
+                        "background": "#f9f9ff",
+                        "secondary-container": "#fae197",
+                        "secondary-fixed-dim": "#ddc57e",
+                        "on-error-container": "#93000a",
+                        "on-background": "#151c27",
+                        "inverse-on-surface": "#ebf1ff",
+                        "tertiary-container": "#2170e4",
+                        "surface": "#f9f9ff",
+                        "surface-container-low": "#f0f3ff",
+                        "secondary-fixed": "#fae197",
+                        "surface-tint": "#c00017",
+                        "outline-variant": "#e7bdb8",
+                        "surface-dim": "#d3daea",
+                        "secondary": "#6f5d21",
+                        "on-primary-container": "#fffbff",
+                        "inverse-surface": "#2a313d",
+                        "on-tertiary-fixed": "#001a42",
+                        "surface-container-high": "#e2e8f8",
+                        "on-primary-fixed-variant": "#93000f",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#ffb3ac",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#756326",
+                        "tertiary": "#0058be",
+                        "on-secondary-fixed": "#231b00"
+                    },
+                    fontFamily: {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .node-pulse {
+            animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 0.4; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- Sidebar Navigation -->
+<nav class="fixed left-0 top-0 h-screen flex flex-col p-4 gap-2 bg-surface-container-low w-64 border-r border-outline-variant/10 z-50">
+<div class="flex items-center gap-3 px-2 py-4 mb-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-white font-bold text-xl">E</div>
+<div>
+<p class="font-headline font-bold text-on-surface text-sm">Minh Anh</p>
+<p class="text-[0.75rem] text-on-surface/60">Student ID: 202401</p>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface/70 hover:bg-white/50 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[0.875rem]">Tổng quan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface/70 hover:bg-white/50 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[0.875rem]">ETESTER của tôi</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface/70 hover:bg-white/50 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">upload_file</span>
+<span class="text-[0.875rem]">Nộp bài</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface/70 hover:bg-white/50 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">timeline</span>
+<span class="text-[0.875rem]">Timeline</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-primary font-bold rounded-lg shadow-sm transition-transform duration-200 translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span class="text-[0.875rem]">Learning Graph</span>
+</a>
+</div>
+<div class="mt-auto pt-4 border-t border-outline-variant/10">
+<button class="w-full h-[52px] bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-semibold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/10">
+<span>Bắt đầu học</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 mt-2 text-on-surface/70 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-[0.875rem]">Đăng xuất</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-8">
+<!-- Header Section -->
+<header class="flex justify-between items-end mb-10">
+<div>
+<h1 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface">Learning graph</h1>
+<p class="text-on-surface/60 mt-1">How your milestones connect</p>
+</div>
+<div class="flex gap-2 p-1 bg-surface-container rounded-xl">
+<button class="px-5 py-2 text-sm font-semibold bg-white text-primary rounded-lg shadow-sm">All</button>
+<button class="px-5 py-2 text-sm font-medium text-on-surface/60 hover:text-on-surface transition-colors">Essay path</button>
+<button class="px-5 py-2 text-sm font-medium text-on-surface/60 hover:text-on-surface transition-colors">Test progress</button>
+</div>
+</header>
+<!-- ArtifactGraph Component -->
+<section class="relative w-full h-[580px] bg-surface-container-low rounded-[2rem] overflow-hidden border border-outline-variant/5 shadow-inner">
+<!-- SVG Connections Layer -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arrow-teal" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="8" refy="5" viewbox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#0D9488"></path>
+</marker>
+<marker id="arrow-purple" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="8" refy="5" viewbox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#7E22CE"></path>
+</marker>
+<marker id="arrow-amber" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="8" refy="5" viewbox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#D97706"></path>
+</marker>
+</defs>
+<!-- Experience Sources (Teal) -->
+<path d="M 220 180 L 410 210" fill="none" marker-end="url(#arrow-teal)" stroke="#0D9488" stroke-width="2"></path>
+<path d="M 220 280 L 410 230" fill="none" marker-end="url(#arrow-teal)" stroke="#0D9488" stroke-width="2"></path>
+<path d="M 220 380 L 410 320" fill="none" marker-end="url(#arrow-teal)" stroke="#0D9488" stroke-width="2"></path>
+<!-- Mentor Sessions (Purple) -->
+<path d="M 880 160 L 590 210" fill="none" marker-end="url(#arrow-purple)" stroke="#7E22CE" stroke-width="2"></path>
+<path d="M 880 260 L 590 240" fill="none" marker-end="url(#arrow-purple)" stroke="#7E22CE" stroke-width="2"></path>
+<path d="M 880 360 L 620 340" fill="none" marker-end="url(#arrow-purple)" stroke="#7E22CE" stroke-width="2"></path>
+<!-- Revision Path (Amber Thick) -->
+<path d="M 500 250 L 500 290" fill="none" marker-end="url(#arrow-amber)" stroke="#D97706" stroke-linecap="round" stroke-width="4"></path>
+<path d="M 500 350 L 500 400" fill="none" marker-end="url(#arrow-amber)" stroke="#D97706" stroke-linecap="round" stroke-width="4"></path>
+<!-- Core Contributions (Blue Dashed) -->
+<path d="M 200 420 Q 400 520 540 520" fill="none" opacity="0.4" stroke="#2170E4" stroke-dasharray="6,4" stroke-width="1.5"></path>
+<path d="M 500 480 L 540 510" fill="none" opacity="0.4" stroke="#2170E4" stroke-dasharray="6,4" stroke-width="1.5"></path>
+<path d="M 850 420 Q 700 520 620 520" fill="none" opacity="0.4" stroke="#2170E4" stroke-dasharray="6,4" stroke-width="1.5"></path>
+<!-- Pending Connection -->
+<path d="M 220 480 L 410 495" fill="none" opacity="0.4" stroke="#D97706" stroke-dasharray="4,4" stroke-width="1.5"></path>
+</svg>
+<!-- Node Grid Container -->
+<div class="relative w-full h-full z-10">
+<!-- Left Cluster (Teal Circles) -->
+<div class="absolute top-[140px] left-[100px] flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-teal-50 border-4 border-teal-600 flex items-center justify-center text-teal-700 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">campaign</span>
+</div>
+<p class="text-[0.6875rem] font-bold mt-2 uppercase tracking-wider text-teal-800">Writing Camp</p>
+<p class="text-[0.625rem] text-teal-600/70">Jul 2025</p>
+</div>
+<div class="absolute top-[240px] left-[120px] flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-teal-50 border-4 border-teal-600 flex items-center justify-center text-teal-700 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+</div>
+<p class="text-[0.6875rem] font-bold mt-2 uppercase tracking-wider text-teal-800">CSR Share &amp; Care</p>
+<p class="text-[0.625rem] text-teal-600/70">Aug 2025</p>
+</div>
+<div class="absolute top-[340px] left-[80px] flex flex-col items-center gap-1 group cursor-pointer">
+<div class="relative">
+<div class="w-24 h-24 rounded-full bg-secondary-container border-4 border-secondary flex items-center justify-center text-on-secondary-container shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">emoji_events</span>
+</div>
+<div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-[10px] font-bold border-2 border-white shadow-sm">L</div>
+</div>
+<p class="text-[0.6875rem] font-bold mt-2 uppercase tracking-wider text-on-secondary-container">National Award</p>
+<p class="text-[0.625rem] text-secondary/70">Sep 2025</p>
+</div>
+<!-- Center Column (Amber Rounded Rects) -->
+<div class="absolute top-[180px] left-[410px] w-[180px] p-3 bg-white rounded-xl shadow-md border-l-4 border-amber-500 group cursor-pointer hover:shadow-xl transition-all">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-amber-600 uppercase">Draft #1</span>
+<span class="text-[10px] font-medium text-slate-400">78% Auth</span>
+</div>
+<p class="text-xs font-semibold text-slate-800 leading-tight">Essay Draft #1</p>
+</div>
+<div class="absolute top-[280px] left-[420px] w-[180px] p-3 bg-white rounded-xl shadow-md border-l-4 border-amber-500 group cursor-pointer hover:shadow-xl transition-all">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-amber-600 uppercase">Draft #2</span>
+<span class="text-[10px] font-medium text-slate-400">87% Auth</span>
+</div>
+<p class="text-xs font-semibold text-slate-800 leading-tight">Essay Draft #2</p>
+</div>
+<!-- Focal Node -->
+<div class="absolute top-[380px] left-[390px] w-[240px] p-5 bg-white rounded-2xl shadow-2xl border-[3px] border-primary group cursor-pointer ring-8 ring-primary/5 transition-all">
+<div class="flex justify-between items-start mb-2">
+<div class="flex gap-1 items-center">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Personal Statement FINAL</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400">94% Auth</span>
+</div>
+<p class="text-sm font-bold text-on-surface mb-3">Jan 2026 Submission</p>
+<div class="flex items-center gap-2 py-2 px-3 bg-surface-container rounded-lg">
+<img alt="Mentor avatar" class="w-6 h-6 rounded-full border border-white" data-alt="Professional mentor headshot avatar thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_AgrCuZg49Lt68S9Okqs8EhtXA_O2qFndzx9ZkxfkAgChmG5P9M-Ddyv7SCiXp_V2yFoLGiufOAC4GO6Z5ZEQszNccuAokY8kdvTMWw0lbj7RQcqcY4kX-K21BNTrJqOjsnd3-RW86Yz8kI1_-jYv9f5cR629zP3-WXqEwkFYMwZg-ROZXSx6_eqDxbnv_9aA5u-cABKls8lD-c-RCq2cWWykxsi8x_WZhtQ671eW_JLGzdmqwclI2c4pEhZ1OcYRsULACaKwhPk"/>
+<span class="text-[10px] font-medium text-on-surface/70">Mentor Review Completed</span>
+<span class="material-symbols-outlined text-xs text-green-600 ml-auto">check_circle</span>
+</div>
+</div>
+<!-- Right Column (Purple) -->
+<div class="absolute top-[140px] left-[850px] w-[160px] p-3 bg-purple-50 rounded-xl border border-purple-200 group cursor-pointer hover:bg-purple-100 transition-all">
+<p class="text-[10px] text-purple-600 font-bold mb-1">SESSION #5</p>
+<p class="text-xs font-semibold text-purple-900 italic">Topic Ideation</p>
+</div>
+<div class="absolute top-[230px] left-[880px] w-[160px] p-3 bg-purple-50 rounded-xl border border-purple-200 group cursor-pointer hover:bg-purple-100 transition-all">
+<p class="text-[10px] text-purple-600 font-bold mb-1">SESSION #7</p>
+<p class="text-xs font-semibold text-purple-900 italic">Structure Review</p>
+</div>
+<div class="absolute top-[330px] left-[840px] w-[200px] p-4 bg-white rounded-xl border-2 border-green-500 shadow-lg group cursor-pointer hover:scale-105 transition-all">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-8 rounded bg-green-50 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined text-xl">description</span>
+</div>
+<p class="text-[10px] font-bold text-slate-400">DEC 2025</p>
+</div>
+<p class="text-xs font-bold text-on-surface leading-tight">Recommendation Letter</p>
+<p class="text-[10px] text-green-600 font-medium mt-1 uppercase">Ready for submission</p>
+</div>
+<!-- Bottom Row -->
+<div class="absolute bottom-[80px] left-[160px] flex flex-col items-center gap-1 group cursor-pointer">
+<div class="relative">
+<div class="w-16 h-16 rounded-full bg-slate-100 border-2 border-slate-300 flex flex-col items-center justify-center text-slate-500 group-hover:bg-slate-200 transition-all">
+<span class="text-lg font-bold">6.5</span>
+<span class="text-[8px] font-bold uppercase opacity-60">IELTS</span>
+</div>
+<div class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center text-[10px] font-bold border-2 border-white shadow-sm">⏳</div>
+</div>
+<p class="text-[0.625rem] font-bold text-slate-500 mt-1 uppercase">IELTS Mock #3</p>
+</div>
+<div class="absolute bottom-[40px] left-1/2 -translate-x-1/2 group cursor-pointer">
+<div class="px-8 py-4 bg-primary rounded-2xl shadow-xl shadow-primary/20 flex items-center gap-4 border border-white/20 hover:scale-105 transition-all">
+<div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div>
+<p class="text-[0.625rem] font-bold text-white/70 uppercase tracking-[0.2em]">ETESTER Core</p>
+<p class="text-sm font-bold text-white">23 Total Contributions</p>
+</div>
+<div class="ml-4 w-8 h-8 rounded-full bg-white flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</div>
+</div>
+<!-- Ambient Pulse for Core -->
+<div class="absolute inset-0 bg-primary/20 rounded-2xl -z-10 node-pulse"></div>
+</div>
+</div>
+<!-- Footer Legend/Instruction -->
+<footer class="absolute bottom-6 right-8 glass-panel py-2 px-5 rounded-full border border-white/40 shadow-sm z-20">
+<p class="text-xs font-medium text-on-surface/60 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">touch_app</span>
+                    Click any node to highlight its connections
+                </p>
+</footer>
+<!-- Connectivity Legend Overlay (Editorial style) -->
+<div class="absolute top-8 left-8 flex flex-col gap-3 z-20">
+<div class="flex items-center gap-3">
+<div class="w-8 h-0.5 bg-teal-600 rounded-full"></div>
+<span class="text-[10px] font-bold text-on-surface/60 uppercase tracking-widest">Experience Source</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-0.5 bg-purple-600 rounded-full"></div>
+<span class="text-[10px] font-bold text-on-surface/60 uppercase tracking-widest">Mentor Guided</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-1 bg-amber-500 rounded-full"></div>
+<span class="text-[10px] font-bold text-on-surface/60 uppercase tracking-widest">Revision of</span>
+</div>
+</div>
+</section>
+<!-- Contextual Stats Bento -->
+<section class="grid grid-cols-12 gap-6 mt-10">
+<div class="col-span-8 bg-surface-container-low rounded-3xl p-8 border border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline text-2xl font-bold">Activity Density</h3>
+<span class="material-symbols-outlined text-primary-container">trending_up</span>
+</div>
+<div class="flex items-end gap-1 h-32">
+<div class="flex-1 bg-primary/10 rounded-t-lg h-[40%]" title="Jul 2025"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[65%]" title="Aug 2025"></div>
+<div class="flex-1 bg-primary/40 rounded-t-lg h-[35%]" title="Sep 2025"></div>
+<div class="flex-1 bg-primary/20 rounded-t-lg h-[55%]" title="Oct 2025"></div>
+<div class="flex-1 bg-primary/60 rounded-t-lg h-[85%]" title="Nov 2025"></div>
+<div class="flex-1 bg-primary/30 rounded-t-lg h-[45%]" title="Dec 2025"></div>
+<div class="flex-1 bg-primary rounded-t-lg h-[100%]" title="Jan 2026"></div>
+</div>
+<div class="flex justify-between mt-4 px-2">
+<span class="text-[10px] font-bold text-on-surface/40">JUL 25</span>
+<span class="text-[10px] font-bold text-on-surface/40">JAN 26</span>
+</div>
+</div>
+<div class="col-span-4 bg-secondary-container/30 rounded-3xl p-8 border border-secondary-container/50 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-4">Mentor Feedback</h3>
+<p class="text-lg font-bold text-on-secondary-container leading-tight mb-6 italic">"Strong progression in authentic voice. The CSR narrative provides a unique hook for Draft #3."</p>
+<div class="flex items-center gap-3">
+<img alt="Mentor headshot" class="w-10 h-10 rounded-full border-2 border-white" data-alt="Female academic mentor headshot avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOoAO9_ZKeLX9_jfBxJ0wufPA4scJgiwV01JFZJqQmEeHCh_6lpCQbiheZuF_dTVQkAUWg-f4UH1oNzKGRtx-MuTWlGOAHZ4hl5qmW2vT3wRlAfXW5-45sumVfFn8JhVRLq9tCqAUbD2JqcTIsSbZcxW9-qECF8_TK7C8ei-1JJArJVguhTbIm_nYV94IIJuzH2r2uR-0kpE4yX_mJGy1lFZ6Re4-YPGCS-3ddCz9LKUKL-FchPfhD3iQWTcxB9532A1tbJimc6Nk"/>
+<div>
+<p class="text-xs font-bold text-on-secondary-container">Dr. Elena Rodriguez</p>
+<p class="text-[10px] text-secondary/70">Senior Admissions Mentor</p>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl text-secondary opacity-10 rotate-12">format_quote</span>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MentorTraceReview - ETEST ONE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#f0f3ff",
+                        "surface-variant": "#dce2f3",
+                        "on-surface": "#151c27",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "on-primary-fixed": "#410003",
+                        "surface-bright": "#f9f9ff",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d3daea",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#e7bdb8",
+                        "on-tertiary-container": "#fefcff",
+                        "on-primary-fixed-variant": "#93000f",
+                        "tertiary-container": "#2170e4",
+                        "surface": "#f9f9ff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e2e8f8",
+                        "primary-container": "#e42027",
+                        "secondary": "#6f5d21",
+                        "secondary-fixed-dim": "#ddc57e",
+                        "on-secondary-container": "#756326",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f9f9ff",
+                        "on-secondary-fixed-variant": "#55450a",
+                        "secondary-container": "#fae197",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#231b00",
+                        "surface-container-highest": "#dce2f3",
+                        "outline": "#926f6b",
+                        "error-container": "#ffdad6",
+                        "on-background": "#151c27",
+                        "tertiary-fixed-dim": "#adc6ff",
+                        "tertiary": "#0058be",
+                        "secondary-fixed": "#fae197",
+                        "on-tertiary-fixed-variant": "#004395",
+                        "inverse-primary": "#ffb3ac",
+                        "on-tertiary-fixed": "#001a42",
+                        "surface-container": "#e7eefe",
+                        "primary": "#bb0016",
+                        "on-surface-variant": "#5d3f3c",
+                        "surface-tint": "#c00017",
+                        "inverse-surface": "#2a313d"
+                    },
+                    fontFamily: {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-shadow {
+            box-shadow: 0 12px 32px rgba(187, 0, 22, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Header / Shell -->
+<header class="w-full top-0 sticky bg-[#F9F9FF] z-50">
+<div class="flex justify-between items-center px-8 h-16 w-full max-w-screen-2xl mx-auto">
+<div class="text-xl font-bold text-[#BB0016] tracking-tight font-headline">ETEST ONE</div>
+<nav class="hidden md:flex items-center space-x-8 font-headline font-medium text-sm">
+<a class="text-slate-600 hover:text-[#BB0016] transition-colors" href="#">Dashboard</a>
+<a class="text-slate-600 hover:text-[#BB0016] transition-colors" href="#">Students</a>
+<a class="text-[#BB0016] font-bold border-b-2 border-[#BB0016] pb-1" href="#">Artifacts</a>
+<a class="text-slate-600 hover:text-[#BB0016] transition-colors" href="#">Reports</a>
+</nav>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-surface-container-low p-2 rounded-full transition-all" data-icon="notifications">notifications</span>
+<img alt="Mentor Profile" class="w-8 h-8 rounded-full border border-outline-variant/20" data-alt="Mentor user profile avatar small circular" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC18AWc5hj7Yc63wkpkwc1VHLGs9YwGQUyjW7gnSxX65CGNAk_DoRJxA3aen4TyZT3qYgr-90kLCFiTHJMjuJflk9eFzsDYPPo3fAWk5jyr-6SRvnJ00oez184c_RGqqM6tcWNEHmMdXHzADw3ifKfGPjD5oLfJXOTdw74CbERv6-FSeE7eiTvi8nESpzzbpCVs2qZzi55vsW3bIn6cHzFIlADMuw0n1BCyeSCy4dIKOO2Zhh4tRHB_XZ6_vs1nRwDeeQLX9TaNaAs"/>
+</div>
+</div>
+<div class="bg-[#F0F3FF] h-[1px] w-full"></div>
+</header>
+<main class="flex min-h-[calc(100vh-64px)]">
+<!-- Sidebar Navigation -->
+<aside class="h-full w-64 fixed left-0 top-16 bg-[#F0F3FF] border-r border-[#E7BDB8]/20 p-4 space-y-2 hidden lg:flex flex-col">
+<div class="mb-6 px-4">
+<div class="font-headline font-black text-[#BB0016]">Mentor Portal</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest font-semibold mt-1">Academic Atelier</div>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="flex items-center text-slate-600 px-4 py-3 hover:translate-x-1 transition-transform font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span> Overview
+                </a>
+<a class="flex items-center text-slate-600 px-4 py-3 hover:translate-x-1 transition-transform font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span> Student Progress
+                </a>
+<a class="flex items-center bg-white text-[#BB0016] font-semibold rounded-lg shadow-sm px-4 py-3 mb-1 font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="link">link</span> Trace Verification
+                </a>
+<a class="flex items-center text-slate-600 px-4 py-3 hover:translate-x-1 transition-transform font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="edit_note">edit_note</span> Essay Feedback
+                </a>
+<a class="flex items-center text-slate-600 px-4 py-3 hover:translate-x-1 transition-transform font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="auto_stories">auto_stories</span> Academic Portfolio
+                </a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 space-y-1">
+<a class="flex items-center text-slate-600 px-4 py-3 hover:translate-x-1 transition-transform font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="settings">settings</span> Settings
+                </a>
+<a class="flex items-center text-slate-600 px-4 py-3 hover:translate-x-1 transition-transform font-medium text-sm" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="logout">logout</span> Sign Out
+                </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<section class="flex-grow lg:ml-64 p-8 flex justify-center items-start bg-surface-bright">
+<!-- Mentor Trace Review Card -->
+<div class="w-full max-w-[420px] bg-surface-container-lowest rounded-xl border border-outline-variant/10 editorial-shadow overflow-hidden flex flex-col">
+<!-- Card Header -->
+<div class="px-6 pt-6 pb-4 flex justify-between items-start">
+<div>
+<h2 class="font-headline font-bold text-lg text-on-surface leading-tight">Nguyễn Hà Minh Anh</h2>
+<p class="text-xs text-on-surface-variant mt-1">submitted 2 ngày trước</p>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg">
+<span class="material-symbols-outlined text-[#BB0016] text-xl" data-icon="history_edu">history_edu</span>
+</div>
+</div>
+<!-- Connection Display Section -->
+<div class="px-6 py-4 bg-surface-container-low/50 relative flex flex-col items-center gap-3">
+<!-- Source Artifact (Teal) -->
+<div class="w-full bg-[#E0F2F1] border-l-4 border-[#00897B] rounded-lg p-3 flex justify-between items-center transition-all hover:scale-[1.01]">
+<div>
+<div class="text-[10px] uppercase font-bold text-[#00695C] tracking-wider">Source</div>
+<div class="font-semibold text-sm text-[#004D40]">Writing Camp</div>
+</div>
+<div class="text-xs font-medium text-[#00695C]">Jul 2025</div>
+</div>
+<!-- Connection Arrow Label -->
+<div class="flex flex-col items-center -my-1 z-10">
+<div class="bg-surface-container-lowest border border-outline-variant/20 px-3 py-0.5 rounded-full flex items-center shadow-sm">
+<span class="material-symbols-outlined text-xs mr-1.5 text-on-surface-variant" data-icon="link">link</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">experience source</span>
+</div>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<span class="material-symbols-outlined text-outline-variant -mt-1" data-icon="south">south</span>
+</div>
+<!-- Target Artifact (Amber) -->
+<div class="w-full bg-[#FFF8E1] border-l-4 border-[#FFB300] rounded-lg p-3 flex justify-between items-center transition-all hover:scale-[1.01]">
+<div>
+<div class="text-[10px] uppercase font-bold text-[#827717] tracking-wider">Target</div>
+<div class="font-semibold text-sm text-[#6F5D21]">Essay Draft #1</div>
+</div>
+<div class="text-xs font-medium text-[#827717]">Oct 2025</div>
+</div>
+</div>
+<!-- AI Evidence Section -->
+<div class="px-6 py-4 border-b border-outline-variant/5">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">AI detected:</span>
+<div class="flex items-center">
+<span class="text-[11px] font-bold text-emerald-600 mr-2">94% Confidence</span>
+<div class="w-12 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-emerald-500 h-full w-[94%]"></div>
+</div>
+</div>
+</div>
+<p class="text-sm text-on-surface/80 leading-relaxed italic">
+                        "Essay draft references Writing Camp thesis workshop in paragraph 2"
+                    </p>
+</div>
+<!-- Student Note Section (High Importance) -->
+<div class="px-6 py-4 bg-[#F0F7FF] border-y border-[#D1E9FF]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[#0058BE] text-lg" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-[11px] font-bold text-[#0058BE] uppercase tracking-wider">Ghi chú từ học sinh:</span>
+</div>
+<div class="pl-2 border-l-2 border-[#0058BE]/30">
+<p class="text-sm font-medium text-[#004395] italic leading-snug">
+                            "Tôi học cách viết thesis ở camp và áp dụng ngay vào Draft #1"
+                        </p>
+</div>
+</div>
+<!-- Relationship Selection Section -->
+<div class="px-6 py-5 space-y-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Loại liên kết:</label>
+<div class="relative">
+<select class="w-full h-11 bg-surface-container-lowest border border-outline-variant/30 rounded-lg pl-3 pr-10 text-sm font-medium focus:ring-1 focus:ring-primary/20 focus:border-primary transition-all appearance-none cursor-pointer">
+<option selected="" value="experience_source">experience source</option>
+<option value="revision_of">revision of</option>
+<option value="mentor_guided">mentor guided</option>
+<option value="skill_applied">skill applied</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Nhận xét của Mentor:</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-3 text-sm focus:ring-1 focus:ring-primary/20 placeholder:text-on-surface-variant/50 resize-none transition-all" placeholder="Thêm nhận xét (không bắt buộc)..." rows="2"></textarea>
+</div>
+</div>
+<!-- Footer Action Buttons -->
+<div class="px-6 pb-6 pt-2 flex gap-3">
+<button class="flex-1 h-12 border border-error text-error font-bold rounded-xl text-sm hover:bg-error/5 active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span> Từ chối
+                    </button>
+<button class="flex-[1.5] h-12 bg-gradient-to-br from-[#BB0016] to-[#E42027] text-white font-bold rounded-xl text-sm shadow-md hover:shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span> Xác nhận liên kết
+                    </button>
+</div>
+</div>
+</section>
+</main>
+</body></html>
