@@ -131,3 +131,145 @@ export interface ChatMessage {
   content: string
   timestamp: string
 }
+
+// ─── ETESTER Module Types ────────────────────────────────────────────
+
+export type ManagerRole = 'manager'
+export type AllRoles = Role | ManagerRole
+
+export type ActivityType =
+  | 'mock_test'
+  | 'essay_draft'
+  | 'essay_final'
+  | 'camp'
+  | 'csr'
+  | 'mentor_session'
+  | 'consultation'
+  | 'recommendation'
+  | 'award'
+
+export type DifficultyLevel = 'easy' | 'medium' | 'hard'
+
+export type TraceLinkType =
+  | 'experience_source'
+  | 'revision_of'
+  | 'mentor_guided'
+  | 'skill_applied'
+
+export type TraceLinkStatus = 'pending' | 'mentor_approved' | 'rejected'
+
+export type CredentialType = 'jwt_rs256' | 'w3c_vc_ed25519'
+
+export interface Artifact {
+  id: string
+  studentId: string
+  type: ActivityType
+  title: string
+  date: string
+  score: number | null
+  authScore: number | null
+  mentorApproved: boolean
+  skills: string[]
+  notes: string
+  difficulty: DifficultyLevel
+  aiSummary: string
+  leadershipRole?: string
+  leadershipPeople?: number
+  leadershipOutcome?: string
+}
+
+export interface TraceLink {
+  id: string
+  sourceArtifactId: string
+  sourceTitle: string
+  sourceType: ActivityType
+  sourceDate: string
+  targetArtifactId: string
+  targetTitle: string
+  targetType: ActivityType
+  targetDate: string
+  linkType: TraceLinkType
+  confidence: number
+  aiReason: string
+  studentNote: string
+  mentorComment: string
+  status: TraceLinkStatus
+}
+
+export interface TraceLinkSuggestion {
+  id: string
+  artifactTitle: string
+  artifactType: ActivityType
+  linkType: TraceLinkType
+  confidence: number
+  aiReason: string
+  iconName: string
+}
+
+export interface AuthScoreDimension {
+  id: string
+  label: string
+  weight: number
+  score: number
+  description: string
+}
+
+export interface AuthScoreBreakdown {
+  overallScore: number
+  verdict: 'justified_growth' | 'suspicious' | 'verified'
+  summary: string
+  dimensions: AuthScoreDimension[]
+  relatedArtifacts: string[]
+}
+
+export interface GraphNode {
+  id: string
+  type: 'experience' | 'draft' | 'final' | 'mentor_session' | 'award' | 'test' | 'core'
+  title: string
+  subtitle?: string
+  date: string
+  x: number
+  y: number
+  authScore?: number
+  mentorApproved?: boolean
+  leadershipBadge?: boolean
+}
+
+export interface GraphEdge {
+  sourceId: string
+  targetId: string
+  type: TraceLinkType
+  color: string
+}
+
+export interface ReadinessCheckItem {
+  label: string
+  passed: boolean
+}
+
+export interface BadgePayload {
+  studentName: string
+  program: string
+  months: number
+  milestones: number
+  mentorVerified: number
+  ielts: number
+  sat: number | null
+  authAvg: number
+  leadership: string
+  requirementsCovered: string
+  expires: string
+  issuer: string
+}
+
+export interface SigningChainStep {
+  step: number
+  label: string
+  status: 'verified' | 'pending' | 'not_started'
+}
+
+export interface RequirementItem {
+  icon: string
+  label: string
+  covered: boolean
+}

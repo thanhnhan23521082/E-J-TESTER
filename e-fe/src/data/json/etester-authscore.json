@@ -1,0 +1,15 @@
+{
+  "overallScore": 94,
+  "verdict": "justified_growth",
+  "summary": "Score increase from 78% to 94% explained by Writing Camp and 2 confirmed mentor sessions. Growth is expected and verified.",
+  "dimensions": [
+    { "id": "d1", "label": "Syntactic Consistency", "weight": 0.25, "score": 92, "description": "Paragraph style consistent" },
+    { "id": "d2", "label": "Vocabulary Range", "weight": 0.15, "score": 88, "description": "Advanced academic terminology present" },
+    { "id": "d3", "label": "Rhetorical Logic", "weight": 0.20, "score": 96, "description": "Exceptional narrative flow" },
+    { "id": "d4", "label": "Cross-Reference Validation", "weight": 0.10, "score": 85, "description": "Aligns with Writing Camp benchmarks" },
+    { "id": "d5", "label": "Burstiness Factor", "weight": 0.10, "score": 91, "description": "Natural variation in sentence length" },
+    { "id": "d6", "label": "Perplexity Analysis", "weight": 0.10, "score": 89, "description": "Model-independent originality confirmed" },
+    { "id": "d7", "label": "Historical Signature", "weight": 0.10, "score": 94, "description": "Matching patterns from Session #7" }
+  ],
+  "relatedArtifacts": ["Writing Camp", "Mentor Session #7"]
+}

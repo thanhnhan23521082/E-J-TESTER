@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { GraduationCap, Users, Award, Check } from 'lucide-react'
+import { GraduationCap, Users, Award, Shield, Check } from 'lucide-react'
 import { useRole } from '../hooks/useRole'
-import type { Role } from '../types'
+import type { AllRoles } from '../types'
 
-const roles: { id: Role; label: string; icon: typeof GraduationCap }[] = [
+const roles: { id: AllRoles; label: string; icon: typeof GraduationCap }[] = [
   { id: 'student', label: 'Học viên', icon: GraduationCap },
   { id: 'parent', label: 'Phụ huynh', icon: Users },
   { id: 'mentor', label: 'Mentor', icon: Award },
+  { id: 'manager', label: 'Manager', icon: Shield },
 ]
 
 export default function Login() {
-  const [selectedRole, setSelectedRole] = useState<Role | null>(null)
+  const [selectedRole, setSelectedRole] = useState<AllRoles | null>(null)
   const { setRole } = useRole()
   const navigate = useNavigate()
 
@@ -20,7 +21,6 @@ export default function Login() {
 
     setRole(selectedRole)
 
-    // Navigate to the appropriate portal
     switch (selectedRole) {
       case 'student':
         navigate('/student')
@@ -30,6 +30,9 @@ export default function Login() {
         break
       case 'mentor':
         navigate('/mentor')
+        break
+      case 'manager':
+        navigate('/manager')
         break
     }
   }
