@@ -28,14 +28,13 @@ from shared.model import (          # noqa: F401
     User,
     Mentor,
     Parent,
+    Manager,
     Student,
     School,
     Course,
     BehavioralLog,
     Conversation,
     Milestone,
-)
-from shared.etester_models import (  # noqa: F401
     ETESTERCore,
     MilestoneTraceLink,
     MilestoneArtifact,

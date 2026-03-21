@@ -24,7 +24,7 @@ from core.database import create_all_tables
 from core.logging import RequestIDMiddleware
 from modules.auth.router import router as auth_router
 from modules.etester.router import router as etester_router
-import shared.etester_models  # noqa: F401 — register ETESTER tables with Base.metadata
+import shared.model  # noqa: F401 — register all tables (incl. ETESTER) with Base.metadata
 from modules.smart_parenting.chatbot_router import router as smart_parenting_chatbot_router
 from modules.smart_parenting.router import router as smart_parenting_router
 

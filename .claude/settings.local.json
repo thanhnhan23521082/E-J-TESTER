@@ -5,7 +5,9 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(npm test:*)",
-      "mcp__gitnexus__query"
+      "mcp__gitnexus__query",
+      "Bash(docker ps:*)",
+      "Bash(docker port:*)"
     ]
   }
 }

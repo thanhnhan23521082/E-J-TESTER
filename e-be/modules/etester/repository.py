@@ -12,7 +12,7 @@ from sqlalchemy import and_, func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from shared.etester_models import (
+from shared.model import (
     ArtifactForm,
     AuthScoringResult,
     ETESTERBadge,
@@ -20,8 +20,9 @@ from shared.etester_models import (
     MentorVerification,
     MilestoneArtifact,
     MilestoneTraceLink,
+    Milestone,
+    Student,
 )
-from shared.model import Milestone, Student
 
 
 # ── Student ──────────────────────────────────────────────────────────────────
