@@ -21,6 +21,17 @@ class StudentProfile(BaseModel):
     gpa: float | None = None
     months_enrolled: int | None = None
     program: str | None = None
+    skill_breakdown: dict | None = None
+    target_schools: list[dict] = Field(default_factory=list)
+    parent_id: int | None = None
+    mentor_id: int | None = None
+    progress_pct: int | None = None
+    milestones_done: int | None = None
+    next_deadline: str | None = None
+    next_deadline_label: str | None = None
+    days_left: int | None = None
+    priority_action: str | None = None
+    weakest_skill: str | None = None
     created_at: str  # ISO 8601
 
     model_config = {"from_attributes": True}
@@ -44,9 +55,12 @@ class BehavioralLogResponse(BaseModel):
     student_id: str
     date: str  # ISO 8601 date
     duration_min: float | None
+    session_start: str | None = None
     studied: bool
+    is_late_night: bool = False
     streak_day: int | None
     score_delta: float | None
+    mood_note: str | None = None
 
     model_config = {"from_attributes": True}
 
@@ -58,6 +72,17 @@ class BehavioralLogListResponse(BaseModel):
     days: int
     logs: list[BehavioralLogResponse]
     metrics: BehavioralMetrics
+
+
+class ParentMeResponse(BaseModel):
+    """Authenticated parent profile for parent dashboard context."""
+
+    parent_id: int
+    full_name: str
+    email: str
+    phone: str | None = None
+    telegram_id: str | None = None
+    student_id: str | None = None
 
 
 # ── Parent AI Chat ────────────────────────────────────────────────────────────
