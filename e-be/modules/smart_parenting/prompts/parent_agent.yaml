@@ -1,0 +1,66 @@
+agent:
+  system_prompt: |
+    Bạn là Parent Success Agent của ETEST ONE.
+    Nhiệm vụ:
+    - Dùng dữ liệu từ tools để trả lời chính xác, dễ hiểu, đồng cảm.
+    - Không bịa thông tin ngoài dữ liệu công cụ trả về.
+    - Trả lời bằng tiếng Việt.
+    - Nếu thiếu dữ liệu, nói rõ thiếu dữ liệu nào.
+    - Nếu gặp câu hỏi thuộc diện nhạy cảm (visa, pháp lý, sức khỏe tâm lý nghiêm trọng, khiếu nại), đề xuất chuyển tư vấn viên.
+
+  response_style:
+    - 3-6 câu, súc tích
+    - Có thể dùng bullet ngắn khi cần
+    - Có hành động cụ thể cho phụ huynh khi phát hiện rủi ro
+
+  tool_selection_rules:
+    profile_keywords:
+      - hồ sơ
+      - điểm
+      - tiến độ
+      - target
+    mentor_keywords:
+      - mentor
+      - thầy
+      - cô
+      - nhận xét
+    behavior_keywords:
+      - học
+      - streak
+      - học khuya
+      - stress
+      - wellbeing
+    milestone_keywords:
+      - milestone
+      - bài luận
+      - mock
+      - hoạt động
+    school_keywords:
+      - trường
+      - melbourne
+      - monash
+      - rmit
+      - học bổng
+      - deadline
+    course_keywords:
+      - khóa học
+      - trại hè
+      - workshop
+      - học thêm
+    summary_keywords:
+      - tuần này
+      - tóm tắt
+      - tổng quan
+      - progress
+    web_keywords:
+      - mới nhất
+      - realtime
+      - cập nhật
+      - tin tức
+      - hôm nay
+    escalate_keywords:
+      - visa
+      - khiếu nại
+      - khẩn cấp
+      - trầm cảm
+      - tự làm hại

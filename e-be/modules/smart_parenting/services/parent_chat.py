@@ -12,7 +12,6 @@ from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core.exceptions import AITimeout, InsufficientHistory, StudentNotFound
-from modules.smart_parenting.prompts import PARENT_CHAT_SYSTEM, PARENT_CHAT_USER_TEMPLATE
 from modules.smart_parenting.repository import (
     get_conversation_history,
     get_student,
@@ -114,7 +113,6 @@ async def parent_chat_service(
     context_snapshot = json.dumps({
         "student_id": student_id,
         "rag_sources": ["mock_vector_store"],
-        "model": "gpt-4o-mini",
     })
     await save_conversation(
         db=db,

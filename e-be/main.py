@@ -23,6 +23,7 @@ from core.database import create_all_tables
 from core.logging import RequestIDMiddleware
 from modules.auth.router import router as auth_router
 from modules.etester.router import router as etester_router
+from modules.smart_parenting.chatbot_router import router as smart_parenting_chatbot_router
 from modules.smart_parenting.router import router as smart_parenting_router
 
 settings = get_settings()
@@ -94,6 +95,7 @@ def create_app() -> FastAPI:
     # ── Include routers ───────────────────────────────────────────────────
     app.include_router(auth_router)
     app.include_router(smart_parenting_router)
+    app.include_router(smart_parenting_chatbot_router)
     app.include_router(etester_router)
 
     # ── Health check ────────────────────────────────────────────────────────

@@ -35,6 +35,29 @@ def _get_client() -> openai.AsyncOpenAI:
     return _client
 
 
+async def _create_chat_completion(
+    *,
+    prompt: str,
+    system_prompt: str,
+    model: str,
+    max_tokens: int,
+    temperature: float,
+) -> str:
+    """Single place to call Chat Completions with shared parameters."""
+    client = _get_client()
+    response = await client.chat.completions.create(
+        model=model,
+        max_tokens=max_tokens,
+        temperature=temperature,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": prompt},
+        ],
+        timeout=10.0,
+    )
+    return response.choices[0].message.content or ""  # type: ignore[union-attr]
+
+
 # ── Public API ───────────────────────────────────────────────────────────────
 
 
@@ -42,7 +65,7 @@ async def call_text(
     prompt: str,
     system_prompt: str = "You are a helpful AI assistant.",
     *,
-    model: str = "gpt-4o-mini",
+    model: str | None = None,
     max_tokens: int = 1024,
     temperature: float = 0.7,
 ) -> str:
@@ -62,38 +85,30 @@ async def call_text(
     Raises:
         AITimeout: if the request times out after 10 s.
     """
-    client = _get_client()
+    resolved_model = model or settings.OPENAI_MODEL
 
     # ── first attempt ────────────────────────────────────────────────────────
     try:
-        response = await client.chat.completions.create(
-            model=model,
+        return await _create_chat_completion(
+            prompt=prompt,
+            system_prompt=system_prompt,
+            model=resolved_model,
             max_tokens=max_tokens,
             temperature=temperature,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": prompt},
-            ],
-            timeout=10.0,
         )
-        return response.choices[0].message.content or ""  # type: ignore[union-attr]
 
     except APIError as exc:
         logger.warning("OpenAI API error (attempt 1): %s", exc)
 
     # ── retry once ───────────────────────────────────────────────────────────
     try:
-        response = await client.chat.completions.create(
-            model=model,
+        return await _create_chat_completion(
+            prompt=prompt,
+            system_prompt=system_prompt,
+            model=resolved_model,
             max_tokens=max_tokens,
             temperature=temperature,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": prompt},
-            ],
-            timeout=10.0,
         )
-        return response.choices[0].message.content or ""  # type: ignore[union-attr]
 
     except (APIError, APIConnectionError, RateLimitError) as exc:
         logger.error("OpenAI API failed after retry: %s", exc)
@@ -105,7 +120,7 @@ async def call_json(
     system_prompt: str,
     schema: type[T],
     *,
-    model: str = "gpt-4o-mini",
+    model: str | None = None,
     max_tokens: int = 1024,
     temperature: float = 0.3,
 ) -> T:

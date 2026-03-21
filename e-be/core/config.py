@@ -30,6 +30,10 @@ class Settings(BaseSettings):
 
     # ── OpenAI API ──────────────────────────────────────────────────────────
     OPENAI_API_KEY: str = ""
+    OPENAI_MODEL: str
+
+    # ── Search API ──────────────────────────────────────────────────────────
+    BRAVE_SEARCH_API_KEY: str = ""
 
     # ── AWS (optional) ───────────────────────────────────────────────────────
     AWS_REGION: str = "ap-southeast-1"
