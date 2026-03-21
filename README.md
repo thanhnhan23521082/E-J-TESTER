@@ -247,10 +247,10 @@ GET  /api/behavioral-log/{student_id}
      → BehavioralLogResponse
        { logs[], metrics: { avg_duration, late_nights_count, current_streak, ... } }
 
-POST /api/ai/parent-chat
-     body: { question: string, student_id: string }
-     → ParentChatResponse
-       { response: string, action: string, escalated: bool }
+POST /api/chat/completion
+     body: { student_id: string, message: string }
+     → ChatCompletionResponse
+       { answer: string, tools_used: string[], escalated: bool, tool_outputs: object }
 
 POST /api/ai/wellbeing
      body: { student_id: string }

@@ -12,18 +12,18 @@ from modules.smart_parenting.services.agent_tools.tools import resolve_parent_id
 from shared.deps import get_current_user
 from shared.model import User
 
-router = APIRouter(prefix="/api/chatbot", tags=["smart_parenting_chatbot"])
+router = APIRouter(prefix="/api/chat", tags=["chat"])
 
 
-class ParentAgentChatRequest(BaseModel):
-    """Request payload for parent-agent chat."""
+class ChatCompletionRequest(BaseModel):
+    """Request payload for chat completion."""
 
     student_id: str = Field(..., description="Target student ID")
     message: str = Field(..., min_length=3, max_length=2000, description="Parent message")
 
 
-class ParentAgentChatResponse(BaseModel):
-    """Response payload returned by parent-agent chat endpoint."""
+class ChatCompletionResponse(BaseModel):
+    """Response payload returned by chat completion endpoint."""
 
     answer: str
     tools_used: list[str]
@@ -31,12 +31,12 @@ class ParentAgentChatResponse(BaseModel):
     tool_outputs: dict
 
 
-@router.post("/parent", response_model=ParentAgentChatResponse, summary="Parent chatbot")
-async def parent_agent_chat(
-    body: ParentAgentChatRequest,
+@router.post("/completion", response_model=ChatCompletionResponse, summary="Chat completion")
+async def chat_completion(
+    body: ChatCompletionRequest,
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_user),
-) -> ParentAgentChatResponse:
+) -> ChatCompletionResponse:
     """Chat endpoint for parents backed by DB context tools and llm_client provider."""
     parent_id = await resolve_parent_id(
         db=db,
@@ -53,7 +53,7 @@ async def parent_agent_chat(
         question=body.message,
     )
 
-    return ParentAgentChatResponse(
+    return ChatCompletionResponse(
         answer=result["answer"],
         tools_used=result["tools_used"],
         escalated=result["escalated"],
