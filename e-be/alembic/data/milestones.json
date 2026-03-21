@@ -1,0 +1,182 @@
+[
+  {
+    "id": "student_001_ms_001",
+    "studentId": "student_001",
+    "type": "essay_review",
+    "title": "Why I want to study at Melbourne - Draft 2",
+    "date": "2026-03-15",
+    "score": null,
+    "scoreLabel": "",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 91,
+    "notes": "Bài viết tốt, giọng văn rõ ràng và nhất quán.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Bài luận Melbourne Draft 2 được mentor xác nhận, thể hiện tư duy phản biện và giọng văn cá nhân rõ ràng.",
+      "skillsDemonstrated": ["Academic Writing", "Critical Thinking", "Self-reflection"],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_001_ms_002",
+    "studentId": "student_001",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #5",
+    "date": "2026-03-10",
+    "score": 6.5,
+    "scoreLabel": "Band 6.5",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Tăng 0.5 so với lần trước. Writing cần cải thiện thêm.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Đạt Band 6.5 trong lần thi thử thứ 5, tăng 0.5 so với lần trước. Tiến bộ rõ rệt ở Listening và Reading.",
+      "skillsDemonstrated": ["Test-taking", "Listening", "Reading"],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_001_ms_003",
+    "studentId": "student_001",
+    "type": "consultation",
+    "title": "Melbourne application strategy review",
+    "date": "2026-03-18",
+    "score": null,
+    "scoreLabel": "Consultation",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": null,
+    "notes": "Chốt timeline hồ sơ và essay revision.",
+    "status": "completed",
+    "contributorType": "parent",
+    "aiSummary": {
+      "summary": "Buổi tư vấn tập trung vào deadline Melbourne và cách phân bổ thời gian ôn Writing.",
+      "skillsDemonstrated": ["Planning", "Time Management"],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_002_ms_001",
+    "studentId": "student_002",
+    "type": "mock_test",
+    "title": "IELTS Mock Test #4",
+    "date": "2026-03-12",
+    "score": 6.0,
+    "scoreLabel": "Band 6.0",
+    "mentorId": null,
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Reading và Speaking ổn, Writing Task 2 còn lan man.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Gia Hân giữ mức 6.0 ổn định, cần tập trung phát triển luận điểm ở Writing.",
+      "skillsDemonstrated": ["Reading", "Speaking"],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_002_ms_002",
+    "studentId": "student_002",
+    "type": "essay_review",
+    "title": "Task 2 Opinion Essay - Final Review",
+    "date": "2026-03-16",
+    "score": null,
+    "scoreLabel": "Reviewed",
+    "mentorId": "mentor_001",
+    "mentorApproved": true,
+    "authScore": 86,
+    "notes": "Luận điểm tốt hơn, cần thêm evidence cụ thể.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Bài essay đã có cấu trúc rõ hơn, mentor xác nhận tiến bộ rõ ở coherence.",
+      "skillsDemonstrated": ["Academic Writing", "Coherence"],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_002_ms_003",
+    "studentId": "student_002",
+    "type": "goal",
+    "title": "Target IELTS 6.5 before UTS deadline",
+    "date": "2026-04-20",
+    "score": null,
+    "scoreLabel": "Target",
+    "mentorId": "mentor_001",
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Cần thêm 0.5 band Writing.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Milestone học tập trọng tâm của Gia Hân trong 1 tháng tới.",
+      "skillsDemonstrated": ["Goal Setting"],
+      "evidenceStrength": "medium"
+    }
+  },
+  {
+    "id": "student_003_ms_001",
+    "studentId": "student_003",
+    "type": "mock_test",
+    "title": "SAT Mock Test #6",
+    "date": "2026-03-09",
+    "score": 1450,
+    "scoreLabel": "SAT 1450",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": null,
+    "notes": "Đạt target SAT sớm hơn kế hoạch.",
+    "status": "completed",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Quang Duy vượt ngưỡng SAT mục tiêu, đặc biệt nổi bật ở phần Math.",
+      "skillsDemonstrated": ["SAT Math", "Test-taking"],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_003_ms_002",
+    "studentId": "student_003",
+    "type": "research",
+    "title": "Canada university shortlist complete",
+    "date": "2026-03-14",
+    "score": null,
+    "scoreLabel": "Research",
+    "mentorId": "mentor_002",
+    "mentorApproved": true,
+    "authScore": 88,
+    "notes": "Đã phân loại reach, match, safety cho 6 trường.",
+    "status": "completed",
+    "contributorType": "mentor",
+    "aiSummary": {
+      "summary": "Danh sách trường Canada đã được mentor xác nhận, thể hiện tư duy chiến lược tốt.",
+      "skillsDemonstrated": ["Research", "Planning"],
+      "evidenceStrength": "high"
+    }
+  },
+  {
+    "id": "student_003_ms_003",
+    "studentId": "student_003",
+    "type": "ielts_requirement",
+    "title": "Bổ sung chứng chỉ IELTS cho hồ sơ Canada",
+    "date": "2026-04-25",
+    "score": null,
+    "scoreLabel": "Requirement",
+    "mentorId": "mentor_002",
+    "mentorApproved": false,
+    "authScore": null,
+    "notes": "Phần còn thiếu lớn nhất trong profile hiện tại.",
+    "status": "upcoming",
+    "contributorType": "student",
+    "aiSummary": {
+      "summary": "Đây là milestone quyết định để hồ sơ Canada hoàn chỉnh.",
+      "skillsDemonstrated": ["Planning"],
+      "evidenceStrength": "medium"
+    }
+  }
+]

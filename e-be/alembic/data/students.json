@@ -1,0 +1,113 @@
+[
+  {
+    "id": "student_001",
+    "name": "Nguyễn Hà Minh Anh",
+    "program": "AMP",
+    "monthsEnrolled": 14,
+    "ieltsScore": 6.5,
+    "satScore": 1320,
+    "gpa": 3.8,
+    "skillBreakdown": { "L": 7.0, "R": 6.5, "W": 6.0, "S": 6.5 },
+    "targetSchools": [
+      {
+        "name": "University of Melbourne",
+        "country": "Úc",
+        "deadline": "2026-05-07",
+        "ieltsRequired": 7.0,
+        "satRequired": null,
+        "daysUntilDeadline": 47,
+        "isEligible": false,
+        "gapIelts": 0.5,
+        "gapSat": null
+      },
+      {
+        "name": "Monash University",
+        "country": "Úc",
+        "deadline": "2026-06-15",
+        "ieltsRequired": 6.5,
+        "satRequired": null,
+        "daysUntilDeadline": 86,
+        "isEligible": true,
+        "gapIelts": 0,
+        "gapSat": null
+      }
+    ],
+    "parentId": "parent_001",
+    "mentorId": "mentor_001",
+    "upsellCooldown": null
+  },
+  {
+    "id": "student_002",
+    "name": "Trần Gia Hân",
+    "program": "IELTS",
+    "monthsEnrolled": 9,
+    "ieltsScore": 6.0,
+    "satScore": null,
+    "gpa": 3.6,
+    "skillBreakdown": { "L": 6.5, "R": 6.0, "W": 5.5, "S": 6.0 },
+    "targetSchools": [
+      {
+        "name": "University of Technology Sydney",
+        "country": "Úc",
+        "deadline": "2026-04-28",
+        "ieltsRequired": 6.5,
+        "satRequired": null,
+        "daysUntilDeadline": 38,
+        "isEligible": false,
+        "gapIelts": 0.5,
+        "gapSat": null
+      },
+      {
+        "name": "Deakin University",
+        "country": "Úc",
+        "deadline": "2026-06-01",
+        "ieltsRequired": 6.0,
+        "satRequired": null,
+        "daysUntilDeadline": 72,
+        "isEligible": true,
+        "gapIelts": 0,
+        "gapSat": null
+      }
+    ],
+    "parentId": "parent_002",
+    "mentorId": "mentor_001",
+    "upsellCooldown": null
+  },
+  {
+    "id": "student_003",
+    "name": "Lê Quang Duy",
+    "program": "SAT",
+    "monthsEnrolled": 11,
+    "ieltsScore": null,
+    "satScore": 1450,
+    "gpa": 3.9,
+    "skillBreakdown": { "math": 760, "reading_writing": 690, "essay": 6.5 },
+    "targetSchools": [
+      {
+        "name": "University of Toronto",
+        "country": "Canada",
+        "deadline": "2026-05-15",
+        "ieltsRequired": 6.5,
+        "satRequired": 1400,
+        "daysUntilDeadline": 55,
+        "isEligible": false,
+        "gapIelts": 6.5,
+        "gapSat": 0
+      },
+      {
+        "name": "University of British Columbia",
+        "country": "Canada",
+        "deadline": "2026-05-30",
+        "ieltsRequired": 6.5,
+        "satRequired": 1380,
+        "daysUntilDeadline": 70,
+        "isEligible": false,
+        "gapIelts": 6.5,
+        "gapSat": 0
+      }
+    ],
+    "parentId": "parent_003",
+    "mentorId": "mentor_002",
+    "upsellCooldown": null
+  }
+]
