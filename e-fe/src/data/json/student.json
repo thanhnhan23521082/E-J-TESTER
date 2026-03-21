@@ -1,0 +1,36 @@
+{
+  "id": "student_001",
+  "name": "Nguyễn Hà Minh Anh",
+  "program": "AMP",
+  "monthsEnrolled": 14,
+  "ieltsScore": 6.5,
+  "satScore": 1320,
+  "gpa": 3.8,
+  "skillBreakdown": { "L": 7.0, "R": 6.5, "W": 6.0, "S": 6.5 },
+  "targetSchools": [
+    {
+      "name": "University of Melbourne",
+      "country": "Úc",
+      "deadline": "2026-05-07",
+      "ieltsRequired": 7.0,
+      "satRequired": null,
+      "daysUntilDeadline": 47,
+      "isEligible": false,
+      "gapIelts": 0.5,
+      "gapSat": null
+    },
+    {
+      "name": "Monash University",
+      "country": "Úc",
+      "deadline": "2026-06-15",
+      "ieltsRequired": 6.5,
+      "satRequired": null,
+      "daysUntilDeadline": 86,
+      "isEligible": true,
+      "gapIelts": 0,
+      "gapSat": null
+    }
+  ],
+  "parentId": "parent_001",
+  "mentorId": "mentor_001"
+}

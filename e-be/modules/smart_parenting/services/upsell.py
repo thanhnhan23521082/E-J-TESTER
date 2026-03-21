@@ -167,7 +167,7 @@ async def upsell_service(
                 months_enrolled=student.months_enrolled,
                 program=student.program or "chưa có",
             )
-            enhanced = call_text(
+            enhanced = await call_text(
                 prompt=prompt,
                 system_prompt=UPSELL_SYSTEM,
                 max_tokens=512,

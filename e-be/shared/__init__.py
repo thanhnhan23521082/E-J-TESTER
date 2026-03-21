@@ -7,6 +7,7 @@ from shared.model import (
     Mentor,
     Milestone,
     Parent,
+    School,
     Student,
     TimestampMixin,
     User,

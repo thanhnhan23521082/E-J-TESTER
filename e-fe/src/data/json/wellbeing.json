@@ -1,0 +1,6 @@
+{
+  "alert": true,
+  "severity": "medium",
+  "message": "Minh Anh học muộn 3 đêm liên tiếp tuần này",
+  "action": "Nhắn hỏi thăm con tối nay"
+}
