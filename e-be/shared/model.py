@@ -75,6 +75,11 @@ class User(Base, TimestampMixin):
     full_name: Mapped[str | None] = mapped_column(String(255), nullable=True)
     phone: Mapped[str | None] = mapped_column(String(50), nullable=True)
 
+    # Relations
+    student: Mapped["Student | None"] = relationship(
+        "Student", back_populates="user", uselist=False
+    )
+
     def __repr__(self) -> str:
         return f"<User(id={self.id}, email={self.email}, role={self.role})>"
 
@@ -186,13 +191,15 @@ class Manager(Base, TimestampMixin):
 class Student(Base, TimestampMixin):
     """
     Student — học viên.
+    FK user_id:   1:1 với User (auth account).
     FK parent_id: 1:1 với Parent.
-    FK mentor_id:  N:1 với Mentor.
+    FK mentor_id: N:1 với Mentor.
     Digest fields: tự cập nhật qua trigger trên milestones.
     """
 
     __tablename__ = "students"
     __table_args__ = (
+        Index("idx_students_user_id", "user_id"),
         Index("idx_students_parent_id", "parent_id"),
         Index("idx_students_mentor_id", "mentor_id"),
         Index("idx_students_program", "program"),
@@ -204,6 +211,14 @@ class Student(Base, TimestampMixin):
 
     # PK
     student_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+
+    # FK — 1:1 with User (auth account)
+    user_id: Mapped[int | None] = mapped_column(
+        Integer,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        unique=True,
+        nullable=True,
+    )
 
     # Identity
     name: Mapped[str] = mapped_column(String(255), nullable=False)
@@ -249,6 +264,9 @@ class Student(Base, TimestampMixin):
     upsell_cooldown: Mapped[date | None] = mapped_column(Date, nullable=True)
 
     # Relations
+    user: Mapped["User | None"] = relationship(
+        "User", back_populates="student", uselist=False
+    )
     parent: Mapped["Parent | None"] = relationship(
         "Parent", back_populates="student", foreign_keys=[parent_id]
     )

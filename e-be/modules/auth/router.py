@@ -55,6 +55,7 @@ async def _create_profile_record(
     db: AsyncSession,
     body: RegisterRequest,
     hashed_pw: str,
+    user: User | None = None,
 ) -> None:
     """Create the role-specific profile record alongside the User row."""
 
@@ -84,6 +85,7 @@ async def _create_profile_record(
         student_id = f"S-{uuid.uuid4().hex[:8].upper()}"
         profile = Student(
             student_id=student_id,
+            user_id=user.id if user else None,
             name=body.full_name,
             program=body.program,
         )
@@ -148,9 +150,10 @@ async def register(
         phone=body.phone,
     )
     db.add(user)
+    await db.flush()  # populate user.id so child records can reference it
 
     # Create role-specific profile record
-    await _create_profile_record(db, body, hashed_pw)
+    await _create_profile_record(db, body, hashed_pw, user)
 
     await db.commit()
     await db.refresh(user)
@@ -260,7 +263,7 @@ async def me(
 
     if current_user.role == "student":
         result = await db.execute(
-            select(Student.student_id).where(Student.name == current_user.full_name)
+            select(Student.student_id).where(Student.user_id == current_user.id)
         )
         student_id = result.scalar_one_or_none()
 
