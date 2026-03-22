@@ -70,7 +70,7 @@ async def get_parent_me(
     return ParentMeResponse(
         parent_id=parent.parent_id,
         full_name=parent.full_name,
-        email=parent.email,
+        email=current_user.email,
         phone=parent.phone,
         telegram_id=parent.telegram_id,
         student_id=parent.student_id,
