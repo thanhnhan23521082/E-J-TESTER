@@ -1,22 +1,38 @@
 """
 modules/etester/repository.py
 ────────────────────────────
-Async data-access functions for the ETESTER module.
+Async data-access functions for the ETESTER module v4.
+All queries target ETESTER-specific tables (etester_core, milestone_trace_links, etc.)
+and the shared milestones/students tables.
 """
 
 from datetime import datetime
 
-from sqlalchemy import and_, func, select
+from sqlalchemy import and_, func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import selectinload
 
-from shared.model import Milestone, Student
+from shared.model import (
+    ArtifactForm,
+    AuthScoringResult,
+    ETESTERBadge,
+    ETESTERCore,
+    MentorVerification,
+    MilestoneArtifact,
+    MilestoneTraceLink,
+    Milestone,
+    Student,
+)
 
+
+# ── Student ──────────────────────────────────────────────────────────────────
 
 async def get_student(student_id: str, db: AsyncSession) -> Student | None:
-    """Fetch a student by primary key, or None."""
     result = await db.execute(select(Student).where(Student.student_id == student_id))
     return result.scalar_one_or_none()
 
+
+# ── Milestone ────────────────────────────────────────────────────────────────
 
 async def save_milestone(
     db: AsyncSession,
@@ -33,26 +49,6 @@ async def save_milestone(
     ai_summary: str | None = None,
     auth_score: float | None = None,
 ) -> Milestone:
-    """
-    Create and persist a new Milestone record.
-
-    Args:
-        db: Async session.
-        student_id:  Target student.
-        milestone_id: Unique ID within student scope.
-        type:        MilestoneType value string.
-        title:       Human-readable title.
-        date:        Milestone date.
-        score:       Optional numeric score.
-        score_label: Optional label (e.g. "Band 7.0").
-        notes:       Free-text notes / reflection.
-        contributor_type: Who contributed this record.
-        ai_summary:  Optional AI-generated summary.
-        auth_score:  Optional AI authenticity score.
-
-    Returns:
-        The newly created Milestone row.
-    """
     milestone = Milestone(
         student_id=student_id,
         milestone_id=milestone_id,
@@ -74,21 +70,8 @@ async def save_milestone(
 
 
 async def get_all_milestones(
-    student_id: str,
-    db: AsyncSession,
-    limit: int = 100,
+    student_id: str, db: AsyncSession, limit: int = 100
 ) -> list[Milestone]:
-    """
-    Fetch all milestones for a student, newest first.
-
-    Args:
-        student_id: Target student.
-        db: Async session.
-        limit: Maximum rows to return.
-
-    Returns:
-        List of Milestone rows.
-    """
     result = await db.execute(
         select(Milestone)
         .where(Milestone.student_id == student_id)
@@ -98,62 +81,9 @@ async def get_all_milestones(
     return list(result.scalars().all())
 
 
-async def get_etester_core(
-    student_id: str,
-    db: AsyncSession,
-) -> Student | None:
-    """Fetch a student with ETESTER aggregate fields, or None."""
-    result = await db.execute(select(Student).where(Student.student_id == student_id))
-    return result.scalar_one_or_none()
-
-
-async def save_etester_core(
-    db: AsyncSession,
-    *,
-    student_id: str,
-    academic_score: float | None = None,
-    writing_growth: float | None = None,
-    skills: dict | None = None,
-    mentor_verifications: int = 0,
-    parent_support_level: float | None = None,
-    institutional_stamp: str | None = None,
-    consistency_score: float | None = None,
-    total_contributions: int = 0,
-    narrative_cache: str | None = None,
-    badge_issued: str | None = None,
-) -> Student:
-    """Update the student's ETESTER aggregate fields and return the row."""
-    student = await get_student(student_id, db)
-    if student is None:
-        raise ValueError(f"Student not found: {student_id}")
-
-    student.ielts_score = academic_score
-    student.skill_breakdown = skills
-    student.progress_pct = total_contributions
-    student.priority_action = badge_issued
-    student.weakest_skill = institutional_stamp
-
-    await db.commit()
-    await db.refresh(student)
-    return student
-
-
 async def get_essay_history(
-    student_id: str,
-    db: AsyncSession,
-    limit: int = 10,
+    student_id: str, db: AsyncSession, limit: int = 10
 ) -> list[Milestone]:
-    """
-    Fetch the most recent essay-related milestones for a student.
-
-    Args:
-        student_id: Target student.
-        db: Async session.
-        limit: Maximum rows.
-
-    Returns:
-        List of Milestone rows where type in (essay_draft, essay_final).
-    """
     result = await db.execute(
         select(Milestone)
         .where(
@@ -168,16 +98,385 @@ async def get_essay_history(
     return list(result.scalars().all())
 
 
-async def get_contribution_summary(
-    student_id: str,
-    db: AsyncSession,
-) -> list[dict]:
-    """
-    Aggregate milestones by type: count, latest date, average score.
+async def get_milestone_by_id(milestone_id: int, db: AsyncSession) -> Milestone | None:
+    result = await db.execute(select(Milestone).where(Milestone.id == milestone_id))
+    return result.scalar_one_or_none()
 
-    Returns:
-        List of dicts: [{type, count, latest_date, avg_score}, ...]
-    """
+
+# ── ETESTERCore ──────────────────────────────────────────────────────────────
+
+async def get_etester_core(student_id: str, db: AsyncSession) -> ETESTERCore | None:
+    result = await db.execute(
+        select(ETESTERCore).where(ETESTERCore.student_id == student_id)
+    )
+    return result.scalar_one_or_none()
+
+
+async def upsert_etester_core(
+    db: AsyncSession, student_id: str, **fields
+) -> ETESTERCore:
+    core = await get_etester_core(student_id, db)
+    if core is None:
+        core = ETESTERCore(student_id=student_id, **fields)
+        db.add(core)
+    else:
+        for k, v in fields.items():
+            if v is not None:
+                setattr(core, k, v)
+    await db.commit()
+    await db.refresh(core)
+    return core
+
+
+# ── MilestoneTraceLink ───────────────────────────────────────────────────────
+
+async def save_trace_link(
+    db: AsyncSession,
+    *,
+    from_milestone_id: int,
+    to_milestone_id: int,
+    student_id: str,
+    relationship_type: str,
+    evidence: str | None = None,
+    confidence: float = 0.0,
+    suggested_by_ai: bool = True,
+) -> MilestoneTraceLink:
+    link = MilestoneTraceLink(
+        from_milestone_id=from_milestone_id,
+        to_milestone_id=to_milestone_id,
+        student_id=student_id,
+        relationship_type=relationship_type,
+        evidence=evidence,
+        confidence=confidence,
+        suggested_by_ai=suggested_by_ai,
+    )
+    db.add(link)
+    await db.commit()
+    await db.refresh(link)
+    return link
+
+
+async def get_trace_links_for_student(
+    student_id: str, db: AsyncSession, only_active: bool = True
+) -> list[MilestoneTraceLink]:
+    q = select(MilestoneTraceLink).where(MilestoneTraceLink.student_id == student_id)
+    if only_active:
+        q = q.where(MilestoneTraceLink.is_active == True)  # noqa: E712
+    q = q.order_by(MilestoneTraceLink.created_at.desc())
+    result = await db.execute(q)
+    return list(result.scalars().all())
+
+
+async def get_pending_trace_links_for_mentor(
+    mentor_id: int, db: AsyncSession
+) -> list[MilestoneTraceLink]:
+    """Get unconfirmed trace links for students of this mentor."""
+    result = await db.execute(
+        select(MilestoneTraceLink)
+        .join(Student, MilestoneTraceLink.student_id == Student.student_id)
+        .where(
+            and_(
+                Student.mentor_id == mentor_id,
+                MilestoneTraceLink.confirmed_by_mentor == False,  # noqa: E712
+                MilestoneTraceLink.is_active == True,  # noqa: E712
+            )
+        )
+        .order_by(MilestoneTraceLink.created_at.desc())
+    )
+    return list(result.scalars().all())
+
+
+async def get_trace_link_by_id(
+    link_id: int, db: AsyncSession
+) -> MilestoneTraceLink | None:
+    result = await db.execute(
+        select(MilestoneTraceLink).where(MilestoneTraceLink.id == link_id)
+    )
+    return result.scalar_one_or_none()
+
+
+async def update_trace_link_student_note(
+    link_id: int, note: str, db: AsyncSession
+) -> MilestoneTraceLink | None:
+    link = await get_trace_link_by_id(link_id, db)
+    if link is None:
+        return None
+    link.student_context_note = note
+    link.student_noted_at = datetime.utcnow()
+    await db.commit()
+    await db.refresh(link)
+    return link
+
+
+async def confirm_trace_link(
+    link_id: int,
+    mentor_id: int,
+    db: AsyncSession,
+    new_relationship_type: str | None = None,
+) -> MilestoneTraceLink | None:
+    link = await get_trace_link_by_id(link_id, db)
+    if link is None:
+        return None
+    link.confirmed_by_mentor = True
+    link.confirmed_by_mentor_id = mentor_id
+    link.confirmed_at = datetime.utcnow()
+    if new_relationship_type:
+        link.relationship_type = new_relationship_type
+    await db.commit()
+    await db.refresh(link)
+    return link
+
+
+async def reject_trace_link(
+    link_id: int, db: AsyncSession
+) -> MilestoneTraceLink | None:
+    link = await get_trace_link_by_id(link_id, db)
+    if link is None:
+        return None
+    link.is_active = False
+    await db.commit()
+    await db.refresh(link)
+    return link
+
+
+# ── MilestoneArtifact ────────────────────────────────────────────────────────
+
+async def save_artifact(
+    db: AsyncSession,
+    *,
+    milestone_id: int,
+    student_id: str,
+    full_text_content: str | None = None,
+    artifact_hash: str | None = None,
+    prev_artifact_hash: str | None = None,
+) -> MilestoneArtifact:
+    artifact = MilestoneArtifact(
+        milestone_id=milestone_id,
+        student_id=student_id,
+        full_text_content=full_text_content,
+        artifact_hash=artifact_hash,
+        prev_artifact_hash=prev_artifact_hash,
+    )
+    db.add(artifact)
+    await db.commit()
+    await db.refresh(artifact)
+    return artifact
+
+
+# ── ArtifactForm ─────────────────────────────────────────────────────────────
+
+async def save_artifact_form(
+    db: AsyncSession,
+    *,
+    milestone_id: int,
+    student_id: str,
+    activity_type: str,
+    form_data: dict | None = None,
+    skills_practiced: list | None = None,
+    had_leadership_role: bool = False,
+    leadership_role_title: str | None = None,
+    leadership_team_size: int | None = None,
+    leadership_outcome: str | None = None,
+) -> ArtifactForm:
+    form = ArtifactForm(
+        milestone_id=milestone_id,
+        student_id=student_id,
+        activity_type=activity_type,
+        form_data=form_data or {},
+        skills_practiced=skills_practiced or [],
+        had_leadership_role=had_leadership_role,
+        leadership_role_title=leadership_role_title,
+        leadership_team_size=leadership_team_size,
+        leadership_outcome=leadership_outcome,
+    )
+    db.add(form)
+    await db.commit()
+    await db.refresh(form)
+    return form
+
+
+# ── MentorVerification ───────────────────────────────────────────────────────
+
+async def save_mentor_verification(
+    db: AsyncSession,
+    *,
+    milestone_id: int,
+    student_id: str,
+    verifier_id: int,
+    verifier_type: str,
+    action_type: str,
+    note: str | None = None,
+    trace_link_id: int | None = None,
+) -> MentorVerification:
+    verification = MentorVerification(
+        milestone_id=milestone_id,
+        student_id=student_id,
+        verifier_id=verifier_id,
+        verifier_type=verifier_type,
+        action_type=action_type,
+        note=note,
+        trace_link_id=trace_link_id,
+    )
+    db.add(verification)
+    await db.commit()
+    await db.refresh(verification)
+    return verification
+
+
+# ── AuthScoringResult ────────────────────────────────────────────────────────
+
+async def save_auth_result(
+    db: AsyncSession,
+    *,
+    milestone_id: int,
+    student_id: str,
+    auth_score: int,
+    verdict: str,
+    dimension_scores: dict | None = None,
+    explaining_artifacts: list | None = None,
+    explanation_en: str | None = None,
+    explanation_vn: str | None = None,
+    graph_snapshot: dict | None = None,
+) -> AuthScoringResult:
+    result_obj = AuthScoringResult(
+        milestone_id=milestone_id,
+        student_id=student_id,
+        auth_score=auth_score,
+        verdict=verdict,
+        dimension_scores=dimension_scores or {},
+        explaining_artifacts=explaining_artifacts or [],
+        explanation_en=explanation_en,
+        explanation_vn=explanation_vn,
+        graph_snapshot=graph_snapshot or {},
+    )
+    db.add(result_obj)
+    await db.commit()
+    await db.refresh(result_obj)
+    return result_obj
+
+
+async def get_auth_results_for_milestone(
+    milestone_id: int, db: AsyncSession
+) -> list[AuthScoringResult]:
+    result = await db.execute(
+        select(AuthScoringResult)
+        .where(AuthScoringResult.milestone_id == milestone_id)
+        .order_by(AuthScoringResult.scored_at.desc())
+    )
+    return list(result.scalars().all())
+
+
+async def get_latest_auth_result(
+    milestone_id: int, db: AsyncSession
+) -> AuthScoringResult | None:
+    result = await db.execute(
+        select(AuthScoringResult)
+        .where(AuthScoringResult.milestone_id == milestone_id)
+        .order_by(AuthScoringResult.scored_at.desc())
+        .limit(1)
+    )
+    return result.scalar_one_or_none()
+
+
+# ── ETESTERBadge ─────────────────────────────────────────────────────────────
+
+async def save_badge(
+    db: AsyncSession,
+    *,
+    core_id: int,
+    student_id: str,
+    badge_uid: str,
+    signed_token: str,
+    badge_payload: dict,
+    credential_type: str = "jwt_rs256",
+    expires_at: datetime | None = None,
+) -> ETESTERBadge:
+    badge = ETESTERBadge(
+        core_id=core_id,
+        student_id=student_id,
+        badge_uid=badge_uid,
+        signed_token=signed_token,
+        badge_payload=badge_payload,
+        credential_type=credential_type,
+        expires_at=expires_at,
+    )
+    db.add(badge)
+    await db.commit()
+    await db.refresh(badge)
+    return badge
+
+
+async def get_badge_by_uid(badge_uid: str, db: AsyncSession) -> ETESTERBadge | None:
+    result = await db.execute(
+        select(ETESTERBadge).where(ETESTERBadge.badge_uid == badge_uid)
+    )
+    return result.scalar_one_or_none()
+
+
+async def get_badge_for_student(
+    student_id: str, db: AsyncSession
+) -> ETESTERBadge | None:
+    result = await db.execute(
+        select(ETESTERBadge)
+        .where(
+            and_(
+                ETESTERBadge.student_id == student_id,
+                ETESTERBadge.is_revoked == False,  # noqa: E712
+            )
+        )
+        .order_by(ETESTERBadge.issued_at.desc())
+        .limit(1)
+    )
+    return result.scalar_one_or_none()
+
+
+# ── Aggregation helpers ──────────────────────────────────────────────────────
+
+async def count_pending_trace_links(student_id: str, db: AsyncSession) -> int:
+    result = await db.execute(
+        select(func.count(MilestoneTraceLink.id)).where(
+            and_(
+                MilestoneTraceLink.student_id == student_id,
+                MilestoneTraceLink.confirmed_by_mentor == False,  # noqa: E712
+                MilestoneTraceLink.is_active == True,  # noqa: E712
+            )
+        )
+    )
+    return result.scalar_one() or 0
+
+
+async def count_pending_approvals(student_id: str, db: AsyncSession) -> int:
+    result = await db.execute(
+        select(func.count(Milestone.id)).where(
+            and_(
+                Milestone.student_id == student_id,
+                Milestone.mentor_approved.is_(None),
+            )
+        )
+    )
+    return result.scalar_one() or 0
+
+
+async def get_pending_artifacts_for_mentor(
+    mentor_id: int, db: AsyncSession
+) -> list[Milestone]:
+    result = await db.execute(
+        select(Milestone)
+        .join(Student, Milestone.student_id == Student.student_id)
+        .where(
+            and_(
+                Student.mentor_id == mentor_id,
+                Milestone.mentor_approved.is_(None),
+            )
+        )
+        .order_by(Milestone.date.desc())
+    )
+    return list(result.scalars().all())
+
+
+async def get_contribution_summary(
+    student_id: str, db: AsyncSession
+) -> list[dict]:
     result = await db.execute(
         select(
             Milestone.type,

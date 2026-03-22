@@ -202,6 +202,7 @@ services:
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
       SERVICE_MODE: etester
       RUN_DB_INIT: "false"
+      ETESTER_RS256_PRIVATE_KEY: ${ETESTER_RS256_PRIVATE_KEY:-}
     depends_on:
       db-init:
         condition: service_completed_successfully

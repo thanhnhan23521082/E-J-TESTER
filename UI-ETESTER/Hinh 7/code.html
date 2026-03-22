@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ManagerBadgeIssuance - ETEST Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#55450a",
+              "on-secondary-fixed": "#231b00",
+              "on-primary-fixed-variant": "#93000f",
+              "outline": "#926f6b",
+              "on-secondary-container": "#756326",
+              "surface-bright": "#f9f9ff",
+              "inverse-primary": "#ffb3ac",
+              "surface-container-high": "#e2e8f8",
+              "on-tertiary-fixed": "#001a42",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f0f3ff",
+              "primary-fixed-dim": "#ffb3ac",
+              "secondary-fixed-dim": "#ddc57e",
+              "primary-fixed": "#ffdad6",
+              "primary": "#bb0016",
+              "on-error-container": "#93000a",
+              "outline-variant": "#e7bdb8",
+              "primary-container": "#e42027",
+              "surface-container": "#e7eefe",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#2170e4",
+              "on-tertiary-container": "#fefcff",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#004395",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed": "#410003",
+              "on-surface-variant": "#5d3f3c",
+              "background": "#f9f9ff",
+              "tertiary-fixed-dim": "#adc6ff",
+              "surface-container-highest": "#dce2f3",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#fffbff",
+              "secondary-container": "#fae197",
+              "inverse-on-surface": "#ebf1ff",
+              "tertiary-fixed": "#d8e2ff",
+              "tertiary": "#0058be",
+              "secondary-fixed": "#fae197",
+              "surface-variant": "#dce2f3",
+              "on-surface": "#151c27",
+              "on-background": "#151c27",
+              "secondary": "#6f5d21",
+              "inverse-surface": "#2a313d",
+              "surface-tint": "#c00017",
+              "surface": "#f9f9ff",
+              "on-error": "#ffffff",
+              "surface-dim": "#d3daea",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Be Vietnam Pro"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pulsing-dot {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-[#F0F3FF] dark:bg-slate-900 flex flex-col py-6 z-50">
+<div class="px-8 mb-10">
+<div class="text-[#BB0016] dark:text-red-500 font-black uppercase tracking-widest text-xl mb-1">ETEST</div>
+<div class="font-headline font-bold text-lg tracking-tight text-on-surface">Academic Atelier</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-slate-600 dark:text-slate-400 font-medium px-4 py-3 mx-2 flex items-center gap-3 hover:bg-white/60 dark:hover:bg-slate-800/60 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium px-4 py-3 mx-2 flex items-center gap-3 hover:bg-white/60 dark:hover:bg-slate-800/60 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Student Profiles</span>
+</a>
+<a class="bg-white dark:bg-slate-800 text-[#BB0016] dark:text-red-400 font-bold rounded-xl px-4 py-3 mx-2 transition-all shadow-[0_4px_12px_rgba(187,0,22,0.04)] flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span>Digital Badges</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium px-4 py-3 mx-2 flex items-center gap-3 hover:bg-white/60 dark:hover:bg-slate-800/60 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Academic Reports</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium px-4 py-3 mx-2 flex items-center gap-3 hover:bg-white/60 dark:hover:bg-slate-800/60 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-6 mt-6">
+<button class="w-full py-3 bg-[#BB0016] text-white rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-red-900/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Issue New Badge
+            </button>
+</div>
+<div class="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800 mx-4">
+<a class="text-slate-600 dark:text-slate-400 font-medium px-4 py-3 flex items-center gap-3 hover:bg-white/60 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium px-4 py-3 flex items-center gap-3 hover:bg-white/60 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="h-20 sticky top-0 z-40 w-full ml-72 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md flex items-center justify-between px-8 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full w-64 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search student or ID..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 text-sm font-medium text-slate-500">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">Manager Admin</p>
+<p class="text-xs text-slate-500">Academic Atelier</p>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden border-2 border-white shadow-sm">
+<img alt="Manager Profile" class="w-full h-full object-cover" data-alt="Manager Profile Photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCELInI1YxNyUXOx2q43QrWZoceocLTw2mdSF2oftK75ep_KCw9WTQjLDszi7oopkwLK-MfpQBeWKu8DjzuEA01qRUgj52BbxxAkNy1nagz4rsDHwy70obUoYW9SLrBQBoPog-R1jGX4Uz2skviGYmzBQ_kuNIjochGXvfpWy-1Ppou3LU73MrfdsEoEThLbiCV3V4ukLUDWxJmlTLkJ5bQBhNxhNPg4qg8tFfcpLR2NpAYbrVzsLbp8x38inyADISDnZF5TbsFchk"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-72 p-8 min-h-[calc(100vh-80px)]">
+<div class="max-w-7xl mx-auto space-y-8">
+<!-- Breadcrumbs -->
+<nav class="flex text-sm text-slate-500 gap-2 items-center">
+<span>Digital Badges</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface font-semibold">Issue Badge</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold">Nguyễn Hà Minh Anh</span>
+</nav>
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: Student Readiness -->
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<!-- 1. Student Card -->
+<section class="bg-surface-container-lowest rounded-3xl p-6 shadow-[0_12px_32px_rgba(187,0,22,0.04)] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full"></div>
+<div class="flex items-center gap-5 relative z-10">
+<div class="w-20 h-20 rounded-2xl bg-[#0058BE] text-white flex items-center justify-center text-2xl font-headline font-black shadow-lg shadow-blue-900/20">
+                                MA
+                            </div>
+<div>
+<h1 class="font-headline text-2xl font-extrabold text-on-surface leading-tight">Nguyễn Hà Minh Anh</h1>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold uppercase tracking-wider">AMP</span>
+<span class="text-slate-500 text-sm">• 14 months duration</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Readiness Checklist -->
+<section class="bg-surface-container-low rounded-3xl p-6 space-y-4">
+<h3 class="font-headline font-bold text-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="rule">rule</span>
+                            Readiness Checklist
+                        </h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+<span class="material-symbols-outlined text-green-600" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>23 milestones completed</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+<span class="material-symbols-outlined text-green-600" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>18 mentor verified</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+<span class="material-symbols-outlined text-green-600" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Avg authenticity 91%</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+<span class="material-symbols-outlined text-green-600" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Final essay mentor approved</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+<span class="material-symbols-outlined text-green-600" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Admin process verified</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-medium text-slate-700">
+<span class="material-symbols-outlined text-green-600" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>0 pending trace links</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-bold text-error bg-error-container/30 p-3 rounded-xl border border-error/10">
+<span class="material-symbols-outlined" data-icon="cancel" style="font-variation-settings: 'FILL' 1;">cancel</span>
+<span>Badge not yet issued</span>
+</div>
+</div>
+</section>
+<!-- 3. Requirements Coverage -->
+<section class="bg-surface-container-lowest rounded-3xl p-6 border border-outline-variant/10 shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-headline font-bold text-on-surface">Requirements Coverage</h3>
+<span class="text-xs font-bold text-tertiary bg-tertiary-container/10 px-2 py-1 rounded">8/9 Covered</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded-xl bg-green-50 flex flex-col items-center justify-center p-2 text-center group transition-all hover:bg-green-100">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="language">language</span>
+<span class="text-[9px] mt-1 font-bold text-slate-600">English Proficiency</span>
+</div>
+<div class="aspect-square rounded-xl bg-green-50 flex flex-col items-center justify-center p-2 text-center group transition-all hover:bg-green-100">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="assignment">assignment</span>
+<span class="text-[9px] mt-1 font-bold text-slate-600">Standardized Test</span>
+</div>
+<div class="aspect-square rounded-xl bg-green-50 flex flex-col items-center justify-center p-2 text-center group transition-all hover:bg-green-100">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="edit_note">edit_note</span>
+<span class="text-[9px] mt-1 font-bold text-slate-600">Personal Essay</span>
+</div>
+<div class="aspect-square rounded-xl bg-green-50 flex flex-col items-center justify-center p-2 text-center group transition-all hover:bg-green-100">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="sports_soccer">sports_soccer</span>
+<span class="text-[9px] mt-1 font-bold text-slate-600">Extracurricular</span>
+</div>
+<div class="aspect-square rounded-xl bg-green-50 flex flex-col items-center justify-center p-2 text-center group transition-all hover:bg-green-100">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="volunteer_activism">volunteer_activism</span>
+<span class="text-[9px] mt-1 font-bold text-slate-600">Community Service</span>
+</div>
+<div class="aspect-square rounded-xl bg-green-50 flex flex-col items-center justify-center p-2 text-center group transition-all hover:bg-green-100">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="groups">groups</span>
+<span class="text-[9px] mt-1 font-bold text-slate-600">Leadership Evidence</span>
+</div>
+<div class="aspect-square rounded-xl bg-green-50 flex flex-col items-center justify-center p-2 text-center group transition-all hover:bg-green-100">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="menu_book">menu_book</span>
+<span class="text-[9px] mt-1 font-bold text-slate-600">Academic Record</span>
+</div>
+<div class="aspect-square rounded-xl bg-green-50 flex flex-col items-center justify-center p-2 text-center group transition-all hover:bg-green-100">
+<span class="material-symbols-outlined text-green-600 text-lg" data-icon="recommend">recommend</span>
+<span class="text-[9px] mt-1 font-bold text-slate-600">Recommendation</span>
+</div>
+<div class="aspect-square rounded-xl bg-slate-100 flex flex-col items-center justify-center p-2 text-center opacity-50 grayscale">
+<span class="material-symbols-outlined text-slate-400 text-lg" data-icon="military_tech">military_tech</span>
+<span class="text-[9px] mt-1 font-bold text-slate-500">Awards/Honors</span>
+</div>
+</div>
+</section>
+<!-- 4. Signing Chain Status -->
+<section class="bg-surface-container-low rounded-3xl p-6">
+<h3 class="font-headline font-bold text-on-surface mb-4">Signing Chain Status</h3>
+<div class="space-y-6 relative">
+<div class="absolute left-3.5 top-2 bottom-2 w-0.5 bg-slate-200"></div>
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-7 h-7 rounded-full bg-green-600 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Step 1: Mentor sign</p>
+<p class="text-[10px] text-green-600 font-bold uppercase tracking-widest">Verified</p>
+</div>
+</div>
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-7 h-7 rounded-full bg-green-600 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Step 2: Admin sign</p>
+<p class="text-[10px] text-green-600 font-bold uppercase tracking-widest">Verified</p>
+</div>
+</div>
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-7 h-7 rounded-full bg-amber-400 flex items-center justify-center">
+<div class="w-2 h-2 bg-white rounded-full pulsing-dot"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Step 3: Manager seal</p>
+<p class="text-[10px] text-amber-600 font-bold uppercase tracking-widest">Pending Action</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Badge Preview + Action -->
+<div class="col-span-12 lg:col-span-7 space-y-6">
+<!-- 5. Badge Payload Preview -->
+<section class="bg-[#151C27] text-white rounded-3xl p-8 shadow-2xl relative">
+<div class="absolute top-6 right-8">
+<span class="material-symbols-outlined text-white/20 text-5xl" data-icon="verified">verified</span>
+</div>
+<div class="mb-8">
+<h2 class="font-headline text-xl font-bold mb-1">Badge payload — preview before signing</h2>
+<p class="text-slate-400 text-sm">Review the cryptographic data structure that will be permanently issued.</p>
+</div>
+<div class="grid grid-cols-2 gap-y-4 gap-x-8 text-sm">
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Student</span>
+<span class="font-medium">Nguyễn Hà Minh Anh</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Program</span>
+<span class="font-medium">AMP</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Months</span>
+<span class="font-medium">14</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Milestones</span>
+<span class="font-medium">23</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Mentor sign</span>
+<span class="font-medium">18 verified</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">IELTS / SAT</span>
+<span class="font-medium">6.5 / 1320</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Auth avg</span>
+<span class="font-medium">91%</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Leadership</span>
+<span class="font-medium">Yes — 4 activities, max 8 people</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Requirements</span>
+<span class="font-medium">8/9 covered</span>
+</div>
+<div class="flex flex-col gap-1 border-b border-white/10 pb-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Expires</span>
+<span class="font-medium">March 21 2028</span>
+</div>
+<div class="col-span-2 flex flex-col gap-1 pt-2">
+<span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest">Issuer</span>
+<span class="font-medium text-primary-fixed-dim">ETEST Vietnam (Academic Atelier Certificate Authority)</span>
+</div>
+</div>
+</section>
+<!-- 6. Credential Type Selector -->
+<section class="bg-surface-container-low rounded-3xl p-6">
+<h3 class="font-headline font-bold text-on-surface mb-4">Credential Type Selector</h3>
+<div class="grid grid-cols-2 gap-4">
+<label class="relative flex flex-col gap-2 p-4 rounded-2xl border-2 border-primary bg-white cursor-pointer group">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-primary">JWT RS256</span>
+<div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center p-0.5">
+<div class="w-full h-full bg-primary rounded-full"></div>
+</div>
+</div>
+<p class="text-xs text-slate-500">Standard demo and current production signature.</p>
+</label>
+<label class="relative flex flex-col gap-2 p-4 rounded-2xl border-2 border-slate-200 bg-slate-50 opacity-60 cursor-not-allowed">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-slate-400 font-label">W3C VC Ed25519</span>
+<div class="w-5 h-5 rounded-full border-2 border-slate-200"></div>
+</div>
+<p class="text-[10px] bg-slate-200 text-slate-500 font-bold self-start px-2 py-0.5 rounded uppercase tracking-tighter">Coming Soon</p>
+</label>
+</div>
+</section>
+<!-- 7. Issue Action -->
+<div class="space-y-4">
+<button class="w-full h-[64px] bg-gradient-to-r from-[#6200EE] to-[#3700B3] text-white rounded-2xl font-headline font-extrabold text-lg shadow-xl shadow-indigo-900/20 active:scale-[0.98] transition-all hover:brightness-110 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="lock_open">lock_open</span>
+                            Issue ETESTER Badge
+                        </button>
+<div class="flex items-start gap-3 px-4">
+<span class="material-symbols-outlined text-amber-500 text-sm mt-0.5" data-icon="warning">warning</span>
+<p class="text-xs text-slate-500 leading-relaxed">
+<span class="font-bold text-slate-700">Permanent action.</span> Badge can be revoked but not deleted. Issuance creates a permanent ledger entry.
+                            </p>
+</div>
+<div class="text-center">
+<a class="text-tertiary font-bold text-sm hover:underline flex items-center justify-center gap-1 group" href="#">
+                                Preview public page first
+                                <span class="material-symbols-outlined text-xs transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 8. Already-Issued State (Reference Component) -->
+<div class="pt-8 opacity-40 border-t border-slate-200 border-dashed">
+<p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4">Reference: Post-Issuance State</p>
+<section class="bg-white rounded-3xl p-6 border-2 border-green-500/20 overflow-hidden relative">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-green-500/5 rounded-full"></div>
+<div class="bg-green-600 text-white px-6 py-2 -mx-6 -mt-6 mb-6 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="font-bold">Badge issued · ETR-2026-001234</span>
+</div>
+<span class="text-xs font-mono opacity-80">TS: 2023-08-21T14:22:01Z</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-24 h-24 bg-slate-100 rounded-xl p-2 flex items-center justify-center border border-slate-200">
+<img alt="QR Preview" class="w-full h-full object-contain mix-blend-multiply" data-alt="Security QR Code for Badge Verification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsfL4bDZ7yZCr_74ExUwlwcg60_SkG45ptlvH0kq8-6FuQyMh1IhfN5O-zyyrhSUKOhdGV8O5oOeLwfXLwhx1f-BVhqK6IbATJXQ3NN7h7c2dQKed7ySKnTwP97Y9XYRWJJyXYMBbfi-W8JwzRRWguBhPuwp7GiG5NK0dTpLvYu6_acwsJ50Qsk12La6tzSsYLHKs97bpCFDFKJ3kTnVXmdcSzfsmpqG7VHISNi6YUd8caR_uBMzku7Tl-BQKzoG-c3urI-2cWuts"/>
+</div>
+<div class="flex-1 space-y-3">
+<button class="w-full py-2 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl text-xs font-bold hover:bg-tertiary-fixed-dim transition-colors">
+                                        View public page
+                                    </button>
+<button class="w-full py-2 text-error text-xs font-bold border border-error/20 rounded-xl hover:bg-error-container/20 transition-colors">
+                                        Revoke badge
+                                    </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

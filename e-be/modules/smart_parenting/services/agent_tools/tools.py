@@ -178,13 +178,16 @@ def _student_payload(student: Student) -> dict[str, Any]:
     }
 
 
-async def resolve_parent_id(*, db: AsyncSession, user_id: int, user_email: str) -> int | None:
+async def resolve_parent_id(*, db: AsyncSession, user_id: int, user_email: str | None = None) -> int | None:
     """Resolve parent_id from authenticated user context."""
-    result = await db.execute(select(Parent.parent_id).where(Parent.email == user_email))
-    parent_id = result.scalar_one_or_none()
-    if parent_id is not None:
-        return parent_id
+    # Primary lookup: via user_id FK (consistent with /me and new schema)
+    if user_id:
+        result = await db.execute(select(Parent.parent_id).where(Parent.user_id == user_id))
+        parent_id = result.scalar_one_or_none()
+        if parent_id is not None:
+            return parent_id
 
+    # Fallback: direct parent_id match (for legacy cases)
     result = await db.execute(select(Parent.parent_id).where(Parent.parent_id == user_id))
     return result.scalar_one_or_none()
 

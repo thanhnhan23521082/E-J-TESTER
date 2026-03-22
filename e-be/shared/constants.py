@@ -36,10 +36,16 @@ class MilestoneType(str, Enum):
     ESSAY_DRAFT = "essay_draft"
     ESSAY_FINAL = "essay_final"
     SAT_MOCK = "sat_mock"
+    TOEFL_MOCK = "toefl_mock"
+    MOCK_TEST = "mock_test"
     EXTRACURRICULAR = "extracurricular"
     CONSULTATION = "consultation"
+    MENTOR_SESSION = "mentor_session"
     CAMP = "camp"
     CSR = "csr"
+    AWARD = "award"
+    ACADEMIC_RECORD = "academic_record"
+    RECOMMENDATION = "recommendation"
     TARGET_ACHIEVED = "target_achieved"
 
 

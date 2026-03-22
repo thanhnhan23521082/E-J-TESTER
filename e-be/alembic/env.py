@@ -28,12 +28,20 @@ from shared.model import (          # noqa: F401
     User,
     Mentor,
     Parent,
+    Manager,
     Student,
     School,
     Course,
     BehavioralLog,
     Conversation,
     Milestone,
+    ETESTERCore,
+    MilestoneTraceLink,
+    MilestoneArtifact,
+    ArtifactForm,
+    MentorVerification,
+    AuthScoringResult,
+    ETESTERBadge,
 )
 
 target_metadata = Base.metadata

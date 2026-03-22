@@ -21,6 +21,7 @@ from sqlalchemy import (
     CheckConstraint,
     Date,
     DateTime,
+    Float,
     ForeignKey,
     Index,
     Integer,
@@ -75,6 +76,20 @@ class User(Base, TimestampMixin):
     full_name: Mapped[str | None] = mapped_column(String(255), nullable=True)
     phone: Mapped[str | None] = mapped_column(String(50), nullable=True)
 
+    # Relations
+    student: Mapped["Student | None"] = relationship(
+        "Student", back_populates="user", uselist=False
+    )
+    mentor: Mapped["Mentor | None"] = relationship(
+        "Mentor", back_populates="user", uselist=False
+    )
+    parent: Mapped["Parent | None"] = relationship(
+        "Parent", back_populates="user", uselist=False
+    )
+    manager: Mapped["Manager | None"] = relationship(
+        "Manager", back_populates="user", uselist=False
+    )
+
     def __repr__(self) -> str:
         return f"<User(id={self.id}, email={self.email}, role={self.role})>"
 
@@ -90,13 +105,13 @@ class Mentor(Base, TimestampMixin):
 
     __tablename__ = "mentors"
     __table_args__ = (
-        Index("idx_mentors_email", "email"),
         Index("mentors_programs_gin", "programs", postgresql_using="gin"),
     )
 
     mentor_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
-    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    user_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=True,
+    )
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     specialty: Mapped[str | None] = mapped_column(String(255), nullable=True)
     bio: Mapped[str | None] = mapped_column(Text, nullable=True)
@@ -106,6 +121,7 @@ class Mentor(Base, TimestampMixin):
     active_students: Mapped[int] = mapped_column(Integer, default=0)
 
     # Relations
+    user: Mapped["User | None"] = relationship("User", back_populates="mentor", uselist=False)
     students: Mapped[list["Student"]] = relationship("Student", back_populates="mentor")
     milestones: Mapped[list["Milestone"]] = relationship("Milestone", back_populates="mentor")
 
@@ -124,13 +140,13 @@ class Parent(Base, TimestampMixin):
 
     __tablename__ = "parents"
     __table_args__ = (
-        Index("idx_parents_email", "email"),
         Index("idx_parents_student_id", "student_id"),
     )
 
     parent_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
-    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    user_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=True,
+    )
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     phone: Mapped[str | None] = mapped_column(String(50), nullable=True)
     telegram_id: Mapped[str | None] = mapped_column(String(100), nullable=True)
@@ -139,6 +155,7 @@ class Parent(Base, TimestampMixin):
     )  # bidirectional 1:1
 
     # Relations
+    user: Mapped["User | None"] = relationship("User", back_populates="parent", uselist=False)
     student: Mapped["Student | None"] = relationship(
         "Student",
         back_populates="parent",
@@ -164,16 +181,18 @@ class Manager(Base, TimestampMixin):
     """
 
     __tablename__ = "managers"
-    __table_args__ = (
-        Index("idx_managers_email", "email"),
-    )
+    __table_args__ = ()
 
     manager_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
-    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    user_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=True,
+    )
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     phone: Mapped[str | None] = mapped_column(String(50), nullable=True)
     department: Mapped[str | None] = mapped_column(String(255), nullable=True)
+
+    # Relations
+    user: Mapped["User | None"] = relationship("User", back_populates="manager", uselist=False)
 
     def __repr__(self) -> str:
         return f"<Manager(id={self.manager_id}, name={self.full_name})>"
@@ -186,13 +205,15 @@ class Manager(Base, TimestampMixin):
 class Student(Base, TimestampMixin):
     """
     Student — học viên.
+    FK user_id:   1:1 với User (auth account).
     FK parent_id: 1:1 với Parent.
-    FK mentor_id:  N:1 với Mentor.
+    FK mentor_id: N:1 với Mentor.
     Digest fields: tự cập nhật qua trigger trên milestones.
     """
 
     __tablename__ = "students"
     __table_args__ = (
+        Index("idx_students_user_id", "user_id"),
         Index("idx_students_parent_id", "parent_id"),
         Index("idx_students_mentor_id", "mentor_id"),
         Index("idx_students_program", "program"),
@@ -204,6 +225,14 @@ class Student(Base, TimestampMixin):
 
     # PK
     student_id: Mapped[str] = mapped_column(String(50), primary_key=True)
+
+    # FK — 1:1 with User (auth account)
+    user_id: Mapped[int | None] = mapped_column(
+        Integer,
+        ForeignKey("users.id", ondelete="CASCADE"),
+        unique=True,
+        nullable=True,
+    )
 
     # Identity
     name: Mapped[str] = mapped_column(String(255), nullable=False)
@@ -249,6 +278,9 @@ class Student(Base, TimestampMixin):
     upsell_cooldown: Mapped[date | None] = mapped_column(Date, nullable=True)
 
     # Relations
+    user: Mapped["User | None"] = relationship(
+        "User", back_populates="student", uselist=False
+    )
     parent: Mapped["Parent | None"] = relationship(
         "Parent", back_populates="student", foreign_keys=[parent_id]
     )
@@ -261,6 +293,11 @@ class Student(Base, TimestampMixin):
     )
     milestones: Mapped[list["Milestone"]] = relationship(
         "Milestone", back_populates="student", cascade="all, delete-orphan"
+    )
+
+    # ETESTER relationships
+    etester_core: Mapped["ETESTERCore | None"] = relationship(
+        "ETESTERCore", back_populates="student", uselist=False
     )
 
     def __repr__(self) -> str:
@@ -501,8 +538,374 @@ class Milestone(Base):
     student: Mapped["Student"] = relationship("Student", back_populates="milestones")
     mentor: Mapped["Mentor | None"] = relationship("Mentor", back_populates="milestones")
 
+    # ETESTER relationships
+    artifact: Mapped["MilestoneArtifact | None"] = relationship(
+        "MilestoneArtifact", back_populates="milestone", uselist=False
+    )
+    form: Mapped["ArtifactForm | None"] = relationship(
+        "ArtifactForm", back_populates="milestone", uselist=False
+    )
+    trace_links_from: Mapped[list["MilestoneTraceLink"]] = relationship(
+        "MilestoneTraceLink",
+        foreign_keys="MilestoneTraceLink.from_milestone_id",
+        back_populates="from_milestone",
+    )
+    trace_links_to: Mapped[list["MilestoneTraceLink"]] = relationship(
+        "MilestoneTraceLink",
+        foreign_keys="MilestoneTraceLink.to_milestone_id",
+        back_populates="to_milestone",
+    )
+    auth_results: Mapped[list["AuthScoringResult"]] = relationship(
+        "AuthScoringResult", back_populates="milestone"
+    )
+
     def __repr__(self) -> str:
         return f"<Milestone(id={self.milestone_id}, type={self.type}, status={self.status})>"
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ETESTER Module v4 — 7 models
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Valid relationship types for MilestoneTraceLink
+VALID_RELATIONSHIP_TYPES = (
+    "experience_source", "revision_of", "mentor_guided",
+    "skill_applied", "score_progression", "recommends",
+)
+
+
+# ── ETESTERCore — single source of truth per student (1:1) ───────────────────
+
+class ETESTERCore(Base, TimestampMixin):
+    __tablename__ = "etester_core"
+    __table_args__ = (
+        Index("idx_etester_core_student", "student_id", unique=True),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    student_id: Mapped[str] = mapped_column(
+        String(50),
+        ForeignKey("students.student_id", ondelete="CASCADE"),
+        unique=True,
+        nullable=False,
+    )
+
+    academic_score: Mapped[float | None] = mapped_column(Numeric(5, 2), nullable=True)
+    writing_growth: Mapped[float | None] = mapped_column(Numeric(5, 2), nullable=True)
+
+    skills: Mapped[list | None] = mapped_column(JSONB, default=list)
+    mentor_verifications: Mapped[int] = mapped_column(Integer, default=0)
+    total_contributions: Mapped[int] = mapped_column(Integer, default=0)
+    contributor_breakdown: Mapped[dict | None] = mapped_column(JSONB, default=dict)
+
+    pending_trace_links: Mapped[int] = mapped_column(Integer, default=0)
+    pending_approvals: Mapped[int] = mapped_column(Integer, default=0)
+
+    requirements_coverage: Mapped[dict | None] = mapped_column(JSONB, default=dict)
+
+    parent_support_level: Mapped[str] = mapped_column(String(20), default="low")
+    parent_engagement_count: Mapped[int] = mapped_column(Integer, default=0)
+    institutional_stamp: Mapped[bool] = mapped_column(Boolean, default=False)
+    stamped_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    stamped_by: Mapped[int | None] = mapped_column(
+        Integer,
+        ForeignKey("mentors.mentor_id", ondelete="SET NULL"),
+        nullable=True,
+    )
+    consistency_score: Mapped[int] = mapped_column(Integer, default=0)
+
+    narrative_en: Mapped[str | None] = mapped_column(Text, nullable=True)
+    narrative_vn: Mapped[str | None] = mapped_column(Text, nullable=True)
+    narrative_updated_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    badge_issued: Mapped[bool] = mapped_column(Boolean, default=False)
+
+    # Relationships
+    student: Mapped["Student"] = relationship("Student", back_populates="etester_core", uselist=False)
+    badge: Mapped["ETESTERBadge | None"] = relationship(
+        "ETESTERBadge", back_populates="core", uselist=False
+    )
+
+    def __repr__(self) -> str:
+        return f"<ETESTERCore(student={self.student_id}, contributions={self.total_contributions})>"
+
+
+# ── MilestoneTraceLink — Approach C linking ────────────────────────────────────
+
+class MilestoneTraceLink(Base, TimestampMixin):
+    __tablename__ = "milestone_trace_links"
+    __table_args__ = (
+        UniqueConstraint("from_milestone_id", "to_milestone_id", name="uq_trace_link_pair"),
+        CheckConstraint("confidence >= 0.0 AND confidence <= 1.0", name="chk_trace_confidence"),
+        CheckConstraint(
+            f"relationship_type IN ({', '.join(repr(t) for t in VALID_RELATIONSHIP_TYPES)})",
+            name="chk_relationship_type",
+        ),
+        Index("idx_trace_links_student", "student_id"),
+        Index("idx_trace_links_pending", "student_id", "confirmed_by_mentor"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    from_milestone_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("milestones.id", ondelete="RESTRICT"),
+        nullable=False,
+    )
+    to_milestone_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("milestones.id", ondelete="RESTRICT"),
+        nullable=False,
+    )
+    student_id: Mapped[str] = mapped_column(
+        String(50),
+        ForeignKey("students.student_id", ondelete="CASCADE"),
+        nullable=False,
+    )
+
+    relationship_type: Mapped[str] = mapped_column(String(30), nullable=False)
+    evidence: Mapped[str | None] = mapped_column(Text, nullable=True)
+    confidence: Mapped[float] = mapped_column(Float, default=0.0)
+
+    student_context_note: Mapped[str | None] = mapped_column(Text, nullable=True)
+    student_noted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    suggested_by_ai: Mapped[bool] = mapped_column(Boolean, default=True)
+    confirmed_by_mentor: Mapped[bool] = mapped_column(Boolean, default=False)
+    confirmed_by_mentor_id: Mapped[int | None] = mapped_column(
+        Integer,
+        ForeignKey("mentors.mentor_id", ondelete="SET NULL"),
+        nullable=True,
+    )
+    confirmed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    is_active: Mapped[bool] = mapped_column(Boolean, default=True)
+
+    # Relationships
+    from_milestone: Mapped["Milestone"] = relationship(
+        "Milestone", foreign_keys=[from_milestone_id], back_populates="trace_links_from"
+    )
+    to_milestone: Mapped["Milestone"] = relationship(
+        "Milestone", foreign_keys=[to_milestone_id], back_populates="trace_links_to"
+    )
+
+    def __repr__(self) -> str:
+        return f"<TraceLink(from={self.from_milestone_id}→to={self.to_milestone_id}, type={self.relationship_type})>"
+
+
+# ── MilestoneArtifact — hash + 3-stage signing ───────────────────────────────
+
+class MilestoneArtifact(Base):
+    __tablename__ = "milestone_artifacts"
+    __table_args__ = (
+        Index("idx_milestone_artifacts_student", "student_id"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    milestone_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("milestones.id", ondelete="CASCADE"),
+        unique=True,
+        nullable=False,
+    )
+    student_id: Mapped[str] = mapped_column(
+        String(50),
+        ForeignKey("students.student_id", ondelete="CASCADE"),
+        nullable=False,
+    )
+
+    full_text_content: Mapped[str | None] = mapped_column(Text, nullable=True)
+    artifact_hash: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    prev_artifact_hash: Mapped[str | None] = mapped_column(String(64), nullable=True)
+
+    vc_signature: Mapped[str | None] = mapped_column(Text, nullable=True)
+    mentor_signed: Mapped[bool] = mapped_column(Boolean, default=False)
+    admin_signed: Mapped[bool] = mapped_column(Boolean, default=False)
+    manager_signed: Mapped[bool] = mapped_column(Boolean, default=False)
+    signed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+
+    # Relationships
+    milestone: Mapped["Milestone"] = relationship("Milestone", back_populates="artifact")
+
+    def __repr__(self) -> str:
+        return f"<MilestoneArtifact(milestone={self.milestone_id})>"
+
+
+# ── ArtifactForm — structured form data + leadership ──────────────────────────
+
+class ArtifactForm(Base, TimestampMixin):
+    __tablename__ = "artifact_forms"
+    __table_args__ = (
+        Index("idx_artifact_forms_student", "student_id"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    milestone_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("milestones.id", ondelete="CASCADE"),
+        unique=True,
+        nullable=False,
+    )
+    student_id: Mapped[str] = mapped_column(
+        String(50),
+        ForeignKey("students.student_id", ondelete="CASCADE"),
+        nullable=False,
+    )
+
+    activity_type: Mapped[str] = mapped_column(String(50), nullable=False)
+    form_version: Mapped[str] = mapped_column(String(10), default="1.0")
+    form_data: Mapped[dict | None] = mapped_column(JSONB, default=dict)
+
+    blooms_level: Mapped[str | None] = mapped_column(String(30), nullable=True)
+    skills_practiced: Mapped[list | None] = mapped_column(JSONB, default=list)
+
+    had_leadership_role: Mapped[bool] = mapped_column(Boolean, default=False)
+    leadership_role_title: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    leadership_team_size: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    leadership_outcome: Mapped[str | None] = mapped_column(String(500), nullable=True)
+
+    mentor_comment: Mapped[str | None] = mapped_column(Text, nullable=True)
+    mentor_comment_by: Mapped[int | None] = mapped_column(
+        Integer,
+        ForeignKey("mentors.mentor_id", ondelete="SET NULL"),
+        nullable=True,
+    )
+
+    # Relationships
+    milestone: Mapped["Milestone"] = relationship("Milestone", back_populates="form")
+
+    def __repr__(self) -> str:
+        return f"<ArtifactForm(milestone={self.milestone_id}, type={self.activity_type})>"
+
+
+# ── MentorVerification — append-only audit log ─────────────────────────────────
+
+class MentorVerification(Base):
+    __tablename__ = "mentor_verifications"
+    __table_args__ = (
+        Index("idx_mentor_verif_student", "student_id"),
+        Index("idx_mentor_verif_milestone", "milestone_id"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    milestone_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("milestones.id", ondelete="RESTRICT"),
+        nullable=False,
+    )
+    student_id: Mapped[str] = mapped_column(
+        String(50),
+        ForeignKey("students.student_id", ondelete="CASCADE"),
+        nullable=False,
+    )
+
+    verifier_id: Mapped[int] = mapped_column(Integer, nullable=False)
+    verifier_type: Mapped[str] = mapped_column(String(20), nullable=False)
+
+    action_type: Mapped[str] = mapped_column(String(30), nullable=False)
+    note: Mapped[str | None] = mapped_column(Text, nullable=True)
+    trace_link_id: Mapped[int | None] = mapped_column(
+        Integer,
+        ForeignKey("milestone_trace_links.id", ondelete="SET NULL"),
+        nullable=True,
+    )
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+
+    def __repr__(self) -> str:
+        return f"<MentorVerification(milestone={self.milestone_id}, action={self.action_type})>"
+
+
+# ── AuthScoringResult — 7-dimension scoring ───────────────────────────────────
+
+class AuthScoringResult(Base):
+    __tablename__ = "auth_scoring_results"
+    __table_args__ = (
+        Index("idx_auth_scoring_student", "student_id"),
+        Index("idx_auth_scoring_milestone", "milestone_id"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    milestone_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("milestones.id", ondelete="CASCADE"),
+        nullable=False,
+    )
+    student_id: Mapped[str] = mapped_column(
+        String(50),
+        ForeignKey("students.student_id", ondelete="CASCADE"),
+        nullable=False,
+    )
+
+    auth_score: Mapped[int] = mapped_column(Integer, nullable=False)
+    verdict: Mapped[str] = mapped_column(String(30), nullable=False)
+
+    dimension_scores: Mapped[dict | None] = mapped_column(JSONB, default=dict)
+    explaining_artifacts: Mapped[list | None] = mapped_column(JSONB, default=list)
+
+    explanation_en: Mapped[str | None] = mapped_column(Text, nullable=True)
+    explanation_vn: Mapped[str | None] = mapped_column(Text, nullable=True)
+    graph_snapshot: Mapped[dict | None] = mapped_column(JSONB, default=dict)
+
+    scored_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+
+    # Relationships
+    milestone: Mapped["Milestone"] = relationship("Milestone", back_populates="auth_results")
+
+    def __repr__(self) -> str:
+        return f"<AuthScoringResult(milestone={self.milestone_id}, score={self.auth_score})>"
+
+
+# ── ETESTERBadge — issued credential ───────────────────────────────────────────
+
+class ETESTERBadge(Base):
+    __tablename__ = "etester_badges"
+    __table_args__ = (
+        Index("idx_etester_badges_student", "student_id"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    core_id: Mapped[int] = mapped_column(
+        Integer,
+        ForeignKey("etester_core.id", ondelete="CASCADE"),
+        unique=True,
+        nullable=False,
+    )
+    student_id: Mapped[str] = mapped_column(
+        String(50),
+        ForeignKey("students.student_id", ondelete="CASCADE"),
+        nullable=False,
+    )
+
+    badge_uid: Mapped[str] = mapped_column(String(50), unique=True, nullable=False)
+    credential_type: Mapped[str] = mapped_column(String(30), default="jwt_rs256")
+    signed_token: Mapped[str] = mapped_column(Text, nullable=False)
+    issuer_did: Mapped[str] = mapped_column(String(100), default="did:web:etest.edu.vn")
+
+    badge_payload: Mapped[dict | None] = mapped_column(JSONB, default=dict)
+
+    issued_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
+    expires_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    is_revoked: Mapped[bool] = mapped_column(Boolean, default=False)
+    revoked_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    revoke_reason: Mapped[str | None] = mapped_column(Text, nullable=True)
+    verify_count: Mapped[int] = mapped_column(Integer, default=0)
+    last_verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    # Relationships
+    core: Mapped["ETESTERCore"] = relationship("ETESTERCore", back_populates="badge")
+
+    def __repr__(self) -> str:
+        return f"<ETESTERBadge(uid={self.badge_uid}, student={self.student_id})>"
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -524,4 +927,13 @@ __all__ = [
     "BehavioralLog",
     "Conversation",
     "Milestone",
+    # ETESTER
+    "ETESTERCore",
+    "MilestoneTraceLink",
+    "MilestoneArtifact",
+    "ArtifactForm",
+    "MentorVerification",
+    "AuthScoringResult",
+    "ETESTERBadge",
+    "VALID_RELATIONSHIP_TYPES",
 ]
