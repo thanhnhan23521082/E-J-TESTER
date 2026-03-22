@@ -19,6 +19,7 @@ from modules.smart_parenting.schemas import (
     BehavioralLogListResponse,
     BehavioralLogResponse,
     DigestResponse,
+    ParentHomeResponse,
     ParentMeResponse,
     StudentProfile,
     UpsellResponse,
@@ -232,3 +233,56 @@ async def get_upsell(
     based on their current profile and progress.
     """
     return await upsell_service(student_id=student_id, db=db)
+
+
+@router.get(
+    "/parent-home/{student_id}",
+    response_model=ParentHomeResponse,
+    summary="Aggregated parent home payload",
+)
+async def get_parent_home(
+    student_id: str,
+    days: Annotated[int, Query(ge=3, le=30)] = 14,
+    db: AsyncSession = Depends(get_db),
+    _current_user: User = Depends(get_current_user),
+) -> ParentHomeResponse:
+    """Return digest + wellbeing + upsell in one API for parent homepage."""
+    student = await get_student(student_id, db)
+    if not student:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=404, detail="Student not found")
+
+    logs = await get_behavioral_logs(student_id, days=days, db=db)
+    wellbeing = await wellbeing_check_service_from_logs(student_id=student_id, logs=logs)
+    digest = await digest_service(student_id=student_id, days=min(days, 7), db=db)
+    upsell = await upsell_service(student_id=student_id, db=db)
+
+    profile = StudentProfile(
+        student_id=student.student_id,
+        name=student.name,
+        ielts_score=student.ielts_score,
+        sat_score=student.sat_score,
+        gpa=student.gpa,
+        months_enrolled=student.months_enrolled,
+        program=student.program,
+        skill_breakdown=student.skill_breakdown,
+        target_schools=student.target_schools or [],
+        parent_id=student.parent_id,
+        mentor_id=student.mentor_id,
+        progress_pct=student.progress_pct,
+        milestones_done=student.milestones_done,
+        next_deadline=student.next_deadline.isoformat() if student.next_deadline else None,
+        next_deadline_label=student.next_deadline_label,
+        days_left=student.days_left,
+        priority_action=student.priority_action,
+        weakest_skill=student.weakest_skill,
+        created_at=student.created_at.isoformat(),
+    )
+
+    return ParentHomeResponse(
+        student_id=student_id,
+        profile=profile,
+        wellbeing=wellbeing,
+        digest=digest,
+        upsell=upsell,
+    )

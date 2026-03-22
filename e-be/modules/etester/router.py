@@ -5,6 +5,8 @@ FastAPI router for ETESTER v4 endpoints.
 All routes require Bearer authentication.
 """
 
+import logging
+
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -38,6 +40,27 @@ from shared.deps import get_current_user
 from shared.model import User
 
 router = APIRouter(prefix="/api/etester", tags=["etester"])
+logger = logging.getLogger(__name__)
+
+
+def _to_float(value):
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _normalize_skills(value):
+    if not isinstance(value, dict):
+        return None
+    result = {}
+    for key, raw in value.items():
+        casted = _to_float(raw)
+        if casted is not None:
+            result[str(key)] = casted
+    return result or None
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

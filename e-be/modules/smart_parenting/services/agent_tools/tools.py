@@ -6,7 +6,9 @@ from contextvars import ContextVar, Token
 from dataclasses import dataclass
 from datetime import date, datetime
 from decimal import Decimal
+import re
 from typing import Any
+from urllib.parse import urlparse
 
 import httpx
 from langchain_core.tools import tool
@@ -58,6 +60,98 @@ def _to_jsonable(value: Any) -> Any:
     if isinstance(value, dict):
         return {k: _to_jsonable(v) for k, v in value.items()}
     return value
+
+
+def _extract_keywords(query: str) -> list[str]:
+    tokens = re.findall(r"\w+", query.lower())
+    stopwords = {
+        "la", "là", "va", "và", "cho", "toi", "tôi", "cua", "của", "nhung", "những",
+        "thong", "tin", "thông", "về", "ve", "các", "cac", "truong", "trường",
+    }
+    return [t for t in tokens if len(t) >= 3 and t not in stopwords][:8]
+
+
+def _build_international_search_query(query: str) -> str:
+    query_normalized = query.lower()
+    study_abroad_markers = [
+        "du hoc",
+        "du học",
+        "hoc bong",
+        "học bổng",
+        "truong dai hoc",
+        "trường đại học",
+        "university",
+        "college",
+        "scholarship",
+        "study abroad",
+    ]
+    if any(marker in query_normalized for marker in study_abroad_markers):
+        return f"{query} international universities scholarships study abroad"
+    return f"{query} international"
+
+
+def _clean_html_to_text(html: str) -> str:
+    # Remove scripts/styles then strip tags to get rough readable text.
+    text = re.sub(r"(?is)<script.*?>.*?</script>", " ", html)
+    text = re.sub(r"(?is)<style.*?>.*?</style>", " ", text)
+    text = re.sub(r"(?s)<[^>]+>", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def _extract_relevant_sentences(text: str, keywords: list[str], max_sentences: int = 3) -> list[str]:
+    if not text:
+        return []
+    chunks = re.split(r"(?<=[\.\!\?])\s+", text)
+    picked: list[str] = []
+    for chunk in chunks:
+        normalized = chunk.lower()
+        if keywords and not any(k in normalized for k in keywords):
+            continue
+        if len(chunk) < 40:
+            continue
+        picked.append(chunk[:280].strip())
+        if len(picked) >= max_sentences:
+            break
+    if picked:
+        return picked
+    # fallback: first long chunks
+    return [c[:280].strip() for c in chunks if len(c) >= 60][:max_sentences]
+
+
+def _is_education_result(query: str, item: dict[str, Any]) -> bool:
+    haystack = " ".join(
+        [
+            str(item.get("title") or ""),
+            str(item.get("description") or ""),
+            " ".join(item.get("snippets") or []),
+        ]
+    ).lower()
+    query_lower = query.lower()
+    edu_markers = [
+        "university",
+        "truong",
+        "trường",
+        "đại học",
+        "dai hoc",
+        "college",
+        "ranking",
+        "top",
+        "xếp hạng",
+        "xep hang",
+        "scholarship",
+        "học bổng",
+        "hoc bong",
+        "ielts",
+        "admission",
+        "tuyển sinh",
+        "tuyen sinh",
+    ]
+    # If query is clearly education-related, drop noisy non-education pages.
+    query_is_edu = any(marker in query_lower for marker in edu_markers)
+    if not query_is_edu:
+        return True
+    return any(marker in haystack for marker in edu_markers)
 
 
 def _student_payload(student: Student) -> dict[str, Any]:
@@ -320,6 +414,10 @@ async def get_school_info(*, db: AsyncSession, school_names: list[str]) -> dict[
     if not school_names:
         return {"schools": []}
 
+    school_names = [name.strip() for name in school_names if isinstance(name, str) and name.strip()]
+    if not school_names:
+        return {"schools": []}
+
     exact_query = select(School).where(School.data["name"].astext.in_(school_names))
     result = await db.execute(exact_query)
     rows = list(result.scalars().all())
@@ -415,69 +513,183 @@ def chitchat(query: str) -> dict[str, Any]:
     return {
         "type": "chitchat",
         "query": query,
-        "instruction": "Tra loi tu kien thuc tong quat, khong can truy van DB.",
+        "instruction": "Trả lời từ kiến thức tổng quát, không cần truy vấn DB.",
+    }
+
+
+def _extract_target_schools(profile: dict[str, Any]) -> list[dict[str, Any]]:
+    schools = profile.get("target_schools") if isinstance(profile, dict) else []
+    if not isinstance(schools, list):
+        return []
+    cleaned: list[dict[str, Any]] = []
+    for item in schools:
+        if isinstance(item, dict):
+            cleaned.append(item)
+    return cleaned
+
+
+def _to_float(value: Any) -> float | None:
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+async def assess_school_fit(
+    *,
+    db: AsyncSession,
+    student_id: str,
+    question: str,
+) -> dict[str, Any]:
+    profile = await get_student_profile(db=db, student_id=student_id)
+    behavior = await get_behavioral_logs(db=db, student_id=student_id, days=14)
+
+    ielts_score = _to_float(profile.get("ielts_score"))
+    gpa = _to_float(profile.get("gpa"))
+    target_schools = _extract_target_schools(profile)
+
+    eligibility: list[dict[str, Any]] = []
+    for school in target_schools:
+        school_name = school.get("name")
+        required_ielts = _to_float(school.get("ieltsRequired"))
+        gap = _to_float(school.get("gapIelts"))
+        if required_ielts is not None and ielts_score is not None:
+            computed_gap = round(required_ielts - ielts_score, 2)
+            gap = computed_gap if gap is None else gap
+            status = "eligible" if computed_gap <= 0 else "not_yet"
+        else:
+            status = "unknown"
+
+        eligibility.append(
+            {
+                "school": school_name,
+                "country": school.get("country"),
+                "required_ielts": required_ielts,
+                "current_ielts": ielts_score,
+                "ielts_gap": gap,
+                "days_until_deadline": school.get("daysUntilDeadline"),
+                "status": status,
+            }
+        )
+
+    web_queries = [
+        question,
+        f"scholarship requirements for IELTS {profile.get('program', 'university')} students",
+    ]
+    web_sources: list[dict[str, Any]] = []
+    for q in web_queries:
+        web_result = await web_search(q, count=3)
+        for item in web_result.get("results", []):
+            if isinstance(item, dict):
+                web_sources.append(
+                    {
+                        "title": item.get("title"),
+                        "url": item.get("url"),
+                        "description": item.get("description"),
+                    }
+                )
+
+    pace_signal = behavior.get("summary", {}) if isinstance(behavior, dict) else {}
+    fit_signals = {
+        "program": profile.get("program"),
+        "ielts_score": ielts_score,
+        "gpa": gpa,
+        "weakest_skill": profile.get("weakest_skill"),
+        "late_night_count_14d": pace_signal.get("late_night_count"),
+        "studied_days_14d": pace_signal.get("studied_days"),
+        "avg_duration_min_14d": pace_signal.get("avg_duration_min"),
+    }
+
+    return {
+        "student_id": student_id,
+        "question": question,
+        "fit_signals": fit_signals,
+        "target_school_eligibility": eligibility,
+        "scholarship_research_sources": web_sources[:6],
     }
 
 
 async def web_search(query: str, count: int = 3) -> dict[str, Any]:
-    api_key = settings.BRAVE_SEARCH_API_KEY
+    api_key = settings.SERPAPI_API_KEY
     if not api_key:
         return {
             "query": query,
             "results": [],
-            "error": "BRAVE_SEARCH_API_KEY is not configured",
+            "error": "SERPAPI_API_KEY is not configured",
         }
 
-    url = "https://api.search.brave.com/res/v1/web/search"
-    headers = {
-        "Accept": "application/json",
-        "Accept-Encoding": "gzip",
-        "X-Subscription-Token": api_key,
-    }
+    search_query = _build_international_search_query(query)
+    url = "https://serpapi.com/search.json"
     params = {
-        "q": query,
-        "count": max(1, min(count, 10)),
-        "search_lang": "vi",
-        "country": "VN",
-        "text_decorations": False,
-        "spellcheck": True,
+        "engine": "google",
+        "q": search_query,
+        "num": max(1, min(count, 10)),
+        "api_key": api_key,
+        "hl": "en",
+        "gl": "us",
+        "google_domain": "google.com",
     }
 
     async with httpx.AsyncClient(timeout=10.0) as client:
         try:
-            response = await client.get(url, headers=headers, params=params)
-            if response.status_code == 422:
-                # Some Brave plans/regions reject certain locale combinations.
-                fallback_params = {
-                    **params,
-                    "search_lang": "en",
-                    "country": "US",
-                }
-                response = await client.get(url, headers=headers, params=fallback_params)
+            response = await client.get(url, params=params)
             response.raise_for_status()
             data = response.json()
         except httpx.HTTPStatusError as exc:
             return {
                 "query": query,
                 "results": [],
-                "error": f"Brave API HTTP {exc.response.status_code}",
+                "error": f"SerpAPI HTTP {exc.response.status_code}",
             }
         except httpx.HTTPError as exc:
             return {
                 "query": query,
                 "results": [],
-                "error": f"Brave API request failed: {exc}",
+                "error": f"SerpAPI request failed: {exc}",
             }
 
+    keywords = _extract_keywords(query)
     results: list[dict[str, Any]] = []
-    for item in data.get("web", {}).get("results", []):
+    organic_results = data.get("organic_results", [])
+    if not isinstance(organic_results, list):
+        organic_results = []
+
+    for item in organic_results:
+        url = item.get("link")
+        page_snippets: list[str] = []
+        crawl_error: str | None = None
+
+        if isinstance(url, str) and url.startswith(("http://", "https://")):
+            parsed = urlparse(url)
+            # Skip obvious binary/doc links for lightweight crawl.
+            if not parsed.path.lower().endswith((".pdf", ".zip", ".doc", ".docx", ".ppt", ".pptx")):
+                try:
+                    async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as crawler:
+                        page_resp = await crawler.get(
+                            url,
+                            headers={"User-Agent": "Mozilla/5.0 (ETEST Parent Agent)"},
+                        )
+                        page_resp.raise_for_status()
+                        raw_text = _clean_html_to_text(page_resp.text[:200000])
+                        page_snippets = _extract_relevant_sentences(raw_text, keywords, max_sentences=3)
+                except httpx.HTTPError as exc:
+                    crawl_error = f"crawl_failed: {exc}"
+
         results.append(
             {
                 "title": item.get("title"),
-                "url": item.get("url"),
-                "description": item.get("description"),
+                "url": url,
+                "description": item.get("snippet"),
+                "snippets": page_snippets,
+                "crawl_error": crawl_error,
             }
         )
+
+    filtered_results = [item for item in results if _is_education_result(query, item)]
+    if filtered_results:
+        results = filtered_results
 
     return {
         "query": query,
@@ -507,7 +719,7 @@ async def escalate(*, db: AsyncSession, parent_id: int, student_id: str, reason:
     return {
         "escalated": True,
         "reason": reason,
-        "message_to_parent": "Cau hoi nay can tu van vien ETEST ho tro truc tiep de dam bao thong tin chinh xac.",
+        "message_to_parent": "Câu hỏi này cần tư vấn viên ETEST hỗ trợ trực tiếp để đảm bảo thông tin chính xác.",
     }
 
 
@@ -521,6 +733,7 @@ TOOL_REGISTRY = {
     "get_school_info": get_school_info,
     "get_weekly_digest": get_weekly_digest,
     "get_progress_summary": get_progress_summary,
+    "assess_school_fit": assess_school_fit,
     "chitchat": chitchat,
     "web_search": web_search,
     "escalate": escalate,
@@ -597,10 +810,19 @@ async def search_courses_tool(
 
 
 @tool("get_school_info")
-async def get_school_info_tool(school_names: list[str]) -> dict[str, Any]:
+async def get_school_info_tool(school_names: list[str | dict[str, Any]]) -> dict[str, Any]:
     """Get school metadata matched by school names."""
     ctx = _require_runtime_context()
-    return await get_school_info(db=ctx.db, school_names=school_names)
+    normalized_names: list[str] = []
+    for item in school_names:
+        if isinstance(item, str) and item.strip():
+            normalized_names.append(item.strip())
+            continue
+        if isinstance(item, dict):
+            name = item.get("name")
+            if isinstance(name, str) and name.strip():
+                normalized_names.append(name.strip())
+    return await get_school_info(db=ctx.db, school_names=normalized_names)
 
 
 @tool("get_weekly_digest")
@@ -617,6 +839,17 @@ async def get_progress_summary_tool(student_id: str) -> dict[str, Any]:
     return await get_progress_summary(db=ctx.db, student_id=student_id)
 
 
+@tool("assess_school_fit")
+async def assess_school_fit_tool(student_id: str, question: str) -> dict[str, Any]:
+    """Combine student DB data with web sources for school-fit and scholarship hints."""
+    ctx = _require_runtime_context()
+    return await assess_school_fit(
+        db=ctx.db,
+        student_id=student_id,
+        question=question,
+    )
+
+
 @tool("chitchat")
 def chitchat_tool(query: str) -> dict[str, Any]:
     """Signal that the question can be answered without DB tools."""
@@ -625,7 +858,7 @@ def chitchat_tool(query: str) -> dict[str, Any]:
 
 @tool("web_search")
 async def web_search_tool(query: str, count: int = 3) -> dict[str, Any]:
-    """Perform Brave web search for realtime information."""
+    """Perform SerpAPI web search for realtime information."""
     return await web_search(query=query, count=count)
 
 
@@ -651,6 +884,7 @@ LANGGRAPH_TOOLS = {
     "get_school_info": get_school_info_tool,
     "get_weekly_digest": get_weekly_digest_tool,
     "get_progress_summary": get_progress_summary_tool,
+    "assess_school_fit": assess_school_fit_tool,
     "chitchat": chitchat_tool,
     "web_search": web_search_tool,
     "escalate": escalate_tool,

@@ -5,7 +5,7 @@ interface QuickChatBarProps {
 
 export default function QuickChatBar({ suggestions, onSelect }: QuickChatBarProps) {
   return (
-    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+    <div className="flex justify-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
       {suggestions.map((suggestion, index) => (
         <button
           key={index}

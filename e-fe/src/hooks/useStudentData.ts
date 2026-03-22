@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react'
 import { studentApi, parentApi, authApi } from '../api'
-import type { Student, Milestone, EtesterCore, WellbeingAlert, DigestData } from '../types'
+import type {
+  Student,
+  Milestone,
+  EtesterCore,
+  WellbeingAlert,
+  DigestData,
+  UpsellCourse,
+} from '../types'
 import type { ParentBehavioralLog } from '../api/parent'
 
 export function useStudentData(studentId?: string) {
@@ -10,6 +17,7 @@ export function useStudentData(studentId?: string) {
   const [etester, setEtester] = useState<EtesterCore | null>(null)
   const [milestones, setMilestones] = useState<Milestone[]>([])
   const [behavioralLogs, setBehavioralLogs] = useState<ParentBehavioralLog[]>([])
+  const [upsell, setUpsell] = useState<UpsellCourse | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -47,13 +55,14 @@ export function useStudentData(studentId?: string) {
           return
         }
 
-        const [studentRes, wellbeingRes, digestRes, etesterRes, milestonesRes] =
+        const [studentRes, wellbeingRes, digestRes, etesterRes, milestonesRes, upsellRes] =
           await Promise.all([
             studentApi.getStudent(resolvedStudentId),
             parentApi.getWellbeingAlerts(resolvedStudentId),
             parentApi.getDigest(resolvedStudentId),
             studentApi.getEtesterScore(resolvedStudentId),
             studentApi.getMilestones(resolvedStudentId),
+            parentApi.getUpsellSuggestion(resolvedStudentId),
           ])
 
         const logsRes = await parentApi.getBehavioralLogs(resolvedStudentId, 7)
@@ -93,6 +102,12 @@ export function useStudentData(studentId?: string) {
         } else {
           setBehavioralLogs(logsRes.data || [])
         }
+
+        if (upsellRes.error) {
+          console.warn('Failed to fetch upsell suggestion:', upsellRes.error)
+        } else {
+          setUpsell(upsellRes.data || null)
+        }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch student data')
       } finally {
@@ -110,6 +125,7 @@ export function useStudentData(studentId?: string) {
     etester,
     milestones,
     behavioralLogs,
+    upsell,
     loading,
     error,
   }

@@ -58,6 +58,11 @@ agent:
       - cập nhật
       - tin tức
       - hôm nay
+      - top
+      - xếp hạng
+      - trên thế giới
+      - toàn cầu
+      - scholarship
     escalate_keywords:
       - visa
       - khiếu nại
