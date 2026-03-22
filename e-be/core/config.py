@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     OPENAI_MODEL: str
 
     # ── Search API ──────────────────────────────────────────────────────────
-    BRAVE_SEARCH_API_KEY: str = ""
+    SERPAPI_API_KEY: str = ""
 
     # ── AWS (optional) ───────────────────────────────────────────────────────
     AWS_REGION: str = "ap-southeast-1"

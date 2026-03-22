@@ -235,3 +235,12 @@ class UpsellResponse(BaseModel):
             ],
         }
     }}
+
+class ParentHomeResponse(BaseModel):
+    """Aggregated payload for parent home page."""
+
+    student_id: str
+    profile: StudentProfile
+    wellbeing: WellbeingResponse
+    digest: DigestResponse
+    upsell: UpsellResponse

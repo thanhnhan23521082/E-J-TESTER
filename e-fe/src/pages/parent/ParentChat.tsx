@@ -1,8 +1,23 @@
 import { useState, useRef, useEffect } from 'react'
-import { Send, Bot, User, MessageCircle } from 'lucide-react'
+import { Send, Bot, User, Sparkles } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
 import QuickChatBar from '../../components/parent/QuickChatBar'
 import { parentApi } from '../../api'
 import type { ChatMessage } from '../../types'
+
+const URL_PATTERN = /((?:https?:\/\/|www\.)[^\s<]+)/gi
+
+const linkifyPlainUrls = (text: string): string => {
+  return text.replace(URL_PATTERN, (rawUrl, _match, offset, wholeText) => {
+    const previousChar = wholeText[offset - 1] ?? ''
+    if (previousChar === '(' || previousChar === '<') {
+      return rawUrl
+    }
+    const trimmed = rawUrl.replace(/[),.;!?]+$/, '')
+    const protocolUrl = trimmed.startsWith('www.') ? `https://${trimmed}` : trimmed
+    return `[${trimmed}](${protocolUrl})`
+  })
+}
 
 const initialMessages: ChatMessage[] = [
   {
@@ -15,10 +30,10 @@ const initialMessages: ChatMessage[] = [
 ]
 
 const suggestions = [
-  'Minh Anh đang yếu môn nào?',
-  'Làm sao để cải thiện Writing?',
-  'Tiến độ so với deadline?',
-  'Hoạt động gần đây của con?',
+  'Tình hình học tập hiện tại?',
+  'Có điểm mạnh/yếu nào nổi bật?',
+  'Gợi ý cải thiện kết quả?',
+  'Có hoạt động nào nên tham gia?',
 ]
 
 export default function ParentChat() {
@@ -95,16 +110,14 @@ export default function ParentChat() {
     <div className="space-y-4">
       {/* Chat Header */}
       <section className="bg-white rounded-3xl border border-etest-border/40 shadow-sm p-6">
-        <div className="flex items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-etest-teal to-etest-teal-dark flex items-center justify-center shadow-lg">
-            <MessageCircle className="w-7 h-7 text-white" />
+        <div className="flex flex-col items-center gap-2">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center shadow-lg">
+            <Sparkles className="w-8 h-8 text-white" />
           </div>
-          <div>
-            <h1 className="text-xl font-bold text-etest-text">Hỏi đáp AI</h1>
-            <p className="text-sm text-etest-subtext mt-0.5">
-              Giải đáp thắc mắc về tiến độ học tập
-            </p>
-          </div>
+          <h1 className="text-2xl font-black text-etest-red tracking-tight">ETEST ONE</h1>
+          <p className="text-sm text-etest-subtext mt-0.5 text-center">
+            Nền tảng tư vấn du học thông minh
+          </p>
         </div>
       </section>
 
@@ -140,7 +153,35 @@ export default function ParentChat() {
                       : 'bg-etest-red text-white rounded-tr-none'
                   }`}
                 >
-                  <p className="text-sm whitespace-pre-line leading-relaxed">{message.content}</p>
+                  <ReactMarkdown
+                    components={{
+                      a: ({node, ...props}) => (
+                        <a
+                          {...props}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline text-etest-red font-semibold hover:text-etest-red-dark"
+                        />
+                      ),
+                      p: ({node, ...props}) => (
+                        <p className="text-sm leading-relaxed mb-2 last:mb-0" {...props} />
+                      ),
+                      ul: ({node, ...props}) => (
+                        <ul className="list-disc ml-5 text-sm leading-relaxed" {...props} />
+                      ),
+                      ol: ({node, ...props}) => (
+                        <ol className="list-decimal ml-5 text-sm leading-relaxed" {...props} />
+                      ),
+                      li: ({node, ...props}) => (
+                        <li className="mb-1" {...props} />
+                      ),
+                      code: ({node, ...props}) => (
+                        <code className="bg-etest-bg-secondary px-1 py-0.5 rounded text-xs font-mono" {...props} />
+                      ),
+                    }}
+                  >
+                    {linkifyPlainUrls(message.content)}
+                  </ReactMarkdown>
                 </div>
               </div>
             ))}
@@ -181,7 +222,7 @@ export default function ParentChat() {
                     void handleSend(inputValue)
                   }
                 }}
-                placeholder="Nhập câu hỏi của bạn..."
+                placeholder="Nhập câu hỏi của bạn"
                 className="flex-1 h-12 px-4 bg-etest-bg rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-etest-teal/20 focus:bg-white transition-all"
               />
               <button

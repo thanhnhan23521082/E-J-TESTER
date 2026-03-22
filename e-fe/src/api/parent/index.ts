@@ -5,7 +5,7 @@
  */
 
 import type { ApiResponse } from '../types'
-import type { Student, WellbeingAlert, DigestData } from '../../types'
+import type { Student, WellbeingAlert, DigestData, UpsellCourse } from '../../types'
 import { apiClient } from '../client'
 
 const CHATBOT_BASE_URL =
@@ -40,9 +40,43 @@ interface StudentDigestDto {
   progress_pct: number | null
   milestones_done: number | null
   next_deadline: string | null
+  next_deadline_label?: string | null
   days_left: number | null
   priority_action: string | null
   weakest_skill: string | null
+}
+
+interface WellbeingAlertDto {
+  type: string
+  severity: 'none' | 'low' | 'medium' | 'high'
+  message: string
+}
+
+interface WellbeingApiResponseDto {
+  student_id: string
+  overall_score: number
+  severity: 'none' | 'low' | 'medium' | 'high'
+  parent_message?: string
+  action_label?: string
+  alerts: WellbeingAlertDto[]
+  recommendations: string[]
+}
+
+interface WeeklyDigestDto {
+  student_id: string
+  student_name: string
+  week_summary: string
+}
+
+interface UpsellItemDto {
+  program_name: string
+  priority: 'high' | 'medium' | 'low'
+  pitch: string
+}
+
+interface UpsellResponseDto {
+  student_id: string
+  recommendations: UpsellItemDto[]
 }
 
 interface StudentProfileDto extends StudentDigestDto {
@@ -172,6 +206,7 @@ const mapDigest = (dto: StudentDigestDto): DigestData => ({
   progressPct: dto.progress_pct ?? 0,
   milestonesCompleted: dto.milestones_done ?? 0,
   nextDeadline: dto.next_deadline ?? '',
+  nextDeadlineLabel: dto.next_deadline_label ?? '',
   daysLeft: dto.days_left ?? 0,
   priorityAction: dto.priority_action ?? '',
   weakestSkill: dto.weakest_skill ?? '',
@@ -199,6 +234,43 @@ const buildWellbeingFromLogs = (logs: ParentBehavioralLog[]): WellbeingAlert => 
       ? `Con học muộn ${lateNightCount} đêm liên tiếp tuần này`
       : 'Không có cảnh báo học muộn trong tuần này',
     action: 'Nhắn hỏi thăm con tối nay',
+  }
+}
+
+const mapWellbeingFromAi = (dto: WellbeingApiResponseDto): WellbeingAlert => {
+  const topAlert = dto.alerts[0]
+  const alert = dto.severity === 'medium' || dto.severity === 'high'
+  const severity = dto.severity === 'high' ? 'high' : dto.severity === 'medium' ? 'medium' : 'low'
+  const friendlyMessage = dto.parent_message?.trim()
+  const cta = dto.action_label?.trim()
+
+  return {
+    alert,
+    severity,
+    message:
+      friendlyMessage ||
+      topAlert?.message ||
+      (alert
+        ? 'Con đang có tín hiệu cần hỗ trợ học tập tuần này'
+        : 'Tình hình học tập và sức khỏe học đường của con đang ổn định'),
+    action: cta || dto.recommendations[0] || 'Nhắn hỏi thăm con tối nay',
+  }
+}
+
+const mapUpsellItem = (item: UpsellItemDto): UpsellCourse => {
+  const lowerName = item.program_name.toLowerCase()
+  const tag: UpsellCourse['tag'] = lowerName.includes('summer') || lowerName.includes('camp')
+    ? 'Trại hè'
+    : lowerName.includes('workshop')
+      ? 'Workshop'
+      : 'Khóa học'
+
+  return {
+    courseName: item.program_name,
+    reason: item.pitch,
+    ctaUrl: '/parent/chat',
+    tag,
+    priority: item.priority,
   }
 }
 
@@ -374,19 +446,32 @@ export class ParentApi {
    * Get wellbeing alerts for a student
    */
   async getWellbeingAlerts(studentId: string): Promise<ApiResponse<WellbeingAlert>> {
-    const logsRes = await this.getBehavioralLogs(studentId, 7)
-    if (!logsRes.data || logsRes.error) {
+    const aiResponse = await apiClient.post<WellbeingApiResponseDto, Record<string, never>>(
+      `/ai/wellbeing?student_id=${studentId}&days=14`,
+      {}
+    )
+
+    if (aiResponse.data && !aiResponse.error) {
       return {
-        data: null,
-        error: logsRes.error,
-        status: logsRes.status,
+        data: mapWellbeingFromAi(aiResponse.data),
+        error: null,
+        status: aiResponse.status,
+      }
+    }
+
+    const logsRes = await this.getBehavioralLogs(studentId, 7)
+    if (logsRes.data && !logsRes.error) {
+      return {
+        data: buildWellbeingFromLogs(logsRes.data),
+        error: null,
+        status: 200,
       }
     }
 
     return {
-      data: buildWellbeingFromLogs(logsRes.data),
-      error: null,
-      status: 200,
+      data: null,
+      error: aiResponse.error ?? logsRes.error,
+      status: aiResponse.status || logsRes.status,
     }
   }
 
@@ -394,7 +479,30 @@ export class ParentApi {
    * Get digest data for a student
    */
   async getDigest(studentId: string): Promise<ApiResponse<DigestData>> {
-    const response = await apiClient.get<StudentDigestDto>(`/students/${studentId}`)
+    const profileResponse = await apiClient.get<StudentDigestDto>(`/students/${studentId}`)
+    if (!profileResponse.data || profileResponse.error) {
+      return {
+        data: null,
+        error: profileResponse.error,
+        status: profileResponse.status,
+      }
+    }
+
+    const digest = mapDigest(profileResponse.data)
+    const weeklyDigest = await apiClient.get<WeeklyDigestDto>(`/digest/${studentId}?days=7`)
+    if (weeklyDigest.data && !weeklyDigest.error) {
+      digest.parentSummary = weeklyDigest.data.week_summary
+    }
+
+    return {
+      data: digest,
+      error: null,
+      status: profileResponse.status,
+    }
+  }
+
+  async getUpsellSuggestion(studentId: string): Promise<ApiResponse<UpsellCourse | null>> {
+    const response = await apiClient.get<UpsellResponseDto>(`/upsell/${studentId}`)
     if (!response.data || response.error) {
       return {
         data: null,
@@ -403,8 +511,9 @@ export class ParentApi {
       }
     }
 
+    const first = response.data.recommendations[0]
     return {
-      data: mapDigest(response.data),
+      data: first ? mapUpsellItem(first) : null,
       error: null,
       status: response.status,
     }

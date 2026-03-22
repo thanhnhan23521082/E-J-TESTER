@@ -26,6 +26,7 @@ T = TypeVar("T", bound=BaseModel)
 
 # ── Client singleton ──────────────────────────────────────────────────────────
 _client: openai.AsyncOpenAI | None = None
+_token_param_by_model: dict[str, str] = {}
 
 
 def _get_client() -> openai.AsyncOpenAI:
@@ -45,17 +46,49 @@ async def _create_chat_completion(
 ) -> str:
     """Single place to call Chat Completions with shared parameters."""
     client = _get_client()
-    response = await client.chat.completions.create(
-        model=model,
-        max_tokens=max_tokens,
-        temperature=temperature,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": prompt},
-        ],
-        timeout=10.0,
+    token_param = _token_param_by_model.get(model, "max_tokens")
+
+    for attempt in range(2):
+        try:
+            payload: dict[str, Any] = {
+                "model": model,
+                "temperature": temperature,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt},
+                ],
+                "timeout": 10.0,
+                token_param: max_tokens,
+            }
+            response = await client.chat.completions.create(**payload)
+            _token_param_by_model[model] = token_param
+            return response.choices[0].message.content or ""  # type: ignore[union-attr]
+        except APIError as exc:
+            if attempt == 0 and _is_unsupported_token_param(exc, token_param):
+                fallback = (
+                    "max_completion_tokens"
+                    if token_param == "max_tokens"
+                    else "max_tokens"
+                )
+                logger.info(
+                    "Model '%s' does not support '%s'; retrying with '%s'",
+                    model,
+                    token_param,
+                    fallback,
+                )
+                token_param = fallback
+                continue
+            raise
+
+    raise AITimeout(message="OpenAI API failed to resolve compatible token parameter")
+
+
+def _is_unsupported_token_param(exc: APIError, param_name: str) -> bool:
+    message = str(exc).lower()
+    return (
+        "unsupported parameter" in message
+        and f"'{param_name.lower()}'" in message
     )
-    return response.choices[0].message.content or ""  # type: ignore[union-attr]
 
 
 # ── Public API ───────────────────────────────────────────────────────────────

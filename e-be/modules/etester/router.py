@@ -5,6 +5,8 @@ FastAPI router for ETESTER endpoints.
 All routes require Bearer authentication.
 """
 
+import logging
+
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -33,6 +35,27 @@ from shared.deps import get_current_user
 from shared.model import User
 
 router = APIRouter(prefix="/api/etester", tags=["etester"])
+logger = logging.getLogger(__name__)
+
+
+def _to_float(value):
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _normalize_skills(value):
+    if not isinstance(value, dict):
+        return None
+    result = {}
+    for key, raw in value.items():
+        casted = _to_float(raw)
+        if casted is not None:
+            result[str(key)] = casted
+    return result or None
 
 
 # ── Profile ───────────────────────────────────────────────────────────────────
@@ -60,27 +83,20 @@ async def get_etester_profile(
     milestones = await get_all_milestones(student_id, db, limit=20)
 
     if core:
-        import json as _json
-        skills_data = None
-        if core.skills:
-            try:
-                skills_data = _json.loads(core.skills)
-            except Exception:
-                pass
         core_resp = ETESTERCoreResponse(
             student_id=core.student_id,
-            academic_score=core.academic_score,
-            writing_growth=core.writing_growth,
-            skills=skills_data,
-            mentor_verifications=core.mentor_verifications,
-            parent_support_level=core.parent_support_level,
-            institutional_stamp=core.institutional_stamp,
-            consistency_score=core.consistency_score,
-            total_contributions=core.total_contributions,
-            badge_issued=core.badge_issued,
-            last_updated=core.last_updated.isoformat(),
+            academic_score=_to_float(core.ielts_score),
+            writing_growth=None,
+            skills=_normalize_skills(core.skill_breakdown),
+            mentor_verifications=0,
+            parent_support_level=None,
+            institutional_stamp=None,
+            consistency_score=None,
+            total_contributions=core.milestones_done or len(milestones),
+            badge_issued=None,
+            last_updated=core.updated_at.isoformat() if core.updated_at else "",
         )
-        narrative = core.narrative_cache
+        narrative = None
     else:
         core_resp = ETESTERCoreResponse(
             student_id=student_id,
@@ -97,25 +113,32 @@ async def get_etester_profile(
         )
         narrative = None
 
-    milestone_responses = [
-        MilestoneResponse(
-            id=m.id,
-            student_id=m.student_id,
-            milestone_id=m.milestone_id,
-            type=m.type,
-            title=m.title,
-            date=m.date.isoformat(),
-            score=m.score,
-            score_label=m.score_label,
-            notes=m.notes,
-            status=m.status,
-            contributor_type=m.contributor_type,
-            ai_summary=m.ai_summary,
-            auth_score=m.auth_score,
-            created_at=m.date.isoformat(),
-        )
-        for m in milestones
-    ]
+    milestone_responses = []
+    for m in milestones:
+        try:
+            milestone_responses.append(
+                MilestoneResponse(
+                    id=m.id,
+                    student_id=m.student_id,
+                    milestone_id=m.milestone_id,
+                    type=m.type,
+                    title=m.title,
+                    date=m.date.isoformat(),
+                    score=_to_float(m.score),
+                    score_label=m.score_label,
+                    notes=m.notes,
+                    status=m.status,
+                    contributor_type=m.contributor_type,
+                    ai_summary=m.ai_summary,
+                    auth_score=_to_float(m.auth_score),
+                    created_at=m.date.isoformat(),
+                )
+            )
+        except Exception:
+            logger.exception(
+                "Failed to map milestone for profile response",
+                extra={"student_id": student_id, "milestone_id": getattr(m, "milestone_id", None)},
+            )
 
     return ETESTERProfileResponse(
         core=core_resp,

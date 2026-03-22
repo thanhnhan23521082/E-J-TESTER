@@ -5,14 +5,48 @@ Compute wellbeing metrics from BehaviouralLog records and
 trigger alerts when thresholds are breached.
 """
 
+import json
 import logging
-from datetime import datetime
 
+from pydantic import BaseModel, Field
+
+from modules.smart_parenting.prompts.loader import get_prompt
 from shared.constants import WELLBEING_THRESHOLDS
+from shared.clients.llm_client import call_json
 from shared.model import BehavioralLog
 from modules.smart_parenting.schemas import BehavioralMetrics, WellbeingAlert, WellbeingResponse
 
 logger = logging.getLogger(__name__)
+WELLBEING_SYSTEM = get_prompt("wellbeing", "system")
+WELLBEING_USER_TEMPLATE = get_prompt("wellbeing", "user_template")
+
+
+class _WellbeingLLMAlert(BaseModel):
+    type: str = Field(default="study_time")
+    severity: str = Field(default="low")
+    message: str = Field(default="")
+
+
+class _WellbeingLLMResult(BaseModel):
+    overall_score: float = Field(ge=0, le=100)
+    severity: str = Field(default="low")
+    parent_message: str = Field(default="")
+    action_label: str = Field(default="")
+    alerts: list[_WellbeingLLMAlert] = Field(default_factory=list)
+    recommendations: list[str] = Field(default_factory=list)
+
+
+def _format_logs(logs: list[BehavioralLog]) -> str:
+    if not logs:
+        return "(no data)"
+    rows: list[str] = []
+    for item in logs:
+        date_val = item.date.isoformat() if hasattr(item.date, "isoformat") else str(item.date)
+        rows.append(
+            f"[{date_val}] duration_min={item.duration_min} studied={item.studied} "
+            f"streak_day={item.streak_day} score_delta={item.score_delta} late_night={item.is_late_night}"
+        )
+    return "\n".join(rows)
 
 
 def compute_metrics(logs: list[BehavioralLog]) -> BehavioralMetrics:
@@ -201,25 +235,71 @@ async def wellbeing_check_service_from_logs(
     Returns:
         WellbeingResponse with metrics, alerts, and overall score.
     """
-    from modules.smart_parenting.repository import get_student
-
     metrics = compute_metrics(logs)
-    alerts = build_alerts(metrics)
+    deterministic_alerts = build_alerts(metrics)
+    deterministic_recommendations = _build_recommendations(metrics, deterministic_alerts)
 
-    # Overall score: 100 down-weighted by alert severity
+    try:
+        prompt = WELLBEING_USER_TEMPLATE.format(
+            student_name=student_id,
+            student_id=student_id,
+            behavioral_data=_format_logs(logs),
+            thresholds=json.dumps(WELLBEING_THRESHOLDS, ensure_ascii=False, indent=2),
+        )
+        ai_result = await call_json(
+            prompt=prompt,
+            system_prompt=WELLBEING_SYSTEM,
+            schema=_WellbeingLLMResult,
+            max_tokens=800,
+            temperature=0.2,
+        )
+
+        severity = str(ai_result.severity).lower()
+        if severity not in {"none", "low", "medium", "high"}:
+            severity = metrics.alert_level
+
+        ai_alerts = [
+            WellbeingAlert(
+                type=item.type,
+                severity=item.severity if item.severity in {"none", "low", "medium", "high"} else "low",
+                message=item.message,
+            )
+            for item in ai_result.alerts
+        ]
+        friendly_message = ai_result.parent_message.strip()
+        if friendly_message:
+            ai_alerts = [
+                WellbeingAlert(
+                    type="parent_summary",
+                    severity=severity,
+                    message=friendly_message,
+                ),
+                *ai_alerts,
+            ]
+
+        recommendations = ai_result.recommendations or deterministic_recommendations
+        if ai_result.action_label.strip():
+            recommendations = [ai_result.action_label.strip(), *recommendations]
+
+        return WellbeingResponse(
+            student_id=student_id,
+            overall_score=round(float(ai_result.overall_score), 1),
+            severity=severity,
+            alerts=ai_alerts or deterministic_alerts,
+            recommendations=recommendations,
+            metrics=metrics,
+        )
+    except Exception as exc:
+        logger.warning("Wellbeing AI call failed, fallback to deterministic mode: %s", exc)
+
     severity_penalty = {"none": 0, "low": 15, "medium": 35, "high": 60}
-    penalty = severity_penalty.get(metrics.alert_level, 0)
-    base = 100
-    overall_score = max(0.0, base - penalty)
-
-    recommendations = _build_recommendations(metrics, alerts)
-
+    fallback_score = max(0.0, 100 - severity_penalty.get(metrics.alert_level, 0))
     return WellbeingResponse(
         student_id=student_id,
-        overall_score=round(overall_score, 1),
+        overall_score=round(fallback_score, 1),
         severity=metrics.alert_level,
-        alerts=alerts,
-        recommendations=recommendations,
+        alerts=deterministic_alerts,
+        recommendations=deterministic_recommendations,
         metrics=metrics,
     )
 

@@ -100,6 +100,8 @@ export interface DigestData {
   daysLeft: number
   priorityAction: string
   weakestSkill: string
+  parentSummary?: string
+  nextDeadlineLabel?: string
 }
 
 export interface UpsellCourse {
@@ -107,6 +109,7 @@ export interface UpsellCourse {
   reason: string
   ctaUrl: string
   tag: 'Trại hè' | 'Khóa học' | 'Workshop'
+  priority?: 'high' | 'medium' | 'low'
 }
 
 export interface AuthenticityResult {
