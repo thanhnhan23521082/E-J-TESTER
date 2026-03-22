@@ -5,10 +5,8 @@ Authentication endpoints: register, login, refresh, logout.
 All routes live under /api/auth.
 """
 
-import uuid
-
 from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core.config import get_settings
@@ -42,27 +40,16 @@ async def _get_user_by_email(db: AsyncSession, email: str) -> User | None:
     return result.scalar_one_or_none()
 
 
-async def _check_email_in_profile_tables(db: AsyncSession, email: str) -> bool:
-    """Check if email is already used in any profile table (mentor, parent, manager, student name)."""
-    for model in (Mentor, Parent, Manager):
-        result = await db.execute(select(model).where(model.email == email))
-        if result.scalar_one_or_none():
-            return True
-    return False
-
-
 async def _create_profile_record(
     db: AsyncSession,
     body: RegisterRequest,
-    hashed_pw: str,
     user: User | None = None,
 ) -> None:
     """Create the role-specific profile record alongside the User row."""
 
     if body.role == "parent":
         profile = Parent(
-            email=body.email,
-            hashed_password=hashed_pw,
+            user_id=user.id if user else None,
             full_name=body.full_name,
             phone=body.phone,
             telegram_id=body.telegram_id,
@@ -71,8 +58,7 @@ async def _create_profile_record(
 
     elif body.role == "mentor":
         profile = Mentor(
-            email=body.email,
-            hashed_password=hashed_pw,
+            user_id=user.id if user else None,
             full_name=body.full_name,
             specialty=body.specialty,
             bio=body.bio,
@@ -81,8 +67,10 @@ async def _create_profile_record(
         db.add(profile)
 
     elif body.role == "student":
-        # Generate a short unique student_id
-        student_id = f"S-{uuid.uuid4().hex[:8].upper()}"
+        # Sequential student_id: count existing students, pad to 5 digits
+        count_result = await db.execute(select(func.count()).select_from(Student))
+        next_num: int = (count_result.scalar() or 0) + 1
+        student_id = f"student_{next_num:05d}"
         profile = Student(
             student_id=student_id,
             user_id=user.id if user else None,
@@ -93,8 +81,7 @@ async def _create_profile_record(
 
     elif body.role == "manager":
         profile = Manager(
-            email=body.email,
-            hashed_password=hashed_pw,
+            user_id=user.id if user else None,
             full_name=body.full_name,
             phone=body.phone,
             department=body.department,
@@ -132,13 +119,6 @@ async def register(
             detail="Email already registered",
         )
 
-    # Check duplicate in profile tables
-    if await _check_email_in_profile_tables(db, body.email):
-        raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail="Email already registered",
-        )
-
     hashed_pw = hash_password(body.password)
 
     # Create User auth record
@@ -153,7 +133,7 @@ async def register(
     await db.flush()  # populate user.id so child records can reference it
 
     # Create role-specific profile record
-    await _create_profile_record(db, body, hashed_pw, user)
+    await _create_profile_record(db, body, user)
 
     await db.commit()
     await db.refresh(user)
@@ -269,19 +249,19 @@ async def me(
 
     elif current_user.role == "parent":
         result = await db.execute(
-            select(Parent.parent_id).where(Parent.email == current_user.email)
+            select(Parent.parent_id).where(Parent.user_id == current_user.id)
         )
         parent_id = result.scalar_one_or_none()
 
     elif current_user.role == "mentor":
         result = await db.execute(
-            select(Mentor.mentor_id).where(Mentor.email == current_user.email)
+            select(Mentor.mentor_id).where(Mentor.user_id == current_user.id)
         )
         mentor_id = result.scalar_one_or_none()
 
     elif current_user.role == "manager":
         result = await db.execute(
-            select(Manager.manager_id).where(Manager.email == current_user.email)
+            select(Manager.manager_id).where(Manager.user_id == current_user.id)
         )
         manager_id = result.scalar_one_or_none()
 

@@ -80,6 +80,15 @@ class User(Base, TimestampMixin):
     student: Mapped["Student | None"] = relationship(
         "Student", back_populates="user", uselist=False
     )
+    mentor: Mapped["Mentor | None"] = relationship(
+        "Mentor", back_populates="user", uselist=False
+    )
+    parent: Mapped["Parent | None"] = relationship(
+        "Parent", back_populates="user", uselist=False
+    )
+    manager: Mapped["Manager | None"] = relationship(
+        "Manager", back_populates="user", uselist=False
+    )
 
     def __repr__(self) -> str:
         return f"<User(id={self.id}, email={self.email}, role={self.role})>"
@@ -96,13 +105,13 @@ class Mentor(Base, TimestampMixin):
 
     __tablename__ = "mentors"
     __table_args__ = (
-        Index("idx_mentors_email", "email"),
         Index("mentors_programs_gin", "programs", postgresql_using="gin"),
     )
 
     mentor_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
-    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    user_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=True,
+    )
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     specialty: Mapped[str | None] = mapped_column(String(255), nullable=True)
     bio: Mapped[str | None] = mapped_column(Text, nullable=True)
@@ -112,6 +121,7 @@ class Mentor(Base, TimestampMixin):
     active_students: Mapped[int] = mapped_column(Integer, default=0)
 
     # Relations
+    user: Mapped["User | None"] = relationship("User", back_populates="mentor", uselist=False)
     students: Mapped[list["Student"]] = relationship("Student", back_populates="mentor")
     milestones: Mapped[list["Milestone"]] = relationship("Milestone", back_populates="mentor")
 
@@ -130,13 +140,13 @@ class Parent(Base, TimestampMixin):
 
     __tablename__ = "parents"
     __table_args__ = (
-        Index("idx_parents_email", "email"),
         Index("idx_parents_student_id", "student_id"),
     )
 
     parent_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
-    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    user_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=True,
+    )
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     phone: Mapped[str | None] = mapped_column(String(50), nullable=True)
     telegram_id: Mapped[str | None] = mapped_column(String(100), nullable=True)
@@ -145,6 +155,7 @@ class Parent(Base, TimestampMixin):
     )  # bidirectional 1:1
 
     # Relations
+    user: Mapped["User | None"] = relationship("User", back_populates="parent", uselist=False)
     student: Mapped["Student | None"] = relationship(
         "Student",
         back_populates="parent",
@@ -170,16 +181,18 @@ class Manager(Base, TimestampMixin):
     """
 
     __tablename__ = "managers"
-    __table_args__ = (
-        Index("idx_managers_email", "email"),
-    )
+    __table_args__ = ()
 
     manager_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
-    hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
+    user_id: Mapped[int | None] = mapped_column(
+        Integer, ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=True,
+    )
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     phone: Mapped[str | None] = mapped_column(String(50), nullable=True)
     department: Mapped[str | None] = mapped_column(String(255), nullable=True)
+
+    # Relations
+    user: Mapped["User | None"] = relationship("User", back_populates="manager", uselist=False)
 
     def __repr__(self) -> str:
         return f"<Manager(id={self.manager_id}, name={self.full_name})>"
